@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="treeListColumn2.Caption" xml:space="preserve">
+    <value>模塊目錄</value>
+  </data>
+  <data name="barButtonItemSave.Caption" xml:space="preserve">
+    <value>存儲</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="barDockControlTop.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="barDockControlBottom.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="barDockControlLeft.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="barDockControlRight.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>表格金額顯示(採購)</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="imageCollection1.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v10.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFpEZXZFeHByZXNzLlV0aWxzLnYxMC4yLCBWZXJzaW9uPTEwLjIu
+        NC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEMAwAAAFFT
+        eXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRv
+        a2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAChEZXZFeHByZXNzLlV0aWxzLkltYWdlQ29sbGVjdGlvblN0
+        cmVhbWVyAgAAAAlJbWFnZVNpemUERGF0YQQHE1N5c3RlbS5EcmF3aW5nLlNpemUDAAAAAgIAAAAF/P//
+        /xNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAV3aWR0aAZoZWlnaHQAAAgIAwAAABgAAAAYAAAACQUAAAAP
+        BQAAALMEAAACrwQAAIlQTkcNChoKAAAADUlIRFIAAAAYAAAAGAgGAAAA4Hc9+AAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+wAA
+        CvsBy58dkAAABCVJREFUSEuVlblvG0cYxb8/IAeRKoBduEmvLl3CLk0K/wEO4DJFoHQpUhlJbbgLojiG
+        DCQxggSBYse6rIOiblm3LFIUJUrmIS5liaZWlEiR3J2X9y1Fimv6XOBhgZn5fm9m9s2sOI4jrusGXGO6
+        jTEFCu+i0bxBx6zBlYVmW4GsW8pUdsPgEzb2tha+SazDxN4xZMhA5l3IqtvsI+ueMlsNrjmuu8E33kZZ
+        u4RkMolEIoHO2CFkjQbLF/1kLfB9rWngOG5XreYcUnidtm0Hn4+5uByqYjZlIZ1Oo3MjD1mhwaLbOtZS
+        ZsPgIzasVas1vE62bePHxWN8MOVANlzczx4hk8mgM0qDJRpwm1rHK1PZavBFpVLF2dnL9ShVw/beASzL
+        QrFYRDDJPY+0GERosECDOddXp0xlS61W+75cruBF5ewKvpnkbO8BX8Zq3kfVpyNB2BMa7NUNrj8pQB6z
+        bca0MZStBjdLpTOHQkNdazV82I16QmIughnjwfUJRF38kqsgn897Bp8un0IYU5kyzfpzOcp+qYH8RDhT
+        IdtUnAapC4Pnjs607BkM7u7j8nwVMk2DyVcYnJ1VTu3jE7RKfqaBwrcoXQH3vfFozq2TMr6Olzhz9hMe
+        4PbIuPExVMqWUqmEw/yRT3KbBgrfpLglwd0Lg+5DAjU1/KjBiMHyCRBcpcGYaeMoW4rFU1i5Q5/kDg0U
+        zjjKOkE7BrsVguIEMY4BZv6WBeRKwHSO7ctsH+XKXuAoW2y7yAOT80nu0kDhjKOe0gBT42WdcbxKkwID
+        1bML/L51brBEg2HTxlG2FAo2dnbTPslvLFC4gvWUEn6FRqFjIGEDXVFgKFN/6yqCvOjkkWnjKFuec6/i
+        20lsbj1tSv5ggcJ5gWmabmQNMmf1GevMFawzb65gnuMHjI+hTGWLZR1gaSWK2OYOorEEIhvbkD9ZcA4P
+        bhrsl4HbceDfp3Wozl7f61zRVd1/wqXPeLXKUJYylS3JVBZ9gxMIhecwO7eCpdUo5C8W6DngxwzGDE5q
+        wK8EzjwDbq4Ba3ngxg4PXagOf3/AwXfT+16tMpSlTGVLMplFz4MRT32D4xgOzUD+YSHhmpjgRj2i/3HW
+        91NAqMDrYo79esoHDT4bOcLfk+sIT8x7tcpo8JQtKV67/XRT9Q6M42F/GNLDYv2JnGf9Gfc/zrxfp5nG
+        UeEfPyrjh5E4hkZmMDg0hd7+eq0yGjxlSyptYXh01id5QAjheoF1rBh080MGeBV4cMbxq6EUekYeEz7t
+        GQyPqvwMlbIlnclxeQs+yUOC9PjzApMJiqdU4R2jNu6EI23jXyVlS2Yvh+nZFZ+kvwUeNngvVMO3E5m2
+        cW+SsiWb3cficsQnPTQNeHDSxthSrG3M20jZYuUOvPy26lK4ikuTVdxd3WvrexdZuQP8DwB/rEXYjFsJ
+        AAAAAElFTkSuQmCCCw==
+</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="checkEditWWPrice.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditWWPrice.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditWWPrice.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditWWPrice.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOJinHuoJinE.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsCOJinHuoJinE.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOJinHuoJinE.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOJinHuoJinE.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOXiangGuanZiLiao.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsXOXiangGuanZiLiao.Properties.Caption" xml:space="preserve">
+    <value>相關資料(銷售)</value>
+  </data>
+  <data name="checkEditIsXOXiangGuanZiLiao.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOXiangGuanZiLiao.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOXiangGuanZiLiao.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOXiangGuanZiLiao.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsCOXiangGuanZiLiao.Properties.Caption" xml:space="preserve">
+    <value>相關資料(採購)</value>
+  </data>
+  <data name="checkEditIsCOXiangGuanZiLiao.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOXiangGuanZiLiao.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOXiangGuanZiLiao.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOZhangKuanZiLiao.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsXOZhangKuanZiLiao.Properties.Caption" xml:space="preserve">
+    <value>賬款資料(銷售)</value>
+  </data>
+  <data name="checkEditIsXOZhangKuanZiLiao.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOZhangKuanZiLiao.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOZhangKuanZiLiao.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOZhangKuanZiLiao.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsCOZhangKuanZiLiao.Properties.Caption" xml:space="preserve">
+    <value>賬款資料(採購)</value>
+  </data>
+  <data name="checkEditIsCOZhangKuanZiLiao.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOZhangKuanZiLiao.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOZhangKuanZiLiao.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOFaPiaoZiLiao.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsCOFaPiaoZiLiao.Properties.Caption" xml:space="preserve">
+    <value>發票資料(採購)</value>
+  </data>
+  <data name="checkEditIsCOFaPiaoZiLiao.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOFaPiaoZiLiao.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOFaPiaoZiLiao.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOJiaoYiMingXi.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsXOJiaoYiMingXi.Properties.Caption" xml:space="preserve">
+    <value>交易明細(銷售)</value>
+  </data>
+  <data name="checkEditIsXOJiaoYiMingXi.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOJiaoYiMingXi.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOJiaoYiMingXi.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOJiaoYiMingXi.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsCOJiaoYiMingXi.Properties.Caption" xml:space="preserve">
+    <value>交易明細(採購)</value>
+  </data>
+  <data name="checkEditIsCOJiaoYiMingXi.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOJiaoYiMingXi.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOJiaoYiMingXi.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOFaPiaoZiLiao.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsXOFaPiaoZiLiao.Properties.Caption" xml:space="preserve">
+    <value>發票資料(銷售)</value>
+  </data>
+  <data name="checkEditIsXOFaPiaoZiLiao.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOFaPiaoZiLiao.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOFaPiaoZiLiao.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOJinHuoJinE.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsXOJinHuoJinE.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOJinHuoJinE.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOJinHuoJinE.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>採購、銷售金額顯示設定</value>
+  </data>
+  <data name="checkEditIsSalaryViewCalc.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsSalaryViewCalc.Properties.Caption" xml:space="preserve">
+    <value>薪資計算與查看</value>
+  </data>
+  <data name="checkEditIsSalaryViewCalc.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsSalaryViewCalc.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsSalaryViewCalc.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsEmployeeBasicInfo.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsEmployeeBasicInfo.Properties.Caption" xml:space="preserve">
+    <value>人事基本資料</value>
+  </data>
+  <data name="checkEditIsEmployeeBasicInfo.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsEmployeeBasicInfo.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsEmployeeBasicInfo.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOCount.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsCOCount.Properties.Caption" xml:space="preserve">
+    <value>顯示採購數量</value>
+  </data>
+  <data name="checkEditIsCOCount.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOCount.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOCount.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOPrice.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsXOPrice.Properties.Caption" xml:space="preserve">
+    <value>顯示銷售單價</value>
+  </data>
+  <data name="checkEditIsXOPrice.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOPrice.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOPrice.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOPrice.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsCOPrice.Properties.Caption" xml:space="preserve">
+    <value>顯示採購單價</value>
+  </data>
+  <data name="checkEditIsCOPrice.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOPrice.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsCOPrice.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsProductCost.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsProductCost.Properties.Caption" xml:space="preserve">
+    <value>顯示成本</value>
+  </data>
+  <data name="checkEditIsProductCost.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsProductCost.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsProductCost.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsStockCount.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsStockCount.Properties.Caption" xml:space="preserve">
+    <value>顯示庫存數量</value>
+  </data>
+  <data name="checkEditIsStockCount.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsStockCount.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsStockCount.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOQuantity.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkEditIsXOQuantity.Properties.Caption" xml:space="preserve">
+    <value>顯示銷售數量</value>
+  </data>
+  <data name="checkEditIsXOQuantity.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOQuantity.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkEditIsXOQuantity.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="gridControl2.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gridControl2.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="gridControl2.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="gridControl2.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v10.2" name="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="gridControl2.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v10.2">
+    <value>Center</value>
+  </data>
+  <data name="gridControl2.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridControl2.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v10.2">
+    <value>None</value>
+  </data>
+  <data name="gridControl2.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn1.Caption" xml:space="preserve">
+    <value>模塊名稱</value>
+  </data>
+  <data name="gridColumn9.Caption" xml:space="preserve">
+    <value>設置列</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v10.2">
+    <value>Center</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v10.2">
+    <value>None</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+</root>

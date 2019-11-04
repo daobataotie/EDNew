@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="ProduceOtherInDepotDetail" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <resultMaps>
+    <resultMap id="ProduceOtherInDepotDetailResult1" class="ProduceOtherInDepotDetail">    
+      <result property="ProduceOtherInDepotDetailId" column="ProduceOtherInDepotDetailId" />
+      <result property="ProductId" column="ProductId" />
+      <result property="DepotPositionId" column="DepotPositionId" />
+      <result property="ProduceOtherInDepotId" column="ProduceOtherInDepotId" />
+      <result property="ProductGuige" column="ProductGuige" />
+      <result property="ProductUnit" column="ProductUnit" />
+      <result property="ProduceQuantity" column="ProduceQuantity" />
+      <result property="ProducePrice" column="ProducePrice" />
+      <result property="ProduceMoney" column="ProduceMoney" />
+      <result property="ProcessPrice" column="ProcessPrice" />
+      <result property="ProduceIsEnd" column="ProduceIsEnd" />
+      <result property="InvoiceXOId" column="InvoiceXOId" />
+      <result property="InvoiceXODetailId" column="InvoiceXODetailId" />
+      <result property="PrimaryKeyId" column="PrimaryKeyId" />
+      <result property="ProduceOtherCompactDetailId" column="ProduceOtherCompactDetailId" />
+      <result property="Description" column="Description" />
+      <result property="ProduceTransferQuantity" column="ProduceTransferQuantity" />
+      <result property="ProduceInDepotQuantity" column="ProduceInDepotQuantity" />
+      <result property="CustomerId" column="CustomerId" />
+      <result property="InvoiceCusId" column="InvoiceCusId" />
+      <result property="ProduceOtherCompactId" column="ProduceOtherCompactId" />
+      <result property="GenerateInputCheck" column="GenerateInputCheck"/>
+      <result property="OrderQuantity" column="OrderQuantity"/>
+      <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
+      <result property="PrimaryKey" column="PrimaryKeyId" lazyLoad="false" select="CustomerProducts.select_by_primary_key" />
+      <result property="DepotPosition" column="DepotPositionId" lazyLoad="false" select="DepotPosition.select_by_primary_key" />
+      <result property="ProduceOtherInDepot" column="ProduceOtherInDepotId" lazyLoad="false" select="ProduceOtherInDepot.select_by_primary_key" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
+    </resultMap>
+  </resultMaps>
+  
+  <statements>
+    <select id="select_byProduceOtherInDepotId" resultMap="ProduceOtherInDepotDetailResult1" parameterClass="string">
+      <!--select * from ProduceOtherInDepotDetail where ProduceOtherInDepotId=#value#-->
+      select pid.*,pcd.OtherCompactCount as OrderQuantity from ProduceOtherInDepotDetail pid left join ProduceOtherCompactDetail pcd on pid.ProduceOtherCompactDetailId =pcd.OtherCompactDetailId where ProduceOtherInDepotId=#value#
+    </select>
+    <select id="select_byProduceInDateAndPronote" resultMap="ProduceOtherInDepotDetailResult" parameterClass="Map">
+      <![CDATA[
+      select * from ProduceOtherInDepotDetail where ProduceOtherInDepotId in(select ProduceOtherInDepotId from ProduceOtherInDepot where ProduceOtherInDepotDate
+      between #startdate# and #enddate#)  and (ProduceOtherCompactId >=#startpronoteid# or #startpronoteid# is null) and
+      (ProduceOtherCompactId <=#endpronoteid# or #endpronoteid# is null)
+      ]]>
+    </select>
+    <select id="selectByCondition" resultMap="ProduceOtherInDepotDetailResult" parameterClass="Map">
+      <![CDATA[
+      SELECT * FROM ProduceOtherInDepotDetail WHERE ProduceOtherInDepotId=#indepotId# AND ProductId IN (SELECT ProductId FROM Product WHERE (ProductName>=#productId1# OR #productId1# IS NULL) AND (ProductName<=#productId2# OR #productId2# IS NULL))
+      ]]>
+    </select>
+    <select id="SelectByProduceotherInDepotId" resultMap="ProduceOtherInDepotDetailResult" parameterClass="string">
+      <![CDATA[
+      SELECT * FROM ProduceOtherInDepotDetail
+      WHERE ProduceOtherInDepotDetail.ProduceOtherInDepotId = #value#
+      ]]>
+    </select>
+    <delete id="deletebyheader"  parameterClass="string">
+      <![CDATA[
+         delete FROM ProduceOtherInDepotDetail WHERE ProduceOtherInDepotId=#value# 
+      ]]>
+    </delete>
+
+    <select id="selectByDateWhere" parameterClass="Map" resultMap="ProduceOtherInDepotDetailResult">
+      <![CDATA[
+     SELECT po.ProduceOtherInDepotId,po.ProduceOtherInDepotDate,po.ProduceOtherCompactId,p.ProductName,pod.ProductUnit,pod.ProduceQuantity,pod.ProduceTransferQuantity,pod.ProduceInDepotQuantity,s.SupplierShortName,pod.InvoiceCusId
+ FROM ProduceOtherInDepotDetail pod 
+LEFT JOIN ProduceOtherInDepot po ON po.ProduceOtherInDepotId = pod.ProduceOtherInDepotId 
+LEFT JOIN product p ON p.ProductId = pod.ProductId
+LEFT JOIN Supplier s ON s.SupplierId = po.SupplierId 
+WHERE po.ProduceOtherInDepotDate BETWEEN #startdate# AND #enddate# and $sql$
+      ]]>
+    </select>
+  </statements>
+</sqlMap>
