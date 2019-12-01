@@ -204,6 +204,10 @@ namespace Book.Model
         /// </summary>
         private string _customerFP;
 
+        private string _tradingCondition;
+
+        private string _payCondition;
+
         /// <summary>
         /// 地区分类
         /// </summary>
@@ -772,6 +776,24 @@ namespace Book.Model
         }
 
         /// <summary>
+        /// 交易条件
+        /// </summary>
+        public string TradingCondition
+        {
+            get { return _tradingCondition; }
+            set { _tradingCondition = value; }
+        }
+
+        /// <summary>
+        /// 付款条件
+        /// </summary>
+        public string PayCondition
+        {
+            get { return _payCondition; }
+            set { _payCondition = value; }
+        }
+
+        /// <summary>
         /// 地区分类
         /// </summary>
         public virtual AreaCategory AreaCategory
@@ -1017,6 +1039,10 @@ namespace Book.Model
         public readonly static string PRO_Marks3 = "Marks3";
 
         public readonly static string PRO_CustomerFP = "CustomerFP";
+
+        public readonly static string PRO_TradingCondition = "TradingCondition";
+
+        public readonly static string PRO_PayCondition = "PayCondition";
 
         #endregion
 

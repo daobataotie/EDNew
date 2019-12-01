@@ -28,6 +28,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="InvoiceXSDetailTaxMoney" column="InvoiceXSDetailTaxMoney" />
       <result property="InvoiceXSDetailFPQuantity" column="InvoiceXSDetailFPQuantity" />
       <result property="InvoiceXSDetailTax" column="InvoiceXSDetailTax" />
+      <result property="Currency" column="Currency"/>
+      <result property="ExchangeRate" column="ExchangeRate"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="InvoiceXO" column="InvoiceXOId" lazyLoad="false" select="InvoiceXO.select_SimpleInvoicexo" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
@@ -85,7 +87,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceXSDetailTaxPrice],
 				[InvoiceXSDetailTaxMoney],
 				[InvoiceXSDetailFPQuantity],
-				[InvoiceXSDetailTax]
+				[InvoiceXSDetailTax],        
+        [Currency],
+        [ExchangeRate]
 			FROM
 				[dbo].[InvoiceXSDetail]
 			WHERE
@@ -160,7 +164,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceXSDetailTaxPrice],
 				[InvoiceXSDetailTaxMoney],
 				[InvoiceXSDetailFPQuantity],
-				[InvoiceXSDetailTax]
+				[InvoiceXSDetailTax],
+        [Currency],
+        [ExchangeRate]
 			) 
 			VALUES 
 			(
@@ -185,7 +191,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#InvoiceXSDetailTaxPrice#,
 				#InvoiceXSDetailTaxMoney#,
 				#InvoiceXSDetailFPQuantity#,
-				#InvoiceXSDetailTax#
+				#InvoiceXSDetailTax#,
+        #Currency#,
+        #ExchangeRate#
 			)
              ]]>
     </insert>
@@ -213,7 +221,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceXSDetailTaxPrice] = #InvoiceXSDetailTaxPrice#,
 				[InvoiceXSDetailTaxMoney] = #InvoiceXSDetailTaxMoney#,
 				[InvoiceXSDetailFPQuantity] = #InvoiceXSDetailFPQuantity#,
-				[InvoiceXSDetailTax] = #InvoiceXSDetailTax#
+				[InvoiceXSDetailTax] = #InvoiceXSDetailTax#,
+        [Currency]=#Currency#,
+        [ExchangeRate]=#ExchangeRate#
 			WHERE
 				[InvoiceXSDetailId] = #InvoiceXSDetailId#
                     ]]>

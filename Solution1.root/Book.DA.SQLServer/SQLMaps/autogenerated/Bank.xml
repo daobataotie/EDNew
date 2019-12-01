@@ -14,7 +14,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="BankPhone" column="BankPhone" />
       <result property="Description" column="Description" />
       <result property="Id" column="Id"/>
-      <result property="OrderId" column="OrderId"/>
+      <result property="OrderId" column="OrderId"/>    
+      <result property="SWIFTCode" column="SWIFTCode"/>
     </resultMap>
   </resultMaps>
 
@@ -99,7 +100,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [BankPhone],
       [Description],
       [Id],
-      [OrderId]
+      [OrderId],
+      [SWIFTCode]
       FROM
       [dbo].[Bank]
       WHERE
@@ -150,7 +152,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [BankPhone],
       [Description],
       [Id],
-      [OrderId]
+      [OrderId],
+      [SWIFTCode]
       )
       VALUES
       (
@@ -162,7 +165,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       #BankPhone#,
       #Description#,
       #Id#,
-      #OrderId#
+      #OrderId#,
+      #SWIFTCode#
       )
     </insert>
 
@@ -176,7 +180,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [BankPhone] = #BankPhone#,
       [Description] = #Description#,
       [Id]=#Id#,
-      [OrderId]=#OrderId#
+      [OrderId]=#OrderId#,
+      [SWIFTCode]=#SWIFTCode#
       WHERE
       [BankId] = #BankId#
     </update>

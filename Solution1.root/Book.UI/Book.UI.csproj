@@ -2940,11 +2940,11 @@
     <Compile Include="Invoices\XS\EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoices\XS\ListForm.cs">
+    <Compile Include="Invoices\XS\ListFormBackup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Invoices\XS\ListForm.Designer.cs">
-      <DependentUpon>ListForm.cs</DependentUpon>
+    <Compile Include="Invoices\XS\ListFormBackup.Designer.cs">
+      <DependentUpon>ListFormBackup.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\XS\R01.cs">
       <SubType>Component</SubType>
@@ -4391,6 +4391,63 @@
     <EmbeddedResource Include="Invoices\CO\SupplierShouldPay.resx">
       <DependentUpon>SupplierShouldPay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\ChooseInvoiceForm.resx">
+      <DependentUpon>ChooseInvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\ChoosePackingListForm.resx">
+      <DependentUpon>ChoosePackingListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\ConditionForm.resx">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\EditFormInvoice.resx">
+      <DependentUpon>EditFormInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\EditFormProformaInvoice.resx">
+      <DependentUpon>EditFormProformaInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\ListFormInvoice.resx">
+      <DependentUpon>ListFormInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\ListFormProformaInvoice.resx">
+      <DependentUpon>ListFormProformaInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\RO.resx">
+      <DependentUpon>RO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\ROInvoice.resx">
+      <DependentUpon>ROInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\IP\ROProformaInvoice.resx">
+      <DependentUpon>ROProformaInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\LH\ConditionForm.resx">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\LH\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\LH\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\LH\RO.resx">
+      <DependentUpon>RO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\LH\ROList.resx">
+      <DependentUpon>ROList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XS\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XS\ListForm.zh-CHT.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCClarityCheck\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -4535,6 +4592,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ChooseCustomsForm2.zh-CHT.resx">
       <DependentUpon>ChooseCustomsForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\ExchangeRate\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\Port\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\SupplierJiaohuoZhunshilv.resx">
       <DependentUpon>SupplierJiaohuoZhunshilv.cs</DependentUpon>
@@ -9349,13 +9412,13 @@
       <SubType>Designer</SubType>
       <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoices\XS\ListForm.resx">
+    <EmbeddedResource Include="Invoices\XS\ListFormBackup.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>ListForm.cs</DependentUpon>
+      <DependentUpon>ListFormBackup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoices\XS\ListForm.zh-CHT.resx">
+    <EmbeddedResource Include="Invoices\XS\ListFormBackup.zh-CHT.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>ListForm.cs</DependentUpon>
+      <DependentUpon>ListFormBackup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XS\R01.resx">
       <DependentUpon>R01.cs</DependentUpon>
@@ -11870,6 +11933,114 @@
     <Compile Include="Invoices\CO\SupplierShouldPay.Designer.cs">
       <DependentUpon>SupplierShouldPay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoices\IP\ChooseInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\ChooseInvoiceForm.Designer.cs">
+      <DependentUpon>ChooseInvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\ChoosePackingListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\ChoosePackingListForm.Designer.cs">
+      <DependentUpon>ChoosePackingListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\ConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\ConditionForm.Designer.cs">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\EditFormInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\EditFormInvoice.Designer.cs">
+      <DependentUpon>EditFormInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\EditFormProformaInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\EditFormProformaInvoice.Designer.cs">
+      <DependentUpon>EditFormProformaInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\ListFormInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\ListFormInvoice.Designer.cs">
+      <DependentUpon>ListFormInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\ListFormProformaInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\ListFormProformaInvoice.Designer.cs">
+      <DependentUpon>ListFormProformaInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\RO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\RO.Designer.cs">
+      <DependentUpon>RO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\ROInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\ROInvoice.Designer.cs">
+      <DependentUpon>ROInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\IP\ROProformaInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\IP\ROProformaInvoice.Designer.cs">
+      <DependentUpon>ROProformaInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\LH\ConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\LH\ConditionForm.Designer.cs">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\LH\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\LH\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\LH\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\LH\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\LH\RO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\LH\RO.Designer.cs">
+      <DependentUpon>RO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\LH\ROList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\LH\ROList.Designer.cs">
+      <DependentUpon>ROList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\XS\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\XS\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="produceManager\PCClarityCheck\EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12013,6 +12184,18 @@
     </Compile>
     <Compile Include="Settings\BasicData\Customs\ChooseCustomsForm2.Designer.cs">
       <DependentUpon>ChooseCustomsForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BasicData\ExchangeRate\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\BasicData\ExchangeRate\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BasicData\Port\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\BasicData\Port\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\BasicData\Supplier\SupplierJiaohuoZhunshilv.cs">
       <SubType>Form</SubType>

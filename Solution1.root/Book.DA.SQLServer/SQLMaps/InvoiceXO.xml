@@ -181,5 +181,11 @@
       select CustomerInvoiceXOId from InvoiceXO where InvoiceId = (select InvoiceXOId from PronoteHeader where PronoteHeaderID=#value#)
       ]]>
     </select>
+  
+    <select id="GetCurrencyByInvoiceId" resultClass="string" parameterClass="string">
+      <![CDATA[
+      select Currency from InvoiceXO where InvoiceId=#value#
+      ]]>
+    </select>
   </statements>
 </sqlMap>

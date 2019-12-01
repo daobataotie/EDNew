@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="ExchangeRate" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="IsExistsSame" parameterClass="Map" resultClass="bool">
+      <![CDATA[
+      select case when exists(select * from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency# and Id<>#Id#) then 1 else 0 end 
+      ]]>
+    </select>
+
+
+    <select id="GetUpRateByDateAndCurrency" parameterClass="Map" resultClass="decimal">
+      <![CDATA[
+      select top 1 ISNULL(UpRate,0) from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
+      ]]>
+    </select>
+
+    <select id="GetMiddleRateByDateAndCurrency" parameterClass="Map" resultClass="decimal">
+      <![CDATA[
+      select top 1 ISNULL(MiddleRate,0) from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
+      ]]>
+    </select>
+
+    <select id="GetDownRateByDateAndCurrency" parameterClass="Map" resultClass="decimal">
+      <![CDATA[
+      select top 1 ISNULL(DownRate,0) from ExchangeRate where YearValue=#YearValue# and MonthValue=#MonthValue# and Currency=#Currency#
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

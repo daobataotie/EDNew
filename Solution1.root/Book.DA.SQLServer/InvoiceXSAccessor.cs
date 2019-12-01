@@ -171,5 +171,49 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<string>("InvoiceXS.SelectByInvoiceCusID", ID);
         }
+
+        public DataTable SelectDateRangAndWhereToTable(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id, string productCategoryId)
+        {
+            StringBuilder sql = new StringBuilder(
+@"select xs.InvoiceId,xs.InvoiceDate,xs.InvoiceNote,c.CustomerShortName as Customer,e.EmployeeName as Employee0,dp.DepotName as Depot,xo.CustomerInvoiceXOId,isnull(xsd.InvoiceXSDetailPrice*xsd.InvoiceXSDetailQuantity,0)*(case when Donatetowards=1 then 0 else 1 end) as XOMoney,ISNULL(xsd.InvoiceXSDetailPrice*xsd.InvoiceXSDetailQuantity*(case when ExchangeRate = 0 then 1 when ExchangeRate is null then 1 else ExchangeRate end),0)*(case when Donatetowards=1 then 0 else 1 end) as XSMoney from InvoiceXSDetail xsd left join InvoiceXS xs on xs.InvoiceId=xsd.InvoiceId
+left join InvoiceXO xo on xo.InvoiceId=xsd.InvoiceXOId
+left join Depot dp on dp.DepotId=xs.DepotId
+left join Employee e on e.EmployeeId=xs.Employee0Id
+left join Customer c on c.CustomerId=xs.CustomerId");
+
+
+            sql.Append(" where (xs.InvoiceStatus<>2 or xs.InvoiceStatus is null) and (xs.InvoiceDate between '" + dateStart.Value.ToString("yyyy-MM-dd") + "' and '" + dateEnd.Value.ToString("yyyy-MM-dd HH:mm:ss") + "')");
+
+            if (customerStart != null && customerEnd != null)
+                sql.Append(" and  xs.customerid in (select CustomerId from Customer where Id between '" + customerStart.Id + "' and '" + customerEnd.Id + "')");
+            if (yjrq1 != global::Helper.DateTimeParse.NullDate && yjrq2 != global::Helper.DateTimeParse.EndDate)
+                sql.Append(" and xsd.InvoiceXOId in (select InvoiceId from InvoiceXO where InvoiceYjrq between '" + yjrq1.ToString("yyyy-MM-dd") + "' and '" + yjrq2.ToString("yyyy-MM-dd HH:mm:ss") + "')");
+            if (!string.IsNullOrEmpty(cusxoid))
+                sql.Append(" and xsd.InvoiceXOId in(select invoiceid from invoicexo where  CustomerInvoiceXOId = '" + cusxoid + "' )");
+            if (!string.IsNullOrEmpty(invoicexoid1) && !string.IsNullOrEmpty(invoicexoid2))
+                sql.Append(" and xs.InvoiceId between '" + invoicexoid1 + "' and '" + invoicexoid2 + "'");
+            if (product1 != null && product2 != null)
+                sql.Append(" and xsd.productid in (select ProductId from Product where Id between '" + product1.Id + "' and '" + product2.Id + "') ");
+            if (startEmp != null && endEmp != null)
+            {
+                sql.Append(" And xs.Employee0Id in (select EmployeeId from Employee where IDNo between '" + startEmp.IDNo + "' and '" + endEmp.IDNo + "')");
+            }
+            if (!string.IsNullOrEmpty(FreightedCompanyId))
+                sql.Append(" and  xs.TransportCompany='" + FreightedCompanyId + "'");
+            if (!string.IsNullOrEmpty(ConveyanceMethodId))
+                sql.Append(" and  xs.ConveyanceMethodId='" + ConveyanceMethodId + "'");
+            if (!string.IsNullOrEmpty(product_Id))
+                sql.Append(" and xsd.ProductId in (select ProductId from Product where Id='" + product_Id + "')");
+            if (!string.IsNullOrEmpty(productCategoryId))
+                sql.Append(" and xsd.productId in (select ProductId from Product where ProductCategoryId='" + productCategoryId + "') ");
+
+            sql.Append(" order by xs.InvoiceId");
+
+            SqlDataAdapter sda = new SqlDataAdapter(sql.ToString(), sqlmapper.DataSource.ConnectionString);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            return dt;
+        }
     }
 }

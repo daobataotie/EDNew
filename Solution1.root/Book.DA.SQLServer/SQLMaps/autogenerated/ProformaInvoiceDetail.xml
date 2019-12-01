@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="ProformaInvoiceDetail" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="ProformaInvoiceDetail" type="Book.Model.ProformaInvoiceDetail, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="ProformaInvoiceDetailResult" class="ProformaInvoiceDetail">
+			<result property="ProformaInvoiceDetailId" column="ProformaInvoiceDetailId" />
+			<result property="ProformaInvoiceId" column="ProformaInvoiceId" />
+			<result property="Number" column="Number" />
+			<result property="ProductId" column="ProductId" />
+			<result property="Quantity" column="Quantity" />
+			<result property="Unit" column="Unit" />
+			<result property="UnitPrice" column="UnitPrice" />
+			<result property="Amount" column="Amount" />
+		<result property="Product" column="ProductId" lazyLoad="false" select="Product.select_by_primary_key" />		<result property="ProformaInvoice" column="ProformaInvoiceId" lazyLoad="false" select="ProformaInvoice.select_by_primary_key" />        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProformaInvoiceDetail]
+				WHERE
+				[ProformaInvoiceDetailId] = #ProformaInvoiceDetailId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProformaInvoiceDetail]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="ProformaInvoiceDetailResult" parameterClass="ProformaInvoiceDetail">
+			<![CDATA[SELECT
+				[ProformaInvoiceDetailId],
+				[ProformaInvoiceId],
+				[Number],
+				[ProductId],
+				[Quantity],
+				[Unit],
+				[UnitPrice],
+				[Amount]
+			FROM
+				[dbo].[ProformaInvoiceDetail]
+			WHERE
+				[ProformaInvoiceDetailId] = #ProformaInvoiceDetailId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[ProformaInvoiceDetail]
+			WHERE            
+				[ProformaInvoiceDetailId] = #ProformaInvoiceDetailId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="ProformaInvoiceDetailResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[ProformaInvoiceDetail]
+                			                   
+
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[ProformaInvoiceDetail]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="ProformaInvoiceDetailResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[ProformaInvoiceDetail]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="ProformaInvoiceDetail">
+			 <![CDATA[ INSERT INTO [dbo].[ProformaInvoiceDetail] 
+			(
+				[ProformaInvoiceDetailId],
+				[ProformaInvoiceId],
+				[Number],
+				[ProductId],
+				[Quantity],
+				[Unit],
+				[UnitPrice],
+				[Amount]
+			) 
+			VALUES 
+			(
+				#ProformaInvoiceDetailId#,
+				#ProformaInvoiceId#,
+				#Number#,
+				#ProductId#,
+				#Quantity#,
+				#Unit#,
+				#UnitPrice#,
+				#Amount#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="ProformaInvoiceDetail">
+		 <![CDATA[ 	UPDATE [ProformaInvoiceDetail] SET
+				[ProformaInvoiceId] = #ProformaInvoiceId#,
+				[Number] = #Number#,
+				[ProductId] = #ProductId#,
+				[Quantity] = #Quantity#,
+				[Unit] = #Unit#,
+				[UnitPrice] = #UnitPrice#,
+				[Amount] = #Amount#
+			WHERE
+				[ProformaInvoiceDetailId] = #ProformaInvoiceDetailId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[ProformaInvoiceDetail]
+				where  ProformaInvoiceDetailId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>

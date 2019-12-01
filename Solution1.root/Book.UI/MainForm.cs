@@ -261,12 +261,12 @@ namespace Book.UI
                 this.barSubItem54.Enabled = false;
 
             //库存预警
-            if (BL.V.ActiveOperator.IsShowStockPrompt)
-            {
-                StockPrompt form = new StockPrompt();
-                if (form.productList.Count > 0)
-                    form.ShowDialog();
-            }
+            //if (BL.V.ActiveOperator.IsShowStockPrompt)
+            //{
+            //    StockPrompt form = new StockPrompt();
+            //    if (form.productList.Count > 0)
+            //        form.ShowDialog();
+            //}
             ////长期未出仓商品
             //if (BL.Settings.NoDepotOutProducts == "1")
             //{
@@ -274,12 +274,12 @@ namespace Book.UI
             //    if (form.dt.Rows.Count > 0)
             //        form.ShowDialog();
             //}
-            if (DateTime.Now.Day == 1 && BL.V.RoleList.Any(R => R.RoleName == "倉庫"))
-            {
-                Settings.StockLimitations.NoDepotOutProducts form = new Book.UI.Settings.StockLimitations.NoDepotOutProducts();
-                //if (form.dt.Rows.Count > 0)
-                form.ShowDialog();
-            }
+            //if (DateTime.Now.Day == 1 && BL.V.RoleList.Any(R => R.RoleName == "倉庫"))
+            //{
+            //    Settings.StockLimitations.NoDepotOutProducts form = new Book.UI.Settings.StockLimitations.NoDepotOutProducts();
+            //    //if (form.dt.Rows.Count > 0)
+            //    form.ShowDialog();
+            //}
 
             if (this.barButtonItem5.Enabled)
                 customer_Jurisdiction = true;

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="ProformaInvoiceDetail" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectByHeader" parameterClass="string" resultMap="ProformaInvoiceDetailResult">
+      <![CDATA[
+      select * from ProformaInvoiceDetail where ProformaInvoiceId=#value# order by Number
+      ]]>
+    </select>
+
+    <delete id="DeleteByHeader" parameterClass="string">
+      <![CDATA[
+      delete from ProformaInvoiceDetail where ProformaInvoiceId=#value#
+      ]]>
+    </delete>
+  </statements>
+</sqlMap>

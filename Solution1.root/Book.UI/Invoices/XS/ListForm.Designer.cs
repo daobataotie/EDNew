@@ -33,21 +33,13 @@ namespace Book.UI.Invoices.XS
             this.colInvoiceId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmployee0Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCompanyId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDepotId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoiceDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoicePayTimeLimit = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoiceOwed = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoiceTotal1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoiceStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoiceAbstract = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoiceTotal0 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoiceZKE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoiceZSE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInvoiceYHE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDepotId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colInvoiceDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
@@ -69,18 +61,10 @@ namespace Book.UI.Invoices.XS
             this.colCompanyId,
             this.gridColumn2,
             this.gridColumn3,
+            this.gridColumn4,
             this.colDepotId,
             this.colInvoiceDate,
-            this.colInvoicePayTimeLimit,
-            this.colInvoiceOwed,
-            this.colInvoiceTotal1,
-            this.gridColumn1,
-            this.colInvoiceStatus,
-            this.colInvoiceAbstract,
-            this.colInvoiceTotal0,
-            this.colInvoiceZKE,
-            this.colInvoiceZSE,
-            this.colInvoiceYHE});
+            this.gridColumn1});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -118,6 +102,24 @@ namespace Book.UI.Invoices.XS
             this.colCompanyId.FieldName = "Customer";
             this.colCompanyId.Name = "colCompanyId";
             // 
+            // gridColumn2
+            // 
+            resources.ApplyResources(this.gridColumn2, "gridColumn2");
+            this.gridColumn2.FieldName = "CustomerInvoiceXOId";
+            this.gridColumn2.Name = "gridColumn2";
+            // 
+            // gridColumn3
+            // 
+            resources.ApplyResources(this.gridColumn3, "gridColumn3");
+            this.gridColumn3.FieldName = "XOMoney";
+            this.gridColumn3.Name = "gridColumn3";
+            // 
+            // gridColumn4
+            // 
+            resources.ApplyResources(this.gridColumn4, "gridColumn4");
+            this.gridColumn4.FieldName = "XSMoney";
+            this.gridColumn4.Name = "gridColumn4";
+            // 
             // colDepotId
             // 
             this.colDepotId.AppearanceCell.Options.UseTextOptions = true;
@@ -138,94 +140,11 @@ namespace Book.UI.Invoices.XS
             this.colInvoiceDate.FieldName = "InvoiceDate";
             this.colInvoiceDate.Name = "colInvoiceDate";
             // 
-            // colInvoicePayTimeLimit
-            // 
-            this.colInvoicePayTimeLimit.AppearanceCell.Options.UseTextOptions = true;
-            this.colInvoicePayTimeLimit.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colInvoicePayTimeLimit.AppearanceHeader.Options.UseTextOptions = true;
-            this.colInvoicePayTimeLimit.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            resources.ApplyResources(this.colInvoicePayTimeLimit, "colInvoicePayTimeLimit");
-            this.colInvoicePayTimeLimit.FieldName = "InvoicePayTimeLimit";
-            this.colInvoicePayTimeLimit.Name = "colInvoicePayTimeLimit";
-            // 
-            // colInvoiceOwed
-            // 
-            this.colInvoiceOwed.AppearanceCell.Options.UseTextOptions = true;
-            this.colInvoiceOwed.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.colInvoiceOwed.AppearanceHeader.Options.UseTextOptions = true;
-            this.colInvoiceOwed.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            resources.ApplyResources(this.colInvoiceOwed, "colInvoiceOwed");
-            this.colInvoiceOwed.FieldName = "InvoiceOwed";
-            this.colInvoiceOwed.Name = "colInvoiceOwed";
-            this.colInvoiceOwed.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            // 
-            // colInvoiceTotal1
-            // 
-            this.colInvoiceTotal1.AppearanceCell.Options.UseTextOptions = true;
-            this.colInvoiceTotal1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.colInvoiceTotal1.AppearanceHeader.Options.UseTextOptions = true;
-            this.colInvoiceTotal1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            resources.ApplyResources(this.colInvoiceTotal1, "colInvoiceTotal1");
-            this.colInvoiceTotal1.FieldName = "InvoiceZongJi";
-            this.colInvoiceTotal1.Name = "colInvoiceTotal1";
-            this.colInvoiceTotal1.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            // 
             // gridColumn1
             // 
             resources.ApplyResources(this.gridColumn1, "gridColumn1");
             this.gridColumn1.FieldName = "InvoiceNote";
             this.gridColumn1.Name = "gridColumn1";
-            // 
-            // colInvoiceStatus
-            // 
-            this.colInvoiceStatus.AppearanceCell.Options.UseTextOptions = true;
-            this.colInvoiceStatus.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colInvoiceStatus.AppearanceHeader.Options.UseTextOptions = true;
-            this.colInvoiceStatus.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            resources.ApplyResources(this.colInvoiceStatus, "colInvoiceStatus");
-            this.colInvoiceStatus.FieldName = "InvoiceStatusDesc";
-            this.colInvoiceStatus.Name = "colInvoiceStatus";
-            // 
-            // colInvoiceAbstract
-            // 
-            this.colInvoiceAbstract.AppearanceCell.Options.UseTextOptions = true;
-            this.colInvoiceAbstract.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.colInvoiceAbstract.AppearanceHeader.Options.UseTextOptions = true;
-            this.colInvoiceAbstract.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            resources.ApplyResources(this.colInvoiceAbstract, "colInvoiceAbstract");
-            this.colInvoiceAbstract.FieldName = "InvoiceAbstract";
-            this.colInvoiceAbstract.Name = "colInvoiceAbstract";
-            this.colInvoiceAbstract.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colInvoiceAbstract.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.colInvoiceAbstract.OptionsFilter.AllowFilter = false;
-            // 
-            // colInvoiceTotal0
-            // 
-            resources.ApplyResources(this.colInvoiceTotal0, "colInvoiceTotal0");
-            this.colInvoiceTotal0.FieldName = "InvoiceYiFu";
-            this.colInvoiceTotal0.Name = "colInvoiceTotal0";
-            this.colInvoiceTotal0.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            // 
-            // colInvoiceZKE
-            // 
-            resources.ApplyResources(this.colInvoiceZKE, "colInvoiceZKE");
-            this.colInvoiceZKE.FieldName = "InvoiceZKE";
-            this.colInvoiceZKE.Name = "colInvoiceZKE";
-            this.colInvoiceZKE.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            // 
-            // colInvoiceZSE
-            // 
-            resources.ApplyResources(this.colInvoiceZSE, "colInvoiceZSE");
-            this.colInvoiceZSE.FieldName = "InvoiceZSE";
-            this.colInvoiceZSE.Name = "colInvoiceZSE";
-            this.colInvoiceZSE.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            // 
-            // colInvoiceYHE
-            // 
-            resources.ApplyResources(this.colInvoiceYHE, "colInvoiceYHE");
-            this.colInvoiceYHE.FieldName = "InvoiceYHE";
-            this.colInvoiceYHE.Name = "colInvoiceYHE";
-            this.colInvoiceYHE.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             // 
             // gridControl1
             // 
@@ -235,18 +154,7 @@ namespace Book.UI.Invoices.XS
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // gridColumn2
-            // 
-            resources.ApplyResources(this.gridColumn2, "gridColumn2");
-            this.gridColumn2.FieldName = "XSCustomer";
-            this.gridColumn2.Name = "gridColumn2";
-            // 
-            // gridColumn3
-            // 
-            resources.ApplyResources(this.gridColumn3, "gridColumn3");
-            this.gridColumn3.FieldName = "InvoiceXO.CustomerInvoiceXOId";
-            this.gridColumn3.Name = "gridColumn3";
+            this.gridControl1.ViewRegistered += new DevExpress.XtraGrid.ViewOperationEventHandler(this.gridControl1_ViewRegistered);
             // 
             // ListForm
             // 
@@ -270,15 +178,6 @@ namespace Book.UI.Invoices.XS
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colInvoiceId;
         private DevExpress.XtraGrid.Columns.GridColumn colInvoiceDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceAbstract;
-        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceStatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceTotal1;
-        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceYHE;
-        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceZSE;
-        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceZKE;
-        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceTotal0;
-        private DevExpress.XtraGrid.Columns.GridColumn colInvoicePayTimeLimit;
-        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceOwed;
         private DevExpress.XtraGrid.Columns.GridColumn colCompanyId;
         private DevExpress.XtraGrid.Columns.GridColumn colEmployee0Id;
         private DevExpress.XtraGrid.Columns.GridColumn colDepotId;
@@ -286,5 +185,6 @@ namespace Book.UI.Invoices.XS
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
     }
 }

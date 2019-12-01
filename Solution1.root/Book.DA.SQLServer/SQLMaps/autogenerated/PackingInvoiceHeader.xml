@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PackingInvoiceHeader" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="PackingInvoiceHeader" type="Book.Model.PackingInvoiceHeader, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="PackingInvoiceHeaderResult" class="PackingInvoiceHeader">
+      <result property="InvoiceNo" column="InvoiceNo" />
+      <result property="InvoiceDate" column="InvoiceDate" />
+      <result property="CustomerId" column="CustomerId" />
+      <result property="PerSS" column="PerSS" />
+      <result property="SailingOnOrAbout" column="SailingOnOrAbout" />
+      <result property="FromPortId" column="FromPortId" />
+      <result property="ToPortId" column="ToPortId" />
+      <result property="MarkNos" column="MarkNos" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="CustomerFullName" column="CustomerFullName"/>
+      <result property="CustomerAddress" column="CustomerAddress"/>
+      <result property="TradingCondition" column="TradingCondition"/>
+      <result property="Unit" column="Unit"/>
+      <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />
+      <result property="FromPort" column="FromPortId" lazyLoad="false" select="Port.select_by_primary_key" />
+      <result property="ToPort" column="ToPortId" lazyLoad="false" select="Port.select_by_primary_key" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PackingInvoiceHeader]
+				WHERE
+				[InvoiceNo] = #InvoiceNo#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PackingInvoiceHeader]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="get_first" resultMap="PackingInvoiceHeaderResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.PackingInvoiceHeader
+			 
+			order by InsertTime 
+			]]>
+    </select>
+    <select id="get_last" resultMap="PackingInvoiceHeaderResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.PackingInvoiceHeader
+						
+            order by InsertTime desc
+			]]>
+
+    </select>
+    <select id="get_prev" resultMap="PackingInvoiceHeaderResult" parameterClass="PackingInvoiceHeader">
+      <![CDATA[
+			select top 1 *
+			from dbo.PackingInvoiceHeader
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+    </select>
+    <select id="get_next" resultMap="PackingInvoiceHeaderResult" parameterClass="PackingInvoiceHeader">
+      <![CDATA[
+			select top 1 *
+			from dbo.PackingInvoiceHeader
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+    </select>
+
+    <select id="has_rows_before" resultClass="bool" parameterClass="PackingInvoiceHeader">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PackingInvoiceHeader
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+    </select>
+
+    <select id="has_rows_after" resultClass="bool" parameterClass="PackingInvoiceHeader">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PackingInvoiceHeader
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="PackingInvoiceHeaderResult" parameterClass="PackingInvoiceHeader">
+      <![CDATA[SELECT
+				[InvoiceNo],
+				[InvoiceDate],
+				[CustomerId],
+				[PerSS],
+				[SailingOnOrAbout],
+				[FromPortId],
+				[ToPortId],
+				[MarkNos],
+				[InsertTime],
+				[UpdateTime],
+        [CustomerFullName],
+        [CustomerAddress],
+        [TradingCondition],
+        [Unit]
+			FROM
+				[dbo].[PackingInvoiceHeader]
+			WHERE
+				[InvoiceNo] = #InvoiceNo#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[PackingInvoiceHeader]
+			WHERE            
+				[InvoiceNo] = #InvoiceNo#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="PackingInvoiceHeaderResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[PackingInvoiceHeader]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[PackingInvoiceHeader]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="PackingInvoiceHeaderResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PackingInvoiceHeader]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="PackingInvoiceHeader">
+      <![CDATA[ INSERT INTO [dbo].[PackingInvoiceHeader] 
+			(
+				[InvoiceNo],
+				[InvoiceDate],
+				[CustomerId],
+				[PerSS],
+				[SailingOnOrAbout],
+				[FromPortId],
+				[ToPortId],
+				[MarkNos],
+				[InsertTime],
+				[UpdateTime],
+        [CustomerFullName],
+        [CustomerAddress],
+        [TradingCondition],
+        [Unit]
+			) 
+			VALUES 
+			(
+				#InvoiceNo#,
+				#InvoiceDate#,
+				#CustomerId#,
+				#PerSS#,
+				#SailingOnOrAbout#,
+				#FromPortId#,
+				#ToPortId#,
+				#MarkNos#,
+				#InsertTime#,
+				#UpdateTime#,
+        #CustomerFullName#,
+        #CustomerAddress#,
+        #TradingCondition#,
+        #Unit#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="PackingInvoiceHeader">
+      <![CDATA[ 	UPDATE [PackingInvoiceHeader] SET
+				[InvoiceDate] = #InvoiceDate#,
+				[CustomerId] = #CustomerId#,
+				[PerSS] = #PerSS#,
+				[SailingOnOrAbout] = #SailingOnOrAbout#,
+				[FromPortId] = #FromPortId#,
+				[ToPortId] = #ToPortId#,
+				[MarkNos] = #MarkNos#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#,
+        [CustomerFullName]=#CustomerFullName#,
+        [CustomerAddress]=#CustomerAddress#,
+        [TradingCondition]=#TradingCondition#,
+        [Unit]=#Unit#
+			WHERE
+				[InvoiceNo] = #InvoiceNo#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PackingInvoiceHeader]
+				where  InvoiceNo = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

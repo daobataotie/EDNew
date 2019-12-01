@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PackingListDetail" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="PackingListDetail" type="Book.Model.PackingListDetail, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="PackingListDetailResult" class="PackingListDetail">
+      <result property="PackingListDetailId" column="PackingListDetailId" />
+      <result property="PackingListHeaderId" column="PackingListHeaderId" />
+      <result property="PLTNo" column="PLTNo" />
+      <result property="CartonNo" column="CartonNo" />
+      <result property="PONo" column="PONo" />
+      <result property="ProductId" column="ProductId" />
+      <result property="BoxMaxQuantity" column="BoxMaxQuantity" />
+      <result property="BoxMaxNetWeight" column="BoxMaxNetWeight" />
+      <result property="BoxMaxGrossWeight" column="BoxMaxGrossWeight" />
+      <result property="Quantity" column="Quantity" />
+      <result property="NetWeight" column="NetWeight" />
+      <result property="GrossWeight" column="GrossWeight" />
+      <result property="CartonQty" column="CartonQty"/>
+      <result property="InvoiceXODetailId" column="InvoiceXODetailId"/>
+      <result property="PackingListHeader" column="PackingListHeaderId" lazyLoad="false" select="PackingListHeader.select_by_primary_key" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_QuickProduct" />
+      <result property="InvoiceXODetail" column="InvoiceXODetailId" lazyLoad="false" select="InvoiceXODetail.select_FastXODetail"/>
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PackingListDetail]
+				WHERE
+				[PackingListDetailId] = #PackingListDetailId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PackingListDetail]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="PackingListDetailResult" parameterClass="PackingListDetail">
+      <![CDATA[SELECT
+				[PackingListDetailId],
+				[PackingListHeaderId],
+				[PLTNo],
+				[CartonNo],
+				[PONo],
+				[ProductId],
+				[BoxMaxQuantity],
+				[BoxMaxNetWeight],
+				[BoxMaxGrossWeight],
+				[Quantity],
+				[NetWeight],
+				[GrossWeight],
+        [CartonQty],
+        [InvoiceXODetailId]
+			FROM
+				[dbo].[PackingListDetail]
+			WHERE
+				[PackingListDetailId] = #PackingListDetailId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[PackingListDetail]
+			WHERE            
+				[PackingListDetailId] = #PackingListDetailId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="PackingListDetailResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[PackingListDetail]
+                			                   
+
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[PackingListDetail]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="PackingListDetailResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PackingListDetail]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="PackingListDetail">
+      <![CDATA[ INSERT INTO [dbo].[PackingListDetail] 
+			(
+				[PackingListDetailId],
+				[PackingListHeaderId],
+				[PLTNo],
+				[CartonNo],
+				[PONo],
+				[ProductId],
+				[BoxMaxQuantity],
+				[BoxMaxNetWeight],
+				[BoxMaxGrossWeight],
+				[Quantity],
+				[NetWeight],
+				[GrossWeight],
+        [CartonQty],
+        [InvoiceXODetailId]
+			) 
+			VALUES 
+			(
+				#PackingListDetailId#,
+				#PackingListHeaderId#,
+				#PLTNo#,
+				#CartonNo#,
+				#PONo#,
+				#ProductId#,
+				#BoxMaxQuantity#,
+				#BoxMaxNetWeight#,
+				#BoxMaxGrossWeight#,
+				#Quantity#,
+				#NetWeight#,
+				#GrossWeight#,
+        #CartonQty#,
+        #InvoiceXODetailId#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="PackingListDetail">
+      <![CDATA[ 	UPDATE [PackingListDetail] SET
+				[PackingListHeaderId] = #PackingListHeaderId#,
+				[PLTNo] = #PLTNo#,
+				[CartonNo] = #CartonNo#,
+				[PONo] = #PONo#,
+				[ProductId] = #ProductId#,
+				[BoxMaxQuantity] = #BoxMaxQuantity#,
+				[BoxMaxNetWeight] = #BoxMaxNetWeight#,
+				[BoxMaxGrossWeight] = #BoxMaxGrossWeight#,
+				[Quantity] = #Quantity#,
+				[NetWeight] = #NetWeight#,
+				[GrossWeight] = #GrossWeight#,
+        [CartonQty]=#CartonQty#,
+        [InvoiceXODetailId]=#InvoiceXODetailId#
+			WHERE
+				[PackingListDetailId] = #PackingListDetailId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PackingListDetail]
+				where  PackingListDetailId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

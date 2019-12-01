@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.BL
 {
@@ -354,6 +355,11 @@ namespace Book.BL
         public string SelectByInvoiceCusID(string ID)
         {
             return accessor.SelectByInvoiceCusID(ID);
+        }
+
+        public DataTable SelectDateRangAndWhereToTable(Model.Customer customerStart, Model.Customer customerEnd, DateTime? dateStart, DateTime? dateEnd, DateTime yjrq1, DateTime yjrq2, string cusxoid, Model.Product product1, Model.Product product2, string invoicexoid1, string invoicexoid2, string FreightedCompanyId, string ConveyanceMethodId, Model.Employee startEmp, Model.Employee endEmp, string product_Id, string productCategoryId)
+        {
+            return accessor.SelectDateRangAndWhereToTable(customerStart, customerEnd, dateStart, dateEnd, yjrq1, yjrq2, cusxoid, product1, product2, invoicexoid1, invoicexoid2, FreightedCompanyId, ConveyanceMethodId, startEmp, endEmp, product_Id, productCategoryId);
         }
     }
 }

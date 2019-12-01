@@ -469,6 +469,11 @@ namespace Book.BL
         {
             return accessor.SelectCusXOIdByPronoteHeaderId(id);
         }
+
+        public string GetCurrencyByInvoiceId(string invoiceId)
+        {
+            return accessor.GetCurrencyByInvoiceId(invoiceId);
+        }
     }
 }
 

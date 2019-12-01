@@ -1,7 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <sqlMap namespace="InvoiceXODetail" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+  <resultMaps>
+    <resultMap id="InvoiceXODetailResult1" class="InvoiceXODetail">
+      <result property="InvoiceXODetailId" column="InvoiceXODetailId" />
+      <result property="PrimaryKeyId" column="PrimaryKeyId" />
+      <result property="InvoiceId" column="InvoiceId" />
+      <result property="InvoiceXODetailQuantity" column="InvoiceXODetailQuantity" />
+      <result property="InvoiceXODetailPrice" column="InvoiceXODetailPrice" />
+      <result property="InvoiceXODetailMoney" column="InvoiceXODetailMoney" />
+      <result property="InvoiceXODetailBeenQuantity" column="InvoiceXODetailBeenQuantity" />
+      <result property="TotalMoney" column="TotalMoney" />
+      <result property="InvoiceXODetailQuantity0" column="InvoiceXODetailQuantity0" />
+      <result property="DetailsFlag" column="DetailsFlag" />
+      <result property="InvoiceXODetailNote" column="InvoiceXODetailNote" />
+      <result property="InvoiceProductUnit" column="InvoiceProductUnit" />
+      <result property="IsCustomerProduct" column="IsCustomerProduct" />
+      <result property="CustomerId" column="CustomerId" />
+      <result property="ProductId" column="ProductId" />
+      <result property="InvoiceMPSQuantity" column="InvoiceMPSQuantity" />
+      <result property="Checkeds" column="Checkeds" />
+      <result property="InvoiceAllowance" column="InvoiceAllowance" />
+      <result property="Islargess" column="Islargess" />
+      <result property="DetailMPSState" column="DetailMPSState" />
+      <result property="Inumber" column="Inumber" />
+      <result property="IsConfirmed" column="IsConfirmed" />
+      <result property="InvoiceXTDetailQuantity" column="InvoiceXTDetailQuantity" />
+      <result property="Remark" column="Remark" />
+      <result property="IsNeedMPS" column="IsNeedMPS"/>
+    </resultMap>
+  </resultMaps>
+  
   <statements>
+    <select id="select_FastXODetail" resultMap="InvoiceXODetailResult1" parameterClass="InvoiceXODetail">
+      SELECT
+      [InvoiceXODetailId],
+      [PrimaryKeyId],
+      [InvoiceId],
+      [InvoiceXODetailQuantity],
+      [InvoiceXODetailPrice],
+      [InvoiceXODetailMoney],
+      [InvoiceXODetailBeenQuantity],
+      [TotalMoney],
+      [InvoiceXODetailQuantity0],
+      [DetailsFlag],
+      [InvoiceXODetailNote],
+      [InvoiceProductUnit],
+      [IsCustomerProduct],
+      [CustomerId],
+      [ProductId],
+      [InvoiceMPSQuantity],
+      [Checkeds],
+      [InvoiceAllowance],
+      [Islargess],
+      [DetailMPSState],
+      [Inumber],
+      [IsConfirmed],
+      [InvoiceXTDetailQuantity],
+      [Remark],
+      [IsNeedMPS]
+      FROM
+      [dbo].[InvoiceXODetail]
+      WHERE
+      [InvoiceXODetailId] = #InvoiceXODetailId#
+    </select>
+    
     <select id="select_by_invoiceid" resultMap="InvoiceXODetailResult" parameterClass="string">
       SELECT *
       FROM

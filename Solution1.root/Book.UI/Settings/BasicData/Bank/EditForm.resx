@@ -344,11 +344,32 @@
         ptqhH7gSLOXhffv66qJ+bRnzE8ZWeMX4bIQGAAAAAElFTkSuQmCCCw==
 </value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txt_SWIFTCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 82</value>
+  </data>
+  <data name="txt_SWIFTCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 21</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txt_SWIFTCode.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txt_SWIFTCode.Name" xml:space="preserve">
+    <value>txt_SWIFTCode</value>
+  </data>
+  <data name="&gt;&gt;txt_SWIFTCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_SWIFTCode.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;txt_SWIFTCode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="spe_OrderID.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="spe_OrderID.Location" type="System.Drawing.Point, System.Drawing">
     <value>463, 12</value>
   </data>
@@ -368,13 +389,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spe_OrderID.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txt_Id.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 12</value>
+    <value>284, 12</value>
   </data>
   <data name="txt_Id.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>90, 21</value>
   </data>
   <data name="txt_Id.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -389,13 +410,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Id.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="textEditDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 37</value>
+    <value>97, 37</value>
   </data>
   <data name="textEditDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>437, 65</value>
+    <value>416, 41</value>
   </data>
   <data name="textEditDescription.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -410,13 +431,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditDescription.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <metadata name="bindingSourceBank.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>303, 17</value>
   </metadata>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 106</value>
+    <value>12, 107</value>
   </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>账号</value>
@@ -467,7 +488,7 @@
     <value>False</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>501, 229</value>
+    <value>501, 228</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -482,13 +503,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="textEditName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 12</value>
+    <value>97, 12</value>
   </data>
   <data name="textEditName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 21</value>
+    <value>98, 21</value>
   </data>
   <data name="textEditName.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -503,7 +524,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditName.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 40</value>
@@ -543,6 +564,12 @@
   </data>
   <data name="layoutControlItem5.Text" xml:space="preserve">
     <value>排序順序：</value>
+  </data>
+  <data name="layoutControlItem6.CustomizationFormText" xml:space="preserve">
+    <value>SWIFT Code：</value>
+  </data>
+  <data name="layoutControlItem6.Text" xml:space="preserve">
+    <value>SWIFT Code：</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
@@ -686,6 +713,12 @@
     <value>layoutControlItem5</value>
   </data>
   <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
+    <value>layoutControlItem6</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

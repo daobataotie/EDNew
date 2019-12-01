@@ -169,6 +169,8 @@ namespace Book.UI.Settings.BasicData.Customs
             if (!string.IsNullOrEmpty(this.richTextBoxMarks3.Text))
                 this._customer.Marks3 = this.richTextBoxMarks3.Rtf;
             this._customer.CustomerFP = this.comboBoxEditFP.Text;
+            this._customer.TradingCondition = this.txt_TradingCondition.Text;
+            this._customer.PayCondition = this.txt_PayCondition.Text;
 
             switch (this.action)
             {
@@ -288,6 +290,8 @@ namespace Book.UI.Settings.BasicData.Customs
 
             this.txt_Create.Text = this._customer.EmployeeCreatorId;
             this.txt_Update.Text = this._customer.EmployeeChangeId;
+            this.txt_TradingCondition.Text = this._customer.TradingCondition;
+            this.txt_PayCondition.Text = this._customer.PayCondition;
 
             //switch (this.action)
             //{

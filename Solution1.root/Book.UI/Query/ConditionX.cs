@@ -143,6 +143,13 @@ namespace Book.UI.Query
             set { _special = value; }
         }
 
+
+        public string Product_Id { get; set; }
+
+        public string ProductCategoryId { get; set; }
+
+        public string Currency { get; set; }
+
         public Model.Customer XOCustomerId1 { get; set; }
 
         public Model.Customer XOCustomerId2 { get; set; }

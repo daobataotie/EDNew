@@ -637,7 +637,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     {
                         //Invoices.XS.EditForm xc = new Book.UI.Invoices.XS.EditForm(str);
                         //xc.Show(this);
-                        Invoices.XS.ListForm listform = new Book.UI.Invoices.XS.ListForm(invoiceCusId);
+                        Invoices.XS.ListFormBackup listform = new Book.UI.Invoices.XS.ListFormBackup(invoiceCusId);
                         listform.Show(this);
                     }
                     else if (name.Contains("生產日報表") || name.Contains("強化/防霧工作日報表") || name.Contains("品檢日報表") || name.Contains("成品組裝日報表"))

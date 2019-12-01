@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PackingInvoiceDetail" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectByHeader" parameterClass="string" resultMap="PackingInvoiceDetailResult">
+      select * from PackingInvoiceDetail where PackingInvoiceHeaderId=#value# order by PONo
+    </select>
+
+    <delete id="DeleteByHeader" parameterClass="string">
+      delete from PackingInvoiceDetail where PackingInvoiceHeaderId=#value#
+    </delete>
+  </statements>
+</sqlMap>

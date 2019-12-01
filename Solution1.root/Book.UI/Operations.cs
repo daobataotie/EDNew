@@ -788,6 +788,25 @@ namespace Book.UI
 
             //清晰度报告
             operations.Add("produceManager.PCClarityCheck.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCClarityCheck.EditForm", form); });
+
+            //港口
+            operations.Add("Settings.BasicData.Port.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Port.EditForm", form); });
+
+            //设置匯率
+            operations.Add("Settings.BasicData.ExchangeRate.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.ExchangeRate.EditForm", form); });
+
+            //理货单
+            operations.Add("Invoices.LH.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.LH.EditForm", form); });
+
+
+            //PackingList
+            operations.Add("Invoices.IP.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditForm", form); });
+
+            //Packing Invoice
+            operations.Add("Invoices.IP.EditFormInvoice", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditFormInvoice", form); });
+
+            //ProformaInvoice
+            operations.Add("Invoices.IP.EditFormProformaInvoice", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditFormProformaInvoice", form); });
         }
 
         static Form CreateForm(string formTypeName)

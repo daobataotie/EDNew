@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="Port" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="Port" type="Book.Model.Port, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="PortResult" class="Port">
+			<result property="PortId" column="PortId" />
+			<result property="Id" column="Id" />
+			<result property="PortName" column="PortName" />
+        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[Port]
+				WHERE
+				[PortId] = #PortId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[Port]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="PortResult" parameterClass="Port">
+			<![CDATA[SELECT
+				[PortId],
+				[Id],
+				[PortName]
+			FROM
+				[dbo].[Port]
+			WHERE
+				[PortId] = #PortId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[Port]
+			WHERE            
+				[PortId] = #PortId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="PortResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[Port]
+                			                   
+			ORDER BY Id ASC			
+			
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[Port]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="PortResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[Port]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="Port">
+			 <![CDATA[ INSERT INTO [dbo].[Port] 
+			(
+				[PortId],
+				[Id],
+				[PortName]
+			) 
+			VALUES 
+			(
+				#PortId#,
+				#Id#,
+				#PortName#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="Port">
+		 <![CDATA[ 	UPDATE [Port] SET
+				[Id] = #Id#,
+				[PortName] = #PortName#
+			WHERE
+				[PortId] = #PortId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[Port]
+				where  PortId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		<select id="exists" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.Port
+				where Id = #value#
+               			          
+         
+				) then 1 else 0 end
+			]]>
+		</select>
+		
+		<select id="get_by_id" resultMap="PortResult" parameterClass="string">
+			<![CDATA[
+			SELECT top 1
+				*
+			FROM
+				[dbo].[Port]
+                    			          
+         
+			WHERE
+				Id = #value#
+			]]>	
+        </select>
+		
+		<select id="existsexcept" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from dbo.Port
+				where Id = #newId# and Id <> #oldId#
+                    			          
+         
+				)
+				then 1 else 0 end
+			]]>
+		</select>		
+		
+		
+    </statements>
+</sqlMap>

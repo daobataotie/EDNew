@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="InvoiceLH" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="InvoiceLH" type="Book.Model.InvoiceLH, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="InvoiceLHResult" class="InvoiceLH">
+      <result property="InvoiceId" column="InvoiceId" />
+      <result property="CustomerId" column="CustomerId" />
+      <result property="ConveyanceMethodId" column="ConveyanceMethodId" />
+      <result property="InvoiceDate" column="InvoiceDate" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="EmpCreaterId" column="EmpCreaterId" />
+      <result property="EmpShengguanId" column="EmpShengguanId" />
+      <result property="EmpShechuId" column="EmpShechuId" />
+      <result property="EmpPinjianId" column="EmpPinjianId" />
+      <result property="EmpDepotId" column="EmpDepotId" />
+      <result property="AuditState" column="AuditState" />
+      <result property="AuditEmpId" column="AuditEmpId" />
+      <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_by_primary_key" />
+      <result property="ConveyanceMethod" column="ConveyanceMethodId" lazyLoad="false" select="ConveyanceMethod.select_by_primary_key" />
+      <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />
+      <result property="EmpCreater" column="EmpCreaterId" lazyLoad="false" select="Employee.select_by_primary_key" />
+      <result property="EmpDepot" column="EmpDepotId" lazyLoad="false" select="Employee.select_by_primary_key" />
+      <result property="EmpPinjian" column="EmpPinjianId" lazyLoad="false" select="Employee.select_by_primary_key" />
+      <result property="EmpShechu" column="EmpShechuId" lazyLoad="false" select="Employee.select_by_primary_key" />
+      <result property="EmpShengguan" column="EmpShengguanId" lazyLoad="false" select="Employee.select_by_primary_key" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[InvoiceLH]
+				WHERE
+				[InvoiceId] = #InvoiceId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[InvoiceLH]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="get_first" resultMap="InvoiceLHResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.InvoiceLH
+			 
+			order by InsertTime 
+			]]>
+    </select>
+    <select id="get_last" resultMap="InvoiceLHResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.InvoiceLH
+						
+            order by InsertTime desc
+			]]>
+
+    </select>
+    <select id="get_prev" resultMap="InvoiceLHResult" parameterClass="InvoiceLH">
+      <![CDATA[
+			select top 1 *
+			from dbo.InvoiceLH
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+    </select>
+    <select id="get_next" resultMap="InvoiceLHResult" parameterClass="InvoiceLH">
+      <![CDATA[
+			select top 1 *
+			from dbo.InvoiceLH
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+    </select>
+
+    <select id="has_rows_before" resultClass="bool" parameterClass="InvoiceLH">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.InvoiceLH
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+    </select>
+
+    <select id="has_rows_after" resultClass="bool" parameterClass="InvoiceLH">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.InvoiceLH
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="InvoiceLHResult" parameterClass="InvoiceLH">
+      <![CDATA[SELECT
+				[InvoiceId],
+				[CustomerId],
+				[ConveyanceMethodId],
+				[InvoiceDate],
+				[InsertTime],
+				[UpdateTime],
+				[EmpCreaterId],
+				[EmpShengguanId],
+				[EmpShechuId],
+				[EmpPinjianId],
+				[EmpDepotId],
+				[AuditState],
+				[AuditEmpId]
+			FROM
+				[dbo].[InvoiceLH]
+			WHERE
+				[InvoiceId] = #InvoiceId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[InvoiceLH]
+			WHERE            
+				[InvoiceId] = #InvoiceId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="InvoiceLHResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[InvoiceLH]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[InvoiceLH]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="InvoiceLHResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[InvoiceLH]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="InvoiceLH">
+      <![CDATA[ INSERT INTO [dbo].[InvoiceLH] 
+			(
+				[InvoiceId],
+				[CustomerId],
+				[ConveyanceMethodId],
+				[InvoiceDate],
+				[InsertTime],
+				[UpdateTime],
+				[EmpCreaterId],
+				[EmpShengguanId],
+				[EmpShechuId],
+				[EmpPinjianId],
+				[EmpDepotId],
+				[AuditState],
+				[AuditEmpId]
+			) 
+			VALUES 
+			(
+				#InvoiceId#,
+				#CustomerId#,
+				#ConveyanceMethodId#,
+				#InvoiceDate#,
+				#InsertTime#,
+				#UpdateTime#,
+				#EmpCreaterId#,
+				#EmpShengguanId#,
+				#EmpShechuId#,
+				#EmpPinjianId#,
+				#EmpDepotId#,
+				#AuditState#,
+				#AuditEmpId#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="InvoiceLH">
+      <![CDATA[ 	UPDATE [InvoiceLH] SET
+				[CustomerId] = #CustomerId#,
+				[ConveyanceMethodId] = #ConveyanceMethodId#,
+				[InvoiceDate] = #InvoiceDate#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#,
+				[EmpCreaterId] = #EmpCreaterId#,
+				[EmpShengguanId] = #EmpShengguanId#,
+				[EmpShechuId] = #EmpShechuId#,
+				[EmpPinjianId] = #EmpPinjianId#,
+				[EmpDepotId] = #EmpDepotId#,
+				[AuditState] = #AuditState#,
+				[AuditEmpId] = #AuditEmpId#
+			WHERE
+				[InvoiceId] = #InvoiceId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[InvoiceLH]
+				where  InvoiceId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

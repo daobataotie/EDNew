@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="InvoiceLHDetail" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="InvoiceLHDetail" type="Book.Model.InvoiceLHDetail, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="InvoiceLHDetailResult" class="InvoiceLHDetail">
+      <result property="InvoiceLHDetailId" column="InvoiceLHDetailId" />
+      <result property="InvoiceLHId" column="InvoiceLHId" />
+      <result property="Number" column="Number" />
+      <result property="ProductId" column="ProductId" />
+      <result property="InvoiceXODetailId" column="InvoiceXODetailId" />
+      <result property="EstimateQty" column="EstimateQty" />
+      <result property="ProductUnit" column="ProductUnit" />
+      <result property="BoxCapacityQty" column="BoxCapacityQty" />
+      <result property="BoxNumber" column="BoxNumber" />
+      <result property="BoxQty" column="BoxQty" />
+      <result property="Note" column="Note" />
+      <result property="InvoiceLH" column="InvoiceLHId" lazyLoad="false" select="InvoiceLH.select_by_primary_key" />
+      <result property="InvoiceXODetail" column="InvoiceXODetailId" lazyLoad="false" select="InvoiceXODetail.select_by_primary_key" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_by_primary_key" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[InvoiceLHDetail]
+				WHERE
+				[InvoiceLHDetailId] = #InvoiceLHDetailId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[InvoiceLHDetail]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="InvoiceLHDetailResult" parameterClass="InvoiceLHDetail">
+      <![CDATA[SELECT
+				[InvoiceLHDetailId],
+				[InvoiceLHId],
+				[Number],
+				[ProductId],
+				[InvoiceXODetailId],
+				[EstimateQty],
+				[ProductUnit],
+				[BoxCapacityQty],
+				[BoxNumber],
+				[BoxQty],
+				[Note]
+			FROM
+				[dbo].[InvoiceLHDetail]
+			WHERE
+				[InvoiceLHDetailId] = #InvoiceLHDetailId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[InvoiceLHDetail]
+			WHERE            
+				[InvoiceLHDetailId] = #InvoiceLHDetailId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="InvoiceLHDetailResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[InvoiceLHDetail]
+                			                   
+
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[InvoiceLHDetail]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="InvoiceLHDetailResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[InvoiceLHDetail]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="InvoiceLHDetail">
+      <![CDATA[ INSERT INTO [dbo].[InvoiceLHDetail] 
+			(
+				[InvoiceLHDetailId],
+				[InvoiceLHId],
+				[Number],
+				[ProductId],
+				[InvoiceXODetailId],
+				[EstimateQty],
+				[ProductUnit],
+				[BoxCapacityQty],
+				[BoxNumber],
+				[BoxQty],
+				[Note]
+			) 
+			VALUES 
+			(
+				#InvoiceLHDetailId#,
+				#InvoiceLHId#,
+				#Number#,
+				#ProductId#,
+				#InvoiceXODetailId#,
+				#EstimateQty#,
+				#ProductUnit#,
+				#BoxCapacityQty#,
+				#BoxNumber#,
+				#BoxQty#,
+				#Note#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="InvoiceLHDetail">
+      <![CDATA[ 	UPDATE [InvoiceLHDetail] SET
+				[InvoiceLHId] = #InvoiceLHId#,
+				[Number] = #Number#,
+				[ProductId] = #ProductId#,
+				[InvoiceXODetailId] = #InvoiceXODetailId#,
+				[EstimateQty] = #EstimateQty#,
+				[ProductUnit] = #ProductUnit#,
+				[BoxCapacityQty] = #BoxCapacityQty#,
+				[BoxNumber] = #BoxNumber#,
+				[BoxQty] = #BoxQty#,
+				[Note] = #Note#
+			WHERE
+				[InvoiceLHDetailId] = #InvoiceLHDetailId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[InvoiceLHDetail]
+				where  InvoiceLHDetailId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

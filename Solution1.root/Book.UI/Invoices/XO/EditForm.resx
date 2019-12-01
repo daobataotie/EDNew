@@ -152,7 +152,7 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn_MPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>283, 379</value>
+    <value>283, 346</value>
   </data>
   <data name="btn_MPS.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 22</value>
@@ -177,7 +177,7 @@
     <value>4</value>
   </data>
   <data name="simpleInputExcle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>386, 379</value>
+    <value>386, 346</value>
   </data>
   <data name="simpleInputExcle.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 22</value>
@@ -232,13 +232,19 @@
     <value>Combo</value>
   </data>
   <data name="comboBoxEditCurrency.Properties.Items" xml:space="preserve">
-    <value>人民币</value>
+    <value>人民幣</value>
   </data>
   <data name="comboBoxEditCurrency.Properties.Items1" xml:space="preserve">
-    <value>新台币</value>
+    <value>新台幣</value>
   </data>
   <data name="comboBoxEditCurrency.Properties.Items2" xml:space="preserve">
     <value>美金</value>
+  </data>
+  <data name="comboBoxEditCurrency.Properties.Items3" xml:space="preserve">
+    <value>歐元</value>
+  </data>
+  <data name="comboBoxEditCurrency.Properties.Items4" xml:space="preserve">
+    <value>日圓</value>
   </data>
   <data name="comboBoxEditCurrency.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 21</value>
@@ -374,7 +380,7 @@
     <value>12</value>
   </data>
   <data name="simpleButtonAppend.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 379</value>
+    <value>12, 346</value>
   </data>
   <data name="simpleButtonAppend.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 22</value>
@@ -401,13 +407,13 @@
     <value>13</value>
   </data>
   <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 405</value>
+    <value>12, 372</value>
   </data>
   <data name="EmpAudit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>653, 87</value>
+    <value>644, 87</value>
   </data>
   <data name="EmpAudit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 21</value>
+    <value>165, 21</value>
   </data>
   <data name="EmpAudit.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -425,7 +431,7 @@
     <value>4</value>
   </data>
   <data name="textEditAuditState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>890, 87</value>
+    <value>877, 87</value>
   </data>
   <data name="textEditAuditState.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -440,7 +446,7 @@
     <value>False</value>
   </data>
   <data name="textEditAuditState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 23</value>
+    <value>165, 21</value>
   </data>
   <data name="textEditAuditState.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -461,10 +467,10 @@
     <value>0</value>
   </data>
   <data name="calcEditInvoiceTax1xset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>889, 37</value>
+    <value>876, 37</value>
   </data>
   <data name="calcEditInvoiceTax1xset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 21</value>
+    <value>166, 21</value>
   </data>
   <data name="calcEditInvoiceTax1xset.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -485,7 +491,7 @@
     <value>12, 29</value>
   </data>
   <data name="textEditNote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>573, 81</value>
+    <value>564, 79</value>
   </data>
   <data name="textEditNote.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -506,10 +512,10 @@
     <value>0</value>
   </data>
   <data name="calcEditInvoiceTotalxset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>889, 12</value>
+    <value>876, 12</value>
   </data>
   <data name="calcEditInvoiceTotalxset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 21</value>
+    <value>166, 21</value>
   </data>
   <data name="calcEditInvoiceTotalxset.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -530,10 +536,10 @@
     <value>0</value>
   </data>
   <data name="calcEditInvoiceTotal0xset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>653, 62</value>
+    <value>644, 62</value>
   </data>
   <data name="calcEditInvoiceTotal0xset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>406, 21</value>
+    <value>398, 21</value>
   </data>
   <data name="calcEditInvoiceTotal0xset.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -551,10 +557,10 @@
     <value>9</value>
   </data>
   <data name="textEditInvoiceCphm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>653, 12</value>
+    <value>644, 12</value>
   </data>
   <data name="textEditInvoiceCphm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 21</value>
+    <value>164, 21</value>
   </data>
   <data name="textEditInvoiceCphm.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -575,7 +581,7 @@
     <value>0</value>
   </data>
   <data name="spinEditInvoiceTaxRate1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>653, 37</value>
+    <value>644, 37</value>
   </data>
   <data name="spinEditInvoiceTaxRate1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Glyph</value>
@@ -633,7 +639,7 @@
     <value>True</value>
   </data>
   <data name="spinEditInvoiceTaxRate1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 21</value>
+    <value>164, 21</value>
   </data>
   <data name="spinEditInvoiceTaxRate1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -711,7 +717,7 @@
     <value>layoutControlGroup3</value>
   </data>
   <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1071, 122</value>
+    <value>1071, 109</value>
   </data>
   <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -732,7 +738,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1071, 122</value>
+    <value>1071, 109</value>
   </data>
   <data name="xtraTabPage1.Text" xml:space="preserve">
     <value>交易明细</value>
@@ -750,7 +756,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1077, 150</value>
+    <value>1077, 137</value>
   </data>
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -993,7 +999,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1071, 122</value>
+    <value>1071, 109</value>
   </data>
   <data name="layoutControl4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1014,7 +1020,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1071, 122</value>
+    <value>1071, 109</value>
   </data>
   <data name="xtraTabPage2.Text" xml:space="preserve">
     <value>发票资料</value>
@@ -1458,7 +1464,7 @@
     <value>14</value>
   </data>
   <data name="simpleButtonRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 379</value>
+    <value>148, 346</value>
   </data>
   <data name="simpleButtonRemove.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 22</value>
@@ -1560,7 +1566,7 @@
     <value>740, 17</value>
   </metadata>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 103</value>
+    <value>12, 86</value>
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>选择</value>
@@ -2110,7 +2116,7 @@
     <value>0</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1077, 272</value>
+    <value>1077, 256</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2242,7 +2248,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1101, 567</value>
+    <value>1101, 521</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2326,7 +2332,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1101, 614</value>
+    <value>1101, 568</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>单据录入 - 客户订单</value>

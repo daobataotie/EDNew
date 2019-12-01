@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="InvoiceLHDetail" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectByHeaderId" parameterClass="string" resultMap="InvoiceLHDetailResult">
+      select * from InvoiceLHDetail where InvoiceLHId=#value#  order by Number
+    </select>
+
+    <delete id="DeleteByHeaderId" parameterClass="string">
+      delete from InvoiceLHDetail where InvoiceLHId=#value#
+    </delete>
+
+    <select id="SelectByCondition" parameterClass="Map" resultMap="InvoiceLHDetailResult">
+      select lhd.* from InvoiceLHDetail lhd left join InvoiceLH lh on lhd.InvoiceLHId=lh.InvoiceId
+      where lh.InvoiceDate between #StartDate# and #EndDate# $sql$  order by lhd.InvoiceLHId,Number
+    </select>
+  </statements>
+</sqlMap>

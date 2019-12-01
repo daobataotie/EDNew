@@ -72,6 +72,7 @@ namespace Book.UI.Settings.BasicData.Bank
 
             this.bank.Description = textEditDescription.Text;
             this.bank.OrderId = Convert.ToInt32(spe_OrderID.Value);
+            this.bank.SWIFTCode = txt_SWIFTCode.Text;
             switch (this.action)
             {
                 case "insert":
@@ -98,6 +99,7 @@ namespace Book.UI.Settings.BasicData.Bank
             this.textEditDescription.Text = this.bank.Description;
             this.txt_Id.Text = this.bank.Id;
             this.spe_OrderID.EditValue = this.bank.OrderId;
+            this.txt_SWIFTCode.Text = this.bank.SWIFTCode;
 
             switch (this.action)
             {

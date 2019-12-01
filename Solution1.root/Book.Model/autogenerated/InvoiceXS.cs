@@ -472,8 +472,28 @@ namespace Book.Model
         {
             get { return _shipmentDate; }
             set { _shipmentDate = value; }
+        }    
+        
+        private decimal? _invoiceTaibiTotal;
+
+        public decimal? InvoiceTaibiTotal
+        {
+            get { return _invoiceTaibiTotal; }
+            set { _invoiceTaibiTotal = value; }
+        }
+
+        private string _currency;
+
+        public string Currency
+        {
+            get { return _currency; }
+            set { _currency = value; }
         }
 
         public static readonly string PRO_ShipmentDate = "ShipmentDate";
+
+        public readonly static string PRO_InvoiceTaibiTotal = "InvoiceTaibiTotal";
+
+        public readonly static string PRO_Currency = "Currency";
     }
 }

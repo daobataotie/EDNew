@@ -101,6 +101,47 @@ namespace Book.UI.Invoices.XO
                 LastFlag = 1;
         }
 
+        public EditForm(IList<Model.ProformaInvoiceDetail> list)
+            : this()
+        {
+            this.action = "insert";
+
+            this.invoice = new Model.InvoiceXO();
+            this.invoice.InvoiceId = this.invoiceManager.GetId(DateTime.Now);
+            this.invoice.InvoiceDate = DateTime.Now;
+            this.invoice.IsClose = false;
+            this.invoice.Employee0 = BL.V.ActiveOperator.Employee;
+            this.invoice.Details = new List<Model.InvoiceXODetail>();
+
+            Model.InvoiceXODetail detail = null;
+            if (list != null)
+            {
+                this.invoice.Customer = invoice.xocustomer = list.Count > 0 ? list[0].ProformaInvoice.Customer : null;
+
+                foreach (var item in list)
+                {
+                    detail = new Book.Model.InvoiceXODetail();
+                    detail.InvoiceXODetailId = Guid.NewGuid().ToString();
+                    detail.Invoice = this.invoice;
+                    detail.Inumber = this.invoice.Details.Count + 1;
+                    detail.InvoiceId = this.invoice.InvoiceId;
+                    detail.Product = item.Product;
+                    detail.ProductId = item.ProductId;
+                    detail.InvoiceXODetailQuantity = item.Quantity;
+                    detail.InvoiceXODetailPrice = item.UnitPrice;
+                    detail.InvoiceXODetailMoney = item.Amount;
+                    detail.InvoiceProductUnit = item.Unit;
+
+                    this.invoice.Details.Add(detail);
+                }
+
+                this.bindingSource1.DataSource = this.invoice.Details;
+                this.gridControl1.RefreshDataSource();
+            }
+
+            LastFlag = 1;
+        }
+
         private void EditForm_Load(object sender, EventArgs e)
         {
             GetXo();
@@ -595,6 +636,8 @@ namespace Book.UI.Invoices.XO
 
         protected override void AddNew()
         {
+            if (LastFlag == 1) { LastFlag = 0; return; }
+
             this.invoice = new Model.InvoiceXO();
 
             this.invoice.InvoiceId = this.invoiceManager.GetNewId();
@@ -1557,8 +1600,8 @@ namespace Book.UI.Invoices.XO
             if (list != null)
             {
                 var detailIds = from n in list
-                              where n.IsConfirmed == true
-                              select n.InvoiceXODetailId;
+                                where n.IsConfirmed == true
+                                select n.InvoiceXODetailId;
                 if (detailIds != null && detailIds.Count() > 0)
                 {
                     //多这些步骤是为了每次排单时刷新一次数据

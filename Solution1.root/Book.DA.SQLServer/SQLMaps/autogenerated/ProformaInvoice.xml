@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="ProformaInvoice" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="ProformaInvoice" type="Book.Model.ProformaInvoice, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="ProformaInvoiceResult" class="ProformaInvoice">
+      <result property="PO" column="PO" />
+      <result property="InvoiceDate" column="InvoiceDate" />
+      <result property="CustomerId" column="CustomerId" />
+      <result property="DeliveryTo" column="DeliveryTo" />
+      <result property="Currency" column="Currency" />
+      <result property="Attn" column="Attn"/>
+      <result property="Remark" column="Remark" />
+      <result property="DeliveryDate" column="DeliveryDate" />
+      <result property="BankId" column="BankId" />
+      <result property="ShippimgMark" column="ShippimgMark" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProformaInvoice]
+				WHERE
+				[PO] = #PO#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ProformaInvoice]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="get_first" resultMap="ProformaInvoiceResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.ProformaInvoice
+			 
+			order by InsertTime 
+			]]>
+    </select>
+    <select id="get_last" resultMap="ProformaInvoiceResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.ProformaInvoice
+						
+            order by InsertTime desc
+			]]>
+
+    </select>
+    <select id="get_prev" resultMap="ProformaInvoiceResult" parameterClass="ProformaInvoice">
+      <![CDATA[
+			select top 1 *
+			from dbo.ProformaInvoice
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+    </select>
+    <select id="get_next" resultMap="ProformaInvoiceResult" parameterClass="ProformaInvoice">
+      <![CDATA[
+			select top 1 *
+			from dbo.ProformaInvoice
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+    </select>
+
+    <select id="has_rows_before" resultClass="bool" parameterClass="ProformaInvoice">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.ProformaInvoice
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+    </select>
+
+    <select id="has_rows_after" resultClass="bool" parameterClass="ProformaInvoice">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.ProformaInvoice
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="ProformaInvoiceResult" parameterClass="ProformaInvoice">
+      <![CDATA[SELECT
+				[PO],
+				[InvoiceDate],
+				[CustomerId],
+				[DeliveryTo],
+				[Currency],
+        [Attn],
+				[Remark],
+				[DeliveryDate],
+				[BankId],
+				[ShippimgMark],
+				[InsertTime],
+				[UpdateTime]
+			FROM
+				[dbo].[ProformaInvoice]
+			WHERE
+				[PO] = #PO#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[ProformaInvoice]
+			WHERE            
+				[PO] = #PO#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="ProformaInvoiceResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[ProformaInvoice]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[ProformaInvoice]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="ProformaInvoiceResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[ProformaInvoice]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="ProformaInvoice">
+      <![CDATA[ INSERT INTO [dbo].[ProformaInvoice] 
+			(
+				[PO],
+				[InvoiceDate],
+				[CustomerId],
+				[DeliveryTo],
+				[Currency],
+        [Attn],
+				[Remark],
+				[DeliveryDate],
+				[BankId],
+				[ShippimgMark],
+				[InsertTime],
+				[UpdateTime]
+			) 
+			VALUES 
+			(
+				#PO#,
+				#InvoiceDate#,
+				#CustomerId#,
+				#DeliveryTo#,
+				#Currency#,
+        #Attn#,
+				#Remark#,
+				#DeliveryDate#,
+				#BankId#,
+				#ShippimgMark#,
+				#InsertTime#,
+				#UpdateTime#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="ProformaInvoice">
+      <![CDATA[ 	UPDATE [ProformaInvoice] SET
+				[InvoiceDate] = #InvoiceDate#,
+				[CustomerId] = #CustomerId#,
+				[DeliveryTo] = #DeliveryTo#,
+				[Currency] = #Currency#,
+        [Attn] = #Attn#,
+				[Remark] = #Remark#,
+				[DeliveryDate] = #DeliveryDate#,
+				[BankId] = #BankId#,
+				[ShippimgMark] = #ShippimgMark#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#
+			WHERE
+				[PO] = #PO#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[ProformaInvoice]
+				where  PO = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

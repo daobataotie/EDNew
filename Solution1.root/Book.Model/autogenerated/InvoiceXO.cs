@@ -193,6 +193,10 @@ namespace Book.Model
             get { return _isNotAutoClose; }
             set { _isNotAutoClose = value; }
         }
+        
+        private decimal? _exchange;
+
+        private decimal? _taibiMoney;
 
         #endregion
 
@@ -660,6 +664,18 @@ namespace Book.Model
             set { _CustomerMarks = value; }
         }
 
+        public decimal? Exchange
+        {
+            get { return _exchange; }
+            set { _exchange = value; }
+        }
+
+        public decimal? TaibiMoney
+        {
+            get { return _taibiMoney; }
+            set { _taibiMoney = value; }
+        }
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -864,6 +880,10 @@ namespace Book.Model
         /// 唛头
         /// </summary>
         public readonly static string PRO_CustomerMarks = "CustomerMarks";
+
+        public readonly static string PRO_Exchange = "Exchange";
+
+        public readonly static string PRO_TaibiMoney = "TaibiMoney";
 
         #endregion
     }

@@ -26,6 +26,7 @@ namespace Book.UI.Invoices.XS
         protected BL.ConveyanceMethodManager cmethod = new Book.BL.ConveyanceMethodManager();
         protected BL.SupplierProductManager supplierproductmanager = new Book.BL.SupplierProductManager();
         private BL.CustomerProductPriceManager customerProductPriceManager = new Book.BL.CustomerProductPriceManager();
+        private BL.ExchangeRateManager exchangeRateManager = new Book.BL.ExchangeRateManager();
 
         /// <summary>
         /// 被修改的单据
@@ -254,7 +255,7 @@ namespace Book.UI.Invoices.XS
                 invoice.ConveyanceMethodId = cm == null ? null : cm.ConveyanceMethodId;
             }
             invoice.OtherChargeNote = this.textEditOtherChargeNote.Text;
-            invoice.OtherChargeMoney = decimal.Parse(this.textEditOtherChargeMoneyset.Text);
+            invoice.OtherChargeMoney = this.textEditOtherChargeMoneyset.Value;
             invoice.InvoiceTotal = decimal.Parse(this.calcEditInvoiceTotalset.Text);
             invoice.InvoiceTax = decimal.Parse(this.calcEditInvoiceTaxset.Text);
             invoice.InvoiceHeji = decimal.Parse(this.calcEditInvoiceHejiset.Text);
@@ -265,6 +266,8 @@ namespace Book.UI.Invoices.XS
             invoice.Special = this.checkEditSpecial.Checked;
             if (this.date_Shipment.EditValue != null)
                 invoice.ShipmentDate = this.date_Shipment.DateTime;
+            invoice.InvoiceTaibiTotal = this.spe_TaibiTotal.Value;
+            invoice.Currency = this.comboBoxEditCurrency.Text;
 
             switch (this.action)
             {
@@ -474,6 +477,8 @@ namespace Book.UI.Invoices.XS
             this.checkEditSpecial.Checked = Convert.ToBoolean(invoice.Special);
             this.bindingSourceDetail.DataSource = invoice.Details;
             this.date_Shipment.EditValue = invoice.ShipmentDate;
+            this.spe_TaibiTotal.EditValue = invoice.InvoiceTaibiTotal;
+            this.comboBoxEditCurrency.Text = invoice.Currency;
             //  this.textEditCustomerInvoiceXOId.Text = xo == null ? "" : xo.CustomerInvoiceXOId;
             //this.bindingSourceProduct.DataSource = this.customerProductsManager.Select(this.buttonEditCompany.EditValue as Model.Customer);
             // this.bindingSourceProduct.DataSource = this.productManager.Select(this.newChooseXScustomer.EditValue as Model.Customer);
@@ -482,13 +487,19 @@ namespace Book.UI.Invoices.XS
             switch (this.action)
             {
                 case "insert":
+                    this.barButtonItem5.Enabled = true;
+                    this.gridColumnPosition.OptionsColumn.AllowEdit = true;
+                    this.comboBoxEditCurrency.Enabled = true;
+                    break;
                 case "update":
                     this.barButtonItem5.Enabled = true;
                     this.gridColumnPosition.OptionsColumn.AllowEdit = true;
+                    this.comboBoxEditCurrency.Enabled = false;
                     break;
                 case "view":
                     this.barButtonItem5.Enabled = true;
                     this.gridColumnPosition.OptionsColumn.AllowEdit = false;
+                    this.comboBoxEditCurrency.Enabled = false;
                     break;
             }
             this.buttonEditEmployee.ShowButton = false;
@@ -794,6 +805,9 @@ namespace Book.UI.Invoices.XS
                     //invoice.Customer = xo.Customer;
                     //invoice.XSCustomer = xo.xocustomer;
                     //   textEditiInvoiceXOId.Text = xo.InvoiceId;
+                    this.comboBoxEditCurrency.Enabled = false;
+                    this.comboBoxEditCurrency.Text = xo.Invoice.Currency;
+
                     foreach (Model.InvoiceXODetail xos in form.key)
                     {
                         Model.InvoiceXSDetail xtdetail = new InvoiceXSDetail();
@@ -810,6 +824,7 @@ namespace Book.UI.Invoices.XS
                         xtdetail.InvoiceProductUnit = xos.InvoiceProductUnit;
                         xtdetail.Donatetowards = false;
                         xtdetail.InvoiceXSDetailPrice = xos.InvoiceXODetailPrice;
+                        ConvertPrice(xos, xtdetail);
                         xtdetail.InvoiceAllowance = 0;
                         xtdetail.InvoiceXSDetailMoney = 0;
                         xtdetail.InvoiceXSDetailTaxPrice = 0;
@@ -870,6 +885,19 @@ namespace Book.UI.Invoices.XS
                 #endregion
             }
             //this.action = "insert";
+        }
+
+        private void ConvertPrice(Model.InvoiceXODetail xodetail, Model.InvoiceXSDetail xsdetail)
+        {
+            string currency = "";
+            if (xodetail.Invoice != null)
+                currency = xodetail.Invoice.Currency;
+            else
+                currency = invoiceXOManager.GetCurrencyByInvoiceId(xodetail.InvoiceId);
+
+            decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, currency);
+            xsdetail.Currency = currency;
+            xsdetail.ExchangeRate = rate;
         }
 
         public static Model.InvoiceXS xs;
@@ -1047,6 +1075,8 @@ namespace Book.UI.Invoices.XS
             decimal yse = 0;//合计       
             decimal tol = 0;
             decimal tax = 0;
+            decimal totalTaibi = 0;
+
             foreach (Model.InvoiceXSDetail detail in invoice.Details)
             {
 
@@ -1054,6 +1084,7 @@ namespace Book.UI.Invoices.XS
                     detail.InvoiceXSDetailMoney = 0;
                 yse += detail.InvoiceXSDetailMoney.Value;
 
+                totalTaibi += Convert.ToDecimal(detail.InvoiceXSDetailPrice) * Convert.ToDecimal(detail.InvoiceXSDetailQuantity) * (Convert.ToDecimal(detail.ExchangeRate) == 0 ? 1 : detail.ExchangeRate.Value);
             }
 
             yse = this.GetDecimal(yse, BL.V.SetDataFormat.XSZJXiao.Value);
@@ -1066,6 +1097,8 @@ namespace Book.UI.Invoices.XS
                 else if (flag == 1)
                 {
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 1;
+
+                    totalTaibi = totalTaibi * (1 + this.spinEditInvoiceTaxRate.Value / 100);
                 }
                 else
                 {
@@ -1074,6 +1107,8 @@ namespace Book.UI.Invoices.XS
                 this.calcEditInvoiceHejiset.EditValue = yse;
                 this.calcEditInvoiceTaxset.EditValue = this.GetDecimal(yse * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSZJXiao.Value);
                 this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
+
+                this.spe_TaibiTotal.Text = totalTaibi.ToString();
             }
         }
 
@@ -1081,7 +1116,7 @@ namespace Book.UI.Invoices.XS
         {
             if (this.calcEditInvoiceTaxset.Text == "")
                 this.calcEditInvoiceTaxset.Text = "0";
-            this.calcEditInvoiceTotalset.EditValue = decimal.Parse(this.calcEditInvoiceHejiset.Text) + decimal.Parse(this.calcEditInvoiceTaxset.Text) + decimal.Parse(this.textEditOtherChargeMoneyset.Text);
+            this.calcEditInvoiceTotalset.EditValue = decimal.Parse(this.calcEditInvoiceHejiset.Text) + decimal.Parse(this.calcEditInvoiceTaxset.Text) + this.textEditOtherChargeMoneyset.Value;
         }
 
         //添加商品
@@ -1243,6 +1278,35 @@ namespace Book.UI.Invoices.XS
             UpdateMoneyFields();
         }
 
+        private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action == "view")
+                return;
+
+            string currency = null;
+
+            foreach (var item in invoice.Details)
+            {
+                if (item.InvoiceXODetail == null)
+                    continue;
+
+                currency = invoiceXOManager.GetCurrencyByInvoiceId(item.InvoiceXODetail.InvoiceId);
+
+                if (item.InvoiceXODetail.InvoiceXODetailPrice == 0 || currency == "新台幣")
+                    continue;
+                else
+                {
+                    decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, currency);
+                   
+                    item.Currency = currency;
+                    item.ExchangeRate = rate;
+                }
+            }
+
+            this.gridControl1.RefreshDataSource();
+            this.UpdateMoneyFields();
+        }
+
         private void spinEditInvoiceTaxRate_EditValueChanged(object sender, EventArgs e)
         {
             if (this.action != "view")
@@ -1279,7 +1343,6 @@ namespace Book.UI.Invoices.XS
                         //detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
                     }
 
-                    // detail.InvoiceCODetailMoney = decimal.Parse(detail.OrderQuantity.ToString()) * detail.InvoiceCODetailPrice;
                 }
                 this.gridControl1.RefreshDataSource();
                 this.spinEditInvoiceTaxRate.Properties.Buttons[1].Enabled = flag == 0 ? false : true;
@@ -1288,5 +1351,6 @@ namespace Book.UI.Invoices.XS
                 this.UpdateMoneyFields();
             }
         }
+
     }
 }

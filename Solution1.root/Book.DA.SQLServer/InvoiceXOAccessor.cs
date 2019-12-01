@@ -42,8 +42,10 @@ namespace Book.DA.SQLServer
         public IList<Book.Model.InvoiceXO> SelectByYJRQCustomEmpCusXOId(Model.Customer customer1, Model.Customer customer2, DateTime startDate, DateTime endDate, DateTime yjrq1, DateTime yjrq2, Model.Employee employee1, Model.Employee employee2, string xoid1, string xoid2, string cusxoidkey, Model.Product product, Model.Product product2, bool isclose, bool mpsIsClose, bool isForeigntrade)
         {
             StringBuilder str = new StringBuilder();
-            if (customer1 != null && customer2 != null)
-                str.Append(" and xocustomerId in (select CustomerId from customer where id between '" + customer1.Id + "' and '" + customer2.Id + "') ");
+            if (customer1 != null)
+                str.Append(" and customerId in (select CustomerId from customer where id = '" + customer1.Id + "' ) ");
+            if ( customer2 != null)
+                str.Append(" and xocustomerId in (select CustomerId from customer where id = '" + customer2.Id + "') ");
             if (employee1 != null && employee2 != null)
                 str.Append(" and  Employee0Id in(select EmployeeId from Employee where idno between '" + employee1.IDNo + "' and '" + employee2.IDNo + "') ");
             if (!string.IsNullOrEmpty(xoid1) && !string.IsNullOrEmpty(xoid2))
@@ -122,6 +124,11 @@ namespace Book.DA.SQLServer
         public string SelectCusXOIdByPronoteHeaderId(string id)
         {
             return sqlmapper.QueryForObject<string>("InvoiceXO.SelectCusXOIdByPronoteHeaderId", id);
+        }
+
+        public string GetCurrencyByInvoiceId(string invoiceId)
+        {
+            return sqlmapper.QueryForObject<string>("InvoiceXO.GetCurrencyByInvoiceId", invoiceId);
         }
         #endregion
     }

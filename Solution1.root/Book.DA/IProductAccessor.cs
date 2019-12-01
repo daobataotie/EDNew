@@ -37,6 +37,7 @@ namespace Book.DA
         IList<Model.Product> Select(Model.Customer customer, Model.ProductCategory cate);
         IList<Model.Product> SelectProductByCustomer(Model.Customer customer);
         IList<Model.Product> SelectAllProductByCustomers(string customerIds, bool isShowUnuseProduct);
+        IList<Model.Product> SelectProductForXO();
         Model.Product Get(Model.Customer customer, Model.Product product);
         void Delete(Book.Model.Product product, Model.Customer customer);
         IList<Model.Product> GetProduct();

@@ -138,6 +138,11 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.Product>("Product.SelectAllProductByCustomers", ht);
         }
 
+        public IList<Model.Product> SelectProductForXO()
+        {
+            return sqlmapper.QueryForList<Model.Product>("Product.SelectProductForXO", null);
+        }
+
         public void Delete(Book.Model.Product product, Model.Customer customer)
         {
             Hashtable table = new Hashtable();

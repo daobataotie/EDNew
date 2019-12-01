@@ -123,6 +123,10 @@ namespace Book.Model
 		/// 税额
 		/// </summary>
 		private decimal? _invoiceXSDetailTax;
+
+        private string _currency;
+
+        private decimal? _exchangeRate;
 		
 		/// <summary>
 		/// 客户
@@ -494,7 +498,19 @@ namespace Book.Model
 			{
 				this._invoiceXSDetailTax = value;
 			}
-		}
+        }
+
+        public string Currency
+        {
+            get { return _currency; }
+            set { _currency = value; }
+        }
+
+        public decimal? ExchangeRate
+        {
+            get { return _exchangeRate; }
+            set { _exchangeRate = value; }
+        }
 	
 		/// <summary>
 		/// 客户
@@ -695,7 +711,10 @@ namespace Book.Model
 		/// 税额
 		/// </summary>
 		public readonly static string PRO_InvoiceXSDetailTax = "InvoiceXSDetailTax";
-		
+        
+        public readonly static string PRO_Currency = "Currency";
+
+        public readonly static string PRO_ExchangeRate = "ExchangeRate";
 
 		#endregion
 	}
