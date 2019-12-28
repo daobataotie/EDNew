@@ -138,83 +138,191 @@
   <data name="barSubItem2.Caption" xml:space="preserve">
     <value>基础数据管理</value>
   </data>
+  <data name="barButtonItem126.Caption" xml:space="preserve">
+    <value>公司基本资料</value>
+  </data>
+  <data name="barButtonItem257.Caption" xml:space="preserve">
+    <value>公司基本资料</value>
+  </data>
+  <data name="barButtonItem14.Caption" xml:space="preserve">
+    <value>编号规则</value>
+  </data>
+  <data name="barSubItem15.Caption" xml:space="preserve">
+    <value>权限设定</value>
+  </data>
+  <data name="barButtonItem359.Caption" xml:space="preserve">
+    <value>功能设置</value>
+  </data>
+  <data name="barSubItem46.Caption" xml:space="preserve">
+    <value>流程管理</value>
+  </data>
+  <data name="barSubItem35.Caption" xml:space="preserve">
+    <value>客户厂商管理</value>
+  </data>
+  <data name="barSubItem89.Caption" xml:space="preserve">
+    <value>供应商管理</value>
+  </data>
+  <data name="barSubItem37.Caption" xml:space="preserve">
+    <value>货品设置</value>
+  </data>
+  <data name="barButtonItem246.Caption" xml:space="preserve">
+    <value>库房货位设置</value>
+  </data>
+  <data name="barButtonItem165.Caption" xml:space="preserve">
+    <value>货运公司资料</value>
+  </data>
+  <data name="barButtonItem245.Caption" xml:space="preserve">
+    <value>货运方式</value>
+  </data>
+  <data name="barButtonItem248.Caption" xml:space="preserve">
+    <value>公司设置</value>
+  </data>
+  <data name="barButtonItem249.Caption" xml:space="preserve">
+    <value>生产机器设备</value>
+  </data>
+  <data name="barSubItem72.Caption" xml:space="preserve">
+    <value>模具管理</value>
+  </data>
+  <data name="barButtonItem454.Caption" xml:space="preserve">
+    <value>产品规格</value>
+  </data>
+  <data name="barButtonItem252.Caption" xml:space="preserve">
+    <value>成品材质</value>
+  </data>
+  <data name="barButtonItem253.Caption" xml:space="preserve">
+    <value>材质设置</value>
+  </data>
+  <data name="barButtonItem254.Caption" xml:space="preserve">
+    <value>产品模具</value>
+  </data>
+  <data name="barButtonItem255.Caption" xml:space="preserve">
+    <value>模具试模</value>
+  </data>
+  <data name="barButtonItem455.Caption" xml:space="preserve">
+    <value>成品类别</value>
+  </data>
+  <data name="barButtonItem318.Caption" xml:space="preserve">
+    <value>邮件发送</value>
+  </data>
+  <data name="barButtonItem363.Caption" xml:space="preserve">
+    <value>客户基本资料一览表</value>
+  </data>
+  <data name="barButtonItem364.Caption" xml:space="preserve">
+    <value>供应商基本资料一览表</value>
+  </data>
+  <data name="barButtonItem478.Caption" xml:space="preserve">
+    <value>年度結轉</value>
+  </data>
+  <data name="barButtonItem503.Caption" xml:space="preserve">
+    <value>港口設置</value>
+  </data>
+  <data name="barButtonItem504.Caption" xml:space="preserve">
+    <value>匯率設置</value>
+  </data>
   <data name="barSubItem44.Caption" xml:space="preserve">
     <value>制造数据</value>
   </data>
   <data name="barSubItem52.Caption" xml:space="preserve">
     <value>采购管理</value>
   </data>
+  <data name="barButtonItem46.Caption" xml:space="preserve">
+    <value>采购报价单</value>
+  </data>
+  <data name="barButtonItem45.Caption" xml:space="preserve">
+    <value>采购订单</value>
+  </data>
+  <data name="barButtonItem77.Caption" xml:space="preserve">
+    <value>进货单</value>
+  </data>
+  <data name="barButtonItem78.Caption" xml:space="preserve">
+    <value>采购退货单</value>
+  </data>
+  <data name="barButtonItem75.Caption" xml:space="preserve">
+    <value>采购报价单一览</value>
+  </data>
+  <data name="barButtonItem76.Caption" xml:space="preserve">
+    <value>采购订单一览</value>
+  </data>
+  <data name="barButtonItem345.Caption" xml:space="preserve">
+    <value>采购进货单一览</value>
+  </data>
+  <data name="barButtonItem346.Caption" xml:space="preserve">
+    <value>采购退货单一览</value>
+  </data>
+  <data name="barButtonItem343.Caption" xml:space="preserve">
+    <value>采购订单明细表</value>
+  </data>
+  <data name="barButtonItem351.Caption" xml:space="preserve">
+    <value>采购订单明细表</value>
+  </data>
+  <data name="barButtonItem95.Caption" xml:space="preserve">
+    <value>进货明细表</value>
+  </data>
+  <data name="barButtonItem96.Caption" xml:space="preserve">
+    <value>进货退货明细表</value>
+  </data>
+  <data name="barButtonItem98.Caption" xml:space="preserve">
+    <value>进货简要表</value>
+  </data>
+  <data name="barButtonItem97.Caption" xml:space="preserve">
+    <value>进货总览表</value>
+  </data>
+  <data name="barButtonItem499.Caption" xml:space="preserve">
+    <value>應付賬款一覽表</value>
+  </data>
   <data name="barSubItem55.Caption" xml:space="preserve">
     <value>销售管理</value>
   </data>
-  <data name="barButtonItem47.Caption" xml:space="preserve">
-    <value>客户询价单</value>
-  </data>
-  <data name="barButtonItem44.Caption" xml:space="preserve">
-    <value>客户订单</value>
-  </data>
-  <data name="barButtonItem16.Caption" xml:space="preserve">
-    <value>出库单</value>
-  </data>
-  <data name="barButtonItem17.Caption" xml:space="preserve">
-    <value>客户退货单</value>
-  </data>
-  <data name="barButtonItem74.Caption" xml:space="preserve">
-    <value>客户询价单一览</value>
-  </data>
-  <data name="barButtonItem73.Caption" xml:space="preserve">
-    <value>客户订单一览</value>
-  </data>
-  <data name="barButtonItem32.Caption" xml:space="preserve">
-    <value>出库单一览</value>
-  </data>
-  <data name="barButtonItem344.Caption" xml:space="preserve">
-    <value>客户退货单一览</value>
-  </data>
-  <data name="barButtonItem342.Caption" xml:space="preserve">
-    <value>销售订单明细表</value>
-  </data>
-  <data name="barButtonItem347.Caption" xml:space="preserve">
-    <value>銷售訂單明細表</value>
-  </data>
-  <data name="barButtonItem99.Caption" xml:space="preserve">
-    <value>出货明细表</value>
-  </data>
-  <data name="barButtonItem102.Caption" xml:space="preserve">
-    <value>出货退货明细表</value>
-  </data>
-  <data name="barButtonItem101.Caption" xml:space="preserve">
-    <value>出货简要表</value>
-  </data>
-  <data name="barButtonItem100.Caption" xml:space="preserve">
-    <value>出货总览表</value>
-  </data>
-  <data name="barButtonItem444.Caption" xml:space="preserve">
-    <value>出货装箱</value>
-  </data>
-  <data name="barButtonItem443.Caption" xml:space="preserve">
-    <value>箱/柜参数设置</value>
-  </data>
-  <data name="barButtonItem445.Caption" xml:space="preserve">
-    <value>订单装箱</value>
-  </data>
-  <data name="barButtonItem451.Caption" xml:space="preserve">
-    <value>箱子装柜</value>
-  </data>
-  <data name="barButtonItem505.Caption" xml:space="preserve">
-    <value>理貨單</value>
-  </data>
-  <data name="barButtonItem506.Caption" xml:space="preserve">
-    <value>PackingList</value>
-  </data>
-  <data name="barButtonItem507.Caption" xml:space="preserve">
-    <value>Invoice</value>
-  </data>
-  <data name="barButtonItem508.Caption" xml:space="preserve">
-    <value>ProformalInvoice</value>
-  </data>
   <data name="barSubItem56.Caption" xml:space="preserve">
     <value>仓库管理</value>
+  </data>
+  <data name="barButtonItem259.Caption" xml:space="preserve">
+    <value>出仓单</value>
+  </data>
+  <data name="barButtonItem262.Caption" xml:space="preserve">
+    <value>进仓单</value>
+  </data>
+  <data name="barButtonItem8.Caption" xml:space="preserve">
+    <value>库存期初状况(&amp;S)...</value>
+  </data>
+  <data name="barButtonItem263.Caption" xml:space="preserve">
+    <value>盘点录入</value>
+  </data>
+  <data name="barButtonItem216.Caption" xml:space="preserve">
+    <value>库存盘点录入</value>
+  </data>
+  <data name="barButtonItem258.Caption" xml:space="preserve">
+    <value>库存盘点校正</value>
+  </data>
+  <data name="barSubItem22.Caption" xml:space="preserve">
+    <value>借入借出</value>
+  </data>
+  <data name="barButtonItem11.Caption" xml:space="preserve">
+    <value>库存量限制(&amp;L)...</value>
+  </data>
+  <data name="barButtonItem28.Caption" xml:space="preserve">
+    <value>库存调拨</value>
+  </data>
+  <data name="barButtonItem244.Caption" xml:space="preserve">
+    <value>库存盘点明细</value>
+  </data>
+  <data name="barButtonItem260.Caption" xml:space="preserve">
+    <value>库存盘点差异表详细</value>
+  </data>
+  <data name="barButtonItem460.Caption" xml:space="preserve">
+    <value>出仓单明细表</value>
+  </data>
+  <data name="barButtonItem461.Caption" xml:space="preserve">
+    <value>进仓单明细表</value>
+  </data>
+  <data name="barButtonItem470.Caption" xml:space="preserve">
+    <value>库存预警</value>
+  </data>
+  <data name="barButtonItem471.Caption" xml:space="preserve">
+    <value>長期未出倉商品</value>
+  </data>
+  <data name="barButtonItem306.Caption" xml:space="preserve">
+    <value>货品一览</value>
   </data>
   <data name="barSubItem49.Caption" xml:space="preserve">
     <value>生产管理</value>
@@ -1158,6 +1266,18 @@
   <data name="&gt;&gt;barButtonItem478.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;barButtonItem503.Name" xml:space="preserve">
+    <value>barButtonItem503</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem503.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem504.Name" xml:space="preserve">
+    <value>barButtonItem504</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem504.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;barSubItem44.Name" xml:space="preserve">
     <value>barSubItem44</value>
   </data>
@@ -1444,6 +1564,30 @@
     <value>barButtonItem451</value>
   </data>
   <data name="&gt;&gt;barButtonItem451.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem505.Name" xml:space="preserve">
+    <value>barButtonItem505</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem505.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem506.Name" xml:space="preserve">
+    <value>barButtonItem506</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem506.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem507.Name" xml:space="preserve">
+    <value>barButtonItem507</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem507.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem508.Name" xml:space="preserve">
+    <value>barButtonItem508</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem508.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barSubItem56.Name" xml:space="preserve">
@@ -4572,42 +4716,6 @@
   <data name="&gt;&gt;defaultLookAndFeel1.Type" xml:space="preserve">
     <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barButtonItem503.Name" xml:space="preserve">
-    <value>barButtonItem503</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem503.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem504.Name" xml:space="preserve">
-    <value>barButtonItem504</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem504.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem505.Name" xml:space="preserve">
-    <value>barButtonItem505</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem505.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem506.Name" xml:space="preserve">
-    <value>barButtonItem506</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem506.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem507.Name" xml:space="preserve">
-    <value>barButtonItem507</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem507.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem508.Name" xml:space="preserve">
-    <value>barButtonItem508</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem508.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
   </data>
@@ -4653,17 +4761,11 @@
   <data name="barSubItem9.Caption" xml:space="preserve">
     <value>期初(&amp;I)</value>
   </data>
-  <data name="barButtonItem8.Caption" xml:space="preserve">
-    <value>库存期初状况(&amp;S)...</value>
-  </data>
   <data name="barButtonItem9.Caption" xml:space="preserve">
     <value>应付(&amp;P)...</value>
   </data>
   <data name="barButtonItem10.Caption" xml:space="preserve">
     <value>资金账户余额(&amp;F)...</value>
-  </data>
-  <data name="barButtonItem11.Caption" xml:space="preserve">
-    <value>库存量限制(&amp;L)...</value>
   </data>
   <data name="barButtonItem12.Caption" xml:space="preserve">
     <value>单位信息</value>
@@ -4671,14 +4773,17 @@
   <data name="barButtonItem13.Caption" xml:space="preserve">
     <value>单据编号规则</value>
   </data>
-  <data name="barButtonItem14.Caption" xml:space="preserve">
-    <value>编号规则</value>
-  </data>
   <data name="barButtonItem1.Caption" xml:space="preserve">
     <value>进货单</value>
   </data>
   <data name="barButtonItem15.Caption" xml:space="preserve">
     <value>采购退货单</value>
+  </data>
+  <data name="barButtonItem16.Caption" xml:space="preserve">
+    <value>出库单</value>
+  </data>
+  <data name="barButtonItem17.Caption" xml:space="preserve">
+    <value>客户退货单</value>
   </data>
   <data name="barButtonItem18.Caption" xml:space="preserve">
     <value>货品组装单</value>
@@ -4710,14 +4815,14 @@
   <data name="barButtonItem27.Caption" xml:space="preserve">
     <value>其他支出单</value>
   </data>
-  <data name="barButtonItem28.Caption" xml:space="preserve">
-    <value>库存调拨</value>
-  </data>
   <data name="barButtonItem29.Caption" xml:space="preserve">
     <value>关于(&amp;A)...</value>
   </data>
   <data name="barSubItem10.Caption" xml:space="preserve">
     <value>单据一览</value>
+  </data>
+  <data name="barButtonItem32.Caption" xml:space="preserve">
+    <value>出库单一览</value>
   </data>
   <data name="barButtonItemCalculator.Caption" xml:space="preserve">
     <value>计算器</value>
@@ -4755,14 +4860,14 @@
   <data name="barSubItem12.Caption" xml:space="preserve">
     <value>订单录入</value>
   </data>
-  <data name="barButtonItem45.Caption" xml:space="preserve">
-    <value>采购订单</value>
+  <data name="barButtonItem44.Caption" xml:space="preserve">
+    <value>客户订单</value>
   </data>
   <data name="barSubItem13.Caption" xml:space="preserve">
     <value>报价单</value>
   </data>
-  <data name="barButtonItem46.Caption" xml:space="preserve">
-    <value>采购报价单</value>
+  <data name="barButtonItem47.Caption" xml:space="preserve">
+    <value>客户询价单</value>
   </data>
   <data name="barButtonItem48.Caption" xml:space="preserve">
     <value>收入类别</value>
@@ -4827,9 +4932,6 @@
   <data name="barButtonItem67.Caption" xml:space="preserve">
     <value>系统 </value>
   </data>
-  <data name="barSubItem15.Caption" xml:space="preserve">
-    <value>权限设定</value>
-  </data>
   <data name="barButtonItem69.Caption" xml:space="preserve">
     <value>角色设定</value>
   </data>
@@ -4842,17 +4944,11 @@
   <data name="barButtonItem72.Caption" xml:space="preserve">
     <value>客户退货单一览</value>
   </data>
-  <data name="barButtonItem75.Caption" xml:space="preserve">
-    <value>采购报价单一览</value>
+  <data name="barButtonItem73.Caption" xml:space="preserve">
+    <value>客户订单一览</value>
   </data>
-  <data name="barButtonItem76.Caption" xml:space="preserve">
-    <value>采购订单一览</value>
-  </data>
-  <data name="barButtonItem77.Caption" xml:space="preserve">
-    <value>进货单</value>
-  </data>
-  <data name="barButtonItem78.Caption" xml:space="preserve">
-    <value>采购退货单</value>
+  <data name="barButtonItem74.Caption" xml:space="preserve">
+    <value>客户询价单一览</value>
   </data>
   <data name="barButtonItem79.Caption" xml:space="preserve">
     <value>赠送单</value>
@@ -4962,17 +5058,17 @@
   <data name="barSubItem17.Caption" xml:space="preserve">
     <value>单据总览</value>
   </data>
-  <data name="barButtonItem95.Caption" xml:space="preserve">
-    <value>进货明细表</value>
+  <data name="barButtonItem99.Caption" xml:space="preserve">
+    <value>出货明细表</value>
   </data>
-  <data name="barButtonItem96.Caption" xml:space="preserve">
-    <value>进货退货明细表</value>
+  <data name="barButtonItem100.Caption" xml:space="preserve">
+    <value>出货总览表</value>
   </data>
-  <data name="barButtonItem97.Caption" xml:space="preserve">
-    <value>进货总览表</value>
+  <data name="barButtonItem101.Caption" xml:space="preserve">
+    <value>出货简要表</value>
   </data>
-  <data name="barButtonItem98.Caption" xml:space="preserve">
-    <value>进货简要表</value>
+  <data name="barButtonItem102.Caption" xml:space="preserve">
+    <value>出货退货明细表</value>
   </data>
   <data name="barButtonItem103.Caption" xml:space="preserve">
     <value>货品低于安全存量表</value>
@@ -5055,14 +5151,8 @@
   <data name="barButtonItem125.Caption" xml:space="preserve">
     <value>库存盘点</value>
   </data>
-  <data name="barButtonItem126.Caption" xml:space="preserve">
-    <value>公司基本资料</value>
-  </data>
   <data name="barButtonItem127.Caption" xml:space="preserve">
     <value>部门管理</value>
-  </data>
-  <data name="barSubItem22.Caption" xml:space="preserve">
-    <value>借入借出</value>
   </data>
   <data name="barSubItem23.Caption" xml:space="preserve">
     <value>采购与销售</value>
@@ -5184,17 +5274,11 @@
   <data name="barButtonItem160.Caption" xml:space="preserve">
     <value>产品库存</value>
   </data>
-  <data name="barSubItem35.Caption" xml:space="preserve">
-    <value>客户厂商管理</value>
-  </data>
   <data name="barButtonItem162.Caption" xml:space="preserve">
     <value>物料清单整批修改</value>
   </data>
   <data name="barSubItem36.Caption" xml:space="preserve">
     <value>库房货品设置</value>
-  </data>
-  <data name="barSubItem37.Caption" xml:space="preserve">
-    <value>货品设置</value>
   </data>
   <data name="barButtonItem161.Caption" xml:space="preserve">
     <value>客户产品对照资料</value>
@@ -5205,17 +5289,11 @@
   <data name="barButtonItem164.Caption" xml:space="preserve">
     <value>客户产品加工描述</value>
   </data>
-  <data name="barButtonItem165.Caption" xml:space="preserve">
-    <value>货运公司资料</value>
-  </data>
   <data name="barButtonItem166.Caption" xml:space="preserve">
     <value>客户产品包装类型</value>
   </data>
   <data name="barButtonItem168.Caption" xml:space="preserve">
     <value>计价方式</value>
-  </data>
-  <data name="barSubItem46.Caption" xml:space="preserve">
-    <value>流程管理</value>
   </data>
   <data name="barButtonItem169.Caption" xml:space="preserve">
     <value>定义流程</value>
@@ -5460,29 +5538,11 @@
   <data name="barButtonItem242.Caption" xml:space="preserve">
     <value>区段弹性排班</value>
   </data>
-  <data name="barButtonItem216.Caption" xml:space="preserve">
-    <value>库存盘点录入</value>
-  </data>
   <data name="barButtonItem243.Caption" xml:space="preserve">
     <value>客户产品加工内容</value>
   </data>
-  <data name="barButtonItem244.Caption" xml:space="preserve">
-    <value>库存盘点明细</value>
-  </data>
-  <data name="barButtonItem245.Caption" xml:space="preserve">
-    <value>货运方式</value>
-  </data>
-  <data name="barButtonItem246.Caption" xml:space="preserve">
-    <value>库房货位设置</value>
-  </data>
   <data name="barButtonItem247.Caption" xml:space="preserve">
     <value>供应商分类</value>
-  </data>
-  <data name="barButtonItem248.Caption" xml:space="preserve">
-    <value>公司设置</value>
-  </data>
-  <data name="barButtonItem249.Caption" xml:space="preserve">
-    <value>生产机器设备</value>
   </data>
   <data name="barButtonItem250.Caption" xml:space="preserve">
     <value>生产工序能力</value>
@@ -5490,44 +5550,11 @@
   <data name="barButtonItem251.Caption" xml:space="preserve">
     <value>生产进度计划</value>
   </data>
-  <data name="barButtonItem252.Caption" xml:space="preserve">
-    <value>成品材质</value>
-  </data>
-  <data name="barButtonItem253.Caption" xml:space="preserve">
-    <value>材质设置</value>
-  </data>
-  <data name="barSubItem72.Caption" xml:space="preserve">
-    <value>模具管理</value>
-  </data>
-  <data name="barButtonItem254.Caption" xml:space="preserve">
-    <value>产品模具</value>
-  </data>
-  <data name="barButtonItem255.Caption" xml:space="preserve">
-    <value>模具试模</value>
-  </data>
   <data name="barButtonItem256.Caption" xml:space="preserve">
     <value>客户产品基本资料</value>
   </data>
-  <data name="barButtonItem257.Caption" xml:space="preserve">
-    <value>公司基本资料</value>
-  </data>
-  <data name="barButtonItem258.Caption" xml:space="preserve">
-    <value>库存盘点校正</value>
-  </data>
-  <data name="barButtonItem259.Caption" xml:space="preserve">
-    <value>出仓单</value>
-  </data>
-  <data name="barButtonItem260.Caption" xml:space="preserve">
-    <value>库存盘点差异表详细</value>
-  </data>
   <data name="barButtonItem261.Caption" xml:space="preserve">
     <value>生产领料</value>
-  </data>
-  <data name="barButtonItem262.Caption" xml:space="preserve">
-    <value>进仓单</value>
-  </data>
-  <data name="barButtonItem263.Caption" xml:space="preserve">
-    <value>盘点录入</value>
   </data>
   <data name="barButtonItem264.Caption" xml:space="preserve">
     <value>会计科目总类</value>
@@ -5679,9 +5706,6 @@
   <data name="barSubItem78.Caption" xml:space="preserve">
     <value>明细查询</value>
   </data>
-  <data name="barButtonItem306.Caption" xml:space="preserve">
-    <value>货品一览</value>
-  </data>
   <data name="barButtonItem307.Caption" xml:space="preserve">
     <value>权限设置</value>
   </data>
@@ -5717,9 +5741,6 @@
   </data>
   <data name="barButtonItem317.Caption" xml:space="preserve">
     <value>生产车间</value>
-  </data>
-  <data name="barButtonItem318.Caption" xml:space="preserve">
-    <value>邮件发送</value>
   </data>
   <data name="barButtonItem319.Caption" xml:space="preserve">
     <value>生产日统计</value>
@@ -5799,14 +5820,14 @@
   <data name="barButtonItem341.Caption" xml:space="preserve">
     <value>应付账款明细账</value>
   </data>
-  <data name="barButtonItem343.Caption" xml:space="preserve">
-    <value>采购订单明细表</value>
+  <data name="barButtonItem342.Caption" xml:space="preserve">
+    <value>销售订单明细表</value>
   </data>
-  <data name="barButtonItem345.Caption" xml:space="preserve">
-    <value>采购进货单一览</value>
+  <data name="barButtonItem344.Caption" xml:space="preserve">
+    <value>客户退货单一览</value>
   </data>
-  <data name="barButtonItem346.Caption" xml:space="preserve">
-    <value>采购退货单一览</value>
+  <data name="barButtonItem347.Caption" xml:space="preserve">
+    <value>銷售訂單明細表</value>
   </data>
   <data name="barButtonItem348.Caption" xml:space="preserve">
     <value>物料需求计划明细</value>
@@ -5816,9 +5837,6 @@
   </data>
   <data name="barButtonItem350.Caption" xml:space="preserve">
     <value>销售发票明细</value>
-  </data>
-  <data name="barButtonItem351.Caption" xml:space="preserve">
-    <value>采购订单明细表</value>
   </data>
   <data name="barButtonItem352.Caption" xml:space="preserve">
     <value>厂商交易排行</value>
@@ -5841,9 +5859,6 @@
   <data name="barButtonItem358.Caption" xml:space="preserve">
     <value>会计参数设定</value>
   </data>
-  <data name="barButtonItem359.Caption" xml:space="preserve">
-    <value>功能设置</value>
-  </data>
   <data name="barButtonItem360.Caption" xml:space="preserve">
     <value>生产不良率统计表</value>
   </data>
@@ -5852,12 +5867,6 @@
   </data>
   <data name="barButtonItem362.Caption" xml:space="preserve">
     <value>应付账款发票号码维护</value>
-  </data>
-  <data name="barButtonItem363.Caption" xml:space="preserve">
-    <value>客户基本资料一览表</value>
-  </data>
-  <data name="barButtonItem364.Caption" xml:space="preserve">
-    <value>供应商基本资料一览表</value>
   </data>
   <data name="barButtonItem365.Caption" xml:space="preserve">
     <value>ANSI外销报告</value>
@@ -6054,9 +6063,6 @@
   <data name="barButtonItem418.Caption" xml:space="preserve">
     <value>记号</value>
   </data>
-  <data name="barSubItem89.Caption" xml:space="preserve">
-    <value>供应商管理</value>
-  </data>
   <data name="barButtonItem419.Caption" xml:space="preserve">
     <value>厂商商品/加工对照</value>
   </data>
@@ -6135,6 +6141,15 @@
   <data name="barLinkContainerItem1.Caption" xml:space="preserve">
     <value>barLinkContainerItem1</value>
   </data>
+  <data name="barButtonItem443.Caption" xml:space="preserve">
+    <value>箱/柜参数设置</value>
+  </data>
+  <data name="barButtonItem444.Caption" xml:space="preserve">
+    <value>出货装箱</value>
+  </data>
+  <data name="barButtonItem445.Caption" xml:space="preserve">
+    <value>订单装箱</value>
+  </data>
   <data name="barButtonItem446.Caption" xml:space="preserve">
     <value>详细测试查询</value>
   </data>
@@ -6150,17 +6165,14 @@
   <data name="barButtonItem450.Caption" xml:space="preserve">
     <value>详细测试查询</value>
   </data>
+  <data name="barButtonItem451.Caption" xml:space="preserve">
+    <value>箱子装柜</value>
+  </data>
   <data name="barButtonItem452.Caption" xml:space="preserve">
     <value>JIS冲击测试单</value>
   </data>
   <data name="barButtonItem453.Caption" xml:space="preserve">
     <value>框脚检验单</value>
-  </data>
-  <data name="barButtonItem454.Caption" xml:space="preserve">
-    <value>产品规格</value>
-  </data>
-  <data name="barButtonItem455.Caption" xml:space="preserve">
-    <value>成品类别</value>
   </data>
   <data name="barButtonItem456.Caption" xml:space="preserve">
     <value>客户产品价格设置</value>
@@ -6173,12 +6185,6 @@
   </data>
   <data name="barButtonItem459.Caption" xml:space="preserve">
     <value>通关手册</value>
-  </data>
-  <data name="barButtonItem460.Caption" xml:space="preserve">
-    <value>出仓单明细表</value>
-  </data>
-  <data name="barButtonItem461.Caption" xml:space="preserve">
-    <value>进仓单明细表</value>
   </data>
   <data name="barButtonItem462.Caption" xml:space="preserve">
     <value>手册管理</value>
@@ -6204,12 +6210,6 @@
   <data name="barButtonItem469.Caption" xml:space="preserve">
     <value>生管未生产数量总表</value>
   </data>
-  <data name="barButtonItem470.Caption" xml:space="preserve">
-    <value>库存预警</value>
-  </data>
-  <data name="barButtonItem471.Caption" xml:space="preserve">
-    <value>長期未出倉商品</value>
-  </data>
   <data name="barButtonItem472.Caption" xml:space="preserve">
     <value>JIS出貨報告</value>
   </data>
@@ -6227,9 +6227,6 @@
   </data>
   <data name="barButtonItem477.Caption" xml:space="preserve">
     <value>入料检验单</value>
-  </data>
-  <data name="barButtonItem478.Caption" xml:space="preserve">
-    <value>年度結轉</value>
   </data>
   <data name="barButtonItem479.Caption" xml:space="preserve">
     <value>ISO出貨報告</value>
@@ -6297,9 +6294,6 @@
   <data name="barButtonItem498.Caption" xml:space="preserve">
     <value>耳塞拉線測試表</value>
   </data>
-  <data name="barButtonItem499.Caption" xml:space="preserve">
-    <value>應付賬款一覽表</value>
-  </data>
   <data name="barButtonItem500.Caption" xml:space="preserve">
     <value>CEEN_WURTH外銷報告</value>
   </data>
@@ -6309,11 +6303,17 @@
   <data name="barButtonItem502.Caption" xml:space="preserve">
     <value>列印月薪資亂數</value>
   </data>
-  <data name="barButtonItem503.Caption" xml:space="preserve">
-    <value>港口設置</value>
+  <data name="barButtonItem505.Caption" xml:space="preserve">
+    <value>理貨單</value>
   </data>
-  <data name="barButtonItem504.Caption" xml:space="preserve">
-    <value>匯率設置</value>
+  <data name="barButtonItem506.Caption" xml:space="preserve">
+    <value>PackingList</value>
+  </data>
+  <data name="barButtonItem507.Caption" xml:space="preserve">
+    <value>Invoice</value>
+  </data>
+  <data name="barButtonItem508.Caption" xml:space="preserve">
+    <value>ProformalInvoice</value>
   </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>169, 18</value>
