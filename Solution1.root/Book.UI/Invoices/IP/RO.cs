@@ -29,7 +29,7 @@ namespace Book.UI.Invoices.IP
 
             this.DataSource = packingList.Details;
 
-            lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
+            //lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
             this.lbl_PackingNo.Text = packingList.PackingNo;
             //this.lbl_PackingDate.Text = packingList.PackingDate.Value.ToString("yyyy-MM-dd");
             this.lbl_PackingDate.Text = packingList.PackingDate.Value.ToString("MMM dd.yyyy", CultureInfo.CreateSpecificCulture("en-GB"));

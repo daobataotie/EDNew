@@ -43,11 +43,14 @@ namespace Book.UI.Invoices.CO
             this.invalidValueExceptions.Add(Model.InvoiceCO.PROPERTY_INVOICEID, new AA(Properties.Resources.EntityExists, this.textEditInvoiceId));
 
             this.buttonEditCompany.Choose = new Book.UI.Settings.BasicData.Supplier.ChooseSupplier();
+            //2019年12月28日19:37:35
+            this.ncc_Supplier2.Choose = new Settings.BasicData.Supplier.ChooseSupplier();
+
             this.buttonEditEmployee.Choose = new ChooseEmployee();
             this.buttonEditEmployee1.Choose = new ChooseEmployee();
             this.buttonEditEmployee2.Choose = new ChooseEmployee();
             this.newChooseCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
-            this.newChooseContorlAtCurrencyCate.Choose = new Accounting.CurrencyCategory.ChooseAtCurrencyCategory();
+            //this.newChooseContorlAtCurrencyCate.Choose = new Accounting.CurrencyCategory.ChooseAtCurrencyCategory();
             this.EmpAudit.Choose = new ChooseEmployee();
             this.bindingSourceWorkHouse.DataSource = new BL.WorkHouseManager().Select();
             this.action = "view";
@@ -279,6 +282,9 @@ namespace Book.UI.Invoices.CO
             this.invoice.Supplier = this.buttonEditCompany.EditValue as Model.Supplier;
             if (this.invoice.Supplier != null)
                 this.invoice.SupplierId = this.invoice.Supplier.SupplierId;
+            this.invoice.Supplier2 = this.ncc_Supplier2.EditValue as Model.Supplier;
+            this.invoice.SupplierId2 = this.invoice.Supplier2 == null ? null : this.invoice.Supplier2.SupplierId;
+
             this.invoice.InvoiceNote = this.textEditNote.Text;
             this.invoice.InvoiceLRTime = DateTime.Now;
             this.invoice.InvoiceYjrq = this.dateEditInvoiceYjrq.DateTime.Date;
@@ -300,12 +306,14 @@ namespace Book.UI.Invoices.CO
             this.Invoice.Employee0 = this.buttonEditEmployee.EditValue as Model.Employee;
             this.invoice.Employee1 = this.buttonEditEmployee1.EditValue as Model.Employee;
             this.invoice.Customer = this.newChooseCustomer.EditValue as Model.Customer;
-            if (this.newChooseContorlAtCurrencyCate.EditValue != null)
-            {
-                this.invoice.AtCurrencyCategory = this.newChooseContorlAtCurrencyCate.EditValue as Model.AtCurrencyCategory;
+            //if (this.newChooseContorlAtCurrencyCate.EditValue != null)
+            //{
+            //    this.invoice.AtCurrencyCategory = this.newChooseContorlAtCurrencyCate.EditValue as Model.AtCurrencyCategory;
 
-                this.invoice.AtCurrencyCategoryId = this.invoice.AtCurrencyCategory.AtCurrencyCategoryId;
-            }
+            //    this.invoice.AtCurrencyCategoryId = this.invoice.AtCurrencyCategory.AtCurrencyCategoryId;
+            //}
+            this.invoice.Currency = this.comboBoxEditCurrency.Text;
+
             if (this.invoice.Customer != null)
             {
                 this.invoice.CustomerId = this.invoice.Customer.CustomerId;
@@ -541,7 +549,6 @@ namespace Book.UI.Invoices.CO
             this.bindingSource1.DataSource = this.invoice.Details;
             this.EmpAudit.EditValue = this.invoice.AuditEmp;
             this.textEditAuditState.Text = this.invoice.AuditStateName;
-            this.newChooseContorlAtCurrencyCate.EditValue = this.invoice.AtCurrencyCategory;
             if (this.action == "insert" && this.invoice.Details.Count == 0)
             {
                 Model.InvoiceCODetail detail = new Model.InvoiceCODetail();
@@ -596,8 +603,11 @@ namespace Book.UI.Invoices.CO
                 this.dateEditInvoiceYjrq.EditValue = this.invoice.InvoiceYjrq;
             }
 
-            this.newChooseContorlAtCurrencyCate.EditValue = this.invoice.AtCurrencyCategory;
+            //this.newChooseContorlAtCurrencyCate.EditValue = this.invoice.AtCurrencyCategory;
+            this.comboBoxEditCurrency.EditValue = this.invoice.Currency;
+
             this.date_Update.EditValue = this.invoice.UpdateTime;
+            this.ncc_Supplier2.EditValue = this.invoice.Supplier2;
 
             base.Refresh();
 
@@ -609,7 +619,18 @@ namespace Book.UI.Invoices.CO
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
-            return new R01(this.invoice.InvoiceId);
+            //return new R01(this.invoice.InvoiceId);
+
+            R01 r1 = new R01(this.invoice.InvoiceId, null, this.invoice.Supplier);
+            r1.ShowPreview();
+
+            if (this.invoice.Supplier2 != null)
+            {
+                R01 r2 = new R01(this.invoice.InvoiceId, this.invoice.Supplier.SupplierFullName, this.invoice.Supplier2);
+                r2.ShowPreview();
+            }
+
+            return null;
         }
 
         protected override bool HasRows()
@@ -1146,6 +1167,7 @@ namespace Book.UI.Invoices.CO
             this.newChooseCustomer.EditValue = f.SelectList[0].Invoice.xocustomer;
             this.buttonEditCompany.EditValue = f.SelectList[0].Product.Supplier;
             this.txtSupplierLotNumber.Text = f.SelectList[0].Invoice.CustomerLotNumber;
+            this.comboBoxEditCurrency.EditValue = f.SelectList[0].Invoice.Currency;
             foreach (Model.InvoiceXODetail xodetail in f.SelectList)
             {
                 Model.InvoiceCODetail detail = new Book.Model.InvoiceCODetail();
@@ -1350,6 +1372,19 @@ namespace Book.UI.Invoices.CO
             //{
             //    BL.V.RollbackTransaction();
             //}
+        }
+
+        private void ncc_Supplier2_EditValueChanged(object sender, EventArgs e)
+        {
+            if (ncc_Supplier2.EditValue == null)
+                return;
+
+            if (this.buttonEditCompany.EditValue == null)
+            {
+                MessageBox.Show("請先選擇供應商", "提示", MessageBoxButtons.OK);
+                ncc_Supplier2.EditValue = null;
+                return;
+            }
         }
     }
 }

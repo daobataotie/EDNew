@@ -66,7 +66,7 @@ namespace Book.UI.Invoices.CO
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
-            return new R01(this.invoice.InvoiceId);
+            return new R01(this.invoice.InvoiceId, BL.Settings.CompanyChineseName, this.invoice.Supplier);
         }
 
         #endregion

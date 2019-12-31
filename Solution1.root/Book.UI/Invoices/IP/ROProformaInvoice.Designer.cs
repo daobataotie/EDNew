@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ROProformaInvoice));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -103,7 +104,7 @@
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
-            this.lbl_CompanyName = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -234,9 +235,9 @@
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.lbl_CompanyName});
+            this.xrPictureBox1});
             this.ReportHeader.Dpi = 254F;
-            this.ReportHeader.HeightF = 79.58667F;
+            this.ReportHeader.HeightF = 320F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // PageHeader
@@ -932,7 +933,7 @@
             this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel20.SizeF = new System.Drawing.SizeF(662.9996F, 58.42004F);
             this.xrLabel20.StylePriority.UseTextAlignment = false;
-            this.xrLabel20.Text = "JIANN LIH OPTICAL CO., LTD";
+            this.xrLabel20.Text = "ALAN SAFETY CO., LTD";
             this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLine2
@@ -943,17 +944,13 @@
             this.xrLine2.Name = "xrLine2";
             this.xrLine2.SizeF = new System.Drawing.SizeF(662.9995F, 13.22916F);
             // 
-            // lbl_CompanyName
+            // xrPictureBox1
             // 
-            this.lbl_CompanyName.Dpi = 254F;
-            this.lbl_CompanyName.Font = new System.Drawing.Font("新細明體-ExtB", 18F);
-            this.lbl_CompanyName.LocationFloat = new DevExpress.Utils.PointFloat(25.00001F, 0F);
-            this.lbl_CompanyName.Name = "lbl_CompanyName";
-            this.lbl_CompanyName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_CompanyName.SizeF = new System.Drawing.SizeF(1956.73F, 79.58667F);
-            this.lbl_CompanyName.StylePriority.UseFont = false;
-            this.lbl_CompanyName.StylePriority.UseTextAlignment = false;
-            this.lbl_CompanyName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrPictureBox1.Dpi = 254F;
+            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(200F, 0F);
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(1600F, 320F);
             // 
             // ROProformaInvoice
             // 
@@ -1056,6 +1053,6 @@
         private DevExpress.XtraReports.UI.XRLine xrLine1;
         private DevExpress.XtraReports.UI.XRLabel lbl_CustomerSign;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
-        private DevExpress.XtraReports.UI.XRLabel lbl_CompanyName;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
     }
 }

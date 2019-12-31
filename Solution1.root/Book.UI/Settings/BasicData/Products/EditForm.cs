@@ -368,7 +368,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.product.CheckCount = Parse(this.spinEditCheckCount.Text);
             this.product.CheckRate = Parse(this.spinEditCheckRate.Text);
             this.product.CheckRule = this.comboBoxEditCheckRule.Text;
-            this.product.Consume = this.checkEditConsume.Checked;
+            //this.product.Consume = this.checkEditConsume.Checked;
             this.product.CustomInspectionRule = this.newChooseContorlCustomInspectionRule.EditValue as Model.CustomInspectionRule;
             //this.product.CustomInspectionRuleId
             this.product.DamageRate = this.spinEditDamageRate.Value;
@@ -401,7 +401,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.product.Height = Parse(this.spinEditHeight.Text);
             this.product.HighestPurchasingPrice = this.spinEditHighestPurchasingPrice.Value;
             this.product.HighestStock = Parse(this.spinEditHighestStock.Text);
-            this.product.HomeMade = this.checkEditHomeMade.Checked;
+            //this.product.HomeMade = this.checkEditHomeMade.Checked;
             //this.product.InsteadOfProductId = this.newChooseContorlInsteadOfProduct.Choose.;              
             this.product.LendQuantity = Parse(this.spinEditLendQuantity.Text);
             this.product.Length = Parse(this.spinEditLength.Text);
@@ -527,7 +527,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.product.CheckCycle = this.textEditCheckCycle.Text;
             this.product.ProProcessName = this.buttonEditTechonProcedures.Text;
             this.product.ProductBarCodeIsAuto = this.radioGroupBarCode.SelectedIndex == 0 ? false : true;
-            this.product.ProductType = this.radioProductType.SelectedIndex;
+            //this.product.ProductType = this.radioProductType.SelectedIndex;
             //this.product.ProductImage = this.
             //if (this.buttonEditProcessGroup.EditValue != null && !string.IsNullOrEmpty(this.textEdit1.Text))
             //    this.product.IsProcee = true;
@@ -854,7 +854,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.spinEditCheckCount.EditValue = this.product.CheckCount;
             this.spinEditCheckRate.EditValue = this.product.CheckRate;
             this.comboBoxEditCheckRule.Text = this.product.CheckRule;
-            this.checkEditConsume.EditValue = this.product.Consume;
+            //this.checkEditConsume.EditValue = this.product.Consume;
             this.newChooseContorlCustomInspectionRule.EditValue = this.product.CustomInspectionRule;
             this.spinEditDamageRate.EditValue = this.product.DamageRate;
             if (this.product.DepotUnit != null)
@@ -865,7 +865,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.spinEditHeight.EditValue = this.product.Height;
             this.spinEditHighestPurchasingPrice.EditValue = this.product.HighestPurchasingPrice;
             this.spinEditHighestStock.EditValue = this.product.HighestStock;
-            this.checkEditHomeMade.EditValue = this.product.HomeMade;
+            //this.checkEditHomeMade.EditValue = this.product.HomeMade;
             //this.newChooseContorlInsteadOfProduct.EditValue = this.product.InsteadOfProduct;
             this.spinEditLendQuantity.EditValue = this.product.LendQuantity;
             this.spinEditLength.EditValue = this.product.Length;
@@ -913,7 +913,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.comboBoxEditValuationWay.Text = this.product.ValuationWay;
             this.spinEditVolume.EditValue = this.product.Volume;
 
-            this.radioProductType.SelectedIndex = this.product.ProductType == null ? 0 : this.product.ProductType.Value;
+            //this.radioProductType.SelectedIndex = this.product.ProductType == null ? 0 : this.product.ProductType.Value;
 
             this.spinEditWidth.EditValue = this.product.Width;
             this.checkEditIsRequiredCheck.EditValue = this.product.IsRequiredCheck;
@@ -1216,7 +1216,7 @@ namespace Book.UI.Settings.BasicData.Products
                         this.spinEditCheckCount.Properties.ReadOnly = false;
                         this.spinEditCheckRate.Properties.ReadOnly = false;
                         this.comboBoxEditCheckRule.Properties.ReadOnly = false;
-                        this.checkEditConsume.Properties.ReadOnly = false;
+                        //this.checkEditConsume.Properties.ReadOnly = false;
 
                         this.newChooseContorlCustomInspectionRule.ShowButton = true;
                         this.newChooseContorlCustomInspectionRule.ButtonReadOnly = false;
@@ -1242,7 +1242,7 @@ namespace Book.UI.Settings.BasicData.Products
                         this.spinEditHeight.Properties.ReadOnly = false;
                         this.spinEditHighestPurchasingPrice.Properties.ReadOnly = false;
                         this.spinEditHighestStock.Properties.ReadOnly = false;
-                        this.checkEditHomeMade.Properties.ReadOnly = false;
+                        //this.checkEditHomeMade.Properties.ReadOnly = false;
 
                         this.newChooseContorlInsteadOfProduct.ShowButton = true;
                         this.newChooseContorlInsteadOfProduct.ButtonReadOnly = false;
@@ -1432,7 +1432,7 @@ namespace Book.UI.Settings.BasicData.Products
                         this.spinEditCheckCount.Properties.ReadOnly = false;
                         this.spinEditCheckRate.Properties.ReadOnly = false;
                         this.comboBoxEditCheckRule.Properties.ReadOnly = false;
-                        this.checkEditConsume.Properties.ReadOnly = false;
+                        //this.checkEditConsume.Properties.ReadOnly = false;
 
                         this.newChooseContorlCustomInspectionRule.ShowButton = true;
                         this.newChooseContorlCustomInspectionRule.ButtonReadOnly = false;
@@ -1458,7 +1458,7 @@ namespace Book.UI.Settings.BasicData.Products
                         this.spinEditHeight.Properties.ReadOnly = false;
                         this.spinEditHighestPurchasingPrice.Properties.ReadOnly = false;
                         this.spinEditHighestStock.Properties.ReadOnly = false;
-                        this.checkEditHomeMade.Properties.ReadOnly = false;
+                        //this.checkEditHomeMade.Properties.ReadOnly = false;
 
                         this.newChooseContorlInsteadOfProduct.ShowButton = true;
                         this.newChooseContorlInsteadOfProduct.ButtonReadOnly = false;
@@ -1637,7 +1637,7 @@ namespace Book.UI.Settings.BasicData.Products
                     this.spinEditCheckCount.Properties.ReadOnly = true;
                     this.spinEditCheckRate.Properties.ReadOnly = true;
                     this.comboBoxEditCheckRule.Properties.ReadOnly = true;
-                    this.checkEditConsume.Properties.ReadOnly = true;
+                    //this.checkEditConsume.Properties.ReadOnly = true;
 
                     this.newChooseContorlCustomInspectionRule.ShowButton = false;
                     this.newChooseContorlCustomInspectionRule.ButtonReadOnly = true;
@@ -1663,7 +1663,7 @@ namespace Book.UI.Settings.BasicData.Products
                     this.spinEditHeight.Properties.ReadOnly = true;
                     this.spinEditHighestPurchasingPrice.Properties.ReadOnly = true;
                     this.spinEditHighestStock.Properties.ReadOnly = true;
-                    this.checkEditHomeMade.Properties.ReadOnly = true;
+                    //this.checkEditHomeMade.Properties.ReadOnly = true;
 
                     this.newChooseContorlInsteadOfProduct.ShowButton = false;
                     this.newChooseContorlInsteadOfProduct.ButtonReadOnly = true;
@@ -2006,8 +2006,8 @@ namespace Book.UI.Settings.BasicData.Products
                     this.dateEditUpdateTime.Properties.ReadOnly = true;
                     this.dateEditUpdateTime.Properties.Buttons[0].Visible = false;
 
-                    this.checkEditHomeMade.Properties.ReadOnly = false;
-                    this.checkEditConsume.Properties.ReadOnly = false;
+                    //this.checkEditHomeMade.Properties.ReadOnly = false;
+                    //this.checkEditConsume.Properties.ReadOnly = false;
                     this.checkEditOutSourcing.Properties.ReadOnly = false;
                     this.checkEditTrustOut.Properties.ReadOnly = false;
                     this.checkEditIsProcess.Properties.ReadOnly = false;

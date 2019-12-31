@@ -53,7 +53,6 @@ namespace Book.UI.Invoices.XS
             this.requireValueExceptions.Add("Id", new AA(Properties.Resources.RequireDataForId, this.textEditInvoiceId));
             this.requireValueExceptions.Add("Date", new AA(Properties.Resources.RequireDataOfInvoiceDate, this.dateEditInvoiceDate));
             this.requireValueExceptions.Add("Employee0", new AA(Properties.Resources.RequiredDataOfEmployee0, this.buttonEditEmployee));
-            this.requireValueExceptions.Add("Depot", new AA(Properties.Resources.RequiredDataOfDepot, this.buttonEditDepot));
             this.requireValueExceptions.Add("Details", new AA(Properties.Resources.RequireDataForDetails, this.gridControl1));
             this.requireValueExceptions.Add("Company", new AA(Properties.Resources.RequireDataForCompany, this.buttonEditCompany));
             this.requireValueExceptions.Add(Model.InvoiceXSDetail.PRO_DepotPositionId, new AA(Properties.Resources.RequireChoosePosition, this.gridControl1));
@@ -63,7 +62,6 @@ namespace Book.UI.Invoices.XS
 
             this.buttonEditEmployee.Choose = new ChooseEmployee();
             this.buttonEditCompany.Choose = new Settings.BasicData.Customs.ChooseCustoms();
-            this.buttonEditDepot.Choose = new ChooseDepot();
             this.newChooseXScustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             IList<Model.ConveyanceMethod> list = cmethod.Select();
             foreach (Model.ConveyanceMethod Method in list)
@@ -211,34 +209,33 @@ namespace Book.UI.Invoices.XS
             if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
                 return;
 
-            Model.Depot depot = this.buttonEditDepot.EditValue as Model.Depot;
-            IList<Model.DepotPosition> DepotPositionList = null;
-            if (depot != null)
-            {
-                this.bindingSourceDepotPosition.DataSource = DepotPositionList = this.depotPositionManager.Select(depot);
-            }
+            //Model.Depot depot = this.buttonEditDepot.EditValue as Model.Depot;
+            //IList<Model.DepotPosition> DepotPositionList = null;
+            //if (depot != null)
+            //{
+            //    this.bindingSourceDepotPosition.DataSource = DepotPositionList = this.depotPositionManager.Select(depot);
+            //}
             //if (this.action != "view" && invoice.Details.Count > 0 && this.bindingSourceDepotPosition.DataSource != null && !(this.bindingSourceDepotPosition.DataSource as IList<Model.DepotPosition>).Any(d => d.DepotPositionId == invoice.Details[0].DepotPositionId))
             //    foreach (var item in invoice.Details)
             //    {
             //        item.DepotPositionId = null;
             //    }
-            if (DepotPositionList != null)
-            {
-                foreach (var item in invoice.Details)
-                {
-                    if (!DepotPositionList.Any(d => d.DepotPositionId == item.DepotPositionId))
-                    {
-                        item.DepotPositionId = null;
-                        item.DepotPosition = null;
-                    }
-                }
-            }
+            //if (DepotPositionList != null)
+            //{
+            //    foreach (var item in invoice.Details)
+            //    {
+            //        if (!DepotPositionList.Any(d => d.DepotPositionId == item.DepotPositionId))
+            //        {
+            //            item.DepotPositionId = null;
+            //            item.DepotPosition = null;
+            //        }
+            //    }
+            //}
 
             invoice.InvoiceStatus = (int)status;
             invoice.InvoiceId = this.textEditInvoiceId.Text;
             invoice.InvoiceDate = this.dateEditInvoiceDate.DateTime;
             invoice.Employee0 = this.buttonEditEmployee.EditValue as Model.Employee;
-            invoice.Depot = this.buttonEditDepot.EditValue as Model.Depot;
             invoice.Customer = this.buttonEditCompany.EditValue as Model.Customer;
             if (invoice.Customer != null)
                 invoice.CustomerId = invoice.Customer.CustomerId;
@@ -454,7 +451,7 @@ namespace Book.UI.Invoices.XS
             this.textEditNote.EditValue = invoice.InvoiceNote;
             this.buttonEditCompany.EditValue = invoice.Customer;
             this.newChooseXScustomer.EditValue = invoice.XSCustomer;
-            this.buttonEditDepot.EditValue = invoice.Depot;
+            //this.buttonEditDepot.EditValue = invoice.Depot;
             this.lookUpEditFreightCompany.EditValue = invoice.TransportCompany;
             this.textEditSongHuoAddress.EditValue = invoice.XSCustomer == null ? "" : invoice.XSCustomer.CustomerJinChuAddress;
             if (invoice.ConveyanceMethodId != null)
@@ -553,21 +550,6 @@ namespace Book.UI.Invoices.XS
                             this.repositoryItemComboBox1.Items.Add(ut.CnName);
                         }
                     }
-                }
-            }
-            else if (this.gridView1.FocusedColumn == this.gridColumnPosition)
-            {
-                if (this.gridView1.FocusedColumn.ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)
-                {
-                    if (this.buttonEditDepot.EditValue == null)
-                    {
-                        MessageBox.Show(Properties.Resources.RequireDataForDepotName, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    //Model.CustomerProducts p = (this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.InvoiceXSDetail).PrimaryKey;
-                    Model.InvoiceXSDetail p = this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.InvoiceXSDetail;
-                    if (string.IsNullOrEmpty(p.ProductId)) return;
-                    this.bindingSourceDepotPosition.DataSource = this.depotPositionManager.GetStockByDepotAndProduct(p.ProductId, (this.buttonEditDepot.EditValue as Model.Depot).DepotId);
                 }
             }
         }
@@ -732,24 +714,6 @@ namespace Book.UI.Invoices.XS
                 }
                 this.gridControl1.RefreshDataSource();
                 this.UpdateMoneyFields();
-            }
-        }
-
-        private void buttonEditDepot_EditValueChanged(object sender, EventArgs e)
-        {
-            Model.Depot depot = this.buttonEditDepot.EditValue as Model.Depot;
-            if (depot != null)
-            {
-                this.bindingSourceDepotPosition.DataSource = this.depotPositionManager.Select(depot);
-            }
-            else
-            {
-                this.bindingSourceDepotPosition.Clear();
-                foreach (Model.InvoiceXSDetail detail in invoice.Details)
-                {
-                    detail.DepotPosition = null;
-                    detail.DepotPositionId = null;
-                }
             }
         }
 

@@ -16,7 +16,7 @@ namespace Book.UI.Invoices.IP
 
             this.DataSource = invoice.Details;
 
-            lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
+            //lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
             this.lbl_PO.Text = invoice.PO;
             //this.lbl_InvoiceDate.Text = invoice.InvoiceDate.Value.ToString("yyyy-MM-dd");
             this.lbl_InvoiceDate.Text = invoice.InvoiceDate.Value.ToString("MMM-dd-yyyy",CultureInfo.CreateSpecificCulture("en-GB"));

@@ -428,7 +428,7 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;EmpAudit.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="textEditAuditState.Location" type="System.Drawing.Point, System.Drawing">
     <value>877, 87</value>
@@ -461,7 +461,7 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;textEditAuditState.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="calcEditInvoiceTax1xset.EditValue" xml:space="preserve">
     <value>0</value>
@@ -485,7 +485,7 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;calcEditInvoiceTax1xset.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="textEditNote.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 29</value>
@@ -506,7 +506,7 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;textEditNote.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="calcEditInvoiceTotalxset.EditValue" xml:space="preserve">
     <value>0</value>
@@ -530,7 +530,7 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;calcEditInvoiceTotalxset.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="calcEditInvoiceTotal0xset.EditValue" xml:space="preserve">
     <value>0</value>
@@ -554,7 +554,7 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;calcEditInvoiceTotal0xset.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="textEditInvoiceCphm.Location" type="System.Drawing.Point, System.Drawing">
     <value>644, 12</value>
@@ -575,7 +575,7 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;textEditInvoiceCphm.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="spinEditInvoiceTaxRate1.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -654,7 +654,7 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;spinEditInvoiceTaxRate1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="layoutControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1041,7 +1041,7 @@
     <value>0</value>
   </data>
   <data name="spinEditInvoiceOwed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>675, 58</value>
+    <value>675, 55</value>
   </data>
   <data name="spinEditInvoiceOwed.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 21</value>
@@ -1065,7 +1065,7 @@
     <value>0</value>
   </data>
   <data name="spinEditYiShou.Location" type="System.Drawing.Point, System.Drawing">
-    <value>904, 33</value>
+    <value>904, 30</value>
   </data>
   <data name="spinEditYiShou.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 21</value>
@@ -1089,7 +1089,7 @@
     <value>0</value>
   </data>
   <data name="spinEditInvoiceZKE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>675, 33</value>
+    <value>675, 30</value>
   </data>
   <data name="spinEditInvoiceZKE.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 21</value>
@@ -1158,7 +1158,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1071, 122</value>
+    <value>1071, 109</value>
   </data>
   <data name="layoutControl5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1179,7 +1179,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1071, 122</value>
+    <value>1071, 109</value>
   </data>
   <data name="xtraTabPage3.Text" xml:space="preserve">
     <value>账款资料</value>
@@ -1200,7 +1200,7 @@
     <value>68, 12</value>
   </data>
   <data name="richTextBoxCustomerMarks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>412, 98</value>
+    <value>412, 85</value>
   </data>
   <data name="richTextBoxCustomerMarks.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1245,7 +1245,7 @@
     <value>5</value>
   </data>
   <data name="btn_UpdatePrice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>861, 88</value>
+    <value>861, 75</value>
   </data>
   <data name="btn_UpdatePrice.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 22</value>
@@ -1269,7 +1269,7 @@
     <value>6</value>
   </data>
   <data name="dateEditUpdateTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>540, 88</value>
+    <value>540, 75</value>
   </data>
   <data name="dateEditUpdateTime.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -1293,7 +1293,7 @@
     <value>7</value>
   </data>
   <data name="newChooseContorlEmp4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>917, 64</value>
+    <value>917, 51</value>
   </data>
   <data name="newChooseContorlEmp4.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 21</value>
@@ -1314,7 +1314,7 @@
     <value>8</value>
   </data>
   <data name="buttonEditEmployee2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>540, 64</value>
+    <value>540, 51</value>
   </data>
   <data name="buttonEditEmployee2.Size" type="System.Drawing.Size, System.Drawing">
     <value>317, 21</value>
@@ -1413,7 +1413,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1071, 122</value>
+    <value>1071, 109</value>
   </data>
   <data name="layoutControl6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1434,7 +1434,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1071, 122</value>
+    <value>1071, 109</value>
   </data>
   <data name="xtraTabPage4.Text" xml:space="preserve">
     <value>相关资料</value>
@@ -1590,7 +1590,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="gridColumn4.Width" type="System.Int32, mscorlib">
     <value>54</value>
@@ -1672,7 +1672,7 @@
     <value>True</value>
   </data>
   <data name="colProductId.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="colProductId.Width" type="System.Int32, mscorlib">
     <value>90</value>
@@ -1750,7 +1750,7 @@
     <value>True</value>
   </data>
   <data name="colProduct.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="colProduct.Width" type="System.Int32, mscorlib">
     <value>131</value>
@@ -1828,7 +1828,7 @@
     <value>True</value>
   </data>
   <data name="gridColumnCustomProduct.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="gridColumnCustomProduct.Width" type="System.Int32, mscorlib">
     <value>83</value>
@@ -1846,7 +1846,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
     <value>53</value>
@@ -1858,7 +1858,7 @@
     <value>True</value>
   </data>
   <data name="gridColumnVersion.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="gridColumnVersion.Width" type="System.Int32, mscorlib">
     <value>49</value>
@@ -1900,7 +1900,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXODetailPrice.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="colInvoiceXODetailPrice.Width" type="System.Int32, mscorlib">
     <value>55</value>
@@ -1942,7 +1942,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXODetailQuantity.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="colInvoiceXODetailQuantity.Width" type="System.Int32, mscorlib">
     <value>59</value>
@@ -1957,7 +1957,7 @@
     <value>True</value>
   </data>
   <data name="gridColumnZR.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="gridColumnZR.Width" type="System.Int32, mscorlib">
     <value>53</value>
@@ -1969,7 +1969,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXODetailMoneyxset.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="colInvoiceXODetailMoneyxset.Width" type="System.Int32, mscorlib">
     <value>65</value>
@@ -1984,19 +1984,13 @@
     <value>True</value>
   </data>
   <data name="gridColumnZS.VisibleIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>13</value>
   </data>
   <data name="gridColumnZS.Width" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>库存</value>
-  </data>
-  <data name="gridColumn3.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
   </data>
   <data name="gridColumn3.Width" type="System.Int32, mscorlib">
     <value>67</value>
@@ -2008,7 +2002,7 @@
     <value>True</value>
   </data>
   <data name="colInvoiceXODetailNote.VisibleIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>15</value>
   </data>
   <data name="colInvoiceXODetailNote.Width" type="System.Int32, mscorlib">
     <value>110</value>
@@ -2020,7 +2014,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>14</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>gridColumn2</value>
@@ -2028,20 +2022,8 @@
   <data name="gridColumn7.Caption" xml:space="preserve">
     <value>手册号</value>
   </data>
-  <data name="gridColumn7.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
   <data name="gridColumn8.Caption" xml:space="preserve">
     <value>手册项号</value>
-  </data>
-  <data name="gridColumn8.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
-    <value>20</value>
   </data>
   <data name="gridColumn9.Caption" xml:space="preserve">
     <value>已出货数量</value>
@@ -2050,7 +2032,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>退货数量</value>
@@ -2059,28 +2041,16 @@
     <value>True</value>
   </data>
   <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="gridColumn11.Caption" xml:space="preserve">
     <value>需排單</value>
-  </data>
-  <data name="gridColumn11.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="gridColumn11.Width" type="System.Int32, mscorlib">
     <value>44</value>
   </data>
   <data name="gridColumn12.Caption" xml:space="preserve">
     <value>已排單數量</value>
-  </data>
-  <data name="gridColumn12.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
   </data>
   <data name="repositoryItemCalcEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>

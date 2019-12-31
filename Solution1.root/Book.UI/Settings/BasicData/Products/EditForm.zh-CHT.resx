@@ -414,7 +414,7 @@
     <value>0</value>
   </data>
   <data name="checkEditOutSourcing.Properties.Caption" xml:space="preserve">
-    <value>外購</value>
+    <value>VPP</value>
   </data>
   <data name="checkEditHomeMade.Properties.Caption" xml:space="preserve">
     <value>自製</value>

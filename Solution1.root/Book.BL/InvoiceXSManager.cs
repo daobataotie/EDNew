@@ -142,7 +142,7 @@ namespace Book.BL
 
         private void _Insert(Model.InvoiceXS invoice)
         {
-            invoice.DepotId = invoice.Depot.DepotId;
+            //invoice.DepotId = invoice.Depot.DepotId;
             invoice.Employee0Id = invoice.Employee0.EmployeeId;
             invoice.Employee1Id = invoice.Employee1 == null ? null : invoice.Employee1.EmployeeId;
             invoice.Employee2Id = invoice.Employee2 == null ? null : invoice.Employee2.EmployeeId;
@@ -152,9 +152,9 @@ namespace Book.BL
                 //  if (detail.PrimaryKey == null || string.IsNullOrEmpty(detail.PrimaryKey.PrimaryKeyId)) continue;    
                 if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId))
                     continue;
-                Model.Stock stock = stockAccessor.GetStockByProductIdAndDepotPositionId(detail.ProductId, detail.DepotPositionId);
-                if (stock == null || Convert.ToDecimal(stock.StockQuantity1) < Convert.ToDecimal(detail.InvoiceXSDetailQuantity))
-                    throw new Helper.MessageValueException("" + detail.Product + "\r出貨數量不能大於貨位庫存");
+                //Model.Stock stock = stockAccessor.GetStockByProductIdAndDepotPositionId(detail.ProductId, detail.DepotPositionId);
+                //if (stock == null || Convert.ToDecimal(stock.StockQuantity1) < Convert.ToDecimal(detail.InvoiceXSDetailQuantity))
+                //    throw new Helper.MessageValueException("" + detail.Product + "\r出貨數量不能大於貨位庫存");
 
                 detail.InvoiceId = invoice.InvoiceId;
                 invoiceXSDetailAccessor.Insert(detail);
@@ -193,16 +193,16 @@ namespace Book.BL
                 //2
                 //3
 
-                if (detail.DepotPosition != null)
-                {
-                    // 更新库存
-                    stockAccessor.Decrement(detail.DepotPosition, detail.Product, detail.InvoiceXSDetailQuantity.Value);
-                    //更新产品库存
-                    //this.productManager.UpdateProduct_Stock(detail.Product);
-                    detail.Product.StocksQuantity = stockAccessor.GetTheCountByProduct(detail.Product);
-                    detail.Product.ProductNearXSDate = DateTime.Now;
-                    this.productManager.update(detail.Product);
-                }
+                //if (detail.DepotPosition != null)
+                //{
+                //    // 更新库存
+                //    stockAccessor.Decrement(detail.DepotPosition, detail.Product, detail.InvoiceXSDetailQuantity.Value);
+                //    //更新产品库存
+                //    //this.productManager.UpdateProduct_Stock(detail.Product);
+                //    detail.Product.StocksQuantity = stockAccessor.GetTheCountByProduct(detail.Product);
+                //    detail.Product.ProductNearXSDate = DateTime.Now;
+                //    this.productManager.update(detail.Product);
+                //}
             }
 
 
@@ -262,13 +262,13 @@ namespace Book.BL
                                     invoiceXOManager.UpdateInvoiceFlag(xodetail.Invoice);
 
                                 }
-                                if (detail.DepotPosition != null)
-                                {
-                                    stockAccessor.Increment(detail.DepotPosition, detail.Product, detail.InvoiceXSDetailQuantity.Value);
-                                    //更新产品库存                         
+                                //if (detail.DepotPosition != null)
+                                //{
+                                //    stockAccessor.Increment(detail.DepotPosition, detail.Product, detail.InvoiceXSDetailQuantity.Value);
+                                //    //更新产品库存                         
 
-                                    this.productManager.UpdateProduct_Stock(detail.Product);
-                                }
+                                //    this.productManager.UpdateProduct_Stock(detail.Product);
+                                //}
                                 //临时注销客户产品
                                 //Model.CustomerProducts p = detail.PrimaryKey;
                                 //p.PrimaryKeyId = detail.PrimaryKey.PrimaryKeyId;
@@ -299,19 +299,19 @@ namespace Book.BL
             if (invoice.Customer == null)
                 throw new Helper.RequireValueException("Company");
 
-            if (invoice.Depot == null)
-                throw new Helper.RequireValueException("Depot");
+            //if (invoice.Depot == null)
+            //    throw new Helper.RequireValueException("Depot");
 
-            foreach (Model.InvoiceXSDetail detail in invoice.Details)
-            {
-                if (detail.DepotPositionId == null)
-                    throw new Helper.RequireValueException(Model.InvoiceXSDetail.PRO_DepotPositionId);
-                //if (detail.PrimaryKey == null || string.IsNullOrEmpty(detail.PrimaryKey.PrimaryKeyId)) continue;                
-                //if (detail.DepotPosition == null || string.IsNullOrEmpty(detail.DepotPositionId)) 
-                //{
-                //    throw new Helper.RequireValueException(Model.InvoiceXSDetail.PROPERTY_DEPOTPOSITIONID);
-                //}
-            }
+            //foreach (Model.InvoiceXSDetail detail in invoice.Details)
+            //{
+            //    if (detail.DepotPositionId == null)
+            //        throw new Helper.RequireValueException(Model.InvoiceXSDetail.PRO_DepotPositionId);
+            //    //if (detail.PrimaryKey == null || string.IsNullOrEmpty(detail.PrimaryKey.PrimaryKeyId)) continue;                
+            //    //if (detail.DepotPosition == null || string.IsNullOrEmpty(detail.DepotPositionId)) 
+            //    //{
+            //    //    throw new Helper.RequireValueException(Model.InvoiceXSDetail.PROPERTY_DEPOTPOSITIONID);
+            //    //}
+            //}
 
         }
 

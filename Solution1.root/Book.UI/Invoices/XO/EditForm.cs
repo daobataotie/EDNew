@@ -1526,6 +1526,7 @@ namespace Book.UI.Invoices.XO
             public string Mark { get; set; }
         }
 
+        //形成采购单
         private void barButtonItemCO_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CO.EditForm f = new CO.EditForm(this.invoice);
