@@ -33,9 +33,9 @@ namespace Book.Model
             get
             {
                 string str = "";
-                str = string.Format("@{0} {1}", this.BoxMaxQuantity, (string.IsNullOrEmpty(PackingListHeader.Unit) ? "PCS" : PackingListHeader.Unit)) +
+                str = string.Format("@{0} {1}", this.BoxMaxQuantity.Value.ToString("F0"), (string.IsNullOrEmpty(PackingListHeader.Unit) ? "PCS" : PackingListHeader.Unit)) +
                     "       " +
-                    string.Format("{0} {1}", this.Quantity, (string.IsNullOrEmpty(PackingListHeader.Unit) ? "PCS" : PackingListHeader.Unit));
+                    string.Format("{0} {1}", this.Quantity.Value.ToString("F0"), (string.IsNullOrEmpty(PackingListHeader.Unit) ? "PCS" : PackingListHeader.Unit));
                 return str;
             }
         }
@@ -45,9 +45,9 @@ namespace Book.Model
             get
             {
                 string str = "";
-                str = string.Format("@{0} KGS", this.BoxMaxNetWeight) +
+                str = string.Format("@{0} KG", this.BoxMaxNetWeight) +
                     "       " +
-                    string.Format("{0} KGS", this.NetWeight);
+                    string.Format("{0} KG", this.NetWeight);
                 return str;
             }
         }
@@ -58,10 +58,34 @@ namespace Book.Model
             get
             {
                 string str = "";
-                str = string.Format("@{0} KGS", this.BoxMaxGrossWeight) +
+                str = string.Format("@{0} KG", this.BoxMaxGrossWeight) +
                     "       " +
-                    string.Format("{0} KGS", this.GrossWeight);
+                    string.Format("{0} KG", this.GrossWeight);
                 return str;
+            }
+        }
+
+        public string ShowCaiji
+        {
+
+            get
+            {
+                string str = "";
+                str = string.Format("@{0} CUFT", this.BoxMaxCaiji) +
+                    "       " +
+                    string.Format("{0} CUFT", this.Caiji.Value);
+                return str;
+            }
+        }
+
+        public int CartonCount
+        {
+            get
+            {
+                if (BoxMaxQuantity > 0)
+                    return (int)Math.Ceiling(Convert.ToDouble(Quantity) / Convert.ToDouble(BoxMaxQuantity));
+                else
+                    return 0;
             }
         }
 
@@ -73,5 +97,7 @@ namespace Book.Model
         public readonly static string PRO_ShowNetWeight = "ShowNetWeight";
 
         public readonly static string PRO_ShowGrossWeight = "ShowGrossWeight";
+
+        public readonly static string PRO_ShowCaiji = "ShowCaiji";
     }
 }

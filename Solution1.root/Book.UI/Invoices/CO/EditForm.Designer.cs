@@ -1317,7 +1317,7 @@
             this.colInvoiceCODetailPrice.AppearanceHeader.Options.UseTextOptions = true;
             this.colInvoiceCODetailPrice.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             resources.ApplyResources(this.colInvoiceCODetailPrice, "colInvoiceCODetailPrice");
-            this.colInvoiceCODetailPrice.DisplayFormat.FormatString = "0.####";
+            this.colInvoiceCODetailPrice.DisplayFormat.FormatString = "0.##";
             this.colInvoiceCODetailPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colInvoiceCODetailPrice.FieldName = "InvoiceCODetailPrice";
             this.colInvoiceCODetailPrice.Name = "colInvoiceCODetailPrice";
@@ -1329,7 +1329,7 @@
             this.colInvoiceCODetailMoney.AppearanceHeader.Options.UseTextOptions = true;
             this.colInvoiceCODetailMoney.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             resources.ApplyResources(this.colInvoiceCODetailMoney, "colInvoiceCODetailMoney");
-            this.colInvoiceCODetailMoney.DisplayFormat.FormatString = "0.####";
+            this.colInvoiceCODetailMoney.DisplayFormat.FormatString = "0.##";
             this.colInvoiceCODetailMoney.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colInvoiceCODetailMoney.FieldName = "InvoiceCODetailMoney";
             this.colInvoiceCODetailMoney.Name = "colInvoiceCODetailMoney";
@@ -1979,11 +1979,8 @@
             // 
             // barBtnUpdatePrice
             // 
-            resources.ApplyResources(this.barBtnUpdatePrice, "barBtnUpdatePrice");
-            this.barBtnUpdatePrice.Id = 16;
-            this.barBtnUpdatePrice.ImageIndex = 0;
+            this.barBtnUpdatePrice.Id = -1;
             this.barBtnUpdatePrice.Name = "barBtnUpdatePrice";
-            this.barBtnUpdatePrice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnUpdatePrice_ItemClick);
             // 
             // barButtonItem3
             // 

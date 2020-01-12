@@ -272,7 +272,7 @@ namespace Book.Model
         /// <summary>
         /// 每第
         /// </summary>
-        private string _digital;
+        private double? _digital;
 
         /// <summary>
         /// 长度
@@ -1383,9 +1383,9 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 每第
+        /// 没用字段改为 成箱数量
         /// </summary>
-        public string Digital
+        public double? Digital
         {
             get
             {
@@ -1998,7 +1998,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 
+        /// 采购价格区间
         /// </summary>
         public string PriceAndRange
         {
@@ -2028,7 +2028,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 
+        /// 销售价格区间
         /// </summary>
         public string XOPriceAndRange
         {

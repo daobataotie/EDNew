@@ -129,7 +129,7 @@
     <value>False</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>640, 311</value>
+    <value>661, 400</value>
   </data>
   <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
     <value>gridControl1</value>
@@ -153,7 +153,7 @@
     <value>1</value>
   </data>
   <data name="colProductId.Width" type="System.Int32, mscorlib">
-    <value>65</value>
+    <value>154</value>
   </data>
   <data name="colProductCategoryId.Caption" xml:space="preserve">
     <value>商品类别</value>
@@ -168,7 +168,7 @@
     <value>2</value>
   </data>
   <data name="colProductName.Width" type="System.Int32, mscorlib">
-    <value>212</value>
+    <value>206</value>
   </data>
   <data name="colProductUnit.Caption" xml:space="preserve">
     <value>单位</value>
@@ -177,7 +177,7 @@
     <value>True</value>
   </data>
   <data name="colProductUnit.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="colProductUnit.Width" type="System.Int32, mscorlib">
     <value>50</value>
@@ -192,7 +192,7 @@
     <value>True</value>
   </data>
   <data name="colProductSpecification.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="colProductSpecification.Width" type="System.Int32, mscorlib">
     <value>62</value>
@@ -207,28 +207,16 @@
     <value>True</value>
   </data>
   <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>客户型号</value>
-  </data>
-  <data name="gridColumn2.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
   </data>
   <data name="gridColumn2.Width" type="System.Int32, mscorlib">
     <value>79</value>
   </data>
   <data name="colProductVersion.Caption" xml:space="preserve">
     <value>版本</value>
-  </data>
-  <data name="colProductVersion.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colProductVersion.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <data name="colProductVersion.Width" type="System.Int32, mscorlib">
     <value>79</value>
@@ -255,10 +243,10 @@
     <value>True</value>
   </data>
   <data name="colProductDescription.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="colProductDescription.Width" type="System.Int32, mscorlib">
-    <value>202</value>
+    <value>327</value>
   </data>
   <data name="gridColumnChecked.Caption" xml:space="preserve">
     <value>选择</value>
@@ -270,10 +258,10 @@
     <value>0</value>
   </data>
   <data name="gridColumnChecked.Width" type="System.Int32, mscorlib">
-    <value>49</value>
+    <value>39</value>
   </data>
   <data name="simpleButtonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>679, 343</value>
+    <value>700, 432</value>
   </data>
   <data name="&gt;&gt;simpleButtonCancel.Name" xml:space="preserve">
     <value>simpleButtonCancel</value>
@@ -288,7 +276,7 @@
     <value>8</value>
   </data>
   <data name="simpleButtonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>577, 344</value>
+    <value>598, 433</value>
   </data>
   <data name="&gt;&gt;simpleButtonOK.Name" xml:space="preserve">
     <value>simpleButtonOK</value>
@@ -303,7 +291,7 @@
     <value>7</value>
   </data>
   <data name="simpleButtonNew.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 343</value>
+    <value>12, 432</value>
   </data>
   <data name="&gt;&gt;simpleButtonNew.Name" xml:space="preserve">
     <value>simpleButtonNew</value>
@@ -325,7 +313,7 @@
     <value>3, 5</value>
   </data>
   <data name="listBoxControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 332</value>
+    <value>118, 421</value>
   </data>
   <data name="listBoxControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -458,7 +446,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>769, 379</value>
+    <value>790, 468</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

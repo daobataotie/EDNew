@@ -137,6 +137,9 @@
   <data name="xrLabel12.Text" xml:space="preserve">
     <value>檢測標準:</value>
   </data>
+  <data name="xrLabel11.Text" xml:space="preserve">
+    <value>客    戶:</value>
+  </data>
   <data name="xrLabel9.Text" xml:space="preserve">
     <value>客戶訂單號:</value>
   </data>
@@ -160,9 +163,6 @@
   </data>
   <data name="xrTableCell16.Text" xml:space="preserve">
     <value>金額</value>
-  </data>
-  <data name="xrTableCell1.Text" xml:space="preserve">
-    <value>下個生產站</value>
   </data>
   <data name="xrLabel4.Text" xml:space="preserve">
     <value>聯  絡 人:</value>

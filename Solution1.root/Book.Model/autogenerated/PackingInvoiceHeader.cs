@@ -359,6 +359,86 @@ namespace Book.Model
         {
             get { return _unit; }
             set { _unit = value; }
+        }  
+        
+        private string _packingListOf;
+
+        public string PackingListOf
+        {
+            get { return _packingListOf; }
+            set { _packingListOf = value; }
+        }
+
+        private string _attn;
+
+        public string Attn
+        {
+            get { return _attn; }
+            set { _attn = value; }
+        }
+
+        private string _shippedBy;
+
+        public string ShippedBy
+        {
+            get { return _shippedBy; }
+            set { _shippedBy = value; }
+        }
+
+        private string _shippedByAddress;
+
+        public string ShippedByAddress
+        {
+            get { return _shippedByAddress; }
+            set { _shippedByAddress = value; }
+        }
+
+        private string _shipTo;
+
+        public string ShipTo
+        {
+            get { return _shipTo; }
+            set { _shipTo = value; }
+        }
+
+        private string _shipToAddress;
+
+        public string ShipToAddress
+        {
+            get { return _shipToAddress; }
+            set { _shipToAddress = value; }
+        }
+
+        private string _term;
+
+        public string Term
+        {
+            get { return _term; }
+            set { _term = value; }
+        }
+        
+        private string _totalEnglish;
+
+        public string TotalEnglish
+        {
+            get { return _totalEnglish; }
+            set { _totalEnglish = value; }
+        }
+
+        private string _bankId;
+
+        public string BankId
+        {
+            get { return _bankId; }
+            set { _bankId = value; }
+        }
+
+        private Bank _bank;
+
+        public Bank Bank
+        {
+            get { return _bank; }
+            set { _bank = value; }
         }
 
         public readonly static string PRO_CustomerFullName = "CustomerFullName";
@@ -368,5 +448,23 @@ namespace Book.Model
         public readonly static string PRO_TradingCondition = "TradingCondition";
 
         public readonly static string PRO_Unit = "Unit";
+
+        public readonly static string PRO_PackingListOf = "PackingListOf";
+
+        public readonly static string PRO_Attn = "Attn";
+
+        public readonly static string PRO_ShippedBy = "ShippedBy";
+
+        public readonly static string PRO_ShippedByAddress = "ShippedByAddress";
+
+        public readonly static string PRO_ShipTo = "ShipTo";
+
+        public readonly static string PRO_ShipToAddress = "ShipToAddress";
+
+        public readonly static string PRO_Term = "Term";
+
+        public readonly static string PRO_TotalEnglish = "TotalEnglish";
+
+        public readonly static string PRO_BankId = "BankId";
 	}
 }

@@ -20,6 +20,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="GrossWeight" column="GrossWeight" />
       <result property="CartonQty" column="CartonQty"/>
       <result property="InvoiceXODetailId" column="InvoiceXODetailId"/>
+      <result property="Caiji" column="Caiji"/>
+      <result property="BoxMaxCaiji" column="BoxMaxCaiji"/>
       <result property="PackingListHeader" column="PackingListHeaderId" lazyLoad="false" select="PackingListHeader.select_by_primary_key" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_QuickProduct" />
       <result property="InvoiceXODetail" column="InvoiceXODetailId" lazyLoad="false" select="InvoiceXODetail.select_FastXODetail"/>
@@ -65,7 +67,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[NetWeight],
 				[GrossWeight],
         [CartonQty],
-        [InvoiceXODetailId]
+        [InvoiceXODetailId],
+        [Caiji],
+        [BoxMaxCaiji]
 			FROM
 				[dbo].[PackingListDetail]
 			WHERE
@@ -132,7 +136,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[NetWeight],
 				[GrossWeight],
         [CartonQty],
-        [InvoiceXODetailId]
+        [InvoiceXODetailId],
+        [Caiji],
+        [BoxMaxCaiji]
 			) 
 			VALUES 
 			(
@@ -149,7 +155,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#NetWeight#,
 				#GrossWeight#,
         #CartonQty#,
-        #InvoiceXODetailId#
+        #InvoiceXODetailId#,
+        #Caiji#,
+        #BoxMaxCaiji#
 			)
              ]]>
     </insert>
@@ -169,7 +177,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[NetWeight] = #NetWeight#,
 				[GrossWeight] = #GrossWeight#,
         [CartonQty]=#CartonQty#,
-        [InvoiceXODetailId]=#InvoiceXODetailId#
+        [InvoiceXODetailId]=#InvoiceXODetailId#,
+        [Caiji]=#Caiji#,
+        [BoxMaxCaiji]=#BoxMaxCaiji#
 			WHERE
 				[PackingListDetailId] = #PackingListDetailId#
                     ]]>

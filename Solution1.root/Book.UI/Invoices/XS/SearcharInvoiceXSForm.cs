@@ -53,7 +53,7 @@ namespace Book.UI.Invoices.XS
         {
             this.newChooseCustom.EditValue = customer;
 
-            this.newChooseCustom.Enabled = false;
+            //this.newChooseCustom.Enabled = false;
             this.LoadSearch = false;
         }
 

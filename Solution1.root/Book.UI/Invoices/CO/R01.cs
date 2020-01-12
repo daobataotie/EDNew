@@ -35,7 +35,7 @@ namespace Book.UI.Invoices.CO
             else
             {
                 xrLabelCompanyInfoName.HeightF += 100;
-                this.xrLabelCompanyInfoName.Text = companyName + "".PadLeft(40, ' ') + "(订单来源：ALAN SAFETY COMPANY LIMITED)";
+                this.xrLabelCompanyInfoName.Text = companyName + "".PadLeft(40, ' ') + "(訂單來源：ALAN SAFETY COMPANY LIMITED)";
             }
 
 

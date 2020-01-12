@@ -34,7 +34,7 @@ namespace Book.Model
 
             get
             {
-                return string.Format("{0} {1}", this.Quantity, (string.IsNullOrEmpty(this.PackingInvoiceHeader.Unit) ? "PCS" : this.PackingInvoiceHeader.Unit));
+                return string.Format("{0} {1}", this.Quantity.Value.ToString("F0"), (string.IsNullOrEmpty(this.PackingInvoiceHeader.Unit) ? "PCS" : this.PackingInvoiceHeader.Unit));
             }
         }
 

@@ -344,14 +344,11 @@
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>名稱</value>
   </data>
-  <data name="gridColumn3.Caption" xml:space="preserve">
-    <value>說明 </value>
-  </data>
   <data name="layoutControlItem3.Text" xml:space="preserve">
     <value>銀行名稱:</value>
   </data>
   <data name="layoutControlItem1.Text" xml:space="preserve">
-    <value>銀行說明：</value>
+    <value>銀行地址：</value>
   </data>
   <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
     <value>銀行賬號：</value>

@@ -282,11 +282,11 @@
             // 
             this.layoutControl1.Controls.Add(this.txt_Product_idNO);
             this.layoutControl1.Controls.Add(this.newChooseUpdateEmployee);
-            this.layoutControl1.Controls.Add(this.groupControl1);
             this.layoutControl1.Controls.Add(this.lookUpEditQualityTestUnitId);
             this.layoutControl1.Controls.Add(this.lookUpSellUnit);
             this.layoutControl1.Controls.Add(this.lookUpDepotUnit);
             this.layoutControl1.Controls.Add(this.lookUpCJUnit);
+            this.layoutControl1.Controls.Add(this.groupControl1);
             this.layoutControl1.Controls.Add(this.lookUpProduceUnitId);
             this.layoutControl1.Controls.Add(this.dateEditVersionDate);
             this.layoutControl1.Controls.Add(this.dateEditUpdate);

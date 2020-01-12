@@ -96,7 +96,6 @@
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.bar_GenerateXO = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -160,16 +159,12 @@
             // 
             // bar1
             // 
-            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.bar_GenerateXO)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DisableClose = true;
             this.bar1.OptionsBar.DisableCustomization = true;
             // 
             // barManager1
             // 
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.bar_GenerateXO});
             this.barManager1.MaxItemId = 18;
             // 
             // layoutControl1
@@ -786,13 +781,6 @@
             this.layoutControlItem37.TextSize = new System.Drawing.Size(50, 20);
             this.layoutControlItem37.TextToControlDistance = 5;
             // 
-            // bar_GenerateXO
-            // 
-            resources.ApplyResources(this.bar_GenerateXO, "bar_GenerateXO");
-            this.bar_GenerateXO.Id = 17;
-            this.bar_GenerateXO.Name = "bar_GenerateXO";
-            this.bar_GenerateXO.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_GenerateXO_ItemClick);
-            // 
             // EditFormProformaInvoice
             // 
             resources.ApplyResources(this, "$this");
@@ -931,6 +919,5 @@
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit2;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit2View;
-        private DevExpress.XtraBars.BarButtonItem bar_GenerateXO;
     }
 }

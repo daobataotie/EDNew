@@ -153,7 +153,7 @@ namespace Book.UI.Invoices.ZX
                 this.spe_MWeight.Text = this._setting.BMWeight.ToString();
                 this.spe_Caiji.Text = this._setting.BCaiJi.ToString();
             }
-            if(this.action=="update" || this.action=="insert")
+            if (this.action == "update" || this.action == "insert")
             {
                 this.action = "view";
                 Refresh();
@@ -162,6 +162,11 @@ namespace Book.UI.Invoices.ZX
         protected override bool HasRows()
         {
             return true;
+        }
+
+        private void spe_BLong_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Caiji.EditValue = Math.Round(this.spe_BLong.Value * this.spe_BWide.Value * this.spe_BHigh.Value / 28317);
         }
 
     }

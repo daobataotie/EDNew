@@ -87,7 +87,7 @@ namespace Book.BL
             if (priceR.Contains(","))
                 inPriceR = priceR.Split(',');
             else
-                inPriceR = new string[] { priceR };
+                return 0;
 
             decimal startRange, endRange, RangePrice;
             foreach (string s in inPriceR)

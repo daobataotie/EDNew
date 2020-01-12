@@ -63,16 +63,20 @@ namespace Book.UI.Settings.BasicData.Bank
         {
             this.bank = new Model.Bank();
         }
+
         protected override void Save()
         {
-
             this.bank.BankId = this.bank.BankId;
             this.bank.Id = this.txt_Id.Text;
             this.bank.BankName = textEditName.Text;
 
-            this.bank.Description = textEditDescription.Text;
+            this.bank.BankAddress = textEditAddress.Text;
             this.bank.OrderId = Convert.ToInt32(spe_OrderID.Value);
             this.bank.SWIFTCode = txt_SWIFTCode.Text;
+
+            this.bank.BankPhone = txt_Tel.Text;
+            this.bank.Fax = txt_Fax.Text;
+
             switch (this.action)
             {
                 case "insert":
@@ -85,9 +89,9 @@ namespace Book.UI.Settings.BasicData.Bank
                     break;
             }
         }
+
         public override void Refresh()
         {
-
             if (this.bank == null)
             {
                 this.bank = new Book.Model.Bank();
@@ -96,26 +100,29 @@ namespace Book.UI.Settings.BasicData.Bank
 
             this.bindingSourceBank.DataSource = this.bankManager.Select();
             this.textEditName.Text = this.bank.BankName;
-            this.textEditDescription.Text = this.bank.Description;
+            this.textEditAddress.Text = this.bank.BankAddress;
             this.txt_Id.Text = this.bank.Id;
             this.spe_OrderID.EditValue = this.bank.OrderId;
             this.txt_SWIFTCode.Text = this.bank.SWIFTCode;
+
+            this.txt_Tel.EditValue = this.bank.BankPhone;
+            this.txt_Fax.EditValue = this.bank.Fax;
 
             switch (this.action)
             {
                 case "insert":
                     this.textEditName.Properties.ReadOnly = false;
-                    this.textEditDescription.Properties.ReadOnly = false;
+                    this.textEditAddress.Properties.ReadOnly = false;
                     break;
 
                 case "update":
                     this.textEditName.Properties.ReadOnly = false;
-                    this.textEditDescription.Properties.ReadOnly = false;
+                    this.textEditAddress.Properties.ReadOnly = false;
                     break;
 
                 case "view":
                     this.textEditName.Properties.ReadOnly = true;
-                    this.textEditDescription.Properties.ReadOnly = true;
+                    this.textEditAddress.Properties.ReadOnly = true;
                     break;
                 default:
                     break;
@@ -183,7 +190,7 @@ namespace Book.UI.Settings.BasicData.Bank
         }
         protected override void IMECtrl()
         {
-            Book.UI.Tools.IMEControl.IMECtrl(new Control[] { this, this.textEditName, this.textEditDescription });
+            Book.UI.Tools.IMEControl.IMECtrl(new Control[] { this, this.textEditName, this.textEditAddress });
         }
         #endregion
 

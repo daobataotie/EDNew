@@ -30,9 +30,7 @@ namespace Book.UI.Invoices.CO
         public EditForm()
         {
             InitializeComponent();
-            this.colInvoiceCODetailPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colInvoiceCODetailPrice.DisplayFormat.FormatString = GetFormat(BL.V.SetDataFormat.CGDJXiao.Value);
-
+          
             this.requireValueExceptions.Add("Id", new AA(Properties.Resources.RequireDataForId, this.textEditInvoiceId));
             this.requireValueExceptions.Add("Date", new AA(Properties.Resources.RequireDataOfInvoiceDate, this.dateEditInvoiceDate));
             this.requireValueExceptions.Add("Employee0", new AA(Properties.Resources.RequiredDataOfEmployee0, this.buttonEditEmployee));
@@ -186,15 +184,18 @@ namespace Book.UI.Invoices.CO
                         //{
                         //    detail.DetailsPriceRange = supplierproductmanager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
                         //}
-                        if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
-                            MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
-                        else
-                        {
-                            if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
-                                detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, detail.ProductId);
-                            else
-                                detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
-                        }
+                        //if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
+                        //    MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
+                        //else
+                        //{
+                        //    if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
+                        //        detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, detail.ProductId);
+                        //    else
+                        //        detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
+                        //}
+
+                        detail.DetailsPriceRange = detail.Product.PriceAndRange;
+
                         detail.OrderQuantity = 0;
                         detail.ArrivalQuantity = 0;
                         detail.NoArrivalQuantity = 0;
@@ -223,15 +224,17 @@ namespace Book.UI.Invoices.CO
                     //{
                     //    detail.DetailsPriceRange = supplierproductmanager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
                     //}
-                    if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
-                        MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
-                    else
-                    {
-                        if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
-                            detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, detail.ProductId);
-                        else
-                            detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
-                    }
+                    //if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
+                    //    MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
+                    //else
+                    //{
+                    //    if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
+                    //        detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, detail.ProductId);
+                    //    else
+                    //        detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
+                    //}
+
+                    detail.DetailsPriceRange = detail.Product.PriceAndRange;
                     detail.OrderQuantity = 0;
                     detail.ArrivalQuantity = 0;
                     detail.NoArrivalQuantity = 0;
@@ -715,49 +718,22 @@ namespace Book.UI.Invoices.CO
                 if (e.Column == this.colInvoiceCODetailQuantity)
                 {
                     decimal.TryParse(e.Value == null ? "0" : e.Value.ToString(), out quantity);     //获得数量
-                    //decimal.TryParse(this.gridView1.GetRowCellValue(e.RowHandle, this.colInvoiceCODetailPrice).ToString(), out price);
-                    //if (price == decimal.Zero)
-                    //Model.Product product = (this.bindingSource1.Current as Model.InvoiceCODetail).Product;
-                    //string[] PriAndRange = (product.PriceAndRange != null && product.PriceAndRange != "") ? product.PriceAndRange.Split(',') : null;
-                    //if (PriAndRange != null)
+                    Model.InvoiceCODetail invoicecodetail = this.bindingSource1.Current as Model.InvoiceCODetail;
+                    //if (string.IsNullOrEmpty(invoicecodetail.DetailsPriceRange))
                     //{
-                    //    foreach (string strPAR in PriAndRange)
+                    //    if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(invoicecodetail.Product.SupplierId))
+                    //        MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
+                    //    else
                     //    {
-                    //        decimal mQuanStart = decimal.Parse((strPAR.Split('/')[0] != null && strPAR.Split('/')[0] != "") ? strPAR.Split('/')[0] : "0");
-                    //        decimal mQuanEnd = decimal.Parse((strPAR.Split('/')[1] != null && strPAR.Split('/')[1] != "") ? strPAR.Split('/')[1] : "0");
-                    //        if (quantity <= 0)
-                    //        {
-                    //            price = 0;
-                    //            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceCODetailPrice, 0);
-                    //            break;
-                    //        }
-                    //        if (quantity >= mQuanStart && quantity <= mQuanEnd)
-                    //        {
-                    //            price = decimal.Parse((strPAR.Split('/')[2] != null && strPAR.Split('/')[2] != "") ? strPAR.Split('/')[2] : "0");
-                    //            string mDJ = (strPAR.Split('/')[2] != null && strPAR.Split('/')[2] != "") ? strPAR.Split('/')[2] : "0";
-                    //            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceCODetailPrice, mDJ);
-                    //            break;
-                    //        }
+                    //        if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
+                    //            invoicecodetail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, invoicecodetail.ProductId);
+                    //        else
+                    //            invoicecodetail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(invoicecodetail.Product.SupplierId, invoicecodetail.ProductId);
                     //    }
                     //}
-                    Model.InvoiceCODetail invoicecodetail = this.bindingSource1.Current as Model.InvoiceCODetail;
                     if (string.IsNullOrEmpty(invoicecodetail.DetailsPriceRange))
-                    {
-                        //invoicecodetail.DetailsPriceRange = (new BL.SupplierProductManager()).GetPriceRangeForSupAndProduct(invoicecodetail.Product.SupplierId, invoicecodetail.ProductId);
-                        //if ((this.buttonEditCompany.EditValue as Model.Supplier) == null)
-                        //    MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
-                        //else
-                        //    invoicecodetail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, invoicecodetail.ProductId);
-                        if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(invoicecodetail.Product.SupplierId))
-                            MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
-                        else
-                        {
-                            if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
-                                invoicecodetail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, invoicecodetail.ProductId);
-                            else
-                                invoicecodetail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(invoicecodetail.Product.SupplierId, invoicecodetail.ProductId);
-                        }
-                    }
+                        invoicecodetail.DetailsPriceRange = invoicecodetail.Product.PriceAndRange;
+
                     if (string.IsNullOrEmpty(invoicecodetail.DetailsPriceRange))
                     {
                         decimal.TryParse(this.gridView1.GetRowCellValue(e.RowHandle, this.colInvoiceCODetailPrice) == null ? "0" : this.gridView1.GetRowCellValue(e.RowHandle, this.colInvoiceCODetailPrice).ToString(), out price); //获得单价
@@ -776,18 +752,6 @@ namespace Book.UI.Invoices.CO
                 double taxrate = double.Parse(this.spinEditInvoiceTaxRate.Value.ToString()); //阭薹
                 double ta = (taxrate + 100) / 100;
 
-                //foreach (Model.InvoiceCODetail detail in this.invoice.Details)
-                //{
-                //    if (detail.OrderQuantity != null && detail.OrderQuantity != 0)
-                //    {
-
-                //        if (flag == 2)
-                //        {
-                //            detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
-                //        }
-                //        detail.InvoiceCODetailMoney = this.GetDecimal(decimal.Parse(detail.OrderQuantity.ToString()) * detail.InvoiceCODetailPrice.Value, BL.V.SetDataFormat.CGJEXiao.Value);
-                //    }
-                //}
                 this.UpdateMoneyFields();
             }
         }
@@ -1168,6 +1132,8 @@ namespace Book.UI.Invoices.CO
             this.buttonEditCompany.EditValue = f.SelectList[0].Product.Supplier;
             this.txtSupplierLotNumber.Text = f.SelectList[0].Invoice.CustomerLotNumber;
             this.comboBoxEditCurrency.EditValue = f.SelectList[0].Invoice.Currency;
+            this.buttonEditCompany.EditValue = f.SelectList[0].Invoice.Supplier;
+
             foreach (Model.InvoiceXODetail xodetail in f.SelectList)
             {
                 Model.InvoiceCODetail detail = new Book.Model.InvoiceCODetail();
@@ -1190,17 +1156,18 @@ namespace Book.UI.Invoices.CO
                 //else
                 //{
                 //detail.DetailsPriceRange = new BL.SupplierProductManager().GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
-                if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
-                    MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
-                else
-                {
-                    if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
-                        detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, detail.ProductId);
-                    else
-                        detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
-                }
-                detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.DetailsPriceRange, detail.OrderQuantity.HasValue ? detail.OrderQuantity.Value : 0);
+                //if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
+                //    MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
+                //else
+                //{
+                //    if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
+                //        detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, detail.ProductId);
+                //    else
+                //        detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
                 //}
+                //detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.DetailsPriceRange, detail.OrderQuantity.HasValue ? detail.OrderQuantity.Value : 0);
+                //}
+                detail.InvoiceCODetailPrice = xodetail.InvoiceXODetailPrice;
                 detail.InvoiceCODetailMoney = Convert.ToDecimal(detail.OrderQuantity) * Convert.ToDecimal(detail.InvoiceCODetailPrice);
 
                 this.invoice.Details.Add(detail);
@@ -1262,63 +1229,23 @@ namespace Book.UI.Invoices.CO
             this.barButtonItem3.Enabled = this.action == "view" ? true : false;
         }
 
-        //单价校对
-        private void barBtnUpdatePrice_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (MessageBox.Show("單價校對功能,將會對原有資料價值進行更新.是否確定繼續操作", "是否繼續", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                //更新所有详细单价,金额
-                IList<Model.InvoiceCODetail> ListDetails = this.invoiceDetailManager.Select();
-                //var query = from invo in ListDetails
-                //            group invo by invo.InvoiceId;
-                //foreach (IGrouping<string, Model.InvoiceCODetail> detail in query)
-                //{
-                //  foreach (Model.InvoiceCODetail item in detail)
-                foreach (Model.InvoiceCODetail item in ListDetails)
-                {
-                    if (!string.IsNullOrEmpty(item.Product.PriceAndRange) && item.InvoiceCODetailPrice.Value == 0)
-                    {
-                        //decimal mHeJi = 0;
-                        foreach (string s in item.Product.PriceAndRange.Split(','))
-                        {
-                            if (item.OrderQuantity >= double.Parse(s.Split('/')[0]) && item.OrderQuantity <= double.Parse(s.Split('/')[1]))
-                            {
-                                item.InvoiceCODetailPrice = decimal.Parse(s.Split('/')[2]);                             //单价
-                                item.InvoiceCODetailMoney = this.invoiceManager.GetSiSheWuRu(decimal.Parse(item.OrderQuantity.ToString()) * item.InvoiceCODetailPrice.Value, SISHEWURU_WEISHU); //金额
-                                //mHeJi += item.InvoiceCODetailMoney.Value;
-                            }
-                        }
-                        //item.Invoice.InvoiceHeji = mHeJi;                                                           //合计
-                        //item.Invoice.InvoiceTaxrate = 5;                                                            //税率
-                        //item.Invoice.InvoiceTax = item.Invoice.InvoiceHeji.Value * decimal.Parse(item.Invoice.InvoiceTaxrate.ToString()) / 100;     //税额
-                        //item.Invoice.InvoiceTotal = item.Invoice.InvoiceHeji + item.Invoice.InvoiceTax;             //总额
-                        this.invoiceDetailManager.UpdateProofUnitPrice(item);
-                    }
-                }
-                MessageBox.Show("單價校對完成", "提示信息", MessageBoxButtons.OK);
-            }
-        }
-
         private void btn_GetNewPrice_Click(object sender, EventArgs e)
         {
             foreach (var item in invoice.Details)
             {
-                //if (string.IsNullOrEmpty(item.Product.SupplierId))
-                //{
-                //    item.DetailsPriceRange = string.Empty;
-                //}
+                //if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(item.Product.SupplierId))
+                //    MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
                 //else
                 //{
-                if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(item.Product.SupplierId))
-                    MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
-                else
-                {
-                    if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
-                        item.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, item.ProductId);
-                    else
-                        item.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(item.Product.SupplierId, item.ProductId);
-                }
+                //    if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
+                //        item.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, item.ProductId);
+                //    else
+                //        item.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(item.Product.SupplierId, item.ProductId);
                 //}
+                ////}
+                if (string.IsNullOrEmpty(item.DetailsPriceRange))
+                    item.DetailsPriceRange = item.Product.PriceAndRange;
+
                 if (string.IsNullOrEmpty(item.DetailsPriceRange))
                 {
                     continue;
@@ -1331,47 +1258,6 @@ namespace Book.UI.Invoices.CO
             }
             this.gridControl1.RefreshDataSource();
             this.UpdateMoneyFields();
-            //BL.V.BeginTransaction();
-            //try
-            //{
-            //    string sql = string.Empty;
-            //    string sql2 = string.Empty;
-            //    IList<Model.InvoiceCODetail> list = this.invoiceDetailManager.SelectNoPrice();   //查询2013-11-12 - 2013-12-20期间
-            //    foreach (var item in list)
-            //    {
-            //        if (string.IsNullOrEmpty(item.Product.SupplierId))
-            //        {
-            //            item.DetailsPriceRange = string.Empty;
-            //            continue;
-            //        }
-            //        else
-            //            item.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(item.Product.SupplierId, item.ProductId);
-            //        if (string.IsNullOrEmpty(item.DetailsPriceRange))
-            //        {
-            //            continue;
-            //        }
-            //        else
-            //        {
-            //            item.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(item.DetailsPriceRange, Convert.ToDouble(item.OrderQuantity));
-            //            if (item.InvoiceCODetailPrice != 0)
-            //            {
-            //                item.InvoiceCODetailMoney = item.InvoiceCODetailPrice * Convert.ToDecimal(item.OrderQuantity);
-            //                item.Invoice.InvoiceTotal += item.InvoiceCODetailMoney;
-            //                item.Invoice.InvoiceHeji = item.Invoice.InvoiceTotal;
-            //                sql = "UPDATE InvoiceCODetail SET InvoiceCODetail.InvoiceCODetailPrice='" + item.InvoiceCODetailPrice + "',InvoiceCODetail.InvoiceCODetailMoney='" + item.InvoiceCODetailMoney + "' WHERE InvoiceCODetailId='" + item.InvoiceCODetailId + "'";
-            //                sql2 = "UPDATE InvoiceCO SET InvoiceTotal='" + item.Invoice.InvoiceTotal + "',InvoiceHeji='" + item.Invoice.InvoiceHeji + "' WHERE InvoiceId='" + item.Invoice.InvoiceId + "'";
-            //                invoiceManager.UpdateSql(sql2);
-            //                invoiceDetailManager.UpdateSql(sql);
-            //            }
-            //        }
-            //    }
-            //    BL.V.CommitTransaction();
-            //    MessageBox.Show("Exe Success!");
-            //}
-            //catch
-            //{
-            //    BL.V.RollbackTransaction();
-            //}
         }
 
         private void ncc_Supplier2_EditValueChanged(object sender, EventArgs e)

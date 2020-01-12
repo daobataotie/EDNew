@@ -19,7 +19,7 @@ namespace Book.UI.Invoices.IP
             //lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
             this.lbl_PO.Text = invoice.PO;
             //this.lbl_InvoiceDate.Text = invoice.InvoiceDate.Value.ToString("yyyy-MM-dd");
-            this.lbl_InvoiceDate.Text = invoice.InvoiceDate.Value.ToString("MMM-dd-yyyy",CultureInfo.CreateSpecificCulture("en-GB"));
+            this.lbl_InvoiceDate.Text = invoice.InvoiceDate.Value.ToString("MMM-dd-yyyy", CultureInfo.CreateSpecificCulture("en-GB"));
             this.lbl_CustomerName.Text = invoice.Customer.CustomerFullName;
             this.lbl_CustomerAddress.Text = invoice.Customer.CustomerAddress;
             this.lbl_DeliveryTO.Text = invoice.DeliveryTo;
@@ -57,7 +57,7 @@ namespace Book.UI.Invoices.IP
             }
 
             TC_No.DataBindings.Add("Text", this.DataSource, Model.ProformaInvoiceDetail.PRO_Number);
-            TC_ItemCode.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
+            TC_ItemCode.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             TC_Desc.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             TC_Qty.DataBindings.Add("Text", this.DataSource, Model.ProformaInvoiceDetail.PRO_Quantity, "{0:N0}");
             TC_Unit.DataBindings.Add("Text", this.DataSource, Model.ProformaInvoiceDetail.PRO_Unit);

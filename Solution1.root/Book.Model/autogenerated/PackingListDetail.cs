@@ -270,6 +270,9 @@ namespace Book.Model
             }
         }
 
+        /// <summary>
+        /// 箱数
+        /// </summary>
         public int CartonQty
         {
             get { return _cartonQty; }
@@ -387,6 +390,26 @@ namespace Book.Model
             set { _invoiceXODetail = value; }
         }
 
+        private decimal? _caiji;
+
+        public decimal? Caiji
+        {
+            get { return _caiji; }
+            set { _caiji = value; }
+        }
+
+        private decimal? _boxMaxCaiji;
+
+        public decimal? BoxMaxCaiji
+        {
+            get { return _boxMaxCaiji; }
+            set { _boxMaxCaiji = value; }
+        }
+
         public readonly static string PRO_InvoiceXODetailId = "InvoiceXODetailId";
+
+        public readonly static string PRO_Caiji = "Caiji";
+
+        public readonly static string PRO_BoxMaxCaiji = "BoxMaxCaiji";
     }
 }

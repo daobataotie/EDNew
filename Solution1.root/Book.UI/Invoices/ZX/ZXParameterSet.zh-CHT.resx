@@ -449,19 +449,19 @@
     <value>編號：</value>
   </data>
   <data name="layoutControlItem2.Text" xml:space="preserve">
-    <value>淨重：</value>
+    <value>淨重(KG)：</value>
   </data>
   <data name="layoutControlItem5.Text" xml:space="preserve">
-    <value>才積：</value>
+    <value>才積(CUFT)：</value>
   </data>
   <data name="layoutControlItem7.Text" xml:space="preserve">
-    <value>箱子長：</value>
+    <value>箱子長(cm)：</value>
   </data>
   <data name="layoutControlItem8.Text" xml:space="preserve">
-    <value>箱子寬：</value>
+    <value>箱子寬(cm)：</value>
   </data>
   <data name="layoutControlItem9.Text" xml:space="preserve">
-    <value>箱子高：</value>
+    <value>箱子高(cm)：</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>箱子參數設置</value>

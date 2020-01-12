@@ -54,7 +54,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="JieAnDate" column="JieAnDate"/>
       <result property="CustomerMarks" column="CustomerMarks"/>
       <result property="IsNotAutoClose" column="IsNotAutoClose"/>
-      
+      <result property="SupplierId" column="SupplierId"/>
       <result property="xocustomer" column="xocustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="Employee4" column="Employee4Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
@@ -63,6 +63,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="Employee3" column="Employee3Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="Employee2" column="Employee2Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="Employee1" column="Employee1Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
+      <result property="Supplier" column="SupplierId" lazyLoad="false" select="Supplier.select_by_primary_key"/>
     </resultMap>
   </resultMaps>
 
@@ -197,7 +198,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	      [Currency],
         [JieAnDate],
         [CustomerMarks],
-        [IsNotAutoClose]
+        [IsNotAutoClose],
+        [SupplierId]
 			FROM
 				[dbo].[InvoiceXO]
 			WHERE
@@ -298,7 +300,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	      [Currency],
         [JieAnDate],
         [CustomerMarks],
-        [IsNotAutoClose]
+        [IsNotAutoClose],
+        [SupplierId]
 			) 
 			VALUES 
 			(
@@ -349,7 +352,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #Currency#,
         #JieAnDate#,
         #CustomerMarks#,
-        #IsNotAutoClose#
+        #IsNotAutoClose#,
+        #SupplierId#
 			)
              ]]>
     </insert>
@@ -403,7 +407,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	      [Currency] = #Currency#,
         [JieAnDate] = #JieAnDate#,
         [CustomerMarks]=#CustomerMarks#,
-        [IsNotAutoClose]=#IsNotAutoClose#
+        [IsNotAutoClose]=#IsNotAutoClose#,
+        [SupplierId]=#SupplierId#
 			WHERE
 				[InvoiceId] = #InvoiceId#
                     ]]>

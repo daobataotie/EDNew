@@ -303,25 +303,7 @@ namespace Book.UI.Settings.BasicData.Products
                 throw new Helper.MessageValueException("損耗區間三設置有誤！");
             }
             this.product.Id = this.textEditId.Text;
-            // this.treeList1.Nodes.Remove
-            //不執行事件treelist
-            //删除节点
-            //flag = 1;
 
-            //foreach (TreeListNode listNode in this.treeList1.Nodes)
-            //{
-
-            //    for (int i = 0; i < listNode.Nodes.Count; i++)
-            //    {
-            //        if (listNode.Nodes[i].Tag.ToString() == this.product.ProductId && listNode.Nodes[i].ParentNode != null)
-            //        {
-            //           listNode.Nodes.Remove( listNode.Nodes[i]);
-            //            treeList1.AppendNode(new object[] { string.IsNullOrEmpty(this.buttonEditTechonProcedures.Text) ? product.ProductName : this.buttonEditTechonProcedures.Text }, 1, product.ProductId);
-
-            //        }
-            //    }
-            //}
-            //flag = 0;
             this.product.AbcCategory = this.comboBoxEditAbcCategory.Text;
 
             if (this.lookUpBasedUnitGroupId.EditValue != null)
@@ -571,48 +553,7 @@ namespace Book.UI.Settings.BasicData.Products
             }
             this.product.ProceId = this.textEditProceduresId.Text;
 
-            // this.product.ProductProcess = _ProductProcess;
-            //图片
 
-            //string fileName = this.buttonEditProductImage.Text;
-            //if (!string.IsNullOrEmpty(fileName))
-            //{
-            //    if (File.Exists(fileName))
-            //    {
-            //        this.product.ProductImage = File.ReadAllBytes(fileName);
-            //    }
-            //}
-
-
-
-            ////图档一
-            //string pic1 = this.ProductImage1.Text;
-            //if (!string.IsNullOrEmpty(pic1))
-            //{
-            //    if (File.Exists(pic1))
-            //    {
-            //        this.product.ProductImage1 = File.ReadAllBytes(pic1);
-            //    }
-            //}
-
-            ////图档二
-            //string pic2 = this.ProductImage2.Text;
-            //if (!string.IsNullOrEmpty(pic2))
-            //{
-            //    if (File.Exists(pic2))
-            //    {
-            //        this.product.ProductImage2 = File.ReadAllBytes(pic2);
-            //    }
-            //}
-            ////图档三
-            //string pic3 = this.ProductImage3.Text;
-            //if (!string.IsNullOrEmpty(pic3))
-            //{
-            //    if (File.Exists(pic3))
-            //    {
-            //        this.product.ProductImage3 = File.ReadAllBytes(pic3);
-            //    }
-            //}
             this.product.MaterialIds = this.checkedComboBoxEditJWeight.EditValue == null ? null : this.checkedComboBoxEditJWeight.EditValue.ToString();
             //2014年3月15日12:45:32
             this.product.Chakuang = Convert.ToDouble(this.spinEditChakuang.EditValue);
@@ -622,6 +563,16 @@ namespace Book.UI.Settings.BasicData.Products
 
             //2018年3月28日21:12:51
             this.product.IsDepot = this.checkEditIsDepot.Checked;
+
+            //2020年1月6日01:30:25：
+            //箱子规格
+            this.product.Length = Convert.ToDouble(this.spinBoxLong.Value);
+            this.product.Width = Convert.ToDouble(this.spinBoxWidth.Value);
+            this.product.Height = Convert.ToDouble(this.spinBoxHeight.Value);
+            this.product.NetWeight = Convert.ToDouble(this.spinBoxJWeight.Value);
+            this.product.GrossWeight = Convert.ToDouble(this.spinBoxMWeight.Value);
+            this.product.Volume = Convert.ToDouble(this.spinBoxCaiJi.Value);
+            this.product.Digital = Convert.ToDouble(this.spinBoxPackingNum.Value);
 
             switch (this.action)
             {
@@ -755,20 +706,7 @@ namespace Book.UI.Settings.BasicData.Products
 
         public override void Refresh()
         {
-
-            //this.treeList1.ClearNodes();
-            //foreach (Model.ProductCategory cate in productCategoryManager.Select())
-            //{
-
-            //    DevExpress.XtraTreeList.Nodes.TreeListNode treeNode = treeList1.AppendNode(new object[] { cate.ProductCategoryName }, null, cate.ProductCategoryId);
-            //    foreach (Model.Product prodcut in productManager.SelectProductByProductCategoryId(cate))
-            //    {
-            //        treeList1.AppendNode(new object[] { prodcut.IsCustomerProduct == true ? prodcut.ProductName + "{" + prodcut.CustomerProductName + "}" : prodcut.ProductName }, treeNode, prodcut.ProductId);
-            //    }
-            //}
-            // this.treeListColumn1.s
             EditForm._ProductProcess.Clear();
-
 
             if (this.product == null)
             {
@@ -783,9 +721,6 @@ namespace Book.UI.Settings.BasicData.Products
                     this.product.ProductMouldDetail = productMouldDetailManager.Select(this.product);
                 }
             }
-            //}
-            //if (this._customer != null)
-            //    this._customer.CustomerId = "e4247f71-4f91-49af-a543-150f8ed65654";
 
             if (this.action == "view")
             {
@@ -793,13 +728,6 @@ namespace Book.UI.Settings.BasicData.Products
                 {
                     this.bindingSourceUnit.DataSource = this.productUnitManager.Select(this.product.BasedUnitGroup);
                     this.lookUpBasedUnitGroupId.EditValue = this.product.BasedUnitGroup.UnitGroupId;
-
-                    //this.newChooseContorlDepotUnit.Choose = new BasicData.ProductUnit.ChooseProductUnit(this.product.BasedUnitGroup.UnitGroupId);
-                    //this.newChooseContorlBuyUnitId.Choose = new BasicData.ProductUnit.ChooseProductUnit(this.product.BasedUnitGroup.UnitGroupId);
-                    //this.newChooseContorlQualityTestUnitId.Choose = new BasicData.ProductUnit.ChooseProductUnit(this.product.BasedUnitGroup.UnitGroupId);
-                    ////this.newChooseContorMainUnitId.Choose = new BasicData.ProductUnit.ChooseProductUnit(this.product.BasedUnitGroup.UnitGroupId);
-                    //this.newChooseContorProduceUnitId.Choose = new BasicData.ProductUnit.ChooseProductUnit(this.product.BasedUnitGroup.UnitGroupId);
-                    //this.newChooseContorSellUnitId.Choose = new BasicData.ProductUnit.ChooseProductUnit(this.product.BasedUnitGroup.UnitGroupId);
                 }
                 if (this.product.VolumeUnitGroup != null)
                 {
@@ -815,15 +743,6 @@ namespace Book.UI.Settings.BasicData.Products
                 }
 
             }
-
-
-
-            //{
-            //    this.textEditId.Text = this.productManager.GetNewId(this.product.ProductCategory);
-
-
-            //}
-            //else
             if (flag1 != 1)
             {
                 this.textEditId.Text = (string.IsNullOrEmpty(this.product.Id) ? this.product.ProductId : this.product.Id);
@@ -1100,17 +1019,7 @@ namespace Book.UI.Settings.BasicData.Products
             #endregion
 
 
-            //if (this.product.ProductProcess.Count==0)
-            //{
-            //    Model.ProductProcess productProcess = new Book.Model.ProductProcess();
-            //    this.product.ProductProcess.Add(productProcess);
-            //}
-            //this.bindingSourceProductProcess.DataSource = this.product.ProductProcess;
             this.buttonEditTechonProcedures.Text = null;
-            //if (this.product.IsProcee ==true)
-            //{
-            //    this.textEdit1.Text = this.product.ProductName;
-            //}
 
             this.newChooseContorlCustomer.EditValue = this.product.Customer;
             this.newChooseContorlCustomer.Enabled = false;
@@ -1119,13 +1028,6 @@ namespace Book.UI.Settings.BasicData.Products
             // this.richTextBoxProcess.Rtf=this.product.ProductProcessDescription  ;
             //  this.buttonEditProcessGroup.EditValue = this.product.CustomerProcessing;
             this.bindingSourceProductMouldDetail.DataSource = this.product.ProductMouldDetail;
-            //if (this.product.IsProcee == true)
-            //{
-            //    this.product.ProductProcess = this.productProcessManager.Select(this.product.ProductId);
-
-            //}
-            // this.bindingSourceProductProcess.DataSource = this.product.ProductProcess;
-
 
             this.nccEmployeeCreator.EditValue = this.product.EmployeeCreator;
             this.nccEmployeeChange.EditValue = this.product.EmployeeChange;
@@ -1179,6 +1081,16 @@ namespace Book.UI.Settings.BasicData.Products
                 this.spinEditSunhaoEnd3.EditValue = null;
                 this.spinEditSunhao3.EditValue = null;
             }
+
+            //2020年1月6日01:30:25：
+            //箱子规格
+            this.spinBoxLong.EditValue = this.product.Length;
+            this.spinBoxWidth.EditValue = this.product.Width;
+            this.spinBoxHeight.EditValue = this.product.Height;
+            this.spinBoxJWeight.EditValue = this.product.NetWeight;
+            this.spinBoxMWeight.EditValue = this.product.GrossWeight;
+            this.spinBoxCaiJi.EditValue = this.product.Volume;
+            this.spinBoxPackingNum.EditValue = this.product.Digital;
 
             switch (this.action)
             {
@@ -2217,74 +2129,6 @@ namespace Book.UI.Settings.BasicData.Products
             }
         }
 
-        /// <summary>
-        ///列印条码
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //private void simpleButton1_Click(object sender, EventArgs e)
-        //{
-        //    string bar = this.textEditProductBarCode.Text;
-        //    if (string.IsNullOrEmpty(bar)) 
-        //    {
-        //        MessageBox.Show("??入產品條形碼!","提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        return;
-        //    }
-        //    BarCode code = new BarCode(bar);
-        //    code.ShowPreviewDialog();
-        //}
-        /// <summary>
-        /// 主计量单位
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //private void newChooseContorlBasedUnitGroupId_EditValueChanged(object sender, EventArgs e)
-        //{
-        //    Model.UnitGroup group = this.newChooseContorlBasedUnitGroupId.EditValue as Model.UnitGroup;
-        //    if (group != null)
-        //    {
-        //        string pars = group.UnitGroupId;
-        //        string parsId=group.Id;
-
-        //        this.newChooseContorlDepotUnit.Choose = new BasicData.ProductUnit.ChooseProductUnit(pars);
-        //        this.newChooseContorlDepotUnit.EditValue = null;
-
-        //        this.newChooseContorlBuyUnitId.Choose = new BasicData.ProductUnit.ChooseProductUnit(pars);
-        //        this.newChooseContorlBuyUnitId.EditValue = null;
-
-        //        this.newChooseContorlQualityTestUnitId.Choose = new BasicData.ProductUnit.ChooseProductUnit(pars);
-        //        this.newChooseContorlQualityTestUnitId.EditValue = null;
-
-        //        //this.newChooseContorMainUnitId.Choose = new BasicData.ProductUnit.ChooseProductUnit(pars);
-        //        //this.newChooseContorMainUnitId.EditValue = null;
-
-        //        this.newChooseContorProduceUnitId.Choose = new BasicData.ProductUnit.ChooseProductUnit(pars);
-        //        this.newChooseContorProduceUnitId.EditValue = null;
-
-        //        this.newChooseContorSellUnitId.Choose = new BasicData.ProductUnit.ChooseProductUnit(pars);
-        //        this.newChooseContorSellUnitId.EditValue = null;
-        //    }
-        //    else
-        //    {
-        //        this.newChooseContorlDepotUnit.Choose = null;
-        //        this.newChooseContorlDepotUnit.EditValue = null;
-
-        //        this.newChooseContorlBuyUnitId.Choose = null;
-        //        this.newChooseContorlBuyUnitId.EditValue =null;
-
-        //        this.newChooseContorlQualityTestUnitId.Choose = null;
-        //        this.newChooseContorlQualityTestUnitId.EditValue = null;
-
-        //        //this.newChooseContorMainUnitId.Choose = null;
-        //       // this.newChooseContorMainUnitId.EditValue = null;
-
-        //        this.newChooseContorProduceUnitId.Choose= null;
-        //        this.newChooseContorProduceUnitId.EditValue = null;
-
-        //        this.newChooseContorSellUnitId.Choose = null;
-        //        this.newChooseContorSellUnitId.EditValue= null;
-        //    }
-        //}
 
         /// <summary>
         /// 默认仓库
@@ -3426,8 +3270,33 @@ namespace Book.UI.Settings.BasicData.Products
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 this.gridViewStock.OptionsPrint.AutoWidth = false;
-                this.gridViewStock.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions() {  });
+                this.gridViewStock.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions() { });
             }
+        }
+
+        //装箱规格
+        private void btn_SetBox_Click(object sender, EventArgs e)
+        {
+            Invoices.ZX.ListForm f = new Book.UI.Invoices.ZX.ListForm();
+            if (DialogResult.OK == f.ShowDialog(this))
+            {
+                Model.Setting setting = f.SelectItem as Model.Setting;
+                if (setting != null)
+                {
+                    this.spinBoxLong.EditValue = setting.Blong;
+                    this.spinBoxWidth.EditValue = setting.BWidth;
+                    this.spinBoxHeight.EditValue = setting.BHeight;
+                    this.spinBoxJWeight.EditValue = setting.BJWeight;
+                    this.spinBoxMWeight.EditValue = setting.BMWeight;
+                    this.spinBoxCaiJi.EditValue = setting.BCaiJi;
+                }
+            }
+        }
+
+        //箱子长宽高变化，才积跟着变化
+        private void spinBoxLong_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spinBoxCaiJi.EditValue = Math.Round(this.spinBoxLong.Value * this.spinBoxWidth.Value * this.spinBoxHeight.Value / 28317, 4);
         }
     }
 }

@@ -242,6 +242,13 @@
       <result property="SafeStock" column="SafeStock"/>
       <result property="LastStockTakeTime" column="LastStockTakeTime"/>
       <result property="OnMadingQuantity" column="OnMadingQuantity"/>
+      <result property="Digital" column="Digital" />
+      <result property="Length" column="Length" />
+      <result property="Width" column="Width" />
+      <result property="Height" column="Height" />
+      <result property="Volume" column="Volume" />
+      <result property="NetWeight" column="NetWeight" />
+      <result property="GrossWeight" column="GrossWeight" />
       <result property="BeenAssigned" column="BeenAssigned"/>
       <result property="OutSourcing" column="OutSourcing" />
       <result property="Consume" column="Consume" />
@@ -258,6 +265,8 @@
       <result property="MRSStockQuantity" column="MRSStockQuantity"/>
       <result property="ProduceMaterialDistributioned" column="ProduceMaterialDistributioned"/>
       <result property="OtherMaterialDistributioned" column="OtherMaterialDistributioned"/>
+      <result property="PriceAndRange" column="PriceAndRange"/>
+      <result property="XOPriceAndRange" column="XOPriceAndRange"/>
       <result property="ProductVersion" column="ProductVersion"/>
       <result property="IsQiangHua" column="IsQiangHua"/>
       <result property="IsFangWu" column="IsFangWu"/>
@@ -320,6 +329,13 @@
       ProductNearXSDate,
       SafeStock,
       LastStockTakeTime,
+			[Digital],
+			[Length],
+			[Width],
+			[Height],
+			[Volume],
+			[NetWeight],
+			[GrossWeight],
       OnMadingQuantity,
       BeenAssigned,
       OutSourcing,
@@ -337,6 +353,8 @@
       MRSStockQuantity,
       ProduceMaterialDistributioned,
       OtherMaterialDistributioned,
+      PriceAndRange,
+      XOPriceAndRange,      
       ProductVersion,
       IsQiangHua,
       IsFangWu,
@@ -443,6 +461,13 @@ where ProductId = #productid#
       ProductNearXSDate,
       SafeStock,
       LastStockTakeTime,
+			[Digital],
+			[Length],
+			[Width],
+			[Height],
+			[Volume],
+			[NetWeight],
+			[GrossWeight],
       OnMadingQuantity,
       BeenAssigned,
       OutSourcing,
@@ -460,6 +485,8 @@ where ProductId = #productid#
       MRSStockQuantity,
       ProduceMaterialDistributioned,
       OtherMaterialDistributioned,
+      PriceAndRange,
+      XOPriceAndRange, 
       ProductVersion,
       IsQiangHua,
       IsFangWu,
@@ -848,6 +875,13 @@ where ProductId = #productid#
       ProductNearXSDate,
       SafeStock,
       LastStockTakeTime,
+			[Digital],
+			[Length],
+			[Width],
+			[Height],
+			[Volume],
+			[NetWeight],
+			[GrossWeight],
       OnMadingQuantity,
       BeenAssigned,
       OutSourcing,
@@ -865,6 +899,8 @@ where ProductId = #productid#
       MRSStockQuantity,
       ProduceMaterialDistributioned,
       OtherMaterialDistributioned,
+      PriceAndRange,
+      XOPriceAndRange, 
       ProductVersion,
       IsQiangHua,
       IsFangWu,

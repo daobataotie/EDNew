@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Book.UI.Settings.BasicData.Employees;
 using System.Linq;
+using Book.UI.Settings.BasicData.Customs;
 
 namespace Book.UI.Invoices.IP
 {
@@ -21,12 +22,9 @@ namespace Book.UI.Invoices.IP
         {
             InitializeComponent();
 
-            this.ncc_Customer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.requireValueExceptions.Add(Model.PackingListHeader.PRO_PackingNo, new AA("PackingNo 不能為空！", this.txt_PackingNo));
             this.requireValueExceptions.Add(Model.PackingListHeader.PRO_PackingDate, new AA("Date 不能為空！", this.Date_PackingDate));
-            this.requireValueExceptions.Add(Model.PackingListHeader.PRO_CustomerId, new AA("CONSIGNEE 不能為空！", this.ncc_Customer));
-            this.requireValueExceptions.Add(Model.PackingListHeader.PRO_PerSS, new AA("PerSS 不能為空！", this.txt_PerSS));
-            this.requireValueExceptions.Add(Model.PackingListHeader.PRO_SailingOnOrAbout, new AA("SailingOnOrAbout 不能為空！", this.date_Sailing));
+            this.requireValueExceptions.Add(Model.PackingListHeader.PRO_PerSS, new AA("Per 不能為空！", this.txt_PerSS));
             this.requireValueExceptions.Add(Model.PackingListHeader.PRO_FromPortId, new AA("From 不能為空！", this.lue_From));
             this.requireValueExceptions.Add(Model.PackingListHeader.PRO_ToPortId, new AA("TO 不能為空！", this.lue_TO));
 
@@ -37,11 +35,6 @@ namespace Book.UI.Invoices.IP
 
             //设置单位
             this.bindingSourcePort.DataSource = portManager.Select();
-            var unitList = new BL.ProductUnitManager().Select().GroupBy(U => U.CnName).Select(D => D.Key).ToList();
-            unitList.ForEach(U =>
-            {
-                this.cob_Unit.Properties.Items.Add(U);
-            });
         }
 
         int LastFlag = 0; //页面载 入时是否执行 last方法
@@ -93,8 +86,6 @@ namespace Book.UI.Invoices.IP
         {
             this.packingListHeader = new Book.Model.PackingListHeader();
             packingListHeader.PackingDate = DateTime.Now;
-            this.cob_Unit.Text = "PCS";
-
 
             this.action = "insert";
         }
@@ -113,15 +104,19 @@ namespace Book.UI.Invoices.IP
 
             this.txt_PackingNo.Text = this.packingListHeader.PackingNo;
             this.Date_PackingDate.EditValue = this.packingListHeader.PackingDate;
-            this.ncc_Customer.EditValue = this.packingListHeader.Customer;
-            this.txt_CustomerName.Text = this.packingListHeader.CustomerFullName;
+            this.btne_CustomerName.Text = this.packingListHeader.CustomerFullName;
             this.txt_ADDRESS.Text = this.packingListHeader.CustomerAddress;
             this.txt_PerSS.Text = this.packingListHeader.PerSS;
-            this.date_Sailing.EditValue = this.packingListHeader.SailingOnOrAbout;
             this.lue_From.EditValue = this.packingListHeader.FromPortId;
             this.lue_TO.EditValue = this.packingListHeader.ToPortId;
-            this.txt_MarkNos.Text = this.packingListHeader.MarkNos;
-            this.cob_Unit.Text = this.packingListHeader.Unit;
+
+            //2020年1月5日22:42:35
+            this.txt_PackingListOf.EditValue = this.packingListHeader.PackingListOf;
+            this.txt_Attn.EditValue = this.packingListHeader.Attn;
+            this.btne_ShippedBy.EditValue = this.packingListHeader.ShippedBy;
+            this.txt_ShippedByAddress.EditValue = this.packingListHeader.ShippedByAddress;
+            this.btne_ShipTo.EditValue = this.packingListHeader.ShipTo;
+            this.txt_ShipToAddress.EditValue = this.packingListHeader.ShipToAddress;
 
             switch (this.action)
             {
@@ -154,20 +149,19 @@ namespace Book.UI.Invoices.IP
             this.packingListHeader.PackingNo = this.txt_PackingNo.Text.Trim();
             if (this.Date_PackingDate.EditValue != null)
                 this.packingListHeader.PackingDate = this.Date_PackingDate.DateTime;
-            if (this.ncc_Customer.EditValue != null)
-            {
-                this.packingListHeader.CustomerId = (this.ncc_Customer.EditValue as Model.Customer).CustomerId;
-                this.packingListHeader.Customer = this.ncc_Customer.EditValue as Model.Customer;
-            }
-            this.packingListHeader.CustomerFullName = this.txt_CustomerName.Text;
+            this.packingListHeader.CustomerFullName = this.btne_CustomerName.Text;
             this.packingListHeader.CustomerAddress = this.txt_ADDRESS.Text;
             this.packingListHeader.PerSS = this.txt_PerSS.Text;
-            if (this.date_Sailing.EditValue != null)
-                this.packingListHeader.SailingOnOrAbout = this.date_Sailing.DateTime;
             this.packingListHeader.FromPortId = this.lue_From.EditValue == null ? null : this.lue_From.EditValue.ToString();
             this.packingListHeader.ToPortId = this.lue_TO.EditValue == null ? null : this.lue_TO.EditValue.ToString();
-            this.packingListHeader.MarkNos = this.txt_MarkNos.Text;
-            this.packingListHeader.Unit = this.cob_Unit.Text;
+
+            //2020年1月5日22:42:35
+            this.packingListHeader.PackingListOf = this.txt_PackingListOf.Text;
+            this.packingListHeader.Attn = this.txt_Attn.Text;
+            this.packingListHeader.ShippedBy = this.btne_ShippedBy.Text; ;
+            this.packingListHeader.ShippedByAddress = this.txt_ShippedByAddress.Text;
+            this.packingListHeader.ShipTo = this.btne_ShipTo.Text;
+            this.packingListHeader.ShipToAddress = this.txt_ShipToAddress.Text;
 
             if (this.action == "insert")
                 this.packingListHeaderManager.Insert(this.packingListHeader);
@@ -260,16 +254,10 @@ namespace Book.UI.Invoices.IP
         // 添加客户订单
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (this.ncc_Customer.EditValue == null)
-            {
-                MessageBox.Show("請先選擇客戶", "提示", MessageBoxButtons.OK);
-                return;
-            }
-
             if (packingListHeader.Details == null)
                 packingListHeader.Details = new List<Model.PackingListDetail>();
 
-            XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm(this.ncc_Customer.EditValue as Model.Customer);
+            XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm();
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 if (f.key != null && f.key.Count > 0)
@@ -279,7 +267,7 @@ namespace Book.UI.Invoices.IP
                     foreach (Model.InvoiceXODetail detail in f.key)
                     {
                         packingDetail = new Book.Model.PackingListDetail();
-                        packingDetail.CartonQty = 1;
+                        //packingDetail.CartonQty = 1;
                         packingDetail.PackingListDetailId = Guid.NewGuid().ToString();
                         packingDetail.Product = detail.Product;
                         packingDetail.ProductId = detail.ProductId;
@@ -287,6 +275,44 @@ namespace Book.UI.Invoices.IP
                         packingDetail.PackingListHeader = this.packingListHeader;
                         packingDetail.InvoiceXODetail = detail;
                         packingDetail.InvoiceXODetailId = detail.InvoiceXODetailId;
+
+                        //2020年1月6日02:13:07
+                        packingDetail.BoxMaxQuantity = Convert.ToDecimal(packingDetail.Product.Digital);
+                        packingDetail.BoxMaxNetWeight = Convert.ToDecimal(packingDetail.Product.NetWeight);
+                        packingDetail.BoxMaxGrossWeight = Convert.ToDecimal(packingDetail.Product.GrossWeight);
+                        packingDetail.BoxMaxCaiji = Convert.ToDecimal(packingDetail.Product.Volume);
+
+                        if (packingDetail.Product.Digital > 0)
+                        {
+                            packingDetail.CartonQty = (int)Math.Ceiling(Convert.ToDouble(detail.InvoiceXODetailQuantity) / Convert.ToDouble(packingDetail.Product.Digital));
+
+                            if (packingListHeader.Details.Count == 0)   //第一个
+                            {
+                                packingDetail.CartonNo = "1-" + packingDetail.CartonQty.ToString();
+                            }
+                            else
+                            {
+                                string[] cartonNos = null;
+                                Model.PackingListDetail lastDetail = packingListHeader.Details.Last();
+                                if (lastDetail.CartonNo.Contains('-'))
+                                    cartonNos = lastDetail.CartonNo.Split('-');
+                                else if (lastDetail.CartonNo.Contains('_'))
+                                    cartonNos = lastDetail.CartonNo.Split('_');
+                                else
+                                    cartonNos = lastDetail.CartonNo.Split('~');
+
+                                if (cartonNos.Length >= 2)
+                                {
+                                    packingDetail.CartonNo = string.Format("{0}-{1}", Convert.ToInt32(cartonNos[1]) + 1, Convert.ToInt32(cartonNos[1]) + packingDetail.CartonQty);
+                                }
+                            }
+                        }
+
+                        packingDetail.Quantity = Convert.ToDecimal(detail.InvoiceXODetailQuantity);
+                        packingDetail.NetWeight = packingDetail.BoxMaxNetWeight * packingDetail.CartonQty;
+                        packingDetail.GrossWeight = packingDetail.BoxMaxGrossWeight * packingDetail.CartonQty;
+                        packingDetail.Caiji = packingDetail.BoxMaxCaiji * packingDetail.CartonQty;
+
 
                         packingListHeader.Details.Add(packingDetail);
                     }
@@ -313,25 +339,6 @@ namespace Book.UI.Invoices.IP
             this.packingListHeader.Details.Remove(detail);
 
             this.gridControl3.RefreshDataSource();
-        }
-
-        private void ncc_Customer_EditValueChanged(object sender, EventArgs e)
-        {
-            if (this.action == "view")
-                return;
-
-            this.txt_CustomerName.Text = null;
-            this.txt_ADDRESS.Text = null;
-
-            if (this.ncc_Customer.EditValue != null)
-            {
-                Model.Customer c = this.ncc_Customer.EditValue as Model.Customer;
-
-                this.txt_CustomerName.Text = c.CustomerFullName;
-                this.txt_ADDRESS.Text = c.CustomerAddress;
-
-                this.packingListHeader.Customer = c;
-            }
         }
 
         protected override string tableCode()
@@ -370,17 +377,19 @@ namespace Book.UI.Invoices.IP
                             //还原数量到最初状态
                             if (detail.CartonQty > 1)
                             {
-                                detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) / detail.CartonQty;
+                                //detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) / detail.CartonQty;
                                 detail.NetWeight = (detail.NetWeight.HasValue ? detail.NetWeight.Value : 0) / detail.CartonQty;
                                 detail.GrossWeight = (detail.GrossWeight.HasValue ? detail.GrossWeight.Value : 0) / detail.CartonQty;
+                                detail.Caiji = (detail.Caiji.HasValue ? detail.Caiji.Value : 0) / detail.CartonQty;
                             }
 
 
                             //根据现在的箱数计算数量
                             detail.CartonQty = endNo - startNo + 1;
-                            detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) * detail.CartonQty;
+                            //detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) * detail.CartonQty;
                             detail.NetWeight = (detail.NetWeight.HasValue ? detail.NetWeight.Value : 0) * detail.CartonQty;
                             detail.GrossWeight = (detail.GrossWeight.HasValue ? detail.GrossWeight.Value : 0) * detail.CartonQty;
+                            detail.Caiji = (detail.Caiji.HasValue ? detail.Caiji.Value : 0) * detail.CartonQty;
                         }
                     }
                     catch
@@ -394,9 +403,10 @@ namespace Book.UI.Invoices.IP
 
                     if (detail.CartonQty > 1)
                     {
-                        detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) / detail.CartonQty;
+                        //detail.Quantity = (detail.Quantity.HasValue ? detail.Quantity.Value : 0) / detail.CartonQty;
                         detail.NetWeight = (detail.NetWeight.HasValue ? detail.NetWeight.Value : 0) / detail.CartonQty;
                         detail.GrossWeight = (detail.GrossWeight.HasValue ? detail.GrossWeight.Value : 0) / detail.CartonQty;
+                        detail.Caiji = (detail.Caiji.HasValue ? detail.Caiji.Value : 0) / detail.CartonQty;
 
                         detail.CartonQty = 1;
                     }
@@ -413,12 +423,12 @@ namespace Book.UI.Invoices.IP
                 //}
 
             }
-            else if (e.Column.Name == "gridColumn6")
-            {
-                decimal qty = 0;
-                decimal.TryParse(str, out qty);
-                detail.Quantity = qty * detail.CartonQty;
-            }
+            //else if (e.Column.Name == "gridColumn6")
+            //{
+            //    decimal qty = 0;
+            //    decimal.TryParse(str, out qty);
+            //    detail.Quantity = qty * detail.CartonQty;
+            //}
             else if (e.Column.Name == "gridColumn7")
             {
                 decimal netWeight = 0;
@@ -431,21 +441,50 @@ namespace Book.UI.Invoices.IP
                 decimal.TryParse(str, out grossWeight);
                 detail.GrossWeight = grossWeight * detail.CartonQty;
             }
+            else if (e.Column.Name == "gridColumn14")
+            {
+                decimal caiji = 0;
+                decimal.TryParse(str, out caiji);
+                detail.Caiji = caiji * detail.CartonQty;
+            }
 
             this.gridControl3.RefreshDataSource();
         }
 
-        private void cob_Unit_EditValueChanged(object sender, EventArgs e)
+        //Shipped by
+        private void btne_ShippedBy_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(this.cob_Unit.Text))
+            Settings.BasicData.Company.ChooseCompanyForm f = new Book.UI.Settings.BasicData.Company.ChooseCompanyForm();
+            if (f.ShowDialog() == DialogResult.OK)
             {
-                this.gridColumn6.DisplayFormat.FormatString = string.Format("@0.## {0}", this.cob_Unit.Text);
-                this.gridColumn9.DisplayFormat.FormatString = string.Format("0.## {0}", this.cob_Unit.Text);
+                Model.Company company = f.SelectedItem as Model.Company;
+                this.btne_ShippedBy.EditValue = string.IsNullOrEmpty(company.CompanyEnglishName) ? company.CompanyName : company.CompanyEnglishName;
+                this.txt_ShippedByAddress.EditValue = company.CompanyAddress3;
             }
-            else
+        }
+
+        //Ship to
+        private void btne_ShipTo_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            ChooseCustomsForm f = new ChooseCustomsForm();
+            if (f.ShowDialog() == DialogResult.OK)
             {
-                this.gridColumn6.DisplayFormat.FormatString = string.Format("@0.## {0}", "PCS");
-                this.gridColumn9.DisplayFormat.FormatString = string.Format("0.## {0}", "PCS");
+                Model.Customer customer = f.SelectedItem as Model.Customer;
+                this.btne_ShipTo.EditValue = customer.CustomerFullName;
+                //this.txt_ShipToAddress.EditValue = customer.CustomerAddress;
+                this.txt_ShipToAddress.EditValue = customer.CustomerJinChuAddress;
+            }
+        }
+
+        //Customer
+        private void txt_CustomerName_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            ChooseCustomsForm f = new ChooseCustomsForm();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                Model.Customer customer = f.SelectedItem as Model.Customer;
+                this.btne_CustomerName.EditValue = customer.CustomerFullName;
+                this.txt_ADDRESS.EditValue = customer.CustomerJinChuAddress;
             }
         }
     }

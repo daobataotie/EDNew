@@ -32,6 +32,7 @@ namespace Book.UI.Settings.BasicData.Company
         {
             InitializeComponent();
             this.requireValueExceptions.Add(Model.Company.PROPERTY_COMPANYNAME, new AA(Properties.Resources.RequireDataForNames, this.textEditName));
+            this.invalidValueExceptions.Add(Model.Company.PROPERTY_COMPANYNAME, new AA("公司名稱已存在", this.textEditName));
             this.action = "insert";
         }
         #endregion

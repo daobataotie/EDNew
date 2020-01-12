@@ -21,7 +21,6 @@ namespace Book.UI.Invoices.IP
         {
             InitializeComponent();
 
-            this.ncc_Customer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.requireValueExceptions.Add(Model.PackingInvoiceHeader.PRO_InvoiceNo, new AA("InvoiceNo 不能為空！", this.txt_InvoiceNo));
             this.requireValueExceptions.Add(Model.PackingInvoiceHeader.PRO_InvoiceDate, new AA("Date 不能為空！", this.Date_InvoiceDate));
 
@@ -33,11 +32,7 @@ namespace Book.UI.Invoices.IP
 
             //设置单位
             this.bindingSourcePort.DataSource = portManager.Select();
-            var unitList = new BL.ProductUnitManager().Select().GroupBy(U => U.CnName).Select(D => D.Key).ToList();
-            unitList.ForEach(U =>
-            {
-                this.cob_Unit.Properties.Items.Add(U);
-            });
+            this.bindingSourceBank.DataSource = new BL.BankManager().Select();
         }
 
         int LastFlag = 0; //页面载 入时是否执行 last方法
@@ -108,27 +103,25 @@ namespace Book.UI.Invoices.IP
 
             this.txt_InvoiceNo.Text = this.packingInvoiceHeader.InvoiceNo;
             this.Date_InvoiceDate.EditValue = this.packingInvoiceHeader.InvoiceDate;
-            this.ncc_Customer.EditValue = this.packingInvoiceHeader.Customer;
-            //if (this.packingInvoiceHeader.Customer != null)   //客户全名和地址独立出来，不从客户带
-            //{
-            //    this.txt_CustomerName.EditValue = this.packingInvoiceHeader.Customer.CustomerFullName;
-            //    this.txt_ADDRESS.EditValue = this.packingInvoiceHeader.Customer.CustomerAddress;
-            //}
-            //else
-            //{
-            //    this.txt_CustomerName.EditValue = "";
-            //    this.txt_ADDRESS.EditValue = "";
-            //}
             this.txt_CustomerName.EditValue = this.packingInvoiceHeader.CustomerFullName;
             this.txt_ADDRESS.EditValue = this.packingInvoiceHeader.CustomerAddress;
-            this.txt_TradingCondition.EditValue = this.packingInvoiceHeader.TradingCondition;
 
             this.txt_PerSS.Text = this.packingInvoiceHeader.PerSS;
             this.date_Sailing.EditValue = this.packingInvoiceHeader.SailingOnOrAbout;
             this.lue_From.EditValue = this.packingInvoiceHeader.FromPortId;
             this.lue_TO.EditValue = this.packingInvoiceHeader.ToPortId;
-            this.txt_MarkNos.Text = this.packingInvoiceHeader.MarkNos;
-            this.cob_Unit.Text = this.packingInvoiceHeader.Unit;
+
+            //2020年1月5日22:42:35
+            this.txt_PackingListOf.EditValue = this.packingInvoiceHeader.PackingListOf;
+            this.txt_Attn.EditValue = this.packingInvoiceHeader.Attn;
+            this.btne_ShippedBy.EditValue = this.packingInvoiceHeader.ShippedBy;
+            this.txt_ShippedByAddress.EditValue = this.packingInvoiceHeader.ShippedByAddress;
+            this.btne_ShipTo.EditValue = this.packingInvoiceHeader.ShipTo;
+            this.txt_ShipToAddress.EditValue = this.packingInvoiceHeader.ShipToAddress;
+            this.txt_TotalEnglish.EditValue = this.packingInvoiceHeader.TotalEnglish;
+            this.txt_Term.EditValue = this.packingInvoiceHeader.Term;
+
+            this.lue_AccountName.EditValue = this.packingInvoiceHeader.BankId;
 
             switch (this.action)
             {
@@ -150,11 +143,9 @@ namespace Book.UI.Invoices.IP
             this.txt_CustomerName.Properties.ReadOnly = true;
             this.txt_ADDRESS.Properties.ReadOnly = true;
             this.txt_PerSS.Properties.ReadOnly = true;
-            this.txt_MarkNos.Properties.ReadOnly = true;
-            this.date_Sailing.Properties.ReadOnly = true;
+            //this.date_Sailing.Properties.ReadOnly = true;
             this.lue_From.Properties.ReadOnly = true;
             this.lue_TO.Properties.ReadOnly = true;
-            this.cob_Unit.Properties.ReadOnly = true;
 
             if (this.action == "update")
                 this.txt_InvoiceNo.Properties.ReadOnly = true;
@@ -168,21 +159,28 @@ namespace Book.UI.Invoices.IP
             this.packingInvoiceHeader.InvoiceNo = this.txt_InvoiceNo.Text.Trim();
             if (this.Date_InvoiceDate.EditValue != null)
                 this.packingInvoiceHeader.InvoiceDate = this.Date_InvoiceDate.DateTime;
-            if (this.ncc_Customer.EditValue != null)
-            {
-                this.packingInvoiceHeader.CustomerId = (this.ncc_Customer.EditValue as Model.Customer).CustomerId;
-                this.packingInvoiceHeader.Customer = this.ncc_Customer.EditValue as Model.Customer;
-            }
             this.packingInvoiceHeader.CustomerFullName = this.txt_CustomerName.Text;
             this.packingInvoiceHeader.CustomerAddress = this.txt_ADDRESS.Text;
-            this.packingInvoiceHeader.TradingCondition = this.txt_TradingCondition.Text;
             this.packingInvoiceHeader.PerSS = this.txt_PerSS.Text;
             if (this.date_Sailing.EditValue != null)
                 this.packingInvoiceHeader.SailingOnOrAbout = this.date_Sailing.DateTime;
             this.packingInvoiceHeader.FromPortId = this.lue_From.EditValue == null ? null : this.lue_From.EditValue.ToString();
             this.packingInvoiceHeader.ToPortId = this.lue_TO.EditValue == null ? null : this.lue_TO.EditValue.ToString();
-            this.packingInvoiceHeader.MarkNos = this.txt_MarkNos.Text;
-            this.packingInvoiceHeader.Unit = this.cob_Unit.Text;
+
+            //2020年1月5日22:42:35
+            this.packingInvoiceHeader.PackingListOf = this.txt_PackingListOf.Text;
+            this.packingInvoiceHeader.Attn = this.txt_Attn.Text;
+            this.packingInvoiceHeader.ShippedBy = this.btne_ShippedBy.Text; ;
+            this.packingInvoiceHeader.ShippedByAddress = this.txt_ShippedByAddress.Text;
+            this.packingInvoiceHeader.ShipTo = this.btne_ShipTo.Text;
+            this.packingInvoiceHeader.ShipToAddress = this.txt_ShipToAddress.Text;
+            this.packingInvoiceHeader.Term = this.txt_Term.Text;
+            this.packingInvoiceHeader.TotalEnglish = this.txt_TotalEnglish.Text;
+
+            if (this.lue_AccountName.EditValue != null)
+            {
+                this.packingInvoiceHeader.BankId = this.lue_AccountName.EditValue.ToString();
+            }
 
             if (this.action == "insert")
                 this.packingInvoiceHeaderManager.Insert(this.packingInvoiceHeader);
@@ -323,18 +321,20 @@ namespace Book.UI.Invoices.IP
                 ChoosePackingListForm f = new ChoosePackingListForm();
                 if (f.ShowDialog(this) == DialogResult.OK && f.SelectItem != null)
                 {
-                    this.ncc_Customer.EditValue = this.packingInvoiceHeader.Customer = f.SelectItem.Customer = new BL.CustomerManager().Get(f.SelectItem.CustomerId);
                     this.txt_CustomerName.EditValue = f.SelectItem.CustomerFullName;
                     this.txt_ADDRESS.EditValue = f.SelectItem.CustomerAddress;
-                    //this.txt_CustomerName.Text = f.SelectItem.Customer.CustomerFullName;
-                    //this.txt_ADDRESS.Text = f.SelectItem.Customer.CustomerAddress;
-                    this.txt_TradingCondition.EditValue = f.SelectItem.Customer.TradingCondition;
                     this.txt_PerSS.Text = f.SelectItem.PerSS;
                     this.date_Sailing.EditValue = f.SelectItem.SailingOnOrAbout;
                     this.lue_From.EditValue = f.SelectItem.FromPortId;
                     this.lue_TO.EditValue = f.SelectItem.ToPortId;
-                    this.txt_MarkNos.Text = f.SelectItem.MarkNos;
-                    this.cob_Unit.Text = f.SelectItem.Unit;
+
+                    //2020年1月5日22:42:35
+                    this.txt_PackingListOf.EditValue = f.SelectItem.PackingListOf;
+                    this.txt_Attn.EditValue = f.SelectItem.Attn;
+                    this.btne_ShippedBy.EditValue = f.SelectItem.ShippedBy;
+                    this.txt_ShippedByAddress.EditValue = f.SelectItem.ShippedByAddress;
+                    this.btne_ShipTo.EditValue = f.SelectItem.ShipTo;
+                    this.txt_ShipToAddress.EditValue = f.SelectItem.ShipToAddress;
 
                     this.packingInvoiceHeader.Details = new List<Model.PackingInvoiceDetail>();
                     Model.PackingInvoiceDetail detail;
@@ -366,13 +366,7 @@ namespace Book.UI.Invoices.IP
         //选择客户订单
         private void btn_ChooseInvoiceXO_Click(object sender, EventArgs e)
         {
-            if (this.ncc_Customer.EditValue == null)
-            {
-                MessageBox.Show("請先選擇客戶", "提示", MessageBoxButtons.OK);
-                return;
-            }
-
-            XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm(this.ncc_Customer.EditValue as Model.Customer);
+            XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm();
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 if (f.key != null && f.key.Count > 0)
@@ -430,12 +424,28 @@ namespace Book.UI.Invoices.IP
             }
         }
 
-        private void cob_Unit_EditValueChanged(object sender, EventArgs e)
+        private void lue_AccountName_EditValueChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(this.cob_Unit.Text))
-                this.gridColumn9.DisplayFormat.FormatString = string.Format("0.## {0}", this.cob_Unit.Text);
+            if (this.lue_AccountName.EditValue != null)
+            {
+                Model.Bank bank = (this.bindingSourceBank.DataSource as IList<Model.Bank>).First(B => B.BankId == this.lue_AccountName.EditValue.ToString());
+                this.txt_AccountNo.Text = bank.Id;
+                this.txt_BankAddress.Text = bank.BankAddress;
+                this.txt_SWIFTCode.Text = bank.SWIFTCode;
+
+                this.txt_BankTel.Text = bank.BankPhone;
+                this.txt_BankFax.Text = bank.Fax;
+            }
             else
-                this.gridColumn9.DisplayFormat.FormatString = string.Format("0.## {0}", "PCS");
+            {
+                this.txt_AccountNo.Text = "";
+                this.txt_BankAddress.Text = "";
+                this.txt_SWIFTCode.Text = "";
+
+                this.txt_BankTel.Text = "";
+                this.txt_BankFax.Text = "";
+            }
         }
+
     }
 }

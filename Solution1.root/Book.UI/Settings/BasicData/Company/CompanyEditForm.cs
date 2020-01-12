@@ -18,6 +18,10 @@ namespace Book.UI.Settings.BasicData.Company
         public CompanyEditForm()
         {
             InitializeComponent();
+
+            this.requireValueExceptions.Add(Model.Company.PROPERTY_COMPANYNAME, new AA(Properties.Resources.RequireDataForNames, this.textEditCompanyName));
+            this.invalidValueExceptions.Add(Model.Company.PROPERTY_COMPANYNAME, new AA("公司名稱已存在", this.textEditCompanyName));
+
             this.action = "view";
             this._company = this._companyManager.SelectIsDefaultCompany();
         }

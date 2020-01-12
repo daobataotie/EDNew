@@ -479,6 +479,343 @@
   <data name="&gt;&gt;newChooseUpdateEmployee.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="lookUpEditQualityTestUnitId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>515, 87</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns" xml:space="preserve">
+    <value>CnName</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns1" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns2" xml:space="preserve">
+    <value>ConvertRate</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns3" xml:space="preserve">
+    <value>换算率</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns4" xml:space="preserve">
+    <value>IsMainUnit</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns5" xml:space="preserve">
+    <value>主计量单位</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns6" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns7" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
+    <value>None</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns9" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns10" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns11" xml:space="preserve">
+    <value>ProductUnitId</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns12" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns13" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns14" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
+    <value>None</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns15" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns16" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.Columns17" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpEditQualityTestUnitId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 21</value>
+  </data>
+  <data name="lookUpEditQualityTestUnitId.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lookUpEditQualityTestUnitId.Name" xml:space="preserve">
+    <value>lookUpEditQualityTestUnitId</value>
+  </data>
+  <data name="&gt;&gt;lookUpEditQualityTestUnitId.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lookUpEditQualityTestUnitId.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;lookUpEditQualityTestUnitId.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lookUpSellUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 87</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns" xml:space="preserve">
+    <value>CnName</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns1" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns2" xml:space="preserve">
+    <value>ConvertRate</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns3" xml:space="preserve">
+    <value>換算率</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns4" xml:space="preserve">
+    <value>IsMainUnit</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns5" xml:space="preserve">
+    <value>主計量單位</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns6" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns7" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
+    <value>None</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns9" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns10" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns11" xml:space="preserve">
+    <value>ProductUnitId</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns12" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns13" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns14" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
+    <value>None</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns15" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns16" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.Columns17" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="lookUpSellUnit.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpSellUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 21</value>
+  </data>
+  <data name="lookUpSellUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;lookUpSellUnit.Name" xml:space="preserve">
+    <value>lookUpSellUnit</value>
+  </data>
+  <data name="&gt;&gt;lookUpSellUnit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lookUpSellUnit.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;lookUpSellUnit.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lookUpDepotUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 87</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns" xml:space="preserve">
+    <value>CnName</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns1" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns2" xml:space="preserve">
+    <value>ConvertRate</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns3" xml:space="preserve">
+    <value>換算率</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns4" xml:space="preserve">
+    <value>IsMainUnit</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns5" xml:space="preserve">
+    <value>主計量單位</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns6" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns7" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
+    <value>None</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns9" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns10" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns11" xml:space="preserve">
+    <value>ProductUnitId</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns12" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns13" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns14" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
+    <value>None</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns15" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns16" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.Columns17" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="lookUpDepotUnit.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpDepotUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 21</value>
+  </data>
+  <data name="lookUpDepotUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;lookUpDepotUnit.Name" xml:space="preserve">
+    <value>lookUpDepotUnit</value>
+  </data>
+  <data name="&gt;&gt;lookUpDepotUnit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lookUpDepotUnit.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;lookUpDepotUnit.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lookUpCJUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 62</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns" xml:space="preserve">
+    <value>CnName</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns1" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns2" xml:space="preserve">
+    <value>ConvertRate</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns3" xml:space="preserve">
+    <value>換算率</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns4" xml:space="preserve">
+    <value>IsMainUnit</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns5" xml:space="preserve">
+    <value>主計量單位</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns6" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns7" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
+    <value>None</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns9" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns10" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns11" xml:space="preserve">
+    <value>ProductUnitId</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns12" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns13" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns14" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
+    <value>None</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns15" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns16" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.Columns17" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="lookUpCJUnit.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lookUpCJUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 21</value>
+  </data>
+  <data name="lookUpCJUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;lookUpCJUnit.Name" xml:space="preserve">
+    <value>lookUpCJUnit</value>
+  </data>
+  <data name="&gt;&gt;lookUpCJUnit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lookUpCJUnit.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;lookUpCJUnit.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="spinBoxPackingNum.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
@@ -780,343 +1117,6 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;groupControl1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>515, 87</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns" xml:space="preserve">
-    <value>CnName</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns1" xml:space="preserve">
-    <value>名称</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns2" xml:space="preserve">
-    <value>ConvertRate</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns3" xml:space="preserve">
-    <value>换算率</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns4" xml:space="preserve">
-    <value>IsMainUnit</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns5" xml:space="preserve">
-    <value>主计量单位</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns6" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns7" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
-    <value>None</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns8" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns9" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns10" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns11" xml:space="preserve">
-    <value>ProductUnitId</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns12" xml:space="preserve">
-    <value>编号</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns13" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns14" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
-    <value>None</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns15" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns16" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.Columns17" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Properties.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpEditQualityTestUnitId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 21</value>
-  </data>
-  <data name="lookUpEditQualityTestUnitId.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lookUpEditQualityTestUnitId.Name" xml:space="preserve">
-    <value>lookUpEditQualityTestUnitId</value>
-  </data>
-  <data name="&gt;&gt;lookUpEditQualityTestUnitId.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;lookUpEditQualityTestUnitId.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;lookUpEditQualityTestUnitId.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lookUpSellUnit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 87</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns" xml:space="preserve">
-    <value>CnName</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns1" xml:space="preserve">
-    <value>名稱</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns2" xml:space="preserve">
-    <value>ConvertRate</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns3" xml:space="preserve">
-    <value>換算率</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns4" xml:space="preserve">
-    <value>IsMainUnit</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns5" xml:space="preserve">
-    <value>主計量單位</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns6" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns7" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
-    <value>None</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns8" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns9" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns10" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns11" xml:space="preserve">
-    <value>ProductUnitId</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns12" xml:space="preserve">
-    <value>編號</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns13" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns14" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
-    <value>None</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns15" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns16" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.Columns17" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="lookUpSellUnit.Properties.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpSellUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 21</value>
-  </data>
-  <data name="lookUpSellUnit.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;lookUpSellUnit.Name" xml:space="preserve">
-    <value>lookUpSellUnit</value>
-  </data>
-  <data name="&gt;&gt;lookUpSellUnit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;lookUpSellUnit.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;lookUpSellUnit.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lookUpDepotUnit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 87</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns" xml:space="preserve">
-    <value>CnName</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns1" xml:space="preserve">
-    <value>名稱</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns2" xml:space="preserve">
-    <value>ConvertRate</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns3" xml:space="preserve">
-    <value>換算率</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns4" xml:space="preserve">
-    <value>IsMainUnit</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns5" xml:space="preserve">
-    <value>主計量單位</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns6" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns7" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
-    <value>None</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns8" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns9" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns10" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns11" xml:space="preserve">
-    <value>ProductUnitId</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns12" xml:space="preserve">
-    <value>編號</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns13" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns14" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
-    <value>None</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns15" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns16" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.Columns17" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="lookUpDepotUnit.Properties.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpDepotUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
-  </data>
-  <data name="lookUpDepotUnit.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;lookUpDepotUnit.Name" xml:space="preserve">
-    <value>lookUpDepotUnit</value>
-  </data>
-  <data name="&gt;&gt;lookUpDepotUnit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;lookUpDepotUnit.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;lookUpDepotUnit.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lookUpCJUnit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 62</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns" xml:space="preserve">
-    <value>CnName</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns1" xml:space="preserve">
-    <value>名稱</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns2" xml:space="preserve">
-    <value>ConvertRate</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns3" xml:space="preserve">
-    <value>換算率</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns4" xml:space="preserve">
-    <value>IsMainUnit</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns5" xml:space="preserve">
-    <value>主計量單位</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns6" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns7" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
-    <value>None</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns8" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns9" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns10" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns11" xml:space="preserve">
-    <value>ProductUnitId</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns12" xml:space="preserve">
-    <value>編號</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns13" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns14" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
-    <value>None</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns15" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns16" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.Columns17" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="lookUpCJUnit.Properties.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpCJUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
-  </data>
-  <data name="lookUpCJUnit.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;lookUpCJUnit.Name" xml:space="preserve">
-    <value>lookUpCJUnit</value>
-  </data>
-  <data name="&gt;&gt;lookUpCJUnit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;lookUpCJUnit.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;lookUpCJUnit.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="lookUpProduceUnitId.Location" type="System.Drawing.Point, System.Drawing">

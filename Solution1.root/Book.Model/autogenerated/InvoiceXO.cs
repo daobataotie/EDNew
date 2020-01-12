@@ -198,6 +198,10 @@ namespace Book.Model
 
         private decimal? _taibiMoney;
 
+        private string _supplierId;
+
+        private Supplier _supplier;
+
         #endregion
 
         #region Properties
@@ -676,6 +680,18 @@ namespace Book.Model
             set { _taibiMoney = value; }
         }
 
+        public string SupplierId
+        {
+            get { return _supplierId; }
+            set { _supplierId = value; }
+        }
+
+        public Supplier Supplier
+        {
+            get { return _supplier; }
+            set { _supplier = value; }
+        }
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -884,6 +900,8 @@ namespace Book.Model
         public readonly static string PRO_Exchange = "Exchange";
 
         public readonly static string PRO_TaibiMoney = "TaibiMoney";
+
+        public readonly static string PRO_SupplierId = "SupplierId";
 
         #endregion
     }

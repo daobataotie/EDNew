@@ -285,7 +285,7 @@ namespace Book.Model
 		}
 
 		/// <summary>
-		/// 
+        /// 登記地址
 		/// </summary>
 		public string CompanyAddress1
 		{
@@ -300,7 +300,7 @@ namespace Book.Model
 		}
 
 		/// <summary>
-		/// 
+		/// 聯繫地址
 		/// </summary>
 		public string CompanyAddress2
 		{
@@ -315,7 +315,7 @@ namespace Book.Model
 		}
 
 		/// <summary>
-		/// 
+		/// 送貨地址
 		/// </summary>
 		public string CompanyAddress3
 		{

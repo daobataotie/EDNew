@@ -54,6 +54,9 @@ namespace Book.Model
         private int _orderId;
 
         private string _sWIFTCode;
+
+        private string _fax;
+
 		#endregion
 		
 		#region Properties
@@ -180,6 +183,12 @@ namespace Book.Model
             get { return _sWIFTCode; }
             set { _sWIFTCode = value; }
         }
+
+        public string Fax
+        {
+            get { return _fax; }
+            set { _fax = value; }
+        }
 	
 		/// <summary>
 		/// 编号
@@ -221,6 +230,8 @@ namespace Book.Model
         public readonly static string PROPERTY_OrderId = "OrderId";
 
         public readonly static string PRO_SWIFTCode = "SWIFTCode";
+
+        public readonly static string PRO_Fax = "Fax";
 		#endregion
 	}
 }

@@ -27,16 +27,16 @@ namespace Book.UI.Invoices.XO
             this.DataSource = this.invoice.Details;
 
             //CompanyInfo            
-            this.xrLabelCompanyInfoName.Text = BL.Settings.CompanyChineseName;
-            this.xrLabelData.Text = Properties.Resources.InvoiceXO;
+            this.xrLabelCompanyInfoName.Text = "ALAN SAFETY CO., LTD(久綺有限公司)";
+            this.xrLabelData.Text = "客戶訂單通知";
             this.xrLabelPrintDate.Text += DateTime.Now.ToShortDateString();
 
-            //客户信息
-            this.xrLabelCustomName.Text = this.invoice.Customer.CustomerShortName;
-            this.xrLabelCustomFax.Text = this.invoice.Customer.CustomerFax;
-            this.xrLabelCustomTel.Text = string.IsNullOrEmpty(this.invoice.Customer.CustomerPhone) ? this.invoice.Customer.CustomerPhone1 : this.invoice.Customer.CustomerPhone;
-            this.xrLabelTongYiNo.Text = this.invoice.Customer.CustomerNumber;
-            this.xrLabelPiHao.Text = this.invoice.CustomerLotNumber;
+            //供應商信息
+            if (invoice.Supplier != null)
+            {
+                this.lbl_SupplierName.Text = this.invoice.Supplier.SupplierFullName;
+                this.lbl_SupplierFax.Text = this.invoice.Supplier.SupplierFax;
+            }
 
             //单据信息
             this.xrLabelInvoiceDate.Text = this.invoice.InvoiceDate.Value.ToString("yyyy-MM-dd");
@@ -45,33 +45,19 @@ namespace Book.UI.Invoices.XO
             this.xrLabel25.Text += this.invoice.AuditEmp == null ? "" : this.invoice.AuditEmp.EmployeeName;
             this.xrLabelNote.Text = this.invoice.InvoiceNote;
             this.xrLabelCustomerXOId.Text = this.invoice.CustomerInvoiceXOId;
-            this.xrLabelXScustomer.Text = this.invoice.xocustomer.CustomerShortName;
+            this.xrLabelXScustomer.Text = this.invoice.xocustomer.CustomerFullName;
             this.xrLabelYJRQ.Text = this.invoice.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
             this.xrLabelUnit.Text = this.invoice.Details[0].InvoiceProductUnit;
-            this.xrLabeJianCe.Text = this.invoice.xocustomer.CheckedStandard;
-            //foreach (Model.InvoiceXODetail invoicedetail in invoice.Details)
-            //{
-            //    this.lblRemark.Text = invoicedetail.Remark;
-            //}
 
-            this.xrLabelCount.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity);
+            this.xrLabelCount.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity, "{0:0.##}");
+
             //明细信息
-            //this.xrTableCellCustomerProductId.DataBindings.Add("Text", this.DataSource, "PrimaryKey." + Model.CustomerProducts.PROPERTY_CUSTOMERPRODUCTID);
-            //this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "PrimaryKey." + Model.CustomerProducts.PROPERTY_CUSTOMERPRODUCTNAME);
-            // this.xrTableCellXinghao.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductSpecification);
-            //this.xrTableCellCustomerProductName.DataBindings.Add("Text", this.DataSource, "PrimaryKey.Product." + Model.Product.PRO_Id);
-            //this.xrTableCellProductUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PROPERTY_INVOICEPRODUCTUNIT);
-            //this.xrTableCellQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PROPERTY_INVOICEXODETAILQUANTITY);  
-            this.xrTableCellxrTableStockQuantity.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_StocksQuantity);
             this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Inumber);
             this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
-            //this.xrTableCellXinghao.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductSpecification);
-            this.xrTableCellCustomerProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
-            this.xrTableCellQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceProductUnit);
-            this.xrTableCellProductUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity);
-
-            this.lblRemark.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Remark);
-            this.TCProductVersion.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductVersion);
+            this.xrTableCellProductUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceProductUnit);
+            this.xrTableCellQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity,"{0:0.##}");
+            //this.TCProductRemark.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Remark);
+            this.xrRichText1.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
         }
 
     }

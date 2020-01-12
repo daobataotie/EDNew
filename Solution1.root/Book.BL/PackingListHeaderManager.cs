@@ -123,12 +123,12 @@ namespace Book.BL
                 throw new Helper.RequireValueException(Model.PackingListHeader.PRO_PackingNo);
             if (model.PackingDate == null)
                 throw new Helper.RequireValueException(Model.PackingListHeader.PRO_PackingDate);
-            if (string.IsNullOrEmpty(model.CustomerId))
-                throw new Helper.RequireValueException(Model.PackingListHeader.PRO_CustomerId);
+            //if (string.IsNullOrEmpty(model.CustomerId))
+            //    throw new Helper.RequireValueException(Model.PackingListHeader.PRO_CustomerId);
             if (string.IsNullOrEmpty(model.PerSS))
                 throw new Helper.RequireValueException(Model.PackingListHeader.PRO_PerSS);
-            if (model.SailingOnOrAbout == null)
-                throw new Helper.RequireValueException(Model.PackingListHeader.PRO_SailingOnOrAbout);
+            //if (model.SailingOnOrAbout == null)
+            //    throw new Helper.RequireValueException(Model.PackingListHeader.PRO_SailingOnOrAbout);
             if (string.IsNullOrEmpty(model.FromPortId))
                 throw new Helper.RequireValueException(Model.PackingListHeader.PRO_FromPortId);
             if (string.IsNullOrEmpty(model.ToPortId))

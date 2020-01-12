@@ -315,94 +315,49 @@ namespace Book.UI.Invoices.IP
         //选择客户订单
         private void btn_ChooseInvoiceXO_Click(object sender, EventArgs e)
         {
-            #region 以前拉取客戶訂單資料，現在反過來生成客戶訂單，因此拉取商品資料
-            //if (this.ncc_Customer.EditValue == null)
-            //{
-            //    MessageBox.Show("請先選擇客戶", "提示", MessageBoxButtons.OK);
-            //    return;
-            //}
+            if (this.ncc_Customer.EditValue == null)
+            {
+                MessageBox.Show("請先選擇客戶", "提示", MessageBoxButtons.OK);
+                return;
+            }
 
-            //XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm(this.ncc_Customer.EditValue as Model.Customer);
-            //if (f.ShowDialog(this) == DialogResult.OK)
-            //{
-            //    if (f.key != null && f.key.Count > 0)
-            //    {
-            //        if (!string.IsNullOrEmpty(f.key[0].Invoice.Currency))
-            //        {
-            //            this.cob_Currency.Text = Model.ExchangeRate.GetCurrencyENName(f.key[0].Invoice.Currency);
-            //        }
-
-            //        Model.ProformaInvoiceDetail proformaInvoiceDetail = null;
-
-            //        foreach (Model.InvoiceXODetail detail in f.key)
-            //        {
-            //            proformaInvoiceDetail = new Book.Model.ProformaInvoiceDetail();
-            //            proformaInvoiceDetail.ProformaInvoiceDetailId = Guid.NewGuid().ToString();
-            //            proformaInvoiceDetail.ProformaInvoiceId = this.proformaInvoice.PO;
-            //            proformaInvoiceDetail.ProductId = detail.ProductId;
-            //            proformaInvoiceDetail.Product = detail.Product;
-            //            proformaInvoiceDetail.Quantity = Convert.ToInt32(detail.InvoiceXODetailQuantity);
-            //            proformaInvoiceDetail.UnitPrice = detail.InvoiceXODetailPrice;
-            //            proformaInvoiceDetail.Amount = proformaInvoiceDetail.Quantity * proformaInvoiceDetail.UnitPrice;
-            //            proformaInvoiceDetail.Unit = "PCS";
-
-            //            this.proformaInvoice.Details.Add(proformaInvoiceDetail);
-            //        }
-
-            //        this.CombineSameItem();
-
-            //        if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
-            //            this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1).ToString());
-
-            //        this.bindingSourceDetail.DataSource = this.proformaInvoice.Details;
-            //        this.gridControl3.RefreshDataSource();
-            //    }
-            //} 
-            #endregion
-
-            Book.UI.Invoices.ChooseProductForm f = new Book.UI.Invoices.ChooseProductForm();
-
+            XS.SearcharInvoiceXSForm f = new Book.UI.Invoices.XS.SearcharInvoiceXSForm(this.ncc_Customer.EditValue as Model.Customer);
             if (f.ShowDialog(this) == DialogResult.OK)
             {
-                Model.ProformaInvoiceDetail proformaInvoiceDetail = null;
-
-                if (ChooseProductForm.ProductList != null || ChooseProductForm.ProductList.Count > 0)
+                if (f.key != null && f.key.Count > 0)
                 {
-                    foreach (Model.Product product in ChooseProductForm.ProductList)
+                    if (!string.IsNullOrEmpty(f.key[0].Invoice.Currency))
+                    
+                    {
+                        this.cob_Currency.Text = Model.ExchangeRate.GetCurrencyENName(f.key[0].Invoice.Currency);
+                    }
+
+                    Model.ProformaInvoiceDetail proformaInvoiceDetail = null;
+
+                    foreach (Model.InvoiceXODetail detail in f.key)
                     {
                         proformaInvoiceDetail = new Book.Model.ProformaInvoiceDetail();
                         proformaInvoiceDetail.ProformaInvoiceDetailId = Guid.NewGuid().ToString();
                         proformaInvoiceDetail.ProformaInvoiceId = this.proformaInvoice.PO;
-                        proformaInvoiceDetail.ProductId = product.ProductId;
-                        proformaInvoiceDetail.Product = product;
-                        proformaInvoiceDetail.Quantity = 0;
-                        proformaInvoiceDetail.UnitPrice = 0;
-                        proformaInvoiceDetail.Amount = 0;
+                        proformaInvoiceDetail.ProductId = detail.ProductId;
+                        proformaInvoiceDetail.Product = detail.Product;
+                        proformaInvoiceDetail.Quantity = Convert.ToInt32(detail.InvoiceXODetailQuantity);
+                        proformaInvoiceDetail.UnitPrice = detail.InvoiceXODetailPrice;
+                        proformaInvoiceDetail.Amount = proformaInvoiceDetail.Quantity * proformaInvoiceDetail.UnitPrice;
                         proformaInvoiceDetail.Unit = "PCS";
 
                         this.proformaInvoice.Details.Add(proformaInvoiceDetail);
-
-                        this.CombineSameItem();
                     }
-                }
-                if (ChooseProductForm.ProductList == null || ChooseProductForm.ProductList.Count == 0)
-                {
-                    Model.Product product = f.SelectedItem as Model.Product;
-                    proformaInvoiceDetail = new Book.Model.ProformaInvoiceDetail();
-                    proformaInvoiceDetail.ProformaInvoiceDetailId = Guid.NewGuid().ToString();
-                    proformaInvoiceDetail.ProformaInvoiceId = this.proformaInvoice.PO;
-                    proformaInvoiceDetail.ProductId = product.ProductId;
-                    proformaInvoiceDetail.Product = product;
-                    proformaInvoiceDetail.Quantity = 0;
-                    proformaInvoiceDetail.UnitPrice = 0;
-                    proformaInvoiceDetail.Amount = 0;
-                    proformaInvoiceDetail.Unit = "PCS";
-
-                    this.proformaInvoice.Details.Add(proformaInvoiceDetail);
 
                     this.CombineSameItem();
+
+                    if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
+                        this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1));
+
+                    this.bindingSourceDetail.DataSource = this.proformaInvoice.Details;
+                    this.gridControl3.RefreshDataSource();
                 }
-            }
+            }             
 
             if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
                 this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1));
@@ -447,7 +402,7 @@ namespace Book.UI.Invoices.IP
             {
                 Model.Customer customer = this.ncc_Customer.EditValue as Model.Customer;
                 this.txt_CustomerAddress.Text = customer.CustomerAddress;
-                this.txt_DeliveryTo.Text = customer.CustomerAddress;
+                this.txt_DeliveryTo.Text = customer.CustomerJinChuAddress;
                 this.txt_Tel.Text = customer.CustomerPhone;
                 this.txt_Attn.Text = customer.CustomerContact;
                 this.txt_TERM.Text = customer.TradingCondition;

@@ -1710,6 +1710,9 @@
   <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="gridColumn8.Width" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
   <data name="colProductId.Caption" xml:space="preserve">
     <value>商品编号</value>
   </data>
@@ -1720,7 +1723,7 @@
     <value>1</value>
   </data>
   <data name="colProductId.Width" type="System.Int32, mscorlib">
-    <value>98</value>
+    <value>90</value>
   </data>
   <data name="colProduct.Caption" xml:space="preserve">
     <value>商品名称</value>
@@ -1732,7 +1735,7 @@
     <value>2</value>
   </data>
   <data name="colProduct.Width" type="System.Int32, mscorlib">
-    <value>116</value>
+    <value>230</value>
   </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>单位</value>
@@ -1750,7 +1753,7 @@
     <value>3</value>
   </data>
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
-    <value>55</value>
+    <value>38</value>
   </data>
   <data name="colInvoiceCODetailQuantity.Caption" xml:space="preserve">
     <value>数量</value>
@@ -1762,7 +1765,7 @@
     <value>4</value>
   </data>
   <data name="colInvoiceCODetailQuantity.Width" type="System.Int32, mscorlib">
-    <value>46</value>
+    <value>50</value>
   </data>
   <data name="colInvoiceCODetailPrice.Caption" xml:space="preserve">
     <value>单价</value>
@@ -1774,7 +1777,7 @@
     <value>5</value>
   </data>
   <data name="colInvoiceCODetailPrice.Width" type="System.Int32, mscorlib">
-    <value>55</value>
+    <value>60</value>
   </data>
   <data name="colInvoiceCODetailMoney.Caption" xml:space="preserve">
     <value>金额</value>
@@ -1786,7 +1789,7 @@
     <value>6</value>
   </data>
   <data name="colInvoiceCODetailMoney.Width" type="System.Int32, mscorlib">
-    <value>57</value>
+    <value>70</value>
   </data>
   <data name="gridColumnStocksQuantity.Caption" xml:space="preserve">
     <value>库存</value>
@@ -1804,7 +1807,7 @@
     <value>7</value>
   </data>
   <data name="colInvoiceProductDescription.Width" type="System.Int32, mscorlib">
-    <value>103</value>
+    <value>450</value>
   </data>
   <data name="gridColumn6.Caption" xml:space="preserve">
     <value>净重</value>
@@ -1852,7 +1855,7 @@
     <value>8</value>
   </data>
   <data name="gridColumnNote.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>66</value>
   </data>
   <data name="gridColumn14.Caption" xml:space="preserve">
     <value>訂單預交日期</value>
@@ -2411,9 +2414,6 @@
   </data>
   <data name="barButtonItemJieAn.Caption" xml:space="preserve">
     <value>结案</value>
-  </data>
-  <data name="barBtnUpdatePrice.Caption" xml:space="preserve">
-    <value>单价校对</value>
   </data>
   <data name="layoutControlItem56.CustomizationFormText" xml:space="preserve">
     <value>货币种类：</value>

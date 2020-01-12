@@ -40,8 +40,6 @@ namespace Book.UI.Invoices.XO
         public EditForm()
         {
             InitializeComponent();
-            this.colInvoiceXODetailPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colInvoiceXODetailPrice.DisplayFormat.FormatString = this.GetFormat(BL.V.SetDataFormat.XSDJXiao.Value);
 
             this.requireValueExceptions.Add("Id", new AA(Properties.Resources.RequireDataForId, this.textEditInvoiceId));
             this.requireValueExceptions.Add("Date", new AA(Properties.Resources.RequireDataOfInvoiceDate, this.dateEditInvoiceDate));
@@ -67,7 +65,12 @@ namespace Book.UI.Invoices.XO
             // this.newChooseXSCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.EmpAudit.Choose = new ChooseEmployee();
 
+            this.ncc_Supplier.Choose = new Settings.BasicData.Supplier.ChooseSupplier();
+
             this.gridView1.GroupPanelText = "如商品不需要生產排程，請取消“需排程”選擇狀態。";
+
+            productlook = this.productManager.GetProductBaseInfo();
+            this.bindingSourceproduct.DataSource = productlook;
         }
 
         public EditForm(string invoiceId)
@@ -178,17 +181,6 @@ namespace Book.UI.Invoices.XO
 
         private void simpleButtonAppend_Click(object sender, EventArgs e)
         {
-
-
-            //if (this.lookUpEdit3.EditValue == null)
-            //{
-            //    MessageBox.Show("請選則客戶！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    return;
-            //} 
-            //Model.Customer customer = this.CustomerManager.Get(this.lookUpEdit3.EditValue== null ? "":.ToString());
-            //   this.bindingSourceproduct.DataSource = this.productManager.Select(customer); //this.customerProductsManager.Select(customer);
-
-            //Book.UI.Settings.BasicData.Customs.ChooseCustomerProductForm f = new Book.UI.Settings.BasicData.Customs.ChooseCustomerProductForm(customer);
             Book.UI.Invoices.ChooseProductForm f = new Book.UI.Invoices.ChooseProductForm();
 
             if (f.ShowDialog(this) == DialogResult.OK)
@@ -215,6 +207,7 @@ namespace Book.UI.Invoices.XO
                         if (product.SellUnit != null)
                             detail.InvoiceProductUnit = product.SellUnit.CnName;
                         detail.Product = product;
+
                         detail.IsNeedMPS = true;
                         if (product != null)
                         {
@@ -222,24 +215,24 @@ namespace Book.UI.Invoices.XO
                         }
                         this.invoice.Details.Add(detail);
 
-                        int flag = 0;
-                        IList<string> id = new List<string>();
+                        //int flag = 0;
+                        //IList<string> id = new List<string>();
 
-                        foreach (Model.Product products in productDetail)
-                        {
-                            if (id.Contains(products.ProductId)) continue;
-                            id.Add(products.ProductId);
-                        }
-                        foreach (Model.Product products in productDetail)
-                        {
-                            if (id.Contains(detail.ProductId))
-                            {
-                                flag = 1;
-                                break;
-                            }
-                        }
-                        if (flag == 0)
-                            productlook.Add(detail.Product);
+                        //foreach (Model.Product products in productDetail)
+                        //{
+                        //    if (id.Contains(products.ProductId)) continue;
+                        //    id.Add(products.ProductId);
+                        //}
+                        //foreach (Model.Product products in productDetail)
+                        //{
+                        //    if (id.Contains(detail.ProductId))
+                        //    {
+                        //        flag = 1;
+                        //        break;
+                        //    }
+                        //}
+                        //if (flag == 0)
+                        //    productlook.Add(detail.Product);
                     }
                 }
                 if (ChooseProductForm.ProductList == null || ChooseProductForm.ProductList.Count == 0)
@@ -259,6 +252,7 @@ namespace Book.UI.Invoices.XO
                     if (product.SellUnit != null)
                         detail.InvoiceProductUnit = product.SellUnit.CnName;
                     detail.Product = product;
+
                     detail.IsNeedMPS = true;
                     if (product != null)
                     {
@@ -266,27 +260,28 @@ namespace Book.UI.Invoices.XO
                     }
                     this.invoice.Details.Add(detail);
 
-                    int flag = 0;
-                    IList<string> id = new List<string>();
+                    //int flag = 0;
+                    //IList<string> id = new List<string>();
 
-                    foreach (Model.Product products in productDetail)
-                    {
-                        if (id.Contains(products.ProductId)) continue;
-                        id.Add(products.ProductId);
-                    }
-                    foreach (Model.Product products in productDetail)
-                    {
-                        if (id.Contains(detail.ProductId))
-                        {
-                            flag = 1;
-                            break;
-                        }
-                    }
-                    if (flag == 0)
-                        productlook.Add(detail.Product);
+                    //foreach (Model.Product products in productDetail)
+                    //{
+                    //    if (id.Contains(products.ProductId)) continue;
+                    //    id.Add(products.ProductId);
+                    //}
+                    //foreach (Model.Product products in productDetail)
+                    //{
+                    //    if (id.Contains(detail.ProductId))
+                    //    {
+                    //        flag = 1;
+                    //        break;
+                    //    }
+                    //}
+                    //if (flag == 0)
+                    //    productlook.Add(detail.Product);
 
                 }
-                this.bindingSourceproduct.DataSource = productlook;
+                //this.bindingSourceproduct.DataSource = productlook;
+
                 this.gridControl1.RefreshDataSource();
                 this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
             }
@@ -399,6 +394,8 @@ namespace Book.UI.Invoices.XO
             string strCusXoId = this.textEditCustomerInvoiceXOID.Text;
             string strsql = string.Empty;
             this.invoice.CustomerMarks = this.richTextBoxCustomerMarks.Rtf;
+            this.invoice.Supplier = this.ncc_Supplier.EditValue as Model.Supplier;
+            this.invoice.SupplierId = this.invoice.Supplier == null ? null : this.invoice.Supplier.SupplierId;
 
             //修改未出货数量
             if (this.action == "update")
@@ -559,29 +556,36 @@ namespace Book.UI.Invoices.XO
                     //Model.Product product = (this.bindingSource1.Current as Model.InvoiceXODetail).Product;
 
                     // 价格区间查询（2013.3.15）
-                    string PriceRange = (new BL.CustomerProductPriceManager()).SelectPriceByProductId((this.bindingSource1.Current as Model.InvoiceXODetail).ProductId);
+                    //string PriceRange = (new BL.CustomerProductPriceManager()).SelectPriceByProductId((this.bindingSource1.Current as Model.InvoiceXODetail).ProductId);
 
-                    string[] PriAndRange = (PriceRange != null && PriceRange != "") ? PriceRange.Split(',') : null;
-                    if (PriAndRange != null)
+                    //string[] PriAndRange = (PriceRange != null && PriceRange != "") ? PriceRange.Split(',') : null;
+                    //if (PriAndRange != null)
+                    //{
+                    //    foreach (string strPAR in PriAndRange)
+                    //    {
+                    //        decimal mQuanStart = decimal.Parse((strPAR.Split('/')[0] != null && strPAR.Split('/')[0] != "") ? strPAR.Split('/')[0] : "0");
+                    //        decimal mQuanEnd = decimal.Parse((strPAR.Split('/')[1] != null && strPAR.Split('/')[1] != "") ? strPAR.Split('/')[1] : "0");
+                    //        if (quantity <= 0)
+                    //        {
+                    //            price = 0;
+                    //            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, 0);
+                    //            break;
+                    //        }
+                    //        if (quantity >= mQuanStart && quantity <= mQuanEnd)
+                    //        {
+                    //            price = decimal.Parse((strPAR.Split('/')[2] != null && strPAR.Split('/')[2] != "") ? strPAR.Split('/')[2] : "0");
+                    //            string mDJ =          (strPAR.Split('/')[2] != null && strPAR.Split('/')[2] != "") ? strPAR.Split('/')[2] : "0";
+                    //            this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, mDJ);
+                    //            break;
+                    //        }
+                    //    }
+                    //}
+
+                    Model.InvoiceXODetail invoiceXOdetail = this.bindingSource1.Current as Model.InvoiceXODetail;
+                    if (invoiceXOdetail.Product != null && !string.IsNullOrEmpty(invoiceXOdetail.Product.XOPriceAndRange))
                     {
-                        foreach (string strPAR in PriAndRange)
-                        {
-                            decimal mQuanStart = decimal.Parse((strPAR.Split('/')[0] != null && strPAR.Split('/')[0] != "") ? strPAR.Split('/')[0] : "0");
-                            decimal mQuanEnd = decimal.Parse((strPAR.Split('/')[1] != null && strPAR.Split('/')[1] != "") ? strPAR.Split('/')[1] : "0");
-                            if (quantity <= 0)
-                            {
-                                price = 0;
-                                this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, 0);
-                                break;
-                            }
-                            if (quantity >= mQuanStart && quantity <= mQuanEnd)
-                            {
-                                price = decimal.Parse((strPAR.Split('/')[2] != null && strPAR.Split('/')[2] != "") ? strPAR.Split('/')[2] : "0");
-                                string mDJ = (strPAR.Split('/')[2] != null && strPAR.Split('/')[2] != "") ? strPAR.Split('/')[2] : "0";
-                                this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, mDJ);
-                                break;
-                            }
-                        }
+                        price = BL.SupplierProductManager.CountPrice(invoiceXOdetail.Product.XOPriceAndRange, (double)quantity);
+                        this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, price);
                     }
 
                 }
@@ -606,7 +610,6 @@ namespace Book.UI.Invoices.XO
                     //}
                 }
 
-
                 if (e.Column != this.gridColumnZS)
                 {
                     zherang = this.GetDecimal(zherang, BL.V.SetDataFormat.XSJEXiao.Value);
@@ -615,7 +618,16 @@ namespace Book.UI.Invoices.XO
                     this.gridView1.SetRowCellValue(e.RowHandle, this.gridColumn2, this.GetDecimal(price * quantity - zherang, BL.V.SetDataFormat.XSJEXiao.Value));
                 }
 
+
                 this.UpdateMoneyFields();
+            }
+            else if (e.Column.Name == "colProduct" || e.Column.Name == "colProductId")
+            {
+                Model.InvoiceXODetail detail = this.bindingSource1.Current as Model.InvoiceXODetail;
+                if (detail != null)
+                {
+                    detail.Product = productManager.Get(detail.ProductId);
+                }
             }
         }
 
@@ -712,7 +724,7 @@ namespace Book.UI.Invoices.XO
                 this.invoice.Details.Add(detail);
                 this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
             }
-            productlook.Clear();
+            //productlook.Clear();
         }
 
         protected override void MoveNext()
@@ -768,18 +780,18 @@ namespace Book.UI.Invoices.XO
             this.newChooseCustomer2.EditValue = this.invoice.xocustomer;
             this.newChooseCustomer1.EditValue = this.invoice.Customer;
             IList<string> id = new List<string>();
-            foreach (Model.Product products in productlook)
-            {
-                if (id.Contains(products.ProductId)) continue;
-                id.Add(products.ProductId);
-            }
-            foreach (Model.InvoiceXODetail xodetail in this.invoice.Details)
-            {
-                if (id.Contains(xodetail.ProductId))
-                    continue;
-                productlook.Add(xodetail.Product);
-            }
-            this.bindingSourceproduct.DataSource = productlook;
+            //foreach (Model.Product products in productlook)
+            //{
+            //    if (id.Contains(products.ProductId)) continue;
+            //    id.Add(products.ProductId);
+            //}
+            //foreach (Model.InvoiceXODetail xodetail in this.invoice.Details)
+            //{
+            //    if (id.Contains(xodetail.ProductId))
+            //        continue;
+            //    productlook.Add(xodetail.Product);
+            //}
+            //this.bindingSourceproduct.DataSource = productlook;
             //if (this.lookUpEdit3.EditValue != null)
             //{
 
@@ -838,6 +850,7 @@ namespace Book.UI.Invoices.XO
             this.comboBoxEditCurrency.Text = this.invoice.Currency;
             this.checkEditIsForeigntrade.Checked = this.invoice.IsForeigntrade.HasValue ? this.invoice.IsForeigntrade.Value : false;
             this.richTextBoxCustomerMarks.Rtf = this.invoice.CustomerMarks;
+            this.ncc_Supplier.EditValue = this.invoice.Supplier;
 
             this.bindingSource1.DataSource = this.invoice.Details;
 
@@ -872,8 +885,6 @@ namespace Book.UI.Invoices.XO
                 this.gridColumnVersion.OptionsColumn.AllowEdit = false;
                 this.gridColumnZR.OptionsColumn.AllowEdit = false;
                 this.gridColumnZS.OptionsColumn.AllowEdit = false;
-
-                this.btn_MPS.Enabled = true;
             }
             else
             {
@@ -1396,6 +1407,7 @@ namespace Book.UI.Invoices.XO
                 throw ex;
             }
         }
+
         //更新結案顯示值
         private void updateCaption()
         {
@@ -1407,32 +1419,6 @@ namespace Book.UI.Invoices.XO
             else
                 this.barButtonItemJieAn.Caption = "強制結案";
             this.barButtonItemJieAn.Enabled = this.action == "view" ? true : false;
-        }
-
-        //单价校对
-        private void btn_UpdatePrice_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("單價校對功能,將會對原有資料價值進行更新.是否確定繼續操作", "是否繼續", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                //更新所有详细单价,金额
-                IList<Model.InvoiceXODetail> ListDetails = this.invoiceDetailManager.Select();
-                foreach (Model.InvoiceXODetail item in ListDetails)
-                {
-                    if (!string.IsNullOrEmpty(item.Product.XOPriceAndRange) && item.InvoiceXODetailPrice.Value == 0)
-                    {
-                        foreach (string s in item.Product.XOPriceAndRange.Split(','))
-                        {
-                            if (item.InvoiceXODetailQuantity >= double.Parse(s.Split('/')[0]) && item.InvoiceXODetailQuantity <= double.Parse(s.Split('/')[1]))
-                            {
-                                item.InvoiceXODetailPrice = decimal.Parse(s.Split('/')[2]);                             //单价
-                                item.InvoiceXODetailMoney = this.invoiceManager.GetSiSheWuRu(decimal.Parse(item.InvoiceXODetailQuantity.ToString()) * item.InvoiceXODetailPrice.Value, SISHEWURU_WEISHU); //金额
-                            }
-                        }
-                        this.invoiceDetailManager.UpdateProofUnitPrice(item);
-                    }
-                }
-                MessageBox.Show("單價校對完成", "提示信息", MessageBoxButtons.OK);
-            }
         }
 
         private void newChooseCustomer1_EditValueChanged(object sender, EventArgs e)
@@ -1448,8 +1434,8 @@ namespace Book.UI.Invoices.XO
         {
             if (this.newChooseCustomer2.EditValue != null && this.action != "view")
             {
-                productlook = this.productManager.SelectProductByCustomer(newChooseCustomer2.EditValue as Model.Customer);
-                this.bindingSourceproduct.DataSource = productlook;
+                //productlook = this.productManager.SelectProductByCustomer(newChooseCustomer2.EditValue as Model.Customer);
+                //this.bindingSourceproduct.DataSource = productlook;
             }
             //if (this.lookUpEdit3.EditValue != null)
             //{               

@@ -20,9 +20,19 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="CustomerAddress" column="CustomerAddress"/>
       <result property="TradingCondition" column="TradingCondition"/>
       <result property="Unit" column="Unit"/>
+      <result property="PackingListOf" column="PackingListOf"/>
+      <result property="Attn" column="Attn"/>
+      <result property="ShippedBy" column="ShippedBy"/>
+      <result property="ShippedByAddress" column="ShippedByAddress"/>
+      <result property="ShipTo" column="ShipTo"/>
+      <result property="ShipToAddress" column="ShipToAddress"/>
+      <result property="Term" column="Term"/>
+      <result property="TotalEnglish" column="TotalEnglish"/>
+      <result property="BankId" column="BankId"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />
       <result property="FromPort" column="FromPortId" lazyLoad="false" select="Port.select_by_primary_key" />
       <result property="ToPort" column="ToPortId" lazyLoad="false" select="Port.select_by_primary_key" />
+      <result property="Bank" column="BankId" lazyLoad="false" select="Bank.select_by_primary_key"/>
     </resultMap>
   </resultMaps>
 
@@ -123,7 +133,16 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [CustomerFullName],
         [CustomerAddress],
         [TradingCondition],
-        [Unit]
+        [Unit],
+        [PackingListOf],
+        [Attn],
+        [ShippedBy],
+        [ShippedByAddress],
+        [ShipTo],
+        [ShipToAddress],
+        [Term],
+        [TotalEnglish],
+        [BankId]
 			FROM
 				[dbo].[PackingInvoiceHeader]
 			WHERE
@@ -190,7 +209,16 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [CustomerFullName],
         [CustomerAddress],
         [TradingCondition],
-        [Unit]
+        [Unit],
+        [PackingListOf],
+        [Attn],
+        [ShippedBy],
+        [ShippedByAddress],
+        [ShipTo],
+        [ShipToAddress],
+        [Term],
+        [TotalEnglish],
+        [BankId]
 			) 
 			VALUES 
 			(
@@ -207,7 +235,16 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #CustomerFullName#,
         #CustomerAddress#,
         #TradingCondition#,
-        #Unit#
+        #Unit#,
+        #PackingListOf#,
+        #Attn#,
+        #ShippedBy#,
+        #ShippedByAddress#,
+        #ShipTo#,
+        #ShipToAddress#,
+        #Term#,
+        #TotalEnglish#,
+        #BankId#
 			)
              ]]>
     </insert>
@@ -227,7 +264,17 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [CustomerFullName]=#CustomerFullName#,
         [CustomerAddress]=#CustomerAddress#,
         [TradingCondition]=#TradingCondition#,
-        [Unit]=#Unit#
+        [Unit]=#Unit#,
+        [PackingListOf]=#PackingListOf#,
+        [Attn]=#Attn#,
+        [ShippedBy]=#ShippedBy#,
+        [ShippedByAddress]=#ShippedByAddress#,
+        [ShipTo]=#ShipTo#,
+        [ShipToAddress]=#ShipToAddress#,
+        [Term]=#Term#,
+        [TotalEnglish]=#TotalEnglish#,
+        [BankId]=#BankId#
+        
 			WHERE
 				[InvoiceNo] = #InvoiceNo#
                     ]]>

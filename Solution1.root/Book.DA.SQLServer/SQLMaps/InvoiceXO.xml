@@ -43,12 +43,13 @@
       <result property="JieAnDate" column="JieAnDate"/>
       <result property="CustomerMarks" column="CustomerMarks"/>
       <result property="IsNotAutoClose" column="IsNotAutoClose"/>
-
+      <result property="SupplierId" column="SupplierId"/>
       <result property="xocustomer" column="xocustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="Employee4" column="Employee4Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="Employee0" column="Employee0Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
+      <result property="Supplier" column="SupplierId" lazyLoad="false" select="Supplier.select_by_primary_key"/>
     </resultMap>
   </resultMaps>
   <statements>
@@ -93,7 +94,8 @@
 	      [Currency],
         [JieAnDate],
         [CustomerMarks],
-        [IsNotAutoClose]
+        [IsNotAutoClose],
+        [SupplierId]
 			FROM
 				[dbo].[InvoiceXO]
 			WHERE

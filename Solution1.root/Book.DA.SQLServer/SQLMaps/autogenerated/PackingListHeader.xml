@@ -19,6 +19,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="CustomerFullName" column="CustomerFullName"/>
       <result property="CustomerAddress" column="CustomerAddress"/>
       <result property="Unit" column="Unit"/>
+      <result property="PackingListOf" column="PackingListOf"/>
+      <result property="Attn" column="Attn"/>
+      <result property="ShippedBy" column="ShippedBy"/>
+      <result property="ShippedByAddress" column="ShippedByAddress"/>
+      <result property="ShipTo" column="ShipTo"/>
+      <result property="ShipToAddress" column="ShipToAddress"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />
       <result property="FromPort" column="FromPortId" lazyLoad="false" select="Port.select_by_primary_key" />
       <result property="ToPort" column="ToPortId" lazyLoad="false" select="Port.select_by_primary_key" />
@@ -121,7 +127,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[UpdateTime],
         [CustomerFullName],
         [CustomerAddress],
-        [Unit]
+        [Unit],
+        [PackingListOf],
+        [Attn],
+        [ShippedBy],
+        [ShippedByAddress],
+        [ShipTo],
+        [ShipToAddress]
 			FROM
 				[dbo].[PackingListHeader]
 			WHERE
@@ -187,7 +199,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[UpdateTime],
         [CustomerFullName],
         [CustomerAddress],
-        [Unit]
+        [Unit],
+        [PackingListOf],
+        [Attn],
+        [ShippedBy],
+        [ShippedByAddress],
+        [ShipTo],
+        [ShipToAddress]
 			) 
 			VALUES 
 			(
@@ -203,7 +221,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#UpdateTime#,
         #CustomerFullName#,
         #CustomerAddress#,
-        #Unit#
+        #Unit#,
+        #PackingListOf#,
+        #Attn#,
+        #ShippedBy#,
+        #ShippedByAddress#,
+        #ShipTo#,
+        #ShipToAddress#
 			)
              ]]>
     </insert>
@@ -222,7 +246,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[UpdateTime] = #UpdateTime#,
         [CustomerFullName]=#CustomerFullName#,
         [CustomerAddress]=#CustomerAddress#,
-        [Unit]=#Unit#
+        [Unit]=#Unit#,
+        [PackingListOf]=#PackingListOf#,
+        [Attn]=#Attn#,
+        [ShippedBy]=#ShippedBy#,
+        [ShippedByAddress]=#ShippedByAddress#,
+        [ShipTo]=#ShipTo#,
+        [ShipToAddress]=#ShipToAddress#
 			WHERE
 				[PackingNo] = #PackingNo#
                     ]]>
