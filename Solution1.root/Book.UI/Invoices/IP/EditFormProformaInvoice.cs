@@ -119,7 +119,6 @@ namespace Book.UI.Invoices.IP
                 this.txt_CustomerAddress.Text = this.proformaInvoice.Customer.CustomerAddress;
                 this.txt_Tel.Text = this.proformaInvoice.Customer.CustomerPhone;
                 this.txt_Attn.Text = this.proformaInvoice.Customer.CustomerContact;
-                this.txt_TERM.Text = this.proformaInvoice.Customer.TradingCondition;
                 this.txt_PaymentTerm.Text = this.proformaInvoice.Customer.PayCondition;
             }
             else
@@ -127,17 +126,17 @@ namespace Book.UI.Invoices.IP
                 this.txt_CustomerAddress.Text = "";
                 this.txt_Tel.Text = "";
                 this.txt_Attn.Text = "";
-                this.txt_TERM.Text = "";
                 this.txt_PaymentTerm.Text = "";
 
             }
-            this.txt_DeliveryTo.EditValue = this.proformaInvoice.DeliveryTo;
             this.txt_Attn.Text = this.proformaInvoice.Attn;
-            this.cob_Currency.Text = this.proformaInvoice.Currency;
-            this.txt_Remark.Text = this.proformaInvoice.Remark;
-            this.txt_Deliverydate.Text = this.proformaInvoice.DeliveryDate;
             this.lue_AccountName.EditValue = this.proformaInvoice.BankId;
-            this.me_ShippimgMark.Text = this.proformaInvoice.ShippimgMark;
+
+            this.txt_CustomerPONo.Text = this.proformaInvoice.CustomerPONo;
+            this.txt_SalesRep.Text = this.proformaInvoice.SalesRep;
+            this.txt_TotalEnglish.Text = this.proformaInvoice.TotalEnglish;
+            this.txt_GoodsReadyDate.Text = this.proformaInvoice.GOODSREADYDATE;
+            this.txt_CountryOfOrigin.Text = this.proformaInvoice.COUNTRYOFORIGIN;
 
             switch (this.action)
             {
@@ -173,13 +172,14 @@ namespace Book.UI.Invoices.IP
                 this.proformaInvoice.CustomerId = (this.ncc_Customer.EditValue as Model.Customer).CustomerId;
                 this.proformaInvoice.Customer = this.ncc_Customer.EditValue as Model.Customer;
             }
-            this.proformaInvoice.DeliveryTo = this.txt_DeliveryTo.Text;
             this.proformaInvoice.Attn = this.txt_Attn.Text;
-            this.proformaInvoice.Currency = this.cob_Currency.Text;
-            this.proformaInvoice.Remark = this.txt_Remark.Text;
-            this.proformaInvoice.DeliveryDate = this.txt_Deliverydate.Text;
             this.proformaInvoice.BankId = this.lue_AccountName.EditValue == null ? null : this.lue_AccountName.EditValue.ToString();
-            this.proformaInvoice.ShippimgMark = this.me_ShippimgMark.Text;
+
+            this.proformaInvoice.CustomerPONo = this.txt_CustomerPONo.Text;
+            this.proformaInvoice.SalesRep = this.txt_SalesRep.Text;
+            this.proformaInvoice.TotalEnglish = this.txt_TotalEnglish.Text;
+            this.proformaInvoice.GOODSREADYDATE = this.txt_GoodsReadyDate.Text;
+            this.proformaInvoice.COUNTRYOFORIGIN = this.txt_CountryOfOrigin.Text;
 
             if (this.action == "insert")
                 this.proformaInvoiceManager.Insert(this.proformaInvoice);
@@ -326,11 +326,7 @@ namespace Book.UI.Invoices.IP
             {
                 if (f.key != null && f.key.Count > 0)
                 {
-                    if (!string.IsNullOrEmpty(f.key[0].Invoice.Currency))
-                    
-                    {
-                        this.cob_Currency.Text = Model.ExchangeRate.GetCurrencyENName(f.key[0].Invoice.Currency);
-                    }
+                    this.txt_CustomerPONo.Text = f.key[0].Invoice.CustomerInvoiceXOId;
 
                     Model.ProformaInvoiceDetail proformaInvoiceDetail = null;
 
@@ -357,7 +353,7 @@ namespace Book.UI.Invoices.IP
                     this.bindingSourceDetail.DataSource = this.proformaInvoice.Details;
                     this.gridControl3.RefreshDataSource();
                 }
-            }             
+            }
 
             if (this.proformaInvoice.Details != null && this.proformaInvoice.Details.Count > 0)
                 this.proformaInvoice.Details.ToList().ForEach(D => D.Number = (this.proformaInvoice.Details.IndexOf(D) + 1));
@@ -402,19 +398,15 @@ namespace Book.UI.Invoices.IP
             {
                 Model.Customer customer = this.ncc_Customer.EditValue as Model.Customer;
                 this.txt_CustomerAddress.Text = customer.CustomerAddress;
-                this.txt_DeliveryTo.Text = customer.CustomerJinChuAddress;
                 this.txt_Tel.Text = customer.CustomerPhone;
                 this.txt_Attn.Text = customer.CustomerContact;
-                this.txt_TERM.Text = customer.TradingCondition;
                 this.txt_PaymentTerm.Text = customer.PayCondition;
             }
             else
             {
                 this.txt_CustomerAddress.Text = "";
-                this.txt_DeliveryTo.Text = "";
                 this.txt_Tel.Text = "";
                 this.txt_Attn.Text = "";
-                this.txt_TERM.Text = "";
                 this.txt_PaymentTerm.Text = "";
 
             }
@@ -426,16 +418,21 @@ namespace Book.UI.Invoices.IP
             {
                 Model.Bank bank = (this.bindingSourceBank.DataSource as IList<Model.Bank>).First(B => B.BankId == this.lue_AccountName.EditValue.ToString());
                 this.txt_AccountNo.Text = bank.Id;
-                this.txt_BankName.Text = bank.BankName;
                 this.txt_BankAddress.Text = bank.BankAddress;
                 this.txt_SWIFTCode.Text = bank.SWIFTCode;
+
+                this.txt_BankFax.Text = bank.Fax;
+                this.txt_BankTel.Text = bank.BankPhone;
             }
             else
             {
                 this.txt_AccountNo.Text = "";
-                this.txt_BankName.Text = "";
                 this.txt_BankAddress.Text = "";
                 this.txt_SWIFTCode.Text = "";
+
+                this.txt_BankFax.Text = "";
+                this.txt_BankTel.Text = "";
+
             }
         }
 

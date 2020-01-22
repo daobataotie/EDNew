@@ -50,14 +50,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="SupplierLotNumber" column="SupplierLotNumber" />
       <result property="SupplierId2" column="SupplierId2"/>
       <result property="Currency" column="Currency"/>
+      <result property="Shipment" column="Shipment"/>
+      <result property="SupplierCurrency1" column="SupplierCurrency1"/>
+      <result property="SupplierCurrency2" column="SupplierCurrency2"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="Supplier" column="SupplierId" lazyLoad="false" select="Supplier.select_by_primary_key" />
       <result property="Employee0" column="Employee0Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
-      <result property="Employee3" column="Employee3Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
-      <result property="Employee2" column="Employee2Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="Employee1" column="Employee1Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
-      <result property="AtCurrencyCategory" column="AtCurrencyCategoryId" lazyLoad="false" select="AtCurrencyCategory.select_by_primary_key" />
       <result property="Supplier2" column="SupplierId2" lazyLoad="false" select="Supplier.select_by_primary_key"/>
     </resultMap>
 
@@ -190,7 +190,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[SupplierLotNumber],
         [AtCurrencyCategoryId],
         [SupplierId2],
-        [Currency]
+        [Currency],
+        [Shipment],
+        [SupplierCurrency1],
+        [SupplierCurrency2]
+        
 			FROM
 				[dbo].[InvoiceCO]
 			WHERE
@@ -287,7 +291,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[SupplierLotNumber],
         [AtCurrencyCategoryId],
         [SupplierId2],
-        [Currency]
+        [Currency],
+        [Shipment],
+        [SupplierCurrency1],
+        [SupplierCurrency2]
 			) 
 			VALUES 
 			(
@@ -334,7 +341,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#SupplierLotNumber#,
         #AtCurrencyCategoryId#,
         #SupplierId2#,
-        #Currency#
+        #Currency#,
+        #Shipment#,
+        #SupplierCurrency1#,
+        #SupplierCurrency2#
 			)
              ]]>
     </insert>
@@ -384,7 +394,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[SupplierLotNumber] = #SupplierLotNumber#,
         [AtCurrencyCategoryId]=#AtCurrencyCategoryId#,
         [SupplierId2]=#SupplierId2#,
-        [Currency]=#Currency#
+        [Currency]=#Currency#,
+        [Shipment]=#Shipment#,
+        [SupplierCurrency1]=#SupplierCurrency1#,
+        [SupplierCurrency2]=#SupplierCurrency2#
 			WHERE
 				[InvoiceId] = #InvoiceId#
                     ]]>

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO));
+            DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -89,6 +90,8 @@
             this.lbl_TotalQTY = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+            this.lbl_TotalCaiji = new DevExpress.XtraReports.UI.XRLabel();
+            this.formattingRule1 = new DevExpress.XtraReports.UI.FormattingRule();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -113,7 +116,7 @@
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(1976.874F, 103.1875F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(1987.457F, 103.1875F);
             this.xrTable2.StylePriority.UseBorders = false;
             this.xrTable2.StylePriority.UseTextAlignment = false;
             this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -197,7 +200,7 @@
             this.TC_Caiji.StylePriority.UseTextAlignment = false;
             this.TC_Caiji.Text = "TC_Caiji";
             this.TC_Caiji.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.TC_Caiji.Weight = 0.33030343079557739;
+            this.TC_Caiji.Weight = 0.34636420234393511;
             // 
             // TopMargin
             // 
@@ -379,7 +382,7 @@
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(1976.874F, 103.1875F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(1987.457F, 103.1875F);
             this.xrTable1.StylePriority.UseBorders = false;
             this.xrTable1.StylePriority.UseTextAlignment = false;
             this.xrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -452,7 +455,7 @@
             this.xrTableCell8.Dpi = 254F;
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.Text = "Measurement      (Cubic Feet)";
-            this.xrTableCell8.Weight = 0.33030344237351938;
+            this.xrTableCell8.Weight = 0.34636421392187711;
             // 
             // xrLabel7
             // 
@@ -617,6 +620,7 @@
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_TotalCaiji,
             this.lblTotal,
             this.xrLine2,
             this.xrLabel20,
@@ -664,7 +668,7 @@
             this.lbl_TotalGrossWeight.LocationFloat = new DevExpress.Utils.PointFloat(1559.647F, 5.000018F);
             this.lbl_TotalGrossWeight.Name = "lbl_TotalGrossWeight";
             this.lbl_TotalGrossWeight.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_TotalGrossWeight.SizeF = new System.Drawing.SizeF(213.7482F, 58.42004F);
+            this.lbl_TotalGrossWeight.SizeF = new System.Drawing.SizeF(204.4272F, 58.42004F);
             this.lbl_TotalGrossWeight.StylePriority.UseTextAlignment = false;
             this.lbl_TotalGrossWeight.Text = "From:";
             this.lbl_TotalGrossWeight.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -709,8 +713,26 @@
             this.xrLine1.LineWidth = 3;
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(4.854617F, 0F);
             this.xrLine1.Name = "xrLine1";
-            this.xrLine1.SizeF = new System.Drawing.SizeF(1976.875F, 5F);
+            this.xrLine1.SizeF = new System.Drawing.SizeF(1987.459F, 5F);
             this.xrLine1.StylePriority.UseBorders = false;
+            // 
+            // lbl_TotalCaiji
+            // 
+            this.lbl_TotalCaiji.Dpi = 254F;
+            this.lbl_TotalCaiji.LocationFloat = new DevExpress.Utils.PointFloat(1764.074F, 5.000018F);
+            this.lbl_TotalCaiji.Name = "lbl_TotalCaiji";
+            this.lbl_TotalCaiji.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_TotalCaiji.SizeF = new System.Drawing.SizeF(228.2395F, 58.42004F);
+            this.lbl_TotalCaiji.StylePriority.UseTextAlignment = false;
+            xrSummary1.FormatString = "{0:0.##} CUFT";
+            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
+            this.lbl_TotalCaiji.Summary = xrSummary1;
+            this.lbl_TotalCaiji.Text = "From:";
+            this.lbl_TotalCaiji.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // formattingRule1
+            // 
+            this.formattingRule1.Name = "formattingRule1";
             // 
             // RO
             // 
@@ -723,6 +745,8 @@
             this.ReportFooter});
             this.Dpi = 254F;
             this.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormattingRuleSheet.AddRange(new DevExpress.XtraReports.UI.FormattingRule[] {
+            this.formattingRule1});
             this.Margins = new System.Drawing.Printing.Margins(79, 79, 61, 79);
             this.PageHeight = 2794;
             this.PageWidth = 2159;
@@ -797,5 +821,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
         private DevExpress.XtraReports.UI.XRTableCell TC_Caiji;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
+        private DevExpress.XtraReports.UI.XRLabel lbl_TotalCaiji;
+        private DevExpress.XtraReports.UI.FormattingRule formattingRule1;
     }
 }

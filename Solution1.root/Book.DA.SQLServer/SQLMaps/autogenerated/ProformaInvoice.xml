@@ -18,6 +18,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="ShippimgMark" column="ShippimgMark" />
       <result property="InsertTime" column="InsertTime" />
       <result property="UpdateTime" column="UpdateTime" />
+      <result property="SalesRep" column="SalesRep"/>
+      <result property="CustomerPONo" column="CustomerPONo"/>
+      <result property="TotalEnglish" column="TotalEnglish"/>
+      <result property="GOODSREADYDATE" column="GOODSREADYDATE"/>
+      <result property="COUNTRYOFORIGIN" column="COUNTRYOFORIGIN"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />
     </resultMap>
   </resultMaps>
@@ -117,7 +122,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[BankId],
 				[ShippimgMark],
 				[InsertTime],
-				[UpdateTime]
+				[UpdateTime],
+        [SalesRep],
+        [CustomerPONo],
+        [TotalEnglish],
+        [GOODSREADYDATE],
+        [COUNTRYOFORIGIN]
+        
 			FROM
 				[dbo].[ProformaInvoice]
 			WHERE
@@ -182,7 +193,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[BankId],
 				[ShippimgMark],
 				[InsertTime],
-				[UpdateTime]
+				[UpdateTime],
+        [SalesRep],
+        [CustomerPONo],
+        [TotalEnglish],
+        [GOODSREADYDATE],
+        [COUNTRYOFORIGIN]
 			) 
 			VALUES 
 			(
@@ -197,7 +213,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#BankId#,
 				#ShippimgMark#,
 				#InsertTime#,
-				#UpdateTime#
+				#UpdateTime#,
+        #SalesRep#,
+        #CustomerPONo#,
+        #TotalEnglish#,
+        #GOODSREADYDATE#,
+        #COUNTRYOFORIGIN#
 			)
              ]]>
     </insert>
@@ -215,7 +236,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[BankId] = #BankId#,
 				[ShippimgMark] = #ShippimgMark#,
 				[InsertTime] = #InsertTime#,
-				[UpdateTime] = #UpdateTime#
+				[UpdateTime] = #UpdateTime#,
+        [SalesRep] = #SalesRep#,
+        [CustomerPONo] = #CustomerPONo#,
+        [TotalEnglish] = #TotalEnglish#,
+        [GOODSREADYDATE] = #GOODSREADYDATE#,
+        [COUNTRYOFORIGIN] = #COUNTRYOFORIGIN#
+        
 			WHERE
 				[PO] = #PO#
                     ]]>

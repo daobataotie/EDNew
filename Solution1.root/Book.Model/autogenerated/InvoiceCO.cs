@@ -138,6 +138,12 @@ namespace Book.Model
 
         private string _currency;
 
+        private string _shipment;
+
+        private string _supplierCurrency1;
+
+        private string _supplierCurrency2;
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -525,6 +531,24 @@ namespace Book.Model
             set { _currency = value; }
         }
 
+        public string Shipment
+        {
+            get { return _shipment; }
+            set { _shipment = value; }
+        }
+
+        public string SupplierCurrency1
+        {
+            get { return _supplierCurrency1; }
+            set { _supplierCurrency1 = value; }
+        }
+
+        public string SupplierCurrency2
+        {
+            get { return _supplierCurrency2; }
+            set { _supplierCurrency2 = value; }
+        }
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -726,6 +750,12 @@ namespace Book.Model
         public readonly static string PRO_AtCurrencyCategoryId = "AtCurrencyCategoryId";
 
         public readonly static string PRO_Currency = "Currency";
+
+        public readonly static string PRO_Shipment = "Shipment";
+
+        public readonly static string PRO_SupplierCurrency1 = "SupplierCurrency1";
+
+        public readonly static string PRO_SupplierCurrency2 = "SupplierCurrency2";
         #endregion
     }
 }

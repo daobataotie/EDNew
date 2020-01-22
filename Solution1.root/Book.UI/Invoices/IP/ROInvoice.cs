@@ -58,7 +58,7 @@ namespace Book.UI.Invoices.IP
             {
                 string currency = new BL.InvoiceXOManager().GetCurrencyByInvoiceId(invoiceList.Details[0].InvoiceXODetail.InvoiceId);
                 string currencyENName = Model.ExchangeRate.GetCurrencyENName(currency);
-                string currencySign = Model.ExchangeRate.GetCurrencySign(currency);
+                string currencySign = Model.ExchangeRate.GetCurrencySignByCNName(currency);
                 this.xrTableCell6.Text = "Amount     (" + currencyENName + ")";
                 this.TCUnitPriceCurrency.Text = currencySign;
                 this.TCAmountCurrency.Text = currencySign;

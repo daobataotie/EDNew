@@ -73,6 +73,9 @@ namespace Book.UI.Invoices.IP
             this.lbl_TotalNetWeight.Text = packingList.Details.Sum(P => P.NetWeight).Value.ToString("0.##") + " KGS";
             this.lbl_TotalGrossWeight.Text = packingList.Details.Sum(P => P.GrossWeight).Value.ToString("0.##") + " KGS";
 
+            //另一种加总方法,此方法需要在界面上该控件的Summary属性设置如下 Func-Sum; Running-Report
+            this.lbl_TotalCaiji.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_Caiji, "{0:0.##}");
+
             TC_PLTNo.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_PLTNo);
             TC_CartonNo.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_CartonNo);
             TC_CartonQty.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_CartonQty, "{0:0.##}");

@@ -4391,6 +4391,18 @@
     <EmbeddedResource Include="Invoices\CO\SupplierShouldPay.resx">
       <DependentUpon>SupplierShouldPay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\CO\R01_Backup.resx">
+      <DependentUpon>R01_Backup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\CO\R01_Backup.zh-CHS.resx">
+      <DependentUpon>R01_Backup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\CO\R01_Backup.zh-CHT.resx">
+      <DependentUpon>R01_Backup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\IP\ChooseInvoiceForm.resx">
       <DependentUpon>ChooseInvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -8616,14 +8628,6 @@
       <DependentUpon>R01.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoices\CO\R01.zh-CHS.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>R01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Invoices\CO\R01.zh-CHT.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>R01.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\R02.resx">
       <SubType>Designer</SubType>
       <DependentUpon>R02.cs</DependentUpon>
@@ -11928,6 +11932,12 @@
     </Compile>
     <Compile Include="Invoices\CO\SupplierShouldPay.Designer.cs">
       <DependentUpon>SupplierShouldPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\CO\R01_Backup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\CO\R01_Backup.Designer.cs">
+      <DependentUpon>R01_Backup.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\IP\ChooseInvoiceForm.cs">
       <SubType>Form</SubType>

@@ -10,146 +10,146 @@
 using System;
 namespace Book.Model
 {
-	public partial class ProformaInvoice
-	{
-		#region Data
+    public partial class ProformaInvoice
+    {
+        #region Data
 
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _pO;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private DateTime? _invoiceDate;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _customerId;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _deliveryTo;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _currency;
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _pO;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private DateTime? _invoiceDate;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _customerId;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _deliveryTo;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _currency;
 
         private string _attn;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _remark;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _deliveryDate;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _bankId;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private string _shippimgMark;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private DateTime? _insertTime;
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		private DateTime? _updateTime;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _remark;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _deliveryDate;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _bankId;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string _shippimgMark;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private DateTime? _insertTime;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private DateTime? _updateTime;
 
         private Customer _customer;
-		 
-		#endregion
-		
-		#region Properties
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public string PO
-		{
-			get 
-			{
-				return this._pO;
-			}
-			set 
-			{
-				this._pO = value;
-			}
-		}
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public DateTime? InvoiceDate
-		{
-			get 
-			{
-				return this._invoiceDate;
-			}
-			set 
-			{
-				this._invoiceDate = value;
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string CustomerId
-		{
-			get 
-			{
-				return this._customerId;
-			}
-			set 
-			{
-				this._customerId = value;
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string DeliveryTo
-		{
-			get 
-			{
-				return this._deliveryTo;
-			}
-			set 
-			{
-				this._deliveryTo = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PO
+        {
+            get
+            {
+                return this._pO;
+            }
+            set
+            {
+                this._pO = value;
+            }
+        }
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string Currency
-		{
-			get 
-			{
-				return this._currency;
-			}
-			set 
-			{
-				this._currency = value;
-			}
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime? InvoiceDate
+        {
+            get
+            {
+                return this._invoiceDate;
+            }
+            set
+            {
+                this._invoiceDate = value;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string CustomerId
+        {
+            get
+            {
+                return this._customerId;
+            }
+            set
+            {
+                this._customerId = value;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string DeliveryTo
+        {
+            get
+            {
+                return this._deliveryTo;
+            }
+            set
+            {
+                this._deliveryTo = value;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Currency
+        {
+            get
+            {
+                return this._currency;
+            }
+            set
+            {
+                this._currency = value;
+            }
         }
 
         public string Attn
@@ -158,94 +158,94 @@ namespace Book.Model
             set { _attn = value; }
         }
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string Remark
-		{
-			get 
-			{
-				return this._remark;
-			}
-			set 
-			{
-				this._remark = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Remark
+        {
+            get
+            {
+                return this._remark;
+            }
+            set
+            {
+                this._remark = value;
+            }
+        }
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string DeliveryDate
-		{
-			get 
-			{
-				return this._deliveryDate;
-			}
-			set 
-			{
-				this._deliveryDate = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        public string DeliveryDate
+        {
+            get
+            {
+                return this._deliveryDate;
+            }
+            set
+            {
+                this._deliveryDate = value;
+            }
+        }
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string BankId
-		{
-			get 
-			{
-				return this._bankId;
-			}
-			set 
-			{
-				this._bankId = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        public string BankId
+        {
+            get
+            {
+                return this._bankId;
+            }
+            set
+            {
+                this._bankId = value;
+            }
+        }
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public string ShippimgMark
-		{
-			get 
-			{
-				return this._shippimgMark;
-			}
-			set 
-			{
-				this._shippimgMark = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        public string ShippimgMark
+        {
+            get
+            {
+                return this._shippimgMark;
+            }
+            set
+            {
+                this._shippimgMark = value;
+            }
+        }
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public DateTime? InsertTime
-		{
-			get 
-			{
-				return this._insertTime;
-			}
-			set 
-			{
-				this._insertTime = value;
-			}
-		}
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime? InsertTime
+        {
+            get
+            {
+                return this._insertTime;
+            }
+            set
+            {
+                this._insertTime = value;
+            }
+        }
 
-		/// <summary>
-		/// 
-		/// </summary>
-		public DateTime? UpdateTime
-		{
-			get 
-			{
-				return this._updateTime;
-			}
-			set 
-			{
-				this._updateTime = value;
-			}
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime? UpdateTime
+        {
+            get
+            {
+                return this._updateTime;
+            }
+            set
+            {
+                this._updateTime = value;
+            }
         }
 
         public Customer Customer
@@ -253,65 +253,114 @@ namespace Book.Model
             get { return _customer; }
             set { _customer = value; }
         }
-	
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_PO = "PO";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_InvoiceDate = "InvoiceDate";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_CustomerId = "CustomerId";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_DeliveryTo = "DeliveryTo";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_Currency = "Currency";
+
+        private string _salesRep;
+
+        public string SalesRep
+        {
+            get { return _salesRep; }
+            set { _salesRep = value; }
+        }
+
+        private string _customerPONo;
+
+        public string CustomerPONo
+        {
+            get { return _customerPONo; }
+            set { _customerPONo = value; }
+        }
+
+        private string _totalEnglish;
+
+        public string TotalEnglish
+        {
+            get { return _totalEnglish; }
+            set { _totalEnglish = value; }
+        }
+
+        private string _gOODSREADYDATE;
+
+        public string GOODSREADYDATE
+        {
+            get { return _gOODSREADYDATE; }
+            set { _gOODSREADYDATE = value; }
+        }
+
+        private string _cOUNTRYOFORIGIN;
+
+        public string COUNTRYOFORIGIN
+        {
+            get { return _cOUNTRYOFORIGIN; }
+            set { _cOUNTRYOFORIGIN = value; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_PO = "PO";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_InvoiceDate = "InvoiceDate";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_CustomerId = "CustomerId";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_DeliveryTo = "DeliveryTo";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_Currency = "Currency";
 
         public readonly static string PRO_Attn = "Attn";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_Remark = "Remark";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_DeliveryDate = "DeliveryDate";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_BankId = "BankId";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_ShippimgMark = "ShippimgMark";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_InsertTime = "InsertTime";
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		public readonly static string PRO_UpdateTime = "UpdateTime";
-		
 
-		#endregion
-	}
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_Remark = "Remark";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_DeliveryDate = "DeliveryDate";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_BankId = "BankId";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_ShippimgMark = "ShippimgMark";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_InsertTime = "InsertTime";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public readonly static string PRO_UpdateTime = "UpdateTime";
+
+
+        public readonly static string PRO_SalesRep = "SalesRep";
+
+        public readonly static string PRO_CustomerPONo = "CustomerPONo";
+
+        public readonly static string PRO_TotalEnglish = "TotalEnglish";
+
+        public readonly static string PRO_GOODSREADYDATE = "GOODSREADYDATE";
+
+        public readonly static string PRO_COUNTRYOFORIGIN = "COUNTRYOFORIGIN";
+        #endregion
+    }
 }

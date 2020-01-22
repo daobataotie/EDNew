@@ -51,10 +51,10 @@ namespace Book.Model
                     enName = "NT$";
                     break;
                 case "美金":
-                    enName = "US$";
+                    enName = "USD$";
                     break;
                 case "歐元":
-                    enName = "€";
+                    enName = "EURO€";
                     break;
                 case "日圓":
                     enName = "JPY¥";
@@ -64,7 +64,7 @@ namespace Book.Model
             return enName;
         }
 
-        public static string GetCurrencySign(string currency)
+        public static string GetCurrencySignByCNName(string currency)
         {
             string enName = "";
             switch (currency)
@@ -87,6 +87,33 @@ namespace Book.Model
             }
 
             return enName;
+        }
+
+
+        public static string GetCurrencySignByENName(string currency)
+        {
+            string str = "";
+            switch (currency)
+            {
+                case "RMB":
+                    str = "¥";
+                    break;
+                case "NTD":
+                    str = "NT$";
+                    break;
+                case "USD":
+                    str = "$";
+                    break;
+                case "EURO":
+                    str = "€";
+                    break;
+                case "JYP":
+                    str = "¥";
+                    break;
+                default:
+                    break;
+            }
+            return str;
         }
     }
 }
