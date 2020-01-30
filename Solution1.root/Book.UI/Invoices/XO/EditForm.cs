@@ -28,6 +28,7 @@ namespace Book.UI.Invoices.XO
         protected BL.ProductManager productManager = new Book.BL.ProductManager();
         protected BL.ProductUnitManager productUnitManager = new Book.BL.ProductUnitManager();
         private BL.CustomerManager CustomerManager = new Book.BL.CustomerManager();
+        private BL.ExchangeRateManager exchangeRateManager = new Book.BL.ExchangeRateManager();
         private Model.InvoiceXO invoice;
         private Model.InvoiceXJ invoicexj;
         private IList<Model.Product> productlook = new List<Model.Product>();
@@ -53,6 +54,7 @@ namespace Book.UI.Invoices.XO
             this.requireValueExceptions.Add("Customer", new AA("商品未核准完", this.gridControl1));
             this.requireValueExceptions.Add(Model.InvoiceXO.PRO_CustomerInvoiceXOId, new AA(Properties.Resources.RequireCusXoId, this.textEditCustomerInvoiceXOID));
             this.invalidValueExceptions.Add(Model.InvoiceXO.PRO_CustomerInvoiceXOId, new AA(Properties.Resources.InvalidCusXoId, this.textEditCustomerInvoiceXOID));
+            this.requireValueExceptions.Add(Model.InvoiceXO.PRO_Currency, new AA("請選擇貨幣種類", this.cob_Currency));
 
             //this.requireValueExceptions.Add(Model.InvoiceXO.PRO_CustomerInvoiceXOId,new AA())
             this.action = "view";
@@ -385,7 +387,7 @@ namespace Book.UI.Invoices.XO
             this.invoice.Employee2 = this.buttonEditEmployee2.EditValue as Model.Employee;
             this.invoice.AuditState = this.saveAuditState;
             this.invoice.IsForeigntrade = this.checkEditIsForeigntrade.Checked;
-            this.invoice.Currency = this.comboBoxEditCurrency.Text;
+            this.invoice.Currency = this.cob_Currency.Text;
 
             if (string.IsNullOrEmpty(this.invoice.CustomerInvoiceXOId))
             {
@@ -585,6 +587,18 @@ namespace Book.UI.Invoices.XO
                     if (invoiceXOdetail.Product != null && !string.IsNullOrEmpty(invoiceXOdetail.Product.XOPriceAndRange))
                     {
                         price = BL.SupplierProductManager.CountPrice(invoiceXOdetail.Product.XOPriceAndRange, (double)quantity);
+
+
+                        if (!string.IsNullOrEmpty(invoiceXOdetail.Product.XOCurrency) &&
+                            !string.IsNullOrEmpty(this.cob_Currency.Text) &&
+                            invoiceXOdetail.Product.XOCurrency != cob_Currency.Text &&
+                            this.dateEditInvoiceDate.EditValue != null)
+                        {
+                            decimal productCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, invoiceXOdetail.Product.XOCurrency);
+                            decimal taibiCurrencyToInvoiceRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, cob_Currency.Text);
+                            price = price * productCurrencyToTaibiRate / taibiCurrencyToInvoiceRate;
+                        }
+
                         this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, price);
                     }
 
@@ -847,7 +861,7 @@ namespace Book.UI.Invoices.XO
             this.EmpAudit.EditValue = this.invoice.AuditEmp;
             this.textEditAuditState.Text = this.invoice.AuditStateName;
 
-            this.comboBoxEditCurrency.Text = this.invoice.Currency;
+            this.cob_Currency.Text = this.invoice.Currency;
             this.checkEditIsForeigntrade.Checked = this.invoice.IsForeigntrade.HasValue ? this.invoice.IsForeigntrade.Value : false;
             this.richTextBoxCustomerMarks.Rtf = this.invoice.CustomerMarks;
             this.ncc_Supplier.EditValue = this.invoice.Supplier;
@@ -1629,6 +1643,33 @@ namespace Book.UI.Invoices.XO
                     return;
                 }
             }
+        }
+
+        private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)
+        {
+            //Model.InvoiceXODetail invoiceXOdetail = this.bindingSource1.Current as Model.InvoiceXODetail;
+            //if (invoiceXOdetail.Product != null && !string.IsNullOrEmpty(invoiceXOdetail.Product.XOPriceAndRange))
+            //{
+            //    price = BL.SupplierProductManager.CountPrice(invoiceXOdetail.Product.XOPriceAndRange, (double)quantity);
+
+
+            //    if (!string.IsNullOrEmpty(invoiceXOdetail.Product.XOCurrency) &&
+            //        !string.IsNullOrEmpty(this.cob_Currency.Text) &&
+            //        invoiceXOdetail.Product.XOCurrency != cob_Currency.Text &&
+            //        this.dateEditInvoiceDate.EditValue != null)
+            //    {
+            //        decimal productCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, invoiceXOdetail.Product.XOCurrency);
+            //        decimal taibiCurrencyToInvoiceRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, cob_Currency.Text);
+            //        price = price * productCurrencyToTaibiRate / taibiCurrencyToInvoiceRate;
+            //    }
+
+            //    this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, price);
+            //}
+        }
+
+        private void cob_Currency_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -70,7 +70,7 @@
       <result property="ProductVersion" column="ProductVersion"/>
       <result property="ProductBarCode" column="ProductBarCode"/>
     </resultMap>
-     <resultMap id="ProductResult7" class="Product">
+    <resultMap id="ProductResult7" class="Product">
       <result property="ProductId" column="ProductId" />
       <result property="Id" column="Id" />
       <result property="ProductName" column="ProductName" />
@@ -275,6 +275,8 @@
       <result property="Paihe" column="Paihe"/>
       <result property="Moshu" column="Moshu"/>
       <result property="IsDepot" column="IsDepot"/>
+      <result property="COCurrency" column="COCurrency"/>
+      <result property="XOCurrency" column="XOCurrency"/>
       <result property="ProductCategory" column="ProductCategoryId" lazyLoad="false" select="ProductCategory.select_by_primary_key" />
       <result property="BuyUnit" column="BuyUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
       <result property="QualityTestUnit" column="QualityTestUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
@@ -362,7 +364,10 @@
       Chakuang,
       Paihe,
       Moshu,
-      IsDepot
+      IsDepot,
+      COCurrency,
+      XOCurrency
+      
       from product
       WHERE
 				[ProductId] = #ProductId#
@@ -461,13 +466,13 @@ where ProductId = #productid#
       ProductNearXSDate,
       SafeStock,
       LastStockTakeTime,
-			[Digital],
-			[Length],
-			[Width],
-			[Height],
-			[Volume],
-			[NetWeight],
-			[GrossWeight],
+      [Digital],
+      [Length],
+      [Width],
+      [Height],
+      [Volume],
+      [NetWeight],
+      [GrossWeight],
       OnMadingQuantity,
       BeenAssigned,
       OutSourcing,
@@ -486,7 +491,7 @@ where ProductId = #productid#
       ProduceMaterialDistributioned,
       OtherMaterialDistributioned,
       PriceAndRange,
-      XOPriceAndRange, 
+      XOPriceAndRange,
       ProductVersion,
       IsQiangHua,
       IsFangWu,
@@ -494,7 +499,9 @@ where ProductId = #productid#
       Chakuang,
       Paihe,
       Moshu,
-      IsDepot
+      IsDepot,
+      COCurrency,
+      XOCurrency
       from product
       WHERE ProductCategoryId = #value# order by Id
     </select>
@@ -908,7 +915,9 @@ where ProductId = #productid#
       Chakuang,
       Paihe,
       Moshu,
-      IsDepot
+      IsDepot,
+      COCurrency,
+      XOCurrency
       from product
       WHERE
 				[ProductId] = #ProductId#

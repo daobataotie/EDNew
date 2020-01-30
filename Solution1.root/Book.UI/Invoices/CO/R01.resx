@@ -275,7 +275,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="lbl_shipment.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>237.499756, 373.624969</value>
+    <value>0, 585.6041</value>
   </data>
   <data name="lbl_shipment.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>865.1875, 50</value>
@@ -503,7 +503,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell12.Text" xml:space="preserve">
-    <value>数量(PCS)</value>
+    <value>數量(PCS)</value>
   </data>
   <data name="xrTableCell12.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -512,7 +512,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell14.Text" xml:space="preserve">
-    <value>单价</value>
+    <value>單價</value>
   </data>
   <data name="xrTableCell14.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -521,7 +521,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell16.Text" xml:space="preserve">
-    <value>金额</value>
+    <value>金額</value>
   </data>
   <data name="xrTableCell16.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -674,7 +674,7 @@
     <value>新細明體, 9.75pt</value>
   </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
-    <value>585.6041</value>
+    <value>635.6041</value>
   </data>
   <data name="xrLabelCompanyInfoName.Dpi" type="System.Single, mscorlib">
     <value>254</value>

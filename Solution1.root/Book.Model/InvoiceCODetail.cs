@@ -174,5 +174,21 @@ namespace Book.Model
         public readonly static string PRO_InvoiceYjrq = "InvoiceYjrq";
 
         public readonly static string PRO_InvoiceXOYjrq = "InvoiceXOYjrq";
+
+
+        /// <summary>
+        /// 根据订单币别转化为台币，再从台币转化为厂商币别 对应的单价
+        /// </summary>
+        public decimal CurrencyPrice { get; set; }
+
+        /// <summary>
+        /// 根据订单币别转化为台币，再从台币转化为厂商币别 对应的金额
+        /// </summary>
+        public decimal CurrencyMoney { get; set; }
+
+
+        public readonly static string PRO_CurrencyPrice = "CurrencyPrice";
+
+        public readonly static string PRO_CurrencyMoney = "CurrencyMoney";
     }
 }

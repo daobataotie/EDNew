@@ -197,7 +197,7 @@
   <data name="&gt;&gt;simpleInputExcle.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="comboBoxEditCurrency.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="cob_Currency.Location" type="System.Drawing.Point, System.Drawing">
     <value>804, 61</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -219,22 +219,22 @@
   <data name="comboBoxEditCurrency.Properties.Items4" xml:space="preserve">
     <value>日圓</value>
   </data>
-  <data name="comboBoxEditCurrency.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="cob_Currency.Size" type="System.Drawing.Size, System.Drawing">
     <value>285, 21</value>
   </data>
-  <data name="comboBoxEditCurrency.TabIndex" type="System.Int32, mscorlib">
+  <data name="cob_Currency.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;comboBoxEditCurrency.Name" xml:space="preserve">
-    <value>comboBoxEditCurrency</value>
+  <data name="&gt;&gt;cob_Currency.Name" xml:space="preserve">
+    <value>cob_Currency</value>
   </data>
-  <data name="&gt;&gt;comboBoxEditCurrency.Type" xml:space="preserve">
+  <data name="&gt;&gt;cob_Currency.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;comboBoxEditCurrency.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cob_Currency.Parent" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
-  <data name="&gt;&gt;comboBoxEditCurrency.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;cob_Currency.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="newChooseCustomer2.Location" type="System.Drawing.Point, System.Drawing">
@@ -1560,7 +1560,7 @@
     <value>18</value>
   </data>
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 55</value>
+    <value>740, 17</value>
   </metadata>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 110</value>
@@ -2236,7 +2236,7 @@
     <value>325, 17</value>
   </metadata>
   <metadata name="bindingSourceCustomer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>162, 55</value>
+    <value>885, 17</value>
   </metadata>
   <data name="barButtonItem2.Caption" xml:space="preserve">
     <value>销售出货单</value>
@@ -2251,7 +2251,7 @@
     <value>barButtonItem6</value>
   </data>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>357, 55</value>
+    <value>1080, 17</value>
   </metadata>
   <data name="layoutControlItem6.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9pt, style=Bold</value>
@@ -2284,7 +2284,7 @@
     <value>barButtonItem7</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>501, 55</value>
+    <value>1224, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -761,8 +761,9 @@ namespace Book.UI.Invoices.CO
                     //            invoicecodetail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(invoicecodetail.Product.SupplierId, invoicecodetail.ProductId);
                     //    }
                     //}
-                    if (string.IsNullOrEmpty(invoicecodetail.DetailsPriceRange))
-                        invoicecodetail.DetailsPriceRange = invoicecodetail.Product.PriceAndRange;
+
+                    //if (string.IsNullOrEmpty(invoicecodetail.DetailsPriceRange))
+                    invoicecodetail.DetailsPriceRange = invoicecodetail.Product.PriceAndRange;
 
                     if (string.IsNullOrEmpty(invoicecodetail.DetailsPriceRange))
                     {
@@ -1197,7 +1198,16 @@ namespace Book.UI.Invoices.CO
                 //}
                 //detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.DetailsPriceRange, detail.OrderQuantity.HasValue ? detail.OrderQuantity.Value : 0);
                 //}
-                detail.InvoiceCODetailPrice = xodetail.InvoiceXODetailPrice;
+
+                //detail.InvoiceCODetailPrice = xodetail.InvoiceXODetailPrice;   改啦商品的采购单价
+                detail.DetailsPriceRange = detail.Product.PriceAndRange;
+                if (!string.IsNullOrEmpty(detail.DetailsPriceRange))
+                {
+                    detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.DetailsPriceRange, Convert.ToDouble(detail.OrderQuantity));
+                }
+                else
+                    detail.InvoiceCODetailPrice = 0;
+
                 detail.InvoiceCODetailMoney = Convert.ToDecimal(detail.OrderQuantity) * Convert.ToDecimal(detail.InvoiceCODetailPrice);
 
                 this.invoice.Details.Add(detail);

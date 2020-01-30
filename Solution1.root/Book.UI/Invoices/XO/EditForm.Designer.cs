@@ -38,7 +38,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.ncc_Supplier = new Book.UI.Invoices.NewChooseContorl();
             this.simpleInputExcle = new DevExpress.XtraEditors.SimpleButton();
-            this.comboBoxEditCurrency = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cob_Currency = new DevExpress.XtraEditors.ComboBoxEdit();
             this.newChooseCustomer2 = new Book.UI.Invoices.NewChooseContorl();
             this.newChooseCustomer1 = new Book.UI.Invoices.NewChooseContorl();
             this.textEditLotNumber = new DevExpress.XtraEditors.TextEdit();
@@ -201,7 +201,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditCurrency.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Currency.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditLotNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditIsForeigntrade.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCustomerInvoiceXOID.Properties)).BeginInit();
@@ -352,7 +352,7 @@
             // 
             this.layoutControl1.Controls.Add(this.ncc_Supplier);
             this.layoutControl1.Controls.Add(this.simpleInputExcle);
-            this.layoutControl1.Controls.Add(this.comboBoxEditCurrency);
+            this.layoutControl1.Controls.Add(this.cob_Currency);
             this.layoutControl1.Controls.Add(this.newChooseCustomer2);
             this.layoutControl1.Controls.Add(this.newChooseCustomer1);
             this.layoutControl1.Controls.Add(this.textEditLotNumber);
@@ -383,21 +383,22 @@
             this.simpleInputExcle.StyleController = this.layoutControl1;
             this.simpleInputExcle.Click += new System.EventHandler(this.simpleInputExcle_Click);
             // 
-            // comboBoxEditCurrency
+            // cob_Currency
             // 
-            resources.ApplyResources(this.comboBoxEditCurrency, "comboBoxEditCurrency");
-            this.comboBoxEditCurrency.MenuManager = this.barManager1;
-            this.comboBoxEditCurrency.Name = "comboBoxEditCurrency";
-            this.comboBoxEditCurrency.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            resources.ApplyResources(this.cob_Currency, "cob_Currency");
+            this.cob_Currency.MenuManager = this.barManager1;
+            this.cob_Currency.Name = "cob_Currency";
+            this.cob_Currency.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEditCurrency.Properties.Buttons"))))});
-            this.comboBoxEditCurrency.Properties.Items.AddRange(new object[] {
+            this.cob_Currency.Properties.Items.AddRange(new object[] {
             resources.GetString("comboBoxEditCurrency.Properties.Items"),
             resources.GetString("comboBoxEditCurrency.Properties.Items1"),
             resources.GetString("comboBoxEditCurrency.Properties.Items2"),
             resources.GetString("comboBoxEditCurrency.Properties.Items3"),
             resources.GetString("comboBoxEditCurrency.Properties.Items4")});
-            this.comboBoxEditCurrency.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEditCurrency.StyleController = this.layoutControl1;
+            this.cob_Currency.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cob_Currency.StyleController = this.layoutControl1;
+            this.cob_Currency.EditValueChanged += new System.EventHandler(this.cob_Currency_EditValueChanged);
             // 
             // newChooseCustomer2
             // 
@@ -1121,6 +1122,7 @@
             this.dateEditInvoiceDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dateEditInvoiceDate.StyleController = this.layoutControl1;
+            this.dateEditInvoiceDate.EditValueChanged += new System.EventHandler(this.dateEditInvoiceDate_EditValueChanged);
             this.dateEditInvoiceDate.Leave += new System.EventHandler(this.dateEditInvoiceDate_Leave);
             // 
             // textEditInvoiceId
@@ -1683,7 +1685,7 @@
             // 
             // layoutControlItem38
             // 
-            this.layoutControlItem38.Control = this.comboBoxEditCurrency;
+            this.layoutControlItem38.Control = this.cob_Currency;
             resources.ApplyResources(this.layoutControlItem38, "layoutControlItem38");
             this.layoutControlItem38.Location = new System.Drawing.Point(712, 49);
             this.layoutControlItem38.Name = "layoutControlItem38";
@@ -1888,7 +1890,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditCurrency.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Currency.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditLotNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditIsForeigntrade.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCustomerInvoiceXOID.Properties)).EndInit();
@@ -2146,7 +2148,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnVersion;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.CheckEdit checkEditIsForeigntrade;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditCurrency;
+        private DevExpress.XtraEditors.ComboBoxEdit cob_Currency;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem38;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem39;
         private DevExpress.XtraBars.BarButtonItem barButtonItemJieAn;

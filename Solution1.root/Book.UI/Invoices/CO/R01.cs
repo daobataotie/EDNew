@@ -69,7 +69,6 @@ namespace Book.UI.Invoices.CO
 
             //總計
             this.TC_TotalQty.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_OrderQuantity);
-            this.TC_TotalMoney.Text = this.invoice.InvoiceHeji.Value.ToString("N0");
 
             string currency = isFirstSupplier ? invoice.SupplierCurrency1 : invoice.SupplierCurrency2;
             this.TC_PriceUnit.Text = string.Format("({0})", Model.ExchangeRate.GetCurrencyENNameAndSign(currency));
@@ -77,23 +76,49 @@ namespace Book.UI.Invoices.CO
 
             if (currency != null)
             {
-                //先将订单币别金额，转换为台币，在将台币转换为供应商币别1/2金额
+                //先将订单币别金额，转换为台币，在将台币转换为供应商1,供应商2 币别金额
                 decimal invoiceCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(invoice.InvoiceDate.Value, invoice.Currency);
                 invoiceCurrencyToTaibiRate = invoiceCurrencyToTaibiRate == 0 ? 1 : invoiceCurrencyToTaibiRate;
-                var taibiMoney = this.invoice.InvoiceHeji.Value / invoiceCurrencyToTaibiRate;
+                var taibiMoney = this.invoice.InvoiceHeji.Value * invoiceCurrencyToTaibiRate;
 
                 if (currency.Contains("台幣") || currency.Contains("台币"))
                 {
                     this.lbl_TotalMoney.Text = "新台幣" + CmycurD(Math.Round(taibiMoney, 0)) + "整";
+
+                    this.TC_TotalMoney.Text = taibiMoney.ToString("N0");
+
+                    foreach (var item in this.invoice.Details)
+                    {
+                        item.CurrencyPrice = item.InvoiceCODetailPrice.Value * invoiceCurrencyToTaibiRate;
+                        item.CurrencyMoney = item.CurrencyPrice * (decimal)item.OrderQuantity.Value;
+                    }
                 }
                 else
                 {
                     decimal taibiToSupplierCurrencyRate = exchangeRateManager.GetRateByDateAndCurrency(invoice.InvoiceDate.Value, currency);
-                    var supplierCurrencyMoney = Math.Round(taibiMoney * taibiToSupplierCurrencyRate, 2);
+                    taibiToSupplierCurrencyRate = taibiToSupplierCurrencyRate == 0 ? 1 : taibiToSupplierCurrencyRate;
+                    var supplierCurrencyMoney = Math.Round(taibiMoney / taibiToSupplierCurrencyRate, 2);
 
                     this.lbl_TotalMoney.Text = string.Format("{0}{1}{2}{3}{4}{5}匯率：{6}", currency, Model.ExchangeRate.GetCurrencyENNameAndSign(currency), supplierCurrencyMoney.ToString("N2"), "".PadLeft(20, ' '), invoice.InvoiceDate.Value.ToString("yyyy.MM.dd"), currency, taibiToSupplierCurrencyRate.ToString("0.####"));
+
+                    this.TC_TotalMoney.Text = supplierCurrencyMoney.ToString("N0");
+
+                    foreach (var item in this.invoice.Details)
+                    {
+                        item.CurrencyPrice = item.InvoiceCODetailPrice.Value * invoiceCurrencyToTaibiRate / taibiToSupplierCurrencyRate;
+                        item.CurrencyMoney = item.CurrencyPrice * (decimal)item.OrderQuantity.Value;
+                    }
                 }
 
+                this.xrTableCellUintPrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_CurrencyPrice, "{0:N2}");
+                this.xrTableCellMoney.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_CurrencyMoney, "{0:N2}");
+            }
+            else
+            {
+                this.xrTableCellUintPrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_InvoiceCODetailPrice, "{0:N2}");
+                this.xrTableCellMoney.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_InvoiceCODetailMoney, "{0:N2}");
+
+                this.TC_TotalMoney.Text = this.invoice.InvoiceHeji.Value.ToString("N0");
             }
 
             this.xrLabelNote.Text = this.invoice.InvoiceNote;
@@ -103,8 +128,7 @@ namespace Book.UI.Invoices.CO
             this.TC_PRoduct_Id.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             this.xrRichTextProductDescribe.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
             this.xrTableCellQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_OrderQuantity, "{0:N0}");
-            this.xrTableCellUintPrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_InvoiceCODetailPrice, "{0:N2}");
-            this.xrTableCellMoney.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_InvoiceCODetailMoney, "{0:N2}");
+
         }
 
         private string CmycurD(decimal num)

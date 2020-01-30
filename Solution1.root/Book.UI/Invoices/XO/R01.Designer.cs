@@ -83,6 +83,8 @@ namespace Book.UI.Invoices.XO
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.formattingRule1 = new DevExpress.XtraReports.UI.FormattingRule();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -161,7 +163,10 @@ namespace Book.UI.Invoices.XO
             // 
             // xrRichText1
             // 
+            this.xrRichText1.CanShrink = true;
             resources.ApplyResources(this.xrRichText1, "xrRichText1");
+            this.xrRichText1.FormattingRules.Add(this.formattingRule1);
+            this.xrRichText1.KeepTogether = true;
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
             // 
@@ -243,7 +248,6 @@ namespace Book.UI.Invoices.XO
             this.xrLabelCount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabelCount.StylePriority.UseFont = false;
             this.xrLabelCount.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(xrSummary2, "xrSummary2");
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabelCount.Summary = xrSummary2;
             // 
@@ -564,6 +568,20 @@ namespace Book.UI.Invoices.XO
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
+            // xrControlStyle1
+            // 
+            this.xrControlStyle1.Font = new System.Drawing.Font("新細明體", 11F);
+            this.xrControlStyle1.Name = "xrControlStyle1";
+            this.xrControlStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // formattingRule1
+            // 
+            // 
+            // 
+            // 
+            this.formattingRule1.Formatting.Font = new System.Drawing.Font("新細明體", 11F);
+            this.formattingRule1.Name = "formattingRule1";
+            // 
             // R01
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -576,9 +594,13 @@ namespace Book.UI.Invoices.XO
             this.bottomMarginBand1});
             resources.ApplyResources(this, "$this");
             this.ExportOptions.Xls.SheetName = resources.GetString("R01.ExportOptions.Xls.SheetName");
-            this.Margins = new System.Drawing.Printing.Margins(79, 79, 79, 79);
+            this.FormattingRuleSheet.AddRange(new DevExpress.XtraReports.UI.FormattingRule[] {
+            this.formattingRule1});
+            this.Margins = new System.Drawing.Printing.Margins(79, 79, 79, 80);
             this.PageHeight = 2794;
             this.PageWidth = 2159;
+            this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
+            this.xrControlStyle1});
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
@@ -641,5 +663,7 @@ namespace Book.UI.Invoices.XO
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
         private DevExpress.XtraReports.UI.XRLine xrLine1;
         private DevExpress.XtraReports.UI.XRRichText xrRichText1;
+        private DevExpress.XtraReports.UI.XRControlStyle xrControlStyle1;
+        private DevExpress.XtraReports.UI.FormattingRule formattingRule1;
     }
 }

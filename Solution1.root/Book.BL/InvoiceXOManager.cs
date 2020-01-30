@@ -117,6 +117,10 @@ namespace Book.BL
             {
                 throw new Helper.RequireValueException("Company");
             }
+            if (string.IsNullOrEmpty(invoice.Currency))
+            {
+                throw new Helper.RequireValueException(Model.InvoiceXO.PRO_Currency);
+            }
             //if (invoice.Details.Count == 0)
             //{
             //    throw new Helper.RequireValueException("Details");

@@ -524,6 +524,11 @@ namespace Book.Model
 
         private bool? _IsDepot;
 
+        private string _cOCurrency;
+
+        private string _xOCurrency;
+
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -2148,6 +2153,24 @@ namespace Book.Model
         }
 
         /// <summary>
+        /// 采購單價幣別
+        /// </summary>
+        public string COCurrency
+        {
+            get { return _cOCurrency; }
+            set { _cOCurrency = value; }
+        }
+
+        /// <summary>
+        /// 銷售單價幣別
+        /// </summary>
+        public string XOCurrency
+        {
+            get { return _xOCurrency; }
+            set { _xOCurrency = value; }
+        }
+
+        /// <summary>
         /// 客户
         /// </summary>
         public virtual Customer Customer
@@ -3016,6 +3039,10 @@ namespace Book.Model
         public readonly static string PRO_SunhaoRage = "SunhaoRage";
 
         public readonly static string PRO_IsDepot = "IsDepot";
+
+        public readonly static string PRO_COCurrency = "COCurrency";
+
+        public readonly static string PRO_XOCurrency = "XOCurrency";
 
         #endregion
     }
