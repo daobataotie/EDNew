@@ -595,7 +595,11 @@ namespace Book.UI.Invoices.XO
                             this.dateEditInvoiceDate.EditValue != null)
                         {
                             decimal productCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, invoiceXOdetail.Product.XOCurrency);
+                            productCurrencyToTaibiRate = productCurrencyToTaibiRate == 0 ? 1 : productCurrencyToTaibiRate;
+
                             decimal taibiCurrencyToInvoiceRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, cob_Currency.Text);
+                            taibiCurrencyToInvoiceRate = taibiCurrencyToInvoiceRate == 0 ? 1 : taibiCurrencyToInvoiceRate;
+
                             price = price * productCurrencyToTaibiRate / taibiCurrencyToInvoiceRate;
                         }
 
@@ -1647,29 +1651,59 @@ namespace Book.UI.Invoices.XO
 
         private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)
         {
-            //Model.InvoiceXODetail invoiceXOdetail = this.bindingSource1.Current as Model.InvoiceXODetail;
-            //if (invoiceXOdetail.Product != null && !string.IsNullOrEmpty(invoiceXOdetail.Product.XOPriceAndRange))
-            //{
-            //    price = BL.SupplierProductManager.CountPrice(invoiceXOdetail.Product.XOPriceAndRange, (double)quantity);
+            if (!string.IsNullOrEmpty(this.cob_Currency.Text) && this.dateEditInvoiceDate.EditValue != null)
+            {
+                foreach (var item in invoice.Details)
+                {
+                    item.InvoiceXODetailPrice = BL.SupplierProductManager.CountPrice(item.Product.PriceAndRange, Convert.ToDouble(item.InvoiceXODetailQuantity));
 
+                    if (!string.IsNullOrEmpty(item.Product.XOCurrency) && item.Product.XOCurrency != this.cob_Currency.Text)
+                    {
+                        decimal productCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, item.Product.XOCurrency);
+                        productCurrencyToTaibiRate = productCurrencyToTaibiRate == 0 ? 1 : productCurrencyToTaibiRate;
 
-            //    if (!string.IsNullOrEmpty(invoiceXOdetail.Product.XOCurrency) &&
-            //        !string.IsNullOrEmpty(this.cob_Currency.Text) &&
-            //        invoiceXOdetail.Product.XOCurrency != cob_Currency.Text &&
-            //        this.dateEditInvoiceDate.EditValue != null)
-            //    {
-            //        decimal productCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, invoiceXOdetail.Product.XOCurrency);
-            //        decimal taibiCurrencyToInvoiceRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, cob_Currency.Text);
-            //        price = price * productCurrencyToTaibiRate / taibiCurrencyToInvoiceRate;
-            //    }
+                        decimal taibiCurrencyToInvoiceRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, cob_Currency.Text);
+                        taibiCurrencyToInvoiceRate = taibiCurrencyToInvoiceRate == 0 ? 1 : taibiCurrencyToInvoiceRate;
 
-            //    this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceXODetailPrice, price);
-            //}
+                        item.InvoiceXODetailPrice = item.InvoiceXODetailPrice * productCurrencyToTaibiRate / taibiCurrencyToInvoiceRate;
+                    }
+
+                    item.InvoiceXODetailMoney = Convert.ToDecimal(item.InvoiceXODetailQuantity) * item.InvoiceXODetailPrice;
+                    item.TotalMoney = item.InvoiceXODetailMoney;
+                }
+
+                UpdateMoneyFields();
+                this.gridControl1.RefreshDataSource();
+            }
+
         }
 
         private void cob_Currency_EditValueChanged(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(this.cob_Currency.Text) && this.dateEditInvoiceDate.EditValue != null)
+            {
+                foreach (var item in invoice.Details)
+                {
+                    item.InvoiceXODetailPrice = BL.SupplierProductManager.CountPrice(item.Product.PriceAndRange, Convert.ToDouble(item.InvoiceXODetailQuantity));
 
+                    if (!string.IsNullOrEmpty(item.Product.XOCurrency) && item.Product.XOCurrency != this.cob_Currency.Text)
+                    {
+                        decimal productCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, item.Product.XOCurrency);
+                        productCurrencyToTaibiRate = productCurrencyToTaibiRate == 0 ? 1 : productCurrencyToTaibiRate;
+
+                        decimal taibiCurrencyToInvoiceRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, cob_Currency.Text);
+                        taibiCurrencyToInvoiceRate = taibiCurrencyToInvoiceRate == 0 ? 1 : taibiCurrencyToInvoiceRate;
+
+                        item.InvoiceXODetailPrice = item.InvoiceXODetailPrice * productCurrencyToTaibiRate / taibiCurrencyToInvoiceRate;
+                    }
+
+                    item.InvoiceXODetailMoney = Convert.ToDecimal(item.InvoiceXODetailQuantity) * item.InvoiceXODetailPrice;
+                    item.TotalMoney = item.InvoiceXODetailMoney;
+                }
+
+                UpdateMoneyFields();
+                this.gridControl1.RefreshDataSource();
+            }
         }
     }
 }

@@ -361,6 +361,11 @@ namespace Book.BL
         {
             return accessor.SelectDateRangAndWhereToTable(customerStart, customerEnd, dateStart, dateEnd, yjrq1, yjrq2, cusxoid, product1, product2, invoicexoid1, invoicexoid2, FreightedCompanyId, ConveyanceMethodId, startEmp, endEmp, product_Id, productCategoryId);
         }
+
+        public IList<Model.InvoiceXS> AmountStatistics(string employeeId, DateTime startDate, DateTime endDate, string currency)
+        {
+            return accessor.AmountStatistics(employeeId, startDate, endDate, currency);
+        }
     }
 }
 

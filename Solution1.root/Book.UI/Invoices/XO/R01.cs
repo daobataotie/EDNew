@@ -22,7 +22,7 @@ namespace Book.UI.Invoices.XO
             if (this.invoice == null)
                 return;
 
-            this.invoice.Details = this.invoiceXODetailManager.Select(this.invoice, false);
+            //this.invoice.Details = this.invoiceXODetailManager.Select(this.invoice, false);
 
             this.DataSource = this.invoice.Details;
 
@@ -45,7 +45,7 @@ namespace Book.UI.Invoices.XO
             this.xrLabel25.Text += this.invoice.AuditEmp == null ? "" : this.invoice.AuditEmp.EmployeeName;
             this.xrLabelNote.Text = this.invoice.InvoiceNote;
             this.xrLabelCustomerXOId.Text = this.invoice.CustomerInvoiceXOId;
-            this.xrLabelXScustomer.Text = this.invoice.xocustomer.CustomerFullName;
+            this.xrLabelXScustomer.Text = this.invoice.xocustomer == null ? "" : this.invoice.xocustomer.CustomerFullName;
             this.xrLabelYJRQ.Text = this.invoice.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
             this.xrLabelUnit.Text = this.invoice.Details[0].InvoiceProductUnit;
 
@@ -53,7 +53,8 @@ namespace Book.UI.Invoices.XO
 
             //Ã÷Ï¸ÐÅÏ¢
             this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Inumber);
-            this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
+            //this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
+            this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             this.xrTableCellProductUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceProductUnit);
             this.xrTableCellQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity, "{0:0.##}");
             //this.TCProductRemark.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_Remark);

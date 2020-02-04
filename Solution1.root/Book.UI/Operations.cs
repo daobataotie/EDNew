@@ -807,6 +807,13 @@ namespace Book.UI
 
             //ProformaInvoice
             operations.Add("Invoices.IP.EditFormProformaInvoice", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.IP.EditFormProformaInvoice", form); });
+
+
+            //客戶訂單-金額統計 
+            operations.Add("Query.AmountStatisticsXO", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.AmountStatisticsXO", form); });
+
+            //出庫單-金額統計 
+            operations.Add("Query.AmountStatisticsXS", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.AmountStatisticsXS", form); });
         }
 
         static Form CreateForm(string formTypeName)

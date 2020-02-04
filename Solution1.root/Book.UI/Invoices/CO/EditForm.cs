@@ -22,6 +22,7 @@ namespace Book.UI.Invoices.CO
         private BL.SupplierProductManager supplierProductManager = new Book.BL.SupplierProductManager();
         private BL.InvoiceCGManager invoiceCGManager = new Book.BL.InvoiceCGManager();
         private BL.InvoiceCGDetailManager invoiceCGDetailManager = new Book.BL.InvoiceCGDetailManager();
+        private BL.ExchangeRateManager exchangeRateManager = new Book.BL.ExchangeRateManager();
 
         //四射五入保留位数 
         private const int SISHEWURU_WEISHU = 3;
@@ -772,6 +773,22 @@ namespace Book.UI.Invoices.CO
                     else
                     {
                         price = BL.SupplierProductManager.CountPrice(invoicecodetail.DetailsPriceRange, Convert.ToDouble(quantity));
+
+                        //根據商品的採購幣別和訂單幣別換算訂單單價
+                        if (this.dateEditInvoiceDate.EditValue != null && !string.IsNullOrEmpty(comboBoxEditCurrency.Text) && !string.IsNullOrEmpty(invoicecodetail.Product.COCurrency))
+                        {
+                            if (comboBoxEditCurrency.Text != invoicecodetail.Product.COCurrency)
+                            {
+                                decimal proCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, invoicecodetail.Product.COCurrency);
+                                proCurrencyToTaibiRate = proCurrencyToTaibiRate == 0 ? 1 : proCurrencyToTaibiRate;
+
+                                decimal taibiToInvoiceCurrencyRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, comboBoxEditCurrency.Text);
+                                taibiToInvoiceCurrencyRate = taibiToInvoiceCurrencyRate == 0 ? 1 : taibiToInvoiceCurrencyRate;
+
+                                price = price * proCurrencyToTaibiRate / taibiToInvoiceCurrencyRate;
+                            }
+                        }
+
                         this.gridView1.SetRowCellValue(e.RowHandle, this.colInvoiceCODetailPrice, price);
                     }
                 }
@@ -1199,7 +1216,7 @@ namespace Book.UI.Invoices.CO
                 //detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.DetailsPriceRange, detail.OrderQuantity.HasValue ? detail.OrderQuantity.Value : 0);
                 //}
 
-                //detail.InvoiceCODetailPrice = xodetail.InvoiceXODetailPrice;   改啦商品的采购单价
+                //detail.InvoiceCODetailPrice = xodetail.InvoiceXODetailPrice;   改拉商品的采购单价
                 detail.DetailsPriceRange = detail.Product.PriceAndRange;
                 if (!string.IsNullOrEmpty(detail.DetailsPriceRange))
                 {
@@ -1208,8 +1225,23 @@ namespace Book.UI.Invoices.CO
                 else
                     detail.InvoiceCODetailPrice = 0;
 
-                detail.InvoiceCODetailMoney = Convert.ToDecimal(detail.OrderQuantity) * Convert.ToDecimal(detail.InvoiceCODetailPrice);
+                //根據商品的採購幣別和訂單幣別換算訂單單價
+                if (this.dateEditInvoiceDate.EditValue != null && !string.IsNullOrEmpty(f.SelectList[0].Invoice.Currency) && !string.IsNullOrEmpty(detail.Product.COCurrency))
+                {
+                    if (f.SelectList[0].Invoice.Currency != detail.Product.COCurrency)
+                    {
+                        decimal proCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, detail.Product.COCurrency);
+                        proCurrencyToTaibiRate = proCurrencyToTaibiRate == 0 ? 1 : proCurrencyToTaibiRate;
 
+                        decimal taibiToInvoiceCurrencyRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, f.SelectList[0].Invoice.Currency);
+                        taibiToInvoiceCurrencyRate = taibiToInvoiceCurrencyRate == 0 ? 1 : taibiToInvoiceCurrencyRate;
+
+                        detail.InvoiceCODetailPrice = detail.InvoiceCODetailPrice * proCurrencyToTaibiRate / taibiToInvoiceCurrencyRate;
+                    }
+                }
+
+
+                detail.InvoiceCODetailMoney = Convert.ToDecimal(detail.OrderQuantity) * Convert.ToDecimal(detail.InvoiceCODetailPrice);
                 this.invoice.Details.Add(detail);
             }
             this.gridControl1.RefreshDataSource();
@@ -1310,6 +1342,62 @@ namespace Book.UI.Invoices.CO
                 MessageBox.Show("請先選擇供應商", "提示", MessageBoxButtons.OK);
                 ncc_Supplier2.EditValue = null;
                 return;
+            }
+        }
+
+        private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)
+        {
+            //根據商品的採購幣別和訂單幣別換算訂單單價
+            if (this.dateEditInvoiceDate.EditValue != null && !string.IsNullOrEmpty(comboBoxEditCurrency.Text))
+            {
+                foreach (var detail in invoice.Details)
+                {
+                    detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.Product.PriceAndRange, Convert.ToDouble(detail.OrderQuantity));
+
+                    if (!string.IsNullOrEmpty(detail.Product.COCurrency) && comboBoxEditCurrency.Text != detail.Product.COCurrency)
+                    {
+                        decimal proCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, detail.Product.COCurrency);
+                        proCurrencyToTaibiRate = proCurrencyToTaibiRate == 0 ? 1 : proCurrencyToTaibiRate;
+
+                        decimal taibiToInvoiceCurrencyRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, comboBoxEditCurrency.Text);
+                        taibiToInvoiceCurrencyRate = taibiToInvoiceCurrencyRate == 0 ? 1 : taibiToInvoiceCurrencyRate;
+
+                        detail.InvoiceCODetailPrice = detail.InvoiceCODetailPrice * proCurrencyToTaibiRate / taibiToInvoiceCurrencyRate;
+                    }
+
+                    detail.InvoiceCODetailMoney = Convert.ToDecimal(detail.OrderQuantity) * detail.InvoiceCODetailPrice;
+                }
+
+                this.UpdateMoneyFields();
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
+        private void comboBoxEditCurrency_EditValueChanged(object sender, EventArgs e)
+        {
+            //根據商品的採購幣別和訂單幣別換算訂單單價
+            if (this.dateEditInvoiceDate.EditValue != null && !string.IsNullOrEmpty(comboBoxEditCurrency.Text))
+            {
+                foreach (var detail in invoice.Details)
+                {
+                    detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.Product.PriceAndRange, Convert.ToDouble(detail.OrderQuantity));
+
+                    if (!string.IsNullOrEmpty(detail.Product.COCurrency) && comboBoxEditCurrency.Text != detail.Product.COCurrency)
+                    {
+                        decimal proCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, detail.Product.COCurrency);
+                        proCurrencyToTaibiRate = proCurrencyToTaibiRate == 0 ? 1 : proCurrencyToTaibiRate;
+
+                        decimal taibiToInvoiceCurrencyRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, comboBoxEditCurrency.Text);
+                        taibiToInvoiceCurrencyRate = taibiToInvoiceCurrencyRate == 0 ? 1 : taibiToInvoiceCurrencyRate;
+
+                        detail.InvoiceCODetailPrice = detail.InvoiceCODetailPrice * proCurrencyToTaibiRate / taibiToInvoiceCurrencyRate;
+                    }
+
+                    detail.InvoiceCODetailMoney = Convert.ToDecimal(detail.OrderQuantity) * detail.InvoiceCODetailPrice;
+                }
+
+                this.UpdateMoneyFields();
+                this.gridControl1.RefreshDataSource();
             }
         }
     }

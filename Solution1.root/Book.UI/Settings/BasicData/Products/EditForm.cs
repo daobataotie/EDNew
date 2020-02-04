@@ -574,6 +574,11 @@ namespace Book.UI.Settings.BasicData.Products
             this.product.Volume = Convert.ToDouble(this.spinBoxCaiJi.Value);
             this.product.Digital = Convert.ToDouble(this.spinBoxPackingNum.Value);
 
+            if (!string.IsNullOrEmpty(this.cob_COCurrency.Text))
+                this.product.COCurrency = this.cob_COCurrency.Text;
+            if (!string.IsNullOrEmpty(this.cob_XOCurrency.Text))
+                this.product.XOCurrency = this.cob_XOCurrency.Text;
+
             switch (this.action)
             {
                 case "insert":
@@ -1091,6 +1096,9 @@ namespace Book.UI.Settings.BasicData.Products
             this.spinBoxMWeight.EditValue = this.product.GrossWeight;
             this.spinBoxCaiJi.EditValue = this.product.Volume;
             this.spinBoxPackingNum.EditValue = this.product.Digital;
+
+            this.cob_COCurrency.EditValue = this.product.COCurrency;
+            this.cob_XOCurrency.EditValue = this.product.XOCurrency;
 
             switch (this.action)
             {

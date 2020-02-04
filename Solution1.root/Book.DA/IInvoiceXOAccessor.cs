@@ -31,6 +31,7 @@ namespace Book.DA
         string SelectCusXOIdByPrimaryId(string id);
         string SelectCusXOIdByPronoteHeaderId(string id);
         string GetCurrencyByInvoiceId(string invoiceId);
+        IList<Model.InvoiceXO> AmountStatistics(string employeeId, DateTime startDate, DateTime endDate, string currency);
     }
 }
 

@@ -99,6 +99,7 @@ namespace Book.UI.Invoices.CO
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichTextProductDescribe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
@@ -217,31 +218,8 @@ namespace Book.UI.Invoices.CO
             // 
             // PageHeader
             // 
-            this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrTable4,
-            this.xrLabel13,
-            this.lbl_shipment,
-            this.lbl_Fax,
-            this.xrLabel12,
-            this.lbl_Tel,
-            this.xrLabel4,
-            this.xrLabel2,
-            this.xrLabelCustomer,
-            this.xrLabel11,
-            this.xrLabelInvoiceXOId,
-            this.xrLabel9,
-            this.xrLabel10,
-            this.xrLabelYJDate,
-            this.xrTable2,
-            this.xrLabelInvoiceId,
-            this.xrLabel18,
-            this.xrLabelInvoiceDate,
-            this.xrLabel7,
-            this.xrLabelCustomName,
-            this.xrLabel1,
-            this.xrLabelData,
-            this.xrPageInfo1});
             resources.ApplyResources(this.PageHeader, "PageHeader");
+            this.PageHeader.Expanded = false;
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.StylePriority.UseFont = false;
             // 
@@ -699,6 +677,7 @@ namespace Book.UI.Invoices.CO
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPanel1,
             this.xrLabelCompanyInfoName});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
@@ -718,6 +697,35 @@ namespace Book.UI.Invoices.CO
             this.xrControlStyle1.Name = "xrControlStyle1";
             this.xrControlStyle1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.xrControlStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrPanel1
+            // 
+            this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabelData,
+            this.xrLabel13,
+            this.lbl_shipment,
+            this.lbl_Fax,
+            this.xrLabel12,
+            this.lbl_Tel,
+            this.xrLabel4,
+            this.xrLabel2,
+            this.xrLabelCustomer,
+            this.xrLabel11,
+            this.xrLabelInvoiceXOId,
+            this.xrLabel9,
+            this.xrLabel10,
+            this.xrLabelYJDate,
+            this.xrTable2,
+            this.xrLabelInvoiceId,
+            this.xrLabel18,
+            this.xrLabelInvoiceDate,
+            this.xrLabel7,
+            this.xrLabelCustomName,
+            this.xrLabel1,
+            this.xrPageInfo1,
+            this.xrTable4});
+            resources.ApplyResources(this.xrPanel1, "xrPanel1");
+            this.xrPanel1.Name = "xrPanel1";
             // 
             // R01
             // 
@@ -814,5 +822,6 @@ namespace Book.UI.Invoices.CO
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
         private DevExpress.XtraReports.UI.XRTableCell TC_PriceUnit;
+        private DevExpress.XtraReports.UI.XRPanel xrPanel1;
     }
 }

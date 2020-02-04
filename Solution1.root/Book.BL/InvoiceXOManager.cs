@@ -478,6 +478,19 @@ namespace Book.BL
         {
             return accessor.GetCurrencyByInvoiceId(invoiceId);
         }
+
+        /// <summary>
+        /// 客户订单年度金额统计
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <param name="currency"></param>
+        /// <returns></returns>
+        public IList<Model.InvoiceXO> AmountStatistics(string employeeId, DateTime startDate, DateTime endDate, string currency)
+        {
+            return accessor.AmountStatistics(employeeId, startDate, endDate, currency);
+        }
     }
 }
 

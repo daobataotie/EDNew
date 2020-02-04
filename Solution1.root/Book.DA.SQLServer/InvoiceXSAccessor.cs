@@ -215,5 +215,12 @@ left join Customer c on c.CustomerId=xs.CustomerId");
 
             return dt;
         }
+
+        public IList<Model.InvoiceXS> AmountStatistics(string employeeId, DateTime startDate, DateTime endDate, string currency)
+        {
+            string sql = "select InvoiceTotal,InvoiceDate from InvoiceXS where Employee0Id='" + employeeId + "' and InvoiceDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "' and Currency='" + currency + "' and InvoiceTotal >0";
+
+            return this.DataReaderBind<Model.InvoiceXS>(sql, null, CommandType.Text);
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
+using System.Linq;
 
 namespace Book.UI.Invoices.CO
 {
@@ -36,11 +37,16 @@ namespace Book.UI.Invoices.CO
 
             //CompanyInfo            
             if (isFirstSupplier)
+            {
                 this.xrLabelCompanyInfoName.Text = "ALAN SAFETY COMPANY LIMITED";
+            }
             else
             {
                 xrLabelCompanyInfoName.HeightF += 100;
                 this.xrLabelCompanyInfoName.Text = companyName + "".PadLeft(40, ' ') + "(訂單來源：ALAN SAFETY COMPANY LIMITED)";
+
+                //this.xrPanel1.LocationF.Y += 100;
+                this.xrPanel1.LocationF = new PointF(this.xrPanel1.LocationF.X, this.xrPanel1.LocationF.Y + 100);
             }
             this.lbl_Tel.Text = BL.Settings.CompanyPhone;
             this.lbl_Fax.Text = BL.Settings.CompanyFax;
@@ -74,40 +80,53 @@ namespace Book.UI.Invoices.CO
             this.TC_PriceUnit.Text = string.Format("({0})", Model.ExchangeRate.GetCurrencyENNameAndSign(currency));
             this.TC_TotalPrice.Text = Model.ExchangeRate.GetCurrencyENNameAndSign(currency);
 
+            //如果是供应商2 打印，单价，金额 * 0.7
+            if (!isFirstSupplier)
+            {
+                foreach (var item in this.invoice.Details)
+                {
+                    item.InvoiceCODetailPrice = item.InvoiceCODetailPrice * 0.7m;
+                    item.InvoiceCODetailMoney = item.InvoiceCODetailPrice * (decimal)item.OrderQuantity.Value;
+                }
+            }
+
+
             if (currency != null)
             {
                 //先将订单币别金额，转换为台币，在将台币转换为供应商1,供应商2 币别金额
                 decimal invoiceCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(invoice.InvoiceDate.Value, invoice.Currency);
                 invoiceCurrencyToTaibiRate = invoiceCurrencyToTaibiRate == 0 ? 1 : invoiceCurrencyToTaibiRate;
-                var taibiMoney = this.invoice.InvoiceHeji.Value * invoiceCurrencyToTaibiRate;
 
                 if (currency.Contains("台幣") || currency.Contains("台币"))
                 {
-                    this.lbl_TotalMoney.Text = "新台幣" + CmycurD(Math.Round(taibiMoney, 0)) + "整";
-
-                    this.TC_TotalMoney.Text = taibiMoney.ToString("N0");
-
                     foreach (var item in this.invoice.Details)
                     {
                         item.CurrencyPrice = item.InvoiceCODetailPrice.Value * invoiceCurrencyToTaibiRate;
                         item.CurrencyMoney = item.CurrencyPrice * (decimal)item.OrderQuantity.Value;
                     }
+
+                    var taibiMoney = invoice.Details.Sum(d => d.CurrencyMoney);
+                    this.lbl_TotalMoney.Text = "新台幣" + CmycurD(Math.Round(taibiMoney, 0)) + "整";
+
+                    this.TC_TotalMoney.Text = taibiMoney.ToString("N0");
+
                 }
                 else
                 {
                     decimal taibiToSupplierCurrencyRate = exchangeRateManager.GetRateByDateAndCurrency(invoice.InvoiceDate.Value, currency);
                     taibiToSupplierCurrencyRate = taibiToSupplierCurrencyRate == 0 ? 1 : taibiToSupplierCurrencyRate;
-                    var supplierCurrencyMoney = Math.Round(taibiMoney / taibiToSupplierCurrencyRate, 2);
-
-                    this.lbl_TotalMoney.Text = string.Format("{0}{1}{2}{3}{4}{5}匯率：{6}", currency, Model.ExchangeRate.GetCurrencyENNameAndSign(currency), supplierCurrencyMoney.ToString("N2"), "".PadLeft(20, ' '), invoice.InvoiceDate.Value.ToString("yyyy.MM.dd"), currency, taibiToSupplierCurrencyRate.ToString("0.####"));
-
-                    this.TC_TotalMoney.Text = supplierCurrencyMoney.ToString("N0");
 
                     foreach (var item in this.invoice.Details)
                     {
                         item.CurrencyPrice = item.InvoiceCODetailPrice.Value * invoiceCurrencyToTaibiRate / taibiToSupplierCurrencyRate;
                         item.CurrencyMoney = item.CurrencyPrice * (decimal)item.OrderQuantity.Value;
                     }
+
+                    var supplierCurrencyMoney = invoice.Details.Sum(d => d.CurrencyMoney);
+
+                    this.lbl_TotalMoney.Text = string.Format("{0}{1}{2}{3}{4}{5}匯率：{6}", currency, Model.ExchangeRate.GetCurrencyENNameAndSign(currency), supplierCurrencyMoney.ToString("N0"), "".PadLeft(20, ' '), invoice.InvoiceDate.Value.ToString("yyyy.MM.dd"), currency, taibiToSupplierCurrencyRate.ToString("0.####"));
+
+                    this.TC_TotalMoney.Text = supplierCurrencyMoney.ToString("N0");
                 }
 
                 this.xrTableCellUintPrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_CurrencyPrice, "{0:N2}");
@@ -120,6 +139,7 @@ namespace Book.UI.Invoices.CO
 
                 this.TC_TotalMoney.Text = this.invoice.InvoiceHeji.Value.ToString("N0");
             }
+
 
             this.xrLabelNote.Text = this.invoice.InvoiceNote;
 

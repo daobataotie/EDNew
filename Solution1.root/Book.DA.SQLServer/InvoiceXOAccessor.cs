@@ -130,6 +130,13 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<string>("InvoiceXO.GetCurrencyByInvoiceId", invoiceId);
         }
+
+        public IList<Model.InvoiceXO> AmountStatistics(string employeeId, DateTime startDate, DateTime endDate, string currency)
+        {
+            string sql = "select InvoiceTotal,InvoiceDate from InvoiceXO where Employee0Id='" + employeeId + "' and InvoiceDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "' and Currency='" + currency + "' and InvoiceTotal >0";
+
+            return this.DataReaderBind<Model.InvoiceXO>(sql, null, CommandType.Text);
+        }
         #endregion
     }
 }
