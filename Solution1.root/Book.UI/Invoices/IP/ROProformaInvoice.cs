@@ -54,14 +54,14 @@ namespace Book.UI.Invoices.IP
             if (invoice.Details != null && invoice.Details.Count > 0)
             {
                 this.TC_TotalQty.Text = invoice.Details.Sum(P => P.Quantity).Value.ToString("N0");
-                this.TC_TotalAmount.Text = currencySign + invoice.Details.Sum(D => D.Amount).Value.ToString("N2");
+                this.TC_TotalAmount.Text = currencySign + invoice.Details.Sum(D => D.Amount).Value.ToString("N3");
             }
 
             TC_ItemCode.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             TC_Desc.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             TC_Qty.DataBindings.Add("Text", this.DataSource, Model.ProformaInvoiceDetail.PRO_Quantity, "{0:N0}");
-            TC_UnitPrice.DataBindings.Add("Text", this.DataSource, Model.ProformaInvoiceDetail.PRO_UnitPrice, currencySign + "{0:N2}");
-            TC_Amount.DataBindings.Add("Text", this.DataSource, Model.ProformaInvoiceDetail.PRO_Amount, currencySign + "{0:N2}");
+            TC_UnitPrice.DataBindings.Add("Text", this.DataSource, Model.ProformaInvoiceDetail.PRO_UnitPrice, currencySign + "{0:N3}");
+            TC_Amount.DataBindings.Add("Text", this.DataSource, Model.ProformaInvoiceDetail.PRO_Amount, currencySign + "{0:N3}");
         }
 
     }

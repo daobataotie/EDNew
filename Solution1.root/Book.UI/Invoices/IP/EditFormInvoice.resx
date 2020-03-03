@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="bar_ChoosePackingList.Caption" xml:space="preserve">
+    <value>選擇PackingList</value>
+  </data>
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>194, 17</value>
   </metadata>
@@ -147,7 +150,7 @@
     <value>4</value>
   </data>
   <data name="txt_SWIFTCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 152</value>
+    <value>85, 179</value>
   </data>
   <data name="txt_SWIFTCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>319, 21</value>
@@ -168,7 +171,7 @@
     <value>4</value>
   </data>
   <data name="txt_AccountNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 127</value>
+    <value>85, 154</value>
   </data>
   <data name="txt_AccountNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>319, 21</value>
@@ -189,7 +192,7 @@
     <value>5</value>
   </data>
   <data name="txt_BankFax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 102</value>
+    <value>85, 129</value>
   </data>
   <data name="txt_BankFax.Size" type="System.Drawing.Size, System.Drawing">
     <value>319, 21</value>
@@ -210,7 +213,7 @@
     <value>6</value>
   </data>
   <data name="txt_BankTel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 77</value>
+    <value>85, 104</value>
   </data>
   <data name="txt_BankTel.Size" type="System.Drawing.Size, System.Drawing">
     <value>319, 21</value>
@@ -229,27 +232,6 @@
   </data>
   <data name="&gt;&gt;txt_BankTel.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="txt_BankAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 52</value>
-  </data>
-  <data name="txt_BankAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>319, 21</value>
-  </data>
-  <data name="txt_BankAddress.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="&gt;&gt;txt_BankAddress.Name" xml:space="preserve">
-    <value>txt_BankAddress</value>
-  </data>
-  <data name="&gt;&gt;txt_BankAddress.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;txt_BankAddress.Parent" xml:space="preserve">
-    <value>layoutControl2</value>
-  </data>
-  <data name="&gt;&gt;txt_BankAddress.ZOrder" xml:space="preserve">
-    <value>8</value>
   </data>
   <data name="lue_AccountName.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 27</value>
@@ -304,7 +286,7 @@
     <value>layoutControl2</value>
   </data>
   <data name="&gt;&gt;lue_AccountName.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="txt_TotalEnglish.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 2</value>
@@ -325,6 +307,27 @@
     <value>layoutControl2</value>
   </data>
   <data name="&gt;&gt;txt_TotalEnglish.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txt_BankAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 52</value>
+  </data>
+  <data name="txt_BankAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>319, 48</value>
+  </data>
+  <data name="txt_BankAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;txt_BankAddress.Name" xml:space="preserve">
+    <value>txt_BankAddress</value>
+  </data>
+  <data name="&gt;&gt;txt_BankAddress.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_BankAddress.Parent" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;txt_BankAddress.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -1083,9 +1086,6 @@
   </data>
   <data name="layoutControlItem37.Text" xml:space="preserve">
     <value>layoutControlItem37</value>
-  </data>
-  <data name="bar_ChoosePackingList.Caption" xml:space="preserve">
-    <value>選擇PackingList</value>
   </data>
   <data name="layoutControlItem12.CustomizationFormText" xml:space="preserve">
     <value>Unit：</value>

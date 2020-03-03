@@ -758,10 +758,10 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel14.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>104.244606, 274.083221</value>
+    <value>104.244606, 274.083252</value>
   </data>
   <data name="xrLabel14.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>269.208344, 50</value>
+    <value>600, 50</value>
   </data>
   <data name="xrLabel14.Text" xml:space="preserve">
     <value>Prosafe</value>
@@ -787,24 +787,6 @@
   <data name="xrLabel3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
-  <data name="xrLabel8.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrLabel8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新宋体, 9.75pt</value>
-  </data>
-  <data name="xrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>104.244568, 81.20822</value>
-  </data>
-  <data name="xrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>189.833344, 50</value>
-  </data>
-  <data name="xrLabel8.Text" xml:space="preserve">
-    <value>金額總計：</value>
-  </data>
-  <data name="xrLabel8.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleLeft</value>
-  </data>
   <data name="lbl_TotalMoney.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -812,10 +794,10 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="lbl_TotalMoney.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>294.0779, 81.20822</value>
+    <value>106.953423, 81.20822</value>
   </data>
   <data name="lbl_TotalMoney.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1679.92212, 50.0000153</value>
+    <value>1867.04663, 50.0000153</value>
   </data>
   <data name="lbl_TotalMoney.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>

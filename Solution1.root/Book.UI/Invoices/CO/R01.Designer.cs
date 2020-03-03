@@ -87,7 +87,6 @@ namespace Book.UI.Invoices.CO
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_TotalMoney = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -96,10 +95,10 @@ namespace Book.UI.Invoices.CO
             this.TC_TotalPrice = new DevExpress.XtraReports.UI.XRTableCell();
             this.TC_TotalMoney = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichTextProductDescribe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
@@ -558,7 +557,6 @@ namespace Book.UI.Invoices.CO
             this.xrLine1,
             this.xrLabel14,
             this.xrLabel3,
-            this.xrLabel8,
             this.lbl_TotalMoney,
             this.xrTable3,
             this.xrLabelNote});
@@ -600,14 +598,6 @@ namespace Book.UI.Invoices.CO
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel3.StylePriority.UseFont = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel8
-            // 
-            resources.ApplyResources(this.xrLabel8, "xrLabel8");
-            this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel8.StylePriority.UseFont = false;
-            this.xrLabel8.StylePriority.UseTextAlignment = false;
             // 
             // lbl_TotalMoney
             // 
@@ -682,22 +672,6 @@ namespace Book.UI.Invoices.CO
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
             // 
-            // topMarginBand1
-            // 
-            resources.ApplyResources(this.topMarginBand1, "topMarginBand1");
-            this.topMarginBand1.Name = "topMarginBand1";
-            // 
-            // bottomMarginBand1
-            // 
-            resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
-            this.bottomMarginBand1.Name = "bottomMarginBand1";
-            // 
-            // xrControlStyle1
-            // 
-            this.xrControlStyle1.Name = "xrControlStyle1";
-            this.xrControlStyle1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            this.xrControlStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
             // xrPanel1
             // 
             this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -726,6 +700,22 @@ namespace Book.UI.Invoices.CO
             this.xrTable4});
             resources.ApplyResources(this.xrPanel1, "xrPanel1");
             this.xrPanel1.Name = "xrPanel1";
+            // 
+            // topMarginBand1
+            // 
+            resources.ApplyResources(this.topMarginBand1, "topMarginBand1");
+            this.topMarginBand1.Name = "topMarginBand1";
+            // 
+            // bottomMarginBand1
+            // 
+            resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
+            this.bottomMarginBand1.Name = "bottomMarginBand1";
+            // 
+            // xrControlStyle1
+            // 
+            this.xrControlStyle1.Name = "xrControlStyle1";
+            this.xrControlStyle1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.xrControlStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // R01
             // 
@@ -810,7 +800,6 @@ namespace Book.UI.Invoices.CO
         private DevExpress.XtraReports.UI.XRTableCell TC_TotalQty;
         private DevExpress.XtraReports.UI.XRTableCell TC_TotalPrice;
         private DevExpress.XtraReports.UI.XRTableCell TC_TotalMoney;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.XRLabel lbl_TotalMoney;
         private DevExpress.XtraReports.UI.XRLine xrLine2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;

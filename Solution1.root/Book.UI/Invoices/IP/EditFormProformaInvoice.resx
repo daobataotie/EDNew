@@ -189,7 +189,7 @@
     <value>6</value>
   </data>
   <data name="txt_BankTel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 513</value>
+    <value>558, 488</value>
   </data>
   <data name="txt_BankTel.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 21</value>
@@ -453,27 +453,6 @@
   <data name="&gt;&gt;txt_SWIFTCode.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="txt_BankAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 488</value>
-  </data>
-  <data name="txt_BankAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>755, 21</value>
-  </data>
-  <data name="txt_BankAddress.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;txt_BankAddress.Name" xml:space="preserve">
-    <value>txt_BankAddress</value>
-  </data>
-  <data name="&gt;&gt;txt_BankAddress.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;txt_BankAddress.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;txt_BankAddress.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
   <data name="txt_AccountNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>558, 538</value>
   </data>
@@ -493,7 +472,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_AccountNo.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="lue_AccountName.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 463</value>
@@ -547,7 +526,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_AccountName.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="txt_PaymentTerm.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 388</value>
@@ -568,7 +547,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_PaymentTerm.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="txt_Tel.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 86</value>
@@ -589,7 +568,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Tel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <data name="ncc_Customer.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 37</value>
@@ -610,7 +589,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;ncc_Customer.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>18</value>
   </data>
   <data name="txt_CustomerAddress.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 61</value>
@@ -631,7 +610,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_CustomerAddress.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>19</value>
   </data>
   <data name="btn_ChooseInvoiceXO.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 362</value>
@@ -655,7 +634,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_ChooseInvoiceXO.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>20</value>
   </data>
   <data name="Date_InvoiceDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>532, 12</value>
@@ -679,7 +658,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;Date_InvoiceDate.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>21</value>
   </data>
   <data name="txt_PONo.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 12</value>
@@ -700,7 +679,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_PONo.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>22</value>
   </data>
   <data name="btn_Remove.Location" type="System.Drawing.Point, System.Drawing">
     <value>447, 362</value>
@@ -724,6 +703,27 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_Remove.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="txt_BankAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 488</value>
+  </data>
+  <data name="txt_BankAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 46</value>
+  </data>
+  <data name="txt_BankAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;txt_BankAddress.Name" xml:space="preserve">
+    <value>txt_BankAddress</value>
+  </data>
+  <data name="&gt;&gt;txt_BankAddress.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_BankAddress.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;txt_BankAddress.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -826,23 +826,11 @@
   <data name="layoutControlItem11.Text" xml:space="preserve">
     <value>Total(English):</value>
   </data>
-  <data name="layoutControlItem12.CustomizationFormText" xml:space="preserve">
-    <value>Tel;</value>
-  </data>
-  <data name="layoutControlItem12.Text" xml:space="preserve">
-    <value>Tel;</value>
-  </data>
   <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
     <value>DATE:</value>
   </data>
   <data name="layoutControlItem3.Text" xml:space="preserve">
     <value>Date:</value>
-  </data>
-  <data name="layoutControlItem13.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem13</value>
-  </data>
-  <data name="layoutControlItem13.Text" xml:space="preserve">
-    <value>Fax:</value>
   </data>
   <data name="layoutControlItem16.CustomizationFormText" xml:space="preserve">
     <value>Account no:</value>
@@ -861,6 +849,18 @@
   </data>
   <data name="layoutControlItem21.Text" xml:space="preserve">
     <value>Country Of Origin:</value>
+  </data>
+  <data name="layoutControlItem12.CustomizationFormText" xml:space="preserve">
+    <value>Tel;</value>
+  </data>
+  <data name="layoutControlItem12.Text" xml:space="preserve">
+    <value>Tel;</value>
+  </data>
+  <data name="layoutControlItem13.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem13</value>
+  </data>
+  <data name="layoutControlItem13.Text" xml:space="preserve">
+    <value>Fax:</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
@@ -1141,22 +1141,10 @@
   <data name="&gt;&gt;layoutControlItem11.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem12.Name" xml:space="preserve">
-    <value>layoutControlItem12</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
     <value>layoutControlItem3</value>
   </data>
   <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem13.Name" xml:space="preserve">
-    <value>layoutControlItem13</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem13.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem16.Name" xml:space="preserve">
@@ -1175,6 +1163,18 @@
     <value>layoutControlItem21</value>
   </data>
   <data name="&gt;&gt;layoutControlItem21.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem12.Name" xml:space="preserve">
+    <value>layoutControlItem12</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem13.Name" xml:space="preserve">
+    <value>layoutControlItem13</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem13.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem29.Name" xml:space="preserve">

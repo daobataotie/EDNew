@@ -568,7 +568,7 @@
     <value>False</value>
   </data>
   <data name="checkEditFang.Properties.Caption" xml:space="preserve">
-    <value>防雾</value>
+    <value>防霧</value>
   </data>
   <data name="checkEditFang.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 19</value>
@@ -1942,26 +1942,26 @@
   <data name="cob_COCurrency.Location" type="System.Drawing.Point, System.Drawing">
     <value>79, 182</value>
   </data>
-  <data name="cob_SupplierCurrency2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+  <data name="cob_COCurrency.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
-  <data name="cob_SupplierCurrency2.Properties.Items" xml:space="preserve">
+  <data name="cob_COCurrency.Properties.Items" xml:space="preserve">
     <value>人民幣</value>
   </data>
-  <data name="cob_SupplierCurrency2.Properties.Items1" xml:space="preserve">
+  <data name="cob_COCurrency.Properties.Items1" xml:space="preserve">
     <value>新台幣</value>
   </data>
-  <data name="cob_SupplierCurrency2.Properties.Items2" xml:space="preserve">
+  <data name="cob_COCurrency.Properties.Items2" xml:space="preserve">
     <value>美金</value>
   </data>
-  <data name="cob_SupplierCurrency2.Properties.Items3" xml:space="preserve">
+  <data name="cob_COCurrency.Properties.Items3" xml:space="preserve">
     <value>歐元</value>
   </data>
-  <data name="cob_SupplierCurrency2.Properties.Items4" xml:space="preserve">
+  <data name="cob_COCurrency.Properties.Items4" xml:space="preserve">
     <value>日圓</value>
   </data>
   <data name="cob_COCurrency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="cob_COCurrency.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -1976,16 +1976,16 @@
     <value>layoutControl13</value>
   </data>
   <data name="&gt;&gt;cob_COCurrency.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 157</value>
+    <value>227, 157</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 21</value>
+    <value>197, 21</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -2009,13 +2009,13 @@
     <value>5</value>
   </data>
   <data name="cePrice7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 157</value>
+    <value>500, 157</value>
   </data>
   <data name="cePrice7.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePrice7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="cePrice7.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -2033,13 +2033,13 @@
     <value>6</value>
   </data>
   <data name="cePrice6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 132</value>
+    <value>500, 132</value>
   </data>
   <data name="cePrice6.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePrice6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="cePrice6.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -2063,7 +2063,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange7_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="cePriRange7_L.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -2081,13 +2081,13 @@
     <value>8</value>
   </data>
   <data name="cePrice5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 107</value>
+    <value>500, 107</value>
   </data>
   <data name="cePrice5.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePrice5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="cePrice5.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -2105,13 +2105,13 @@
     <value>9</value>
   </data>
   <data name="cePriRange6_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 132</value>
+    <value>262, 132</value>
   </data>
   <data name="cePriRange6_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePriRange6_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="cePriRange6_R.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -2135,7 +2135,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange6_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="cePriRange6_L.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -2153,13 +2153,13 @@
     <value>11</value>
   </data>
   <data name="cePrice4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 82</value>
+    <value>500, 82</value>
   </data>
   <data name="cePrice4.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePrice4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="cePrice4.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -2177,13 +2177,13 @@
     <value>12</value>
   </data>
   <data name="cePriRange5_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 107</value>
+    <value>262, 107</value>
   </data>
   <data name="cePriRange5_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePriRange5_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="cePriRange5_R.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -2207,7 +2207,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange5_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="cePriRange5_L.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -2225,13 +2225,13 @@
     <value>14</value>
   </data>
   <data name="cePriRange3_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 57</value>
+    <value>262, 57</value>
   </data>
   <data name="cePriRange3_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePriRange3_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="cePriRange3_R.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -2249,13 +2249,13 @@
     <value>15</value>
   </data>
   <data name="cePriRange4_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 82</value>
+    <value>262, 82</value>
   </data>
   <data name="cePriRange4_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePriRange4_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="cePriRange4_R.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -2279,7 +2279,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange4_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="cePriRange4_L.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -2297,13 +2297,13 @@
     <value>17</value>
   </data>
   <data name="cePrice3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 57</value>
+    <value>500, 57</value>
   </data>
   <data name="cePrice3.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePrice3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="cePrice3.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -2321,13 +2321,13 @@
     <value>18</value>
   </data>
   <data name="cePrice2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 32</value>
+    <value>500, 32</value>
   </data>
   <data name="cePrice2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePrice2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="cePrice2.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -2351,7 +2351,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange3_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="cePriRange3_L.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -2369,13 +2369,13 @@
     <value>20</value>
   </data>
   <data name="cePrice1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 7</value>
+    <value>500, 7</value>
   </data>
   <data name="cePrice1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePrice1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="cePrice1.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -2393,13 +2393,13 @@
     <value>21</value>
   </data>
   <data name="cePriRange2_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 32</value>
+    <value>262, 32</value>
   </data>
   <data name="cePriRange2_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePriRange2_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="cePriRange2_R.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -2423,7 +2423,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange2_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="cePriRange2_L.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -2447,7 +2447,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange1_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="cePriRange1_L.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -2465,13 +2465,13 @@
     <value>24</value>
   </data>
   <data name="cePriRange1_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 7</value>
+    <value>262, 7</value>
   </data>
   <data name="cePriRange1_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cePriRange1_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="cePriRange1_R.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -2692,26 +2692,26 @@
   <data name="cob_XOCurrency.Location" type="System.Drawing.Point, System.Drawing">
     <value>79, 182</value>
   </data>
-  <data name="comboBoxEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+  <data name="cob_XOCurrency.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
-  <data name="comboBoxEdit1.Properties.Items" xml:space="preserve">
+  <data name="cob_XOCurrency.Properties.Items" xml:space="preserve">
     <value>人民幣</value>
   </data>
-  <data name="comboBoxEdit1.Properties.Items1" xml:space="preserve">
+  <data name="cob_XOCurrency.Properties.Items1" xml:space="preserve">
     <value>新台幣</value>
   </data>
-  <data name="comboBoxEdit1.Properties.Items2" xml:space="preserve">
+  <data name="cob_XOCurrency.Properties.Items2" xml:space="preserve">
     <value>美金</value>
   </data>
-  <data name="comboBoxEdit1.Properties.Items3" xml:space="preserve">
+  <data name="cob_XOCurrency.Properties.Items3" xml:space="preserve">
     <value>歐元</value>
   </data>
-  <data name="comboBoxEdit1.Properties.Items4" xml:space="preserve">
+  <data name="cob_XOCurrency.Properties.Items4" xml:space="preserve">
     <value>日圓</value>
   </data>
   <data name="cob_XOCurrency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="cob_XOCurrency.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -2726,16 +2726,16 @@
     <value>layoutControl14</value>
   </data>
   <data name="&gt;&gt;cob_XOCurrency.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 157</value>
+    <value>227, 157</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 21</value>
+    <value>197, 21</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -2759,13 +2759,13 @@
     <value>5</value>
   </data>
   <data name="XOcePrice7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 157</value>
+    <value>500, 157</value>
   </data>
   <data name="XOcePrice7.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePrice7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="XOcePrice7.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -2783,13 +2783,13 @@
     <value>6</value>
   </data>
   <data name="XOcePriRange6_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 132</value>
+    <value>262, 132</value>
   </data>
   <data name="XOcePriRange6_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePriRange6_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="XOcePriRange6_R.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -2807,13 +2807,13 @@
     <value>7</value>
   </data>
   <data name="XOcePrice6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 132</value>
+    <value>500, 132</value>
   </data>
   <data name="XOcePrice6.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePrice6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="XOcePrice6.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -2837,7 +2837,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange6_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="XOcePriRange6_L.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -2855,13 +2855,13 @@
     <value>9</value>
   </data>
   <data name="XOcePrice5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 107</value>
+    <value>500, 107</value>
   </data>
   <data name="XOcePrice5.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePrice5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="XOcePrice5.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -2879,13 +2879,13 @@
     <value>10</value>
   </data>
   <data name="XOcePriRange5_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 107</value>
+    <value>262, 107</value>
   </data>
   <data name="XOcePriRange5_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePriRange5_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="XOcePriRange5_R.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -2909,7 +2909,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange5_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="XOcePriRange5_L.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -2927,13 +2927,13 @@
     <value>12</value>
   </data>
   <data name="XOcePrice4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 82</value>
+    <value>500, 82</value>
   </data>
   <data name="XOcePrice4.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePrice4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="XOcePrice4.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -2951,13 +2951,13 @@
     <value>13</value>
   </data>
   <data name="XOcePriRange4_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 82</value>
+    <value>262, 82</value>
   </data>
   <data name="XOcePriRange4_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePriRange4_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="XOcePriRange4_R.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -2981,7 +2981,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange4_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="XOcePriRange4_L.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -2999,13 +2999,13 @@
     <value>15</value>
   </data>
   <data name="XOcePrice3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 57</value>
+    <value>500, 57</value>
   </data>
   <data name="XOcePrice3.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePrice3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="XOcePrice3.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -3023,13 +3023,13 @@
     <value>16</value>
   </data>
   <data name="XOcePriRange3_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 57</value>
+    <value>262, 57</value>
   </data>
   <data name="XOcePriRange3_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePriRange3_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="XOcePriRange3_R.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -3053,7 +3053,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange3_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="XOcePriRange3_L.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -3071,13 +3071,13 @@
     <value>18</value>
   </data>
   <data name="XOcePriRange2_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 32</value>
+    <value>262, 32</value>
   </data>
   <data name="XOcePriRange2_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePriRange2_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="XOcePriRange2_R.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -3095,13 +3095,13 @@
     <value>19</value>
   </data>
   <data name="XOcePrice1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 7</value>
+    <value>500, 7</value>
   </data>
   <data name="XOcePrice1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePrice1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="XOcePrice1.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -3125,7 +3125,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange2_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="XOcePriRange2_L.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -3143,13 +3143,13 @@
     <value>21</value>
   </data>
   <data name="XOcePriRange1_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 7</value>
+    <value>262, 7</value>
   </data>
   <data name="XOcePriRange1_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePriRange1_R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>162, 21</value>
   </data>
   <data name="XOcePriRange1_R.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -3173,7 +3173,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange7_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="XOcePriRange7_L.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -3191,13 +3191,13 @@
     <value>23</value>
   </data>
   <data name="XOcePrice2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 32</value>
+    <value>500, 32</value>
   </data>
   <data name="XOcePrice2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="XOcePrice2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="XOcePrice2.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -3221,7 +3221,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange1_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>144, 21</value>
   </data>
   <data name="XOcePriRange1_L.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -3554,7 +3554,7 @@
     <value>layoutControl4</value>
   </data>
   <data name="&gt;&gt;xtraTabControl2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="spinEditReferenceSellPrice.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -9985,6 +9985,18 @@
   <data name="&gt;&gt;layoutControlItem133.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem198.Name" xml:space="preserve">
+    <value>layoutControlItem198</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem198.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem7.Name" xml:space="preserve">
+    <value>emptySpaceItem7</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutControlGroup15.Name" xml:space="preserve">
     <value>layoutControlGroup15</value>
   </data>
@@ -10121,6 +10133,18 @@
     <value>emptySpaceItem1</value>
   </data>
   <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem199.Name" xml:space="preserve">
+    <value>layoutControlItem199</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem199.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem19.Name" xml:space="preserve">
+    <value>emptySpaceItem19</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem19.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlGroup16.Name" xml:space="preserve">
@@ -11688,30 +11712,6 @@
   </data>
   <data name="&gt;&gt;bar_ReportStockRecord.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem198.Name" xml:space="preserve">
-    <value>layoutControlItem198</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem198.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem7.Name" xml:space="preserve">
-    <value>emptySpaceItem7</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem7.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem199.Name" xml:space="preserve">
-    <value>layoutControlItem199</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem199.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem19.Name" xml:space="preserve">
-    <value>emptySpaceItem19</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem19.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

@@ -113,6 +113,10 @@ namespace Book.Model
             set { _checked = value; }
         }
 
+        public string PId { get; set; }
+
+        public string ProductName { get; set; }
+
         public static readonly string PRO_xiaoji = "xiaoji";
 
     }

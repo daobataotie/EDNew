@@ -814,6 +814,10 @@ namespace Book.UI
 
             //³öŽì†Î-½ðî~½yÓ‹ 
             operations.Add("Query.AmountStatisticsXS", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.AmountStatisticsXS", form); });
+
+            //äNÊÛ½yÓ‹ 
+            operations.Add("Query.InvoiceXSStatistics", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.InvoiceXSStatistics", form); });
+        
         }
 
         static Form CreateForm(string formTypeName)

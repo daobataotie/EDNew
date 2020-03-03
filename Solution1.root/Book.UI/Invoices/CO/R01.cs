@@ -39,6 +39,9 @@ namespace Book.UI.Invoices.CO
             if (isFirstSupplier)
             {
                 this.xrLabelCompanyInfoName.Text = "ALAN SAFETY COMPANY LIMITED";
+
+                //左下角签名档同供应商
+                this.xrLabel14.Text = supplier.SupplierFullName;
             }
             else
             {
@@ -47,7 +50,11 @@ namespace Book.UI.Invoices.CO
 
                 //this.xrPanel1.LocationF.Y += 100;
                 this.xrPanel1.LocationF = new PointF(this.xrPanel1.LocationF.X, this.xrPanel1.LocationF.Y + 100);
+
+                //转单单据右下角的签名档同供应商
+                this.xrLabel15.Text = supplier.SupplierFullName;
             }
+
             this.lbl_Tel.Text = BL.Settings.CompanyPhone;
             this.lbl_Fax.Text = BL.Settings.CompanyFax;
 
@@ -86,7 +93,7 @@ namespace Book.UI.Invoices.CO
                 foreach (var item in this.invoice.Details)
                 {
                     item.InvoiceCODetailPrice = item.InvoiceCODetailPrice * 0.7m;
-                    item.InvoiceCODetailMoney = item.InvoiceCODetailPrice * (decimal)item.OrderQuantity.Value;
+                    item.InvoiceCODetailMoney = Math.Round(item.InvoiceCODetailPrice.Value, 2, MidpointRounding.AwayFromZero) * (decimal)item.OrderQuantity.Value;
                 }
             }
 
@@ -102,13 +109,18 @@ namespace Book.UI.Invoices.CO
                     foreach (var item in this.invoice.Details)
                     {
                         item.CurrencyPrice = item.InvoiceCODetailPrice.Value * invoiceCurrencyToTaibiRate;
-                        item.CurrencyMoney = item.CurrencyPrice * (decimal)item.OrderQuantity.Value;
+                        item.CurrencyMoney = Math.Round(item.CurrencyPrice, 2, MidpointRounding.AwayFromZero) * (decimal)item.OrderQuantity.Value;
                     }
 
                     var taibiMoney = invoice.Details.Sum(d => d.CurrencyMoney);
-                    this.lbl_TotalMoney.Text = "新台幣" + CmycurD(Math.Round(taibiMoney, 0)) + "整";
 
-                    this.TC_TotalMoney.Text = taibiMoney.ToString("N0");
+
+                    this.lbl_TotalMoney.Text = "金額總計：新台幣" + CmycurD(Math.Round(taibiMoney, 2, MidpointRounding.AwayFromZero));
+
+                    if ((int)taibiMoney == taibiMoney)
+                        this.lbl_TotalMoney.Text += "整";
+
+                    this.TC_TotalMoney.Text = taibiMoney.ToString("N2");
 
                 }
                 else
@@ -119,14 +131,14 @@ namespace Book.UI.Invoices.CO
                     foreach (var item in this.invoice.Details)
                     {
                         item.CurrencyPrice = item.InvoiceCODetailPrice.Value * invoiceCurrencyToTaibiRate / taibiToSupplierCurrencyRate;
-                        item.CurrencyMoney = item.CurrencyPrice * (decimal)item.OrderQuantity.Value;
+                        item.CurrencyMoney = Math.Round(item.CurrencyPrice, 2, MidpointRounding.AwayFromZero) * (decimal)item.OrderQuantity.Value;
                     }
 
                     var supplierCurrencyMoney = invoice.Details.Sum(d => d.CurrencyMoney);
 
-                    this.lbl_TotalMoney.Text = string.Format("{0}{1}{2}{3}{4}{5}匯率：{6}", currency, Model.ExchangeRate.GetCurrencyENNameAndSign(currency), supplierCurrencyMoney.ToString("N0"), "".PadLeft(20, ' '), invoice.InvoiceDate.Value.ToString("yyyy.MM.dd"), currency, taibiToSupplierCurrencyRate.ToString("0.####"));
+                    this.lbl_TotalMoney.Text = string.Format("金額總計：{0}{1}{2}{3}{4}{5}匯率：{6}", currency, Model.ExchangeRate.GetCurrencyENNameAndSign(currency), supplierCurrencyMoney.ToString("N2"), "".PadLeft(20, ' '), invoice.InvoiceDate.Value.ToString("yyyy.MM.dd"), currency, taibiToSupplierCurrencyRate.ToString("0.####"));
 
-                    this.TC_TotalMoney.Text = supplierCurrencyMoney.ToString("N0");
+                    this.TC_TotalMoney.Text = supplierCurrencyMoney.ToString("N2");
                 }
 
                 this.xrTableCellUintPrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_CurrencyPrice, "{0:N2}");
@@ -137,7 +149,7 @@ namespace Book.UI.Invoices.CO
                 this.xrTableCellUintPrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_InvoiceCODetailPrice, "{0:N2}");
                 this.xrTableCellMoney.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_InvoiceCODetailMoney, "{0:N2}");
 
-                this.TC_TotalMoney.Text = this.invoice.InvoiceHeji.Value.ToString("N0");
+                this.TC_TotalMoney.Text = this.invoice.InvoiceHeji.Value.ToString("N2");
             }
 
 
@@ -165,7 +177,7 @@ namespace Book.UI.Invoices.CO
             int nzero = 0;  //用来计算连续的零值是几个
             int temp;            //从原num值中取出的值
 
-            num = Math.Round(Math.Abs(num), 2);    //将num取绝对值并四舍五入取2位小数
+            num = Math.Round(Math.Abs(num), 2, MidpointRounding.AwayFromZero);    //将num取绝对值并四舍五入取2位小数
             str4 = ((long)(num * 100)).ToString();        //将num乘100并转换成字符串形式
             j = str4.Length;      //找出最高位
             if (j > 15) { return "溢出"; }

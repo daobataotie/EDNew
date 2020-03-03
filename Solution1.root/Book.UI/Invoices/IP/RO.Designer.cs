@@ -82,6 +82,9 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbl_TotalCaiji = new DevExpress.XtraReports.UI.XRLabel();
             this.lblTotal = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
@@ -90,10 +93,10 @@
             this.lbl_TotalQTY = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
-            this.lbl_TotalCaiji = new DevExpress.XtraReports.UI.XRLabel();
             this.formattingRule1 = new DevExpress.XtraReports.UI.FormattingRule();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -620,6 +623,8 @@
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrRichText1,
+            this.xrLabel8,
             this.lbl_TotalCaiji,
             this.lblTotal,
             this.xrLine2,
@@ -632,6 +637,39 @@
             this.ReportFooter.Dpi = 254F;
             this.ReportFooter.HeightF = 322.5F;
             this.ReportFooter.Name = "ReportFooter";
+            // 
+            // xrRichText1
+            // 
+            this.xrRichText1.Dpi = 254F;
+            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(119.0625F, 79.375F);
+            this.xrRichText1.Name = "xrRichText1";
+            this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
+            this.xrRichText1.SizeF = new System.Drawing.SizeF(969.4808F, 243.125F);
+            // 
+            // xrLabel8
+            // 
+            this.xrLabel8.Dpi = 254F;
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 79.375F);
+            this.xrLabel8.Name = "xrLabel8";
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(119.0625F, 58.42004F);
+            this.xrLabel8.StylePriority.UseTextAlignment = false;
+            this.xrLabel8.Text = "Mark:";
+            this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // lbl_TotalCaiji
+            // 
+            this.lbl_TotalCaiji.Dpi = 254F;
+            this.lbl_TotalCaiji.LocationFloat = new DevExpress.Utils.PointFloat(1764.074F, 5.000018F);
+            this.lbl_TotalCaiji.Name = "lbl_TotalCaiji";
+            this.lbl_TotalCaiji.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_TotalCaiji.SizeF = new System.Drawing.SizeF(228.2395F, 58.42004F);
+            this.lbl_TotalCaiji.StylePriority.UseTextAlignment = false;
+            xrSummary1.FormatString = "{0:0.##} CUFT";
+            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
+            this.lbl_TotalCaiji.Summary = xrSummary1;
+            this.lbl_TotalCaiji.Text = "From:";
+            this.lbl_TotalCaiji.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lblTotal
             // 
@@ -716,20 +754,6 @@
             this.xrLine1.SizeF = new System.Drawing.SizeF(1987.459F, 5F);
             this.xrLine1.StylePriority.UseBorders = false;
             // 
-            // lbl_TotalCaiji
-            // 
-            this.lbl_TotalCaiji.Dpi = 254F;
-            this.lbl_TotalCaiji.LocationFloat = new DevExpress.Utils.PointFloat(1764.074F, 5.000018F);
-            this.lbl_TotalCaiji.Name = "lbl_TotalCaiji";
-            this.lbl_TotalCaiji.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_TotalCaiji.SizeF = new System.Drawing.SizeF(228.2395F, 58.42004F);
-            this.lbl_TotalCaiji.StylePriority.UseTextAlignment = false;
-            xrSummary1.FormatString = "{0:0.##} CUFT";
-            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
-            this.lbl_TotalCaiji.Summary = xrSummary1;
-            this.lbl_TotalCaiji.Text = "From:";
-            this.lbl_TotalCaiji.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
             // formattingRule1
             // 
             this.formattingRule1.Name = "formattingRule1";
@@ -755,6 +779,7 @@
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -823,5 +848,7 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
         private DevExpress.XtraReports.UI.XRLabel lbl_TotalCaiji;
         private DevExpress.XtraReports.UI.FormattingRule formattingRule1;
+        private DevExpress.XtraReports.UI.XRRichText xrRichText1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel8;
     }
 }

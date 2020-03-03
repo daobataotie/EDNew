@@ -688,6 +688,7 @@
             // 
             this.lbl_BankAddress.Dpi = 254F;
             this.lbl_BankAddress.LocationFloat = new DevExpress.Utils.PointFloat(149.2717F, 494.4301F);
+            this.lbl_BankAddress.Multiline = true;
             this.lbl_BankAddress.Name = "lbl_BankAddress";
             this.lbl_BankAddress.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_BankAddress.SizeF = new System.Drawing.SizeF(1100.229F, 55.00003F);

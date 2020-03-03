@@ -221,5 +221,12 @@ namespace Book.DA.SQLServer
             }
         }
 
+        public IList<Model.InvoiceXSDetail> GetXSStatistics(DateTime StartDate, DateTime EndDate, string areaId, string proType)
+        {
+            string sql = "select p.Id as PId,p.ProductName,SUM(InvoiceXSDetailTaxMoney) as InvoiceXSDetailTaxMoney from InvoiceXSDetail xsd left join InvoiceXS xs on xsd.InvoiceId=xs.InvoiceId left join Product p on xsd.ProductId=p.ProductId where xs.InvoiceDate between '" + StartDate.ToString("yyyy-MM-dd") + "' and '" + EndDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'  and xs.AreaCategoryId='" + areaId + "' " + proType + "  group by p.Id,p.ProductName  order by p.Id";
+
+            return this.DataReaderBind<Model.InvoiceXSDetail>(sql, null, CommandType.Text);
+        }
+
     }
 }

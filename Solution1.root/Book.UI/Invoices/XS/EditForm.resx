@@ -132,11 +132,32 @@
   <metadata name="defaultLookAndFeel1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ncc_Area.Location" type="System.Drawing.Point, System.Drawing">
+    <value>791, 17</value>
+  </data>
+  <data name="ncc_Area.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 21</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ncc_Area.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;ncc_Area.Name" xml:space="preserve">
+    <value>ncc_Area</value>
+  </data>
+  <data name="&gt;&gt;ncc_Area.Type" xml:space="preserve">
+    <value>Book.UI.Invoices.NewChooseContorl, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ncc_Area.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ncc_Area.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="spe_TaibiTotal.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="spe_TaibiTotal.Location" type="System.Drawing.Point, System.Drawing">
     <value>811, 458</value>
   </data>
@@ -172,7 +193,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spe_TaibiTotal.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="comboBoxEditCurrency.Location" type="System.Drawing.Point, System.Drawing">
     <value>822, 67</value>
@@ -215,7 +236,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;comboBoxEditCurrency.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="date_Shipment.Location" type="System.Drawing.Point, System.Drawing">
     <value>336, 17</value>
@@ -239,7 +260,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_Shipment.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btn_GetNewPrice.Location" type="System.Drawing.Point, System.Drawing">
     <value>412, 357</value>
@@ -263,7 +284,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_GetNewPrice.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnPlus.Location" type="System.Drawing.Point, System.Drawing">
     <value>309, 357</value>
@@ -287,7 +308,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btnPlus.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="textEditOtherChargeNote.Location" type="System.Drawing.Point, System.Drawing">
     <value>616, 458</value>
@@ -320,7 +341,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditOtherChargeNote.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="EmpAudit.Location" type="System.Drawing.Point, System.Drawing">
     <value>811, 484</value>
@@ -341,7 +362,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;EmpAudit.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="checkEditSpecial.Location" type="System.Drawing.Point, System.Drawing">
     <value>737, 42</value>
@@ -365,7 +386,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;checkEditSpecial.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="calcInvoiceAllowance.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -389,7 +410,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;calcInvoiceAllowance.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="textEditAuditState.Location" type="System.Drawing.Point, System.Drawing">
     <value>602, 483</value>
@@ -422,7 +443,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditAuditState.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="calcEditInvoiceTotalset.Location" type="System.Drawing.Point, System.Drawing">
     <value>812, 433</value>
@@ -455,7 +476,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;calcEditInvoiceTotalset.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="calcEditInvoiceTaxset.Location" type="System.Drawing.Point, System.Drawing">
     <value>812, 408</value>
@@ -488,7 +509,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;calcEditInvoiceTaxset.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="comboBoxEditInvoiceKslb.EditValue" xml:space="preserve">
     <value />
@@ -527,7 +548,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;comboBoxEditInvoiceKslb.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="calcEditInvoiceHejiset.Location" type="System.Drawing.Point, System.Drawing">
     <value>812, 383</value>
@@ -560,7 +581,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;calcEditInvoiceHejiset.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="spinEditInvoiceTaxRate.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -707,7 +728,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spinEditInvoiceTaxRate.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="simpleButton_Remove.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 357</value>
@@ -731,7 +752,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButton_Remove.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="simpleButton_Copy.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 357</value>
@@ -755,7 +776,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButton_Copy.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="comboBoxConveyanceMethodId.Location" type="System.Drawing.Point, System.Drawing">
     <value>568, 67</value>
@@ -779,7 +800,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;comboBoxConveyanceMethodId.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="newChooseXScustomer.Location" type="System.Drawing.Point, System.Drawing">
     <value>336, 42</value>
@@ -800,7 +821,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseXScustomer.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="lookUpEditFreightCompany.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 67</value>
@@ -848,7 +869,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lookUpEditFreightCompany.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="textEditNote.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 383</value>
@@ -869,27 +890,6 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditNote.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="textEditSongHuoAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>821, 17</value>
-  </data>
-  <data name="textEditSongHuoAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
-  </data>
-  <data name="textEditSongHuoAddress.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;textEditSongHuoAddress.Name" xml:space="preserve">
-    <value>textEditSongHuoAddress</value>
-  </data>
-  <data name="&gt;&gt;textEditSongHuoAddress.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;textEditSongHuoAddress.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;textEditSongHuoAddress.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
   <data name="buttonEditCompany.Location" type="System.Drawing.Point, System.Drawing">
@@ -1514,12 +1514,6 @@
   <data name="layoutControlItem24.Text" xml:space="preserve">
     <value>折让：</value>
   </data>
-  <data name="layoutControlItem19.CustomizationFormText" xml:space="preserve">
-    <value>送货地址:</value>
-  </data>
-  <data name="layoutControlItem19.Text" xml:space="preserve">
-    <value>送货地址:</value>
-  </data>
   <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
     <value>出货客户:</value>
   </data>
@@ -1543,6 +1537,12 @@
   </data>
   <data name="layoutControlItem35.Text" xml:space="preserve">
     <value>layoutControlItem35</value>
+  </data>
+  <data name="layoutControlItem7.CustomizationFormText" xml:space="preserve">
+    <value>地區：</value>
+  </data>
+  <data name="layoutControlItem7.Text" xml:space="preserve">
+    <value>地區：</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>Root</value>
@@ -2078,12 +2078,6 @@
   <data name="&gt;&gt;layoutControlItem24.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem19.Name" xml:space="preserve">
-    <value>layoutControlItem19</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem19.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
     <value>layoutControlItem10</value>
   </data>
@@ -2106,6 +2100,12 @@
     <value>layoutControlItem35</value>
   </data>
   <data name="&gt;&gt;layoutControlItem35.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;bindingSourceProduct.Name" xml:space="preserve">

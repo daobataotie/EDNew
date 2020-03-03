@@ -143,7 +143,9 @@
     <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Charts.v10.2.Core, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v10.2.Core, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevExpress.CodeRush.Common, Version=10.2.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -162,7 +164,9 @@
     <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -4604,6 +4608,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\AmountStatisticsXS.resx">
       <DependentUpon>AmountStatisticsXS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\InvoiceXSStatistics.resx">
+      <DependentUpon>InvoiceXSStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\InvoiceXSStatisticsRO.resx">
+      <DependentUpon>InvoiceXSStatisticsRO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ChooseCustomsForm2.resx">
       <DependentUpon>ChooseCustomsForm2.cs</DependentUpon>
@@ -12202,6 +12212,18 @@
     </Compile>
     <Compile Include="Query\AmountStatisticsXS.Designer.cs">
       <DependentUpon>AmountStatisticsXS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\InvoiceXSStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\InvoiceXSStatistics.Designer.cs">
+      <DependentUpon>InvoiceXSStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\InvoiceXSStatisticsRO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Query\InvoiceXSStatisticsRO.Designer.cs">
+      <DependentUpon>InvoiceXSStatisticsRO.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\BasicData\Customs\ChooseCustomsForm2.cs">
       <SubType>Form</SubType>

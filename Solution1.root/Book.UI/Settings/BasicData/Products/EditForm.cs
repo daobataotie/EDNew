@@ -800,7 +800,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.spinEditNewestCost.EditValue = this.product.NewestCost;
             this.spinEditOnMadingQuantity.EditValue = this.product.OnMadingQuantity;
             this.spinEditOrderOnWayQuantity.EditValue = this.product.OrderOnWayQuantity;
-            this.checkEditOutSourcing.EditValue = this.product.OutSourcing;
+
             // this.newChooseContorlPackageType.EditValue = this.product.PackageType;
             this.spinEditPlanSellPrice.EditValue = this.product.PlanSellPrice;
             this.textEditPowerGroup.Text = this.product.PowerGroup;
@@ -832,8 +832,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.comboBoxEditDigital.Text = this.product.StockTakeCycle;
             this.newChooseContorSupplierId.EditValue = this.product.Supplier;
 
-            this.checkEditTrustOut.EditValue = this.product.TrustOut;
-            this.checkEditIsProcess.EditValue = this.product.IsProcee;
             this.comboBoxEditValuationWay.Text = this.product.ValuationWay;
             this.spinEditVolume.EditValue = this.product.Volume;
 
@@ -844,12 +842,15 @@ namespace Book.UI.Settings.BasicData.Products
             this.checkEditIsRequiredCheckCycle.EditValue = this.product.IsRequiredCheckCycle;
             this.textEditCheckCycle.Text = this.product.CheckCycle;
             this.textEditVersion.Text = this.product.ProductVersion;
-
-
+            
 
             this.checkEditQiang.Checked = this.product.IsQiangHua.HasValue ? this.product.IsQiangHua.Value : false;
             this.checkEditFang.Checked = this.product.IsFangWu.HasValue ? this.product.IsFangWu.Value : false;
             this.checkEditNoQiang.Checked = this.product.IsNoQiangFang.HasValue ? this.product.IsNoQiangFang.Value : false;
+            this.checkEditOutSourcing.EditValue = this.product.OutSourcing;
+            this.checkEditTrustOut.EditValue = this.product.TrustOut;
+            this.checkEditIsProcess.EditValue = this.product.IsProcee;
+            this.checkEditIsDepot.EditValue = this.product.IsDepot;
 
             this.checkedComboBoxEditJWeight.EditValue = this.product.MaterialIds;
             this.checkedComboBoxEditJWeight.RefreshEditValue();
@@ -1044,9 +1045,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.spinEditChakuang.EditValue = this.product.Chakuang;
             this.spinEditPaihe.EditValue = this.product.Paihe;
             this.spinEditMoshu.EditValue = this.product.Moshu;
-
-            //2018年3月28日21:11:49
-            this.checkEditIsDepot.EditValue = this.product.IsDepot;
 
             if (!string.IsNullOrEmpty(this.product.SunhaoRage))
             {

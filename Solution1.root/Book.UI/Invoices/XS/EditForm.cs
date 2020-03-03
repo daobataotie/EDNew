@@ -63,6 +63,8 @@ namespace Book.UI.Invoices.XS
             this.buttonEditEmployee.Choose = new ChooseEmployee();
             this.buttonEditCompany.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.newChooseXScustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
+            this.ncc_Area.Choose = new Settings.BasicData.AreaCategory.ChooseAreaCategory();
+
             IList<Model.ConveyanceMethod> list = cmethod.Select();
             foreach (Model.ConveyanceMethod Method in list)
             {
@@ -265,6 +267,8 @@ namespace Book.UI.Invoices.XS
                 invoice.ShipmentDate = this.date_Shipment.DateTime;
             invoice.InvoiceTaibiTotal = this.spe_TaibiTotal.Value;
             invoice.Currency = this.comboBoxEditCurrency.Text;
+            if (this.ncc_Area.EditValue != null)
+                invoice.AreaCategoryId = (this.ncc_Area.EditValue as Model.AreaCategory).AreaCategoryId;
 
             switch (this.action)
             {
@@ -453,7 +457,6 @@ namespace Book.UI.Invoices.XS
             this.newChooseXScustomer.EditValue = invoice.XSCustomer;
             //this.buttonEditDepot.EditValue = invoice.Depot;
             this.lookUpEditFreightCompany.EditValue = invoice.TransportCompany;
-            this.textEditSongHuoAddress.EditValue = invoice.XSCustomer == null ? "" : invoice.XSCustomer.CustomerJinChuAddress;
             if (invoice.ConveyanceMethodId != null)
                 this.comboBoxConveyanceMethodId.EditValue = invoice.ConveyanceMethod;
             this.calcEditInvoiceTotalset.EditValue = invoice.InvoiceTotal.HasValue ? invoice.InvoiceTotal.Value : 0;
@@ -479,6 +482,7 @@ namespace Book.UI.Invoices.XS
             //  this.textEditCustomerInvoiceXOId.Text = xo == null ? "" : xo.CustomerInvoiceXOId;
             //this.bindingSourceProduct.DataSource = this.customerProductsManager.Select(this.buttonEditCompany.EditValue as Model.Customer);
             // this.bindingSourceProduct.DataSource = this.productManager.Select(this.newChooseXScustomer.EditValue as Model.Customer);
+            this.ncc_Area.EditValue = invoice.AreaCategory;
 
             base.Refresh();
             switch (this.action)
@@ -502,7 +506,6 @@ namespace Book.UI.Invoices.XS
             this.buttonEditEmployee.ShowButton = false;
             this.buttonEditEmployee.ButtonReadOnly = true;
             this.textEditInvoiceId.Properties.ReadOnly = true;
-            this.textEditSongHuoAddress.Enabled = false;
         }
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
@@ -980,6 +983,52 @@ namespace Book.UI.Invoices.XS
             this.gridControl1.RefreshDataSource();
         }
 
+        //∂ê¬ ◊ÉªØ
+        private void spinEditInvoiceTaxRate_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+            {
+                foreach (Model.InvoiceXSDetail detail in invoice.Details)
+                {
+                    this.textEditInvoiceId.Text.Equals(null);
+                    if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId)) continue;
+                    if (detail.Donatetowards != null && detail.Donatetowards == true) continue;
+                    //if (detail.InvoiceXODetailQuantity == 0 || detail.InvoiceXODetailQuantity == 0) continue;
+                    if (flag == 0)
+                    {
+                        detail.InvoiceXSDetailTaxPrice = 0;
+                        detail.InvoiceXSDetailTax = 0;
+                        detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailMoney;
+                        this.spinEditInvoiceTaxRate.EditValue = 0;
+                    }
+                    if (flag == 1)
+                    {
+                        if (detail.InvoiceXSDetailPrice == null)
+                        {
+                            detail.InvoiceXSDetailPrice = 0;
+                        }
+                        detail.InvoiceXSDetailTaxPrice = 0;
+                        detail.InvoiceXSDetailTax = detail.InvoiceXSDetailPrice.Value * decimal.Parse(detail.InvoiceXSDetailQuantity.ToString()) * decimal.Parse(this.spinEditInvoiceTaxRate.Text) / 100;
+
+                        detail.InvoiceXSDetailTax = this.GetDecimal(detail.InvoiceXSDetailTax.Value, BL.V.SetDataFormat.XSZJXiao.Value);
+
+                        detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailTax + detail.InvoiceXSDetailMoney;
+                    }
+                    else
+                    {
+                        //‘›Œ¥øº¬«ƒ⁄∫¨À∞
+                        //detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
+                    }
+
+                }
+                this.gridControl1.RefreshDataSource();
+                this.spinEditInvoiceTaxRate.Properties.Buttons[1].Enabled = flag == 0 ? false : true;
+                this.spinEditInvoiceTaxRate.Properties.Buttons[2].Enabled = flag == 1 ? false : true;
+                this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = flag == 2 ? false : true;
+                this.UpdateMoneyFields();
+            }
+        }
+
         private void TaxMethod()
         {
             string message = "";
@@ -1261,7 +1310,7 @@ namespace Book.UI.Invoices.XS
                 else
                 {
                     decimal rate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, currency);
-                   
+
                     item.Currency = currency;
                     item.ExchangeRate = rate;
                 }
@@ -1269,51 +1318,6 @@ namespace Book.UI.Invoices.XS
 
             this.gridControl1.RefreshDataSource();
             this.UpdateMoneyFields();
-        }
-
-        private void spinEditInvoiceTaxRate_EditValueChanged(object sender, EventArgs e)
-        {
-            if (this.action != "view")
-            {
-                foreach (Model.InvoiceXSDetail detail in invoice.Details)
-                {
-                    this.textEditInvoiceId.Text.Equals(null);
-                    if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId)) continue;
-                    if (detail.Donatetowards != null && detail.Donatetowards == true) continue;
-                    //if (detail.InvoiceXODetailQuantity == 0 || detail.InvoiceXODetailQuantity == 0) continue;
-                    if (flag == 0)
-                    {
-                        detail.InvoiceXSDetailTaxPrice = 0;
-                        detail.InvoiceXSDetailTax = 0;
-                        detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailMoney;
-                        this.spinEditInvoiceTaxRate.EditValue = 0;
-                    }
-                    if (flag == 1)
-                    {
-                        if (detail.InvoiceXSDetailPrice == null)
-                        {
-                            detail.InvoiceXSDetailPrice = 0;
-                        }
-                        detail.InvoiceXSDetailTaxPrice = 0;
-                        detail.InvoiceXSDetailTax = detail.InvoiceXSDetailPrice.Value * decimal.Parse(detail.InvoiceXSDetailQuantity.ToString()) * decimal.Parse(this.spinEditInvoiceTaxRate.Text) / 100;
-
-                        detail.InvoiceXSDetailTax = this.GetDecimal(detail.InvoiceXSDetailTax.Value, BL.V.SetDataFormat.XSZJXiao.Value);
-
-                        detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailTax + detail.InvoiceXSDetailMoney;
-                    }
-                    else
-                    {
-                        //‘›Œ¥øº¬«ƒ⁄∫¨À∞
-                        //detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
-                    }
-
-                }
-                this.gridControl1.RefreshDataSource();
-                this.spinEditInvoiceTaxRate.Properties.Buttons[1].Enabled = flag == 0 ? false : true;
-                this.spinEditInvoiceTaxRate.Properties.Buttons[2].Enabled = flag == 1 ? false : true;
-                this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = flag == 2 ? false : true;
-                this.UpdateMoneyFields();
-            }
         }
 
     }

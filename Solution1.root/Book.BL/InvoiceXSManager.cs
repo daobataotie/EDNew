@@ -217,7 +217,7 @@ namespace Book.BL
             _ValidateForUpdate(invoice);
             invoice.UpdateTime = DateTime.Now;
             invoice.CustomerId = invoice.Customer.CustomerId;
-            invoice.DepotId = invoice.Depot.DepotId;
+            //invoice.DepotId = invoice.Depot.DepotId;
             invoice.Employee0Id = invoice.Employee0.EmployeeId;
             invoice.Employee1Id = invoice.Employee1 == null ? null : invoice.Employee1.EmployeeId;
             invoice.Employee2Id = invoice.Employee2 == null ? null : invoice.Employee2.EmployeeId;

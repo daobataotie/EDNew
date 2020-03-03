@@ -470,7 +470,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 客户地址
+        /// 登记地址
         /// </summary>
         public string CustomerAddress
         {

@@ -31,10 +31,7 @@ namespace Book.UI.Invoices.IP
 
             //lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
             this.lbl_PackingNo.Text = packingList.PackingNo;
-            //this.lbl_PackingDate.Text = packingList.PackingDate.Value.ToString("yyyy-MM-dd");
             this.lbl_PackingDate.Text = packingList.PackingDate.Value.ToString("yyyy/MM/dd");
-            //this.lbl_CustomerFullName.Text = packingList.Customer.CustomerFullName;
-            //this.lbl_address.Text = packingList.Customer.CustomerAddress;
             this.lbl_CustomerFullName.Text = packingList.CustomerFullName;
             this.lbl_address.Text = packingList.CustomerAddress;
             this.lbl_PerSS.Text = packingList.PerSS;
@@ -51,6 +48,7 @@ namespace Book.UI.Invoices.IP
             this.lbl_ShippedBy.Text = packingList.ShippedBy;
             this.lbl_ShipTo.Text = packingList.ShipTo;
             this.lbl_ShioToAddress.Text = packingList.ShipToAddress;
+            this.xrRichText1.Rtf = packingList.MarkNos;
 
             //this.lblTotal.Text = packingList.Details.Max(P => Convert.ToInt32(string.IsNullOrEmpty(P.PLTNo) ? "0" : P.PLTNo)) + " PLT / " +
             //    (string.IsNullOrEmpty(packingList.Details.Last().CartonNo) ? "" : packingList.Details.Last().CartonNo.Substring(packingList.Details.Last().CartonNo.Length - 1)) + " CARTON";

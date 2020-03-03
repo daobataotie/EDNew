@@ -490,6 +490,22 @@ namespace Book.Model
             set { _currency = value; }
         }
 
+        private string _areaCategoryId;
+
+        public string AreaCategoryId
+        {
+            get { return _areaCategoryId; }
+            set { _areaCategoryId = value; }
+        }
+
+        private AreaCategory _areaCategory;
+
+        public AreaCategory AreaCategory
+        {
+            get { return _areaCategory; }
+            set { _areaCategory = value; }
+        }
+
         public static readonly string PRO_ShipmentDate = "ShipmentDate";
 
         public readonly static string PRO_InvoiceTaibiTotal = "InvoiceTaibiTotal";

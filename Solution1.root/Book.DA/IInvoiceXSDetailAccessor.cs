@@ -36,6 +36,8 @@ namespace Book.DA
 
         System.Data.DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Book.Model.Customer Customer1, Book.Model.Customer Customer2, string XOId1, string XOId2, Book.Model.Product Product, Book.Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial, Model.Customer XOCustomer1, Model.Customer XOCustomer2);
         DataTable SelectAnnualShipment(string ProductId, DateTime StartDate, DateTime EndDate, string CustomerId, int showType);
+
+        IList<Model.InvoiceXSDetail> GetXSStatistics(DateTime StartDate, DateTime EndDate, string areaId, string proType);
     }
 
 }

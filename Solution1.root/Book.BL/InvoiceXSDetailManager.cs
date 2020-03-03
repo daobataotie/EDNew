@@ -112,6 +112,12 @@ namespace Book.BL
         {
             return accessor.SelectAnnualShipment(ProductId, StartDate, EndDate, CustomerId, showType);
         }
+
+
+        public IList<Model.InvoiceXSDetail> GetXSStatistics(DateTime StartDate, DateTime EndDate, string areaId, string proType)
+        {
+            return accessor.GetXSStatistics(StartDate, EndDate, areaId, proType);
+        }
     }
 }
 

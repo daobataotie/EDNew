@@ -35,6 +35,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.ncc_Area = new Book.UI.Invoices.NewChooseContorl();
             this.spe_TaibiTotal = new DevExpress.XtraEditors.SpinEdit();
             this.comboBoxEditCurrency = new DevExpress.XtraEditors.ComboBoxEdit();
             this.date_Shipment = new DevExpress.XtraEditors.DateEdit();
@@ -57,7 +58,6 @@
             this.lookUpEditFreightCompany = new DevExpress.XtraEditors.LookUpEdit();
             this.bindingSourceCompany = new System.Windows.Forms.BindingSource(this.components);
             this.textEditNote = new DevExpress.XtraEditors.MemoEdit();
-            this.textEditSongHuoAddress = new DevExpress.XtraEditors.TextEdit();
             this.buttonEditCompany = new Book.UI.Invoices.NewChooseContorl();
             this.buttonEditEmployee = new Book.UI.Invoices.NewChooseContorl();
             this.textEditInvoiceId = new DevExpress.XtraEditors.TextEdit();
@@ -127,11 +127,11 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bindingSourceProduct = new System.Windows.Forms.BindingSource(this.components);
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -174,7 +174,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditFreightCompany.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCompany)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditNote.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditSongHuoAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditInvoiceId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditInvoiceDate.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditInvoiceDate.Properties)).BeginInit();
@@ -218,11 +217,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
@@ -261,6 +260,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.ncc_Area);
             this.layoutControl1.Controls.Add(this.spe_TaibiTotal);
             this.layoutControl1.Controls.Add(this.comboBoxEditCurrency);
             this.layoutControl1.Controls.Add(this.date_Shipment);
@@ -282,7 +282,6 @@
             this.layoutControl1.Controls.Add(this.newChooseXScustomer);
             this.layoutControl1.Controls.Add(this.lookUpEditFreightCompany);
             this.layoutControl1.Controls.Add(this.textEditNote);
-            this.layoutControl1.Controls.Add(this.textEditSongHuoAddress);
             this.layoutControl1.Controls.Add(this.buttonEditCompany);
             this.layoutControl1.Controls.Add(this.buttonEditEmployee);
             this.layoutControl1.Controls.Add(this.textEditInvoiceId);
@@ -294,6 +293,12 @@
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(118, 249, 250, 350);
             this.layoutControl1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignMode.CustomSize;
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // ncc_Area
+            // 
+            this.ncc_Area.EditValue = null;
+            resources.ApplyResources(this.ncc_Area, "ncc_Area");
+            this.ncc_Area.Name = "ncc_Area";
             // 
             // spe_TaibiTotal
             // 
@@ -486,6 +491,7 @@
             this.spinEditInvoiceTaxRate.Properties.NullValuePrompt = null;
             this.spinEditInvoiceTaxRate.StyleController = this.layoutControl1;
             this.spinEditInvoiceTaxRate.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.spinEditInvoiceTaxRate_ButtonClick);
+            this.spinEditInvoiceTaxRate.EditValueChanged += new System.EventHandler(this.spinEditInvoiceTaxRate_EditValueChanged);
             // 
             // simpleButton_Remove
             // 
@@ -536,12 +542,6 @@
             resources.ApplyResources(this.textEditNote, "textEditNote");
             this.textEditNote.Name = "textEditNote";
             this.textEditNote.StyleController = this.layoutControl1;
-            // 
-            // textEditSongHuoAddress
-            // 
-            resources.ApplyResources(this.textEditSongHuoAddress, "textEditSongHuoAddress");
-            this.textEditSongHuoAddress.Name = "textEditSongHuoAddress";
-            this.textEditSongHuoAddress.StyleController = this.layoutControl1;
             // 
             // buttonEditCompany
             // 
@@ -942,11 +942,11 @@
             this.layoutControlItem6,
             this.layoutControlItem3,
             this.layoutControlItem24,
-            this.layoutControlItem19,
             this.layoutControlItem10,
             this.layoutControlItem36,
             this.layoutControlItem37,
-            this.layoutControlItem35});
+            this.layoutControlItem35,
+            this.layoutControlItem7});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.CustomSize;
@@ -1215,15 +1215,6 @@
             this.layoutControlItem24.Size = new System.Drawing.Size(238, 25);
             this.layoutControlItem24.TextSize = new System.Drawing.Size(60, 20);
             // 
-            // layoutControlItem19
-            // 
-            this.layoutControlItem19.Control = this.textEditSongHuoAddress;
-            resources.ApplyResources(this.layoutControlItem19, "layoutControlItem19");
-            this.layoutControlItem19.Location = new System.Drawing.Point(720, 0);
-            this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(245, 25);
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(80, 20);
-            // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.newChooseXScustomer;
@@ -1267,6 +1258,15 @@
             this.layoutControlItem35.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem35.TextToControlDistance = 0;
             this.layoutControlItem35.TextVisible = false;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.ncc_Area;
+            resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
+            this.layoutControlItem7.Location = new System.Drawing.Point(720, 0);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(245, 25);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(50, 20);
             // 
             // emptySpaceItem5
             // 
@@ -1464,7 +1464,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditFreightCompany.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCompany)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditNote.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditSongHuoAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditInvoiceId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditInvoiceDate.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditInvoiceDate.Properties)).EndInit();
@@ -1508,11 +1507,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
@@ -1557,8 +1556,6 @@
         private NewChooseContorl buttonEditCompany;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private System.Windows.Forms.BindingSource bindingSourceProduct;
-        private DevExpress.XtraEditors.TextEdit textEditSongHuoAddress;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private System.Windows.Forms.BindingSource bindingSourceDepotPosition;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private DevExpress.XtraEditors.MemoEdit textEditNote;
@@ -1654,5 +1651,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem39;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem38;
         private DevExpress.XtraEditors.SpinEdit textEditOtherChargeMoneyset;
+        private NewChooseContorl ncc_Area;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }

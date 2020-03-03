@@ -35,7 +35,8 @@ namespace Book.UI.Invoices.IP
             this.lbl_Attn.Text = invoiceList.Attn;
             this.lbl_Term.Text = invoiceList.Term;
             this.lbl_ShippedBy.Text = invoiceList.ShippedBy;
-            this.lbl_ShipTo.Text = invoiceList.ShipToAddress;
+            this.lbl_ShipTo.Text = invoiceList.ShipTo;
+            this.lbl_ShipToAddress.Text = invoiceList.ShipToAddress;
 
             this.lbl_TotalEnglish.Text = invoiceList.TotalEnglish;
 
@@ -47,6 +48,8 @@ namespace Book.UI.Invoices.IP
                 this.lbl_BankFax.Text = invoiceList.Bank.Fax;
                 this.lbl_BankAccountNo.Text = invoiceList.Bank.Id;
                 this.lbl_BankSwiftCode.Text = invoiceList.Bank.SWIFTCode;
+
+                //this.xrLabel17
             }
 
             if (!string.IsNullOrEmpty(invoiceList.Unit))
@@ -62,15 +65,15 @@ namespace Book.UI.Invoices.IP
                 this.xrTableCell6.Text = "Amount     (" + currencyENName + ")";
                 this.TCUnitPriceCurrency.Text = currencySign;
                 this.TCAmountCurrency.Text = currencySign;
-                this.lbl_TotalAmount.Text = currencyENName + " " + invoiceList.Details.Sum(P => P.Amount).Value.ToString("0.00");
+                this.lbl_TotalAmount.Text = currencyENName + " " + invoiceList.Details.Sum(P => P.Amount).Value.ToString("N3");
             }
 
             TC_No.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_Number);
             TC_PONO.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_PONo);
             TC_ProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             TCQTY.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_ShowQty, "{0:0.##}");
-            TC_UnitPrice.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_UnitPrice, "{0:0.00}");
-            TC_Amount.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_Amount, "{0:0.00}");
+            TC_UnitPrice.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_UnitPrice, "{0:N3}");
+            TC_Amount.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_Amount, "{0:N3}");
 
         }
     }

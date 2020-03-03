@@ -112,7 +112,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			SELECT *
 			FROM 
 				[dbo].[AreaCategory]
-			ORDER BY AreaCategoryId ASC
+			ORDER BY Id ASC
         </select>
         
 		<select id="count_all" resultClass="int">

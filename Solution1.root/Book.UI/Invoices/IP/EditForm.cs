@@ -117,6 +117,7 @@ namespace Book.UI.Invoices.IP
             this.txt_ShippedByAddress.EditValue = this.packingListHeader.ShippedByAddress;
             this.btne_ShipTo.EditValue = this.packingListHeader.ShipTo;
             this.txt_ShipToAddress.EditValue = this.packingListHeader.ShipToAddress;
+            this.richTextBox1.Rtf = this.packingListHeader.MarkNos;
 
             switch (this.action)
             {
@@ -162,6 +163,7 @@ namespace Book.UI.Invoices.IP
             this.packingListHeader.ShippedByAddress = this.txt_ShippedByAddress.Text;
             this.packingListHeader.ShipTo = this.btne_ShipTo.Text;
             this.packingListHeader.ShipToAddress = this.txt_ShipToAddress.Text;
+            this.packingListHeader.MarkNos = this.richTextBox1.Rtf;
 
             if (this.action == "insert")
                 this.packingListHeaderManager.Insert(this.packingListHeader);
@@ -471,7 +473,6 @@ namespace Book.UI.Invoices.IP
             {
                 Model.Customer customer = f.SelectedItem as Model.Customer;
                 this.btne_ShipTo.EditValue = customer.CustomerFullName;
-                //this.txt_ShipToAddress.EditValue = customer.CustomerAddress;
                 this.txt_ShipToAddress.EditValue = customer.CustomerJinChuAddress;
             }
         }
@@ -484,7 +485,7 @@ namespace Book.UI.Invoices.IP
             {
                 Model.Customer customer = f.SelectedItem as Model.Customer;
                 this.btne_CustomerName.EditValue = customer.CustomerFullName;
-                this.txt_ADDRESS.EditValue = customer.CustomerJinChuAddress;
+                this.txt_ADDRESS.EditValue = customer.CustomerAddress;
             }
         }
     }

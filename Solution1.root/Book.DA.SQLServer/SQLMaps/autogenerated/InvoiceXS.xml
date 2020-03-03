@@ -42,6 +42,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="ShipmentDate" column="ShipmentDate"/>
       <result property="InvoiceTaibiTotal" column="InvoiceTaibiTotal"/>
       <result property="Currency" column="Currency"/>
+      <result property="AreaCategoryId" column="AreaCategoryId"/>
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="ConveyanceMethod" column="ConveyanceMethodId" lazyLoad="false" select="ConveyanceMethod.select_by_primary_key" />
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
@@ -52,6 +53,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="Employee3" column="Employee3Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="Employee2" column="Employee2Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="Employee1" column="Employee1Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
+      <result property="AreaCategory" column="AreaCategoryId" lazyLoad ="false" select="AreaCategory.select_by_primary_key"/>
     </resultMap>
   </resultMaps>
 
@@ -174,7 +176,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [Special],
         [ShipmentDate],
         [InvoiceTaibiTotal],
-        [Currency]
+        [Currency],
+        [AreaCategoryId]
 			FROM
 				[dbo].[InvoiceXS]
 			WHERE
@@ -263,7 +266,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [Special],
         [ShipmentDate],
         [InvoiceTaibiTotal],
-        [Currency]
+        [Currency],
+        [AreaCategoryId]
 			) 
 			VALUES 
 			(
@@ -302,7 +306,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #Special#,
         #ShipmentDate#,        
         #InvoiceTaibiTotal#,
-        #Currency#
+        #Currency#,
+        #AreaCategoryId#
 			)
              ]]>
     </insert>
@@ -344,7 +349,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [Special]=#Special#,
         [ShipmentDate]=#ShipmentDate#,        
         [InvoiceTaibiTotal]=#InvoiceTaibiTotal#,
-        [Currency]=#Currency#
+        [Currency]=#Currency#,
+        [AreaCategoryId]=#AreaCategoryId#
 			WHERE
 				[InvoiceId] = #InvoiceId#
                     ]]>

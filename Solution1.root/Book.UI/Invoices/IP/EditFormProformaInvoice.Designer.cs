@@ -57,7 +57,6 @@
             this.repositoryItemRichTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
             this.txt_Attn = new DevExpress.XtraEditors.TextEdit();
             this.txt_SWIFTCode = new DevExpress.XtraEditors.TextEdit();
-            this.txt_BankAddress = new DevExpress.XtraEditors.TextEdit();
             this.txt_AccountNo = new DevExpress.XtraEditors.TextEdit();
             this.lue_AccountName = new DevExpress.XtraEditors.LookUpEdit();
             this.bindingSourceBank = new System.Windows.Forms.BindingSource(this.components);
@@ -69,6 +68,7 @@
             this.Date_InvoiceDate = new DevExpress.XtraEditors.DateEdit();
             this.txt_PONo = new DevExpress.XtraEditors.TextEdit();
             this.btn_Remove = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_BankAddress = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -85,12 +85,12 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -116,7 +116,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Attn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_SWIFTCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_BankAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AccountNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_AccountName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBank)).BeginInit();
@@ -126,6 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Date_InvoiceDate.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Date_InvoiceDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_PONo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_BankAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
@@ -142,12 +142,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
@@ -175,7 +175,6 @@
             this.layoutControl1.Controls.Add(this.gridControl3);
             this.layoutControl1.Controls.Add(this.txt_Attn);
             this.layoutControl1.Controls.Add(this.txt_SWIFTCode);
-            this.layoutControl1.Controls.Add(this.txt_BankAddress);
             this.layoutControl1.Controls.Add(this.txt_AccountNo);
             this.layoutControl1.Controls.Add(this.lue_AccountName);
             this.layoutControl1.Controls.Add(this.txt_PaymentTerm);
@@ -186,6 +185,7 @@
             this.layoutControl1.Controls.Add(this.Date_InvoiceDate);
             this.layoutControl1.Controls.Add(this.txt_PONo);
             this.layoutControl1.Controls.Add(this.btn_Remove);
+            this.layoutControl1.Controls.Add(this.txt_BankAddress);
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
@@ -354,7 +354,7 @@
             // gridColumn10
             // 
             resources.ApplyResources(this.gridColumn10, "gridColumn10");
-            this.gridColumn10.DisplayFormat.FormatString = "0.##";
+            this.gridColumn10.DisplayFormat.FormatString = "0.###";
             this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn10.FieldName = "UnitPrice";
             this.gridColumn10.Name = "gridColumn10";
@@ -362,7 +362,7 @@
             // gridColumn11
             // 
             resources.ApplyResources(this.gridColumn11, "gridColumn11");
-            this.gridColumn11.DisplayFormat.FormatString = "0.##";
+            this.gridColumn11.DisplayFormat.FormatString = "0.###";
             this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn11.FieldName = "Amount";
             this.gridColumn11.Name = "gridColumn11";
@@ -389,14 +389,6 @@
             this.txt_SWIFTCode.Name = "txt_SWIFTCode";
             this.txt_SWIFTCode.Properties.ReadOnly = true;
             this.txt_SWIFTCode.StyleController = this.layoutControl1;
-            // 
-            // txt_BankAddress
-            // 
-            resources.ApplyResources(this.txt_BankAddress, "txt_BankAddress");
-            this.txt_BankAddress.MenuManager = this.barManager1;
-            this.txt_BankAddress.Name = "txt_BankAddress";
-            this.txt_BankAddress.Properties.ReadOnly = true;
-            this.txt_BankAddress.StyleController = this.layoutControl1;
             // 
             // txt_AccountNo
             // 
@@ -488,6 +480,14 @@
             this.btn_Remove.StyleController = this.layoutControl1;
             this.btn_Remove.Click += new System.EventHandler(this.btn_Remove_Click);
             // 
+            // txt_BankAddress
+            // 
+            resources.ApplyResources(this.txt_BankAddress, "txt_BankAddress");
+            this.txt_BankAddress.MenuManager = this.barManager1;
+            this.txt_BankAddress.Name = "txt_BankAddress";
+            this.txt_BankAddress.Properties.ReadOnly = true;
+            this.txt_BankAddress.StyleController = this.layoutControl1;
+            // 
             // layoutControlGroup1
             // 
             resources.ApplyResources(this.layoutControlGroup1, "layoutControlGroup1");
@@ -509,12 +509,12 @@
             this.layoutControlItem5,
             this.layoutControlItem10,
             this.layoutControlItem11,
-            this.layoutControlItem12,
             this.layoutControlItem3,
-            this.layoutControlItem13,
             this.layoutControlItem16,
             this.layoutControlItem17,
-            this.layoutControlItem21});
+            this.layoutControlItem21,
+            this.layoutControlItem12,
+            this.layoutControlItem13});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(890, 571);
@@ -592,7 +592,7 @@
             resources.ApplyResources(this.layoutControlItem18, "layoutControlItem18");
             this.layoutControlItem18.Location = new System.Drawing.Point(0, 476);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(870, 25);
+            this.layoutControlItem18.Size = new System.Drawing.Size(435, 50);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(107, 14);
             // 
             // layoutControlItem19
@@ -662,15 +662,6 @@
             this.layoutControlItem11.Size = new System.Drawing.Size(870, 25);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(107, 14);
             // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.Control = this.txt_BankTel;
-            resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 501);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(435, 25);
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(107, 14);
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.Date_InvoiceDate;
@@ -681,15 +672,6 @@
             this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(80, 14);
             this.layoutControlItem3.TextToControlDistance = 5;
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.txt_BankFax;
-            resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
-            this.layoutControlItem13.Location = new System.Drawing.Point(435, 501);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(435, 25);
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(107, 14);
             // 
             // layoutControlItem16
             // 
@@ -717,6 +699,24 @@
             this.layoutControlItem21.Name = "layoutControlItem21";
             this.layoutControlItem21.Size = new System.Drawing.Size(870, 25);
             this.layoutControlItem21.TextSize = new System.Drawing.Size(107, 14);
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.txt_BankTel;
+            resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
+            this.layoutControlItem12.Location = new System.Drawing.Point(435, 476);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(435, 25);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(107, 14);
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.txt_BankFax;
+            resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
+            this.layoutControlItem13.Location = new System.Drawing.Point(435, 501);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(435, 25);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(107, 14);
             // 
             // layoutControlItem29
             // 
@@ -777,7 +777,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Attn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_SWIFTCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_BankAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AccountNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_AccountName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBank)).EndInit();
@@ -787,6 +786,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Date_InvoiceDate.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Date_InvoiceDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_PONo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_BankAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
@@ -803,12 +803,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
@@ -857,7 +857,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private System.Windows.Forms.BindingSource bindingSourceBank;
         private DevExpress.XtraEditors.TextEdit txt_SWIFTCode;
-        private DevExpress.XtraEditors.TextEdit txt_BankAddress;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
@@ -882,5 +881,6 @@
         private DevExpress.XtraEditors.TextEdit txt_GoodsReadyDate;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
+        private DevExpress.XtraEditors.MemoEdit txt_BankAddress;
     }
 }

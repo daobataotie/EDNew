@@ -146,6 +146,10 @@ namespace Book.UI.Invoices.IP
             //this.date_Sailing.Properties.ReadOnly = true;
             this.lue_From.Properties.ReadOnly = true;
             this.lue_TO.Properties.ReadOnly = true;
+            this.btne_ShippedBy.Properties.ReadOnly = true;
+            this.txt_ShippedByAddress.Properties.ReadOnly = true;
+            this.btne_ShipTo.Properties.ReadOnly = true;
+            this.txt_ShipToAddress.Properties.ReadOnly = true;
 
             if (this.action == "update")
                 this.txt_InvoiceNo.Properties.ReadOnly = true;
