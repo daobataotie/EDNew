@@ -73,7 +73,7 @@ namespace Book.Model
                 string str = "";
                 str = string.Format("@{0} CUFT", this.BoxMaxCaiji) +
                     "       " +
-                    string.Format("{0} CUFT", this.Caiji.Value);
+                    string.Format("{0} CUFT", this.Caiji);
                 return str;
             }
         }

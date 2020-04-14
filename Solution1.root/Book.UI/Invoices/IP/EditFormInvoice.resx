@@ -127,13 +127,37 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_AddProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 487</value>
+  </data>
+  <data name="btn_AddProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 22</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_AddProduct.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="btn_AddProduct.Text" xml:space="preserve">
+    <value>添加商品</value>
+  </data>
+  <data name="&gt;&gt;btn_AddProduct.Name" xml:space="preserve">
+    <value>btn_AddProduct</value>
+  </data>
+  <data name="&gt;&gt;btn_AddProduct.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_AddProduct.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;btn_AddProduct.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="txt_Term.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 137</value>
   </data>
   <data name="txt_Term.Size" type="System.Drawing.Size, System.Drawing">
     <value>393, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txt_Term.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
@@ -147,7 +171,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Term.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txt_SWIFTCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 179</value>
@@ -431,7 +455,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;panelControl1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txt_ShipToAddress.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 237</value>
@@ -452,7 +476,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_ShipToAddress.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btne_ShipTo.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 212</value>
@@ -473,7 +497,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btne_ShipTo.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="txt_ShippedByAddress.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 187</value>
@@ -494,7 +518,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_ShippedByAddress.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btne_ShippedBy.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 162</value>
@@ -515,7 +539,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btne_ShippedBy.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="txt_Attn.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 112</value>
@@ -536,7 +560,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Attn.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="txt_PackingListOf.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 37</value>
@@ -557,7 +581,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_PackingListOf.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="btn_Remove.Location" type="System.Drawing.Point, System.Drawing">
     <value>466, 487</value>
@@ -581,13 +605,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_Remove.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="btn_ChooseInvoiceXO.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 487</value>
   </data>
   <data name="btn_ChooseInvoiceXO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 22</value>
+    <value>219, 22</value>
   </data>
   <data name="btn_ChooseInvoiceXO.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -605,7 +629,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_ChooseInvoiceXO.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <metadata name="bindingSourceDetail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>325, 17</value>
@@ -701,7 +725,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;gridControl3.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="lue_TO.Location" type="System.Drawing.Point, System.Drawing">
     <value>378, 312</value>
@@ -743,7 +767,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_TO.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="txt_PerSS.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 262</value>
@@ -764,7 +788,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_PerSS.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="date_Sailing.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 287</value>
@@ -788,7 +812,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_Sailing.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="txt_CustomerName.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 62</value>
@@ -809,7 +833,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_CustomerName.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="txt_ADDRESS.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 87</value>
@@ -830,7 +854,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_ADDRESS.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="lue_From.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 312</value>
@@ -869,7 +893,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_From.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="Date_InvoiceDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>375, 12</value>
@@ -893,7 +917,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;Date_InvoiceDate.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="txt_InvoiceNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 12</value>
@@ -914,7 +938,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_InvoiceNo.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1038,6 +1062,12 @@
   </data>
   <data name="layoutControlItem17.Text" xml:space="preserve">
     <value>Term:</value>
+  </data>
+  <data name="layoutControlItem28.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem28</value>
+  </data>
+  <data name="layoutControlItem28.Text" xml:space="preserve">
+    <value>layoutControlItem28</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
@@ -1412,6 +1442,12 @@
     <value>layoutControlItem12</value>
   </data>
   <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem28.Name" xml:space="preserve">
+    <value>layoutControlItem28</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem28.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

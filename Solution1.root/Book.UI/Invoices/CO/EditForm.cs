@@ -1347,40 +1347,23 @@ namespace Book.UI.Invoices.CO
 
         private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)
         {
-            //根據商品的採購幣別和訂單幣別換算訂單單價
-            if (this.dateEditInvoiceDate.EditValue != null && !string.IsNullOrEmpty(comboBoxEditCurrency.Text))
-            {
-                foreach (var detail in invoice.Details)
-                {
-                    detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.Product.PriceAndRange, Convert.ToDouble(detail.OrderQuantity));
-
-                    if (!string.IsNullOrEmpty(detail.Product.COCurrency) && comboBoxEditCurrency.Text != detail.Product.COCurrency)
-                    {
-                        decimal proCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, detail.Product.COCurrency);
-                        proCurrencyToTaibiRate = proCurrencyToTaibiRate == 0 ? 1 : proCurrencyToTaibiRate;
-
-                        decimal taibiToInvoiceCurrencyRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, comboBoxEditCurrency.Text);
-                        taibiToInvoiceCurrencyRate = taibiToInvoiceCurrencyRate == 0 ? 1 : taibiToInvoiceCurrencyRate;
-
-                        detail.InvoiceCODetailPrice = detail.InvoiceCODetailPrice * proCurrencyToTaibiRate / taibiToInvoiceCurrencyRate;
-                    }
-
-                    detail.InvoiceCODetailMoney = Convert.ToDecimal(detail.OrderQuantity) * detail.InvoiceCODetailPrice;
-                }
-
-                this.UpdateMoneyFields();
-                this.gridControl1.RefreshDataSource();
-            }
+            CountProPriceAndMoney();
         }
 
         private void comboBoxEditCurrency_EditValueChanged(object sender, EventArgs e)
         {
+            CountProPriceAndMoney();
+        }
+
+        private void CountProPriceAndMoney()
+        {
             //根據商品的採購幣別和訂單幣別換算訂單單價
-            if (this.dateEditInvoiceDate.EditValue != null && !string.IsNullOrEmpty(comboBoxEditCurrency.Text))
+            if (this.dateEditInvoiceDate.EditValue != null && !string.IsNullOrEmpty(comboBoxEditCurrency.Text) && this.action != "view")
             {
                 foreach (var detail in invoice.Details)
                 {
-                    detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.Product.PriceAndRange, Convert.ToDouble(detail.OrderQuantity));
+                    if (!detail.InvoiceCODetailPrice.HasValue || detail.InvoiceCODetailPrice.Value == 0)   //没有值的情况下才会去拉设定值
+                        detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.Product.PriceAndRange, Convert.ToDouble(detail.OrderQuantity));
 
                     if (!string.IsNullOrEmpty(detail.Product.COCurrency) && comboBoxEditCurrency.Text != detail.Product.COCurrency)
                     {

@@ -358,6 +358,11 @@ namespace Book.UI.Invoices.IP
                             detail.InvoiceXODetail = item.InvoiceXODetail;
                             detail.InvoiceXODetailId = item.InvoiceXODetailId;
                         }
+                        else
+                        {
+                            detail.UnitPrice = 0;
+                            detail.Amount = 0;
+                        }
 
                         this.packingInvoiceHeader.Details.Add(detail);
                     }
@@ -451,5 +456,50 @@ namespace Book.UI.Invoices.IP
             }
         }
 
+        private void btn_AddProduct_Click(object sender, EventArgs e)
+        {
+            Book.UI.Invoices.ChooseProductForm f = new Book.UI.Invoices.ChooseProductForm();
+
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                if (ChooseProductForm.ProductList != null && ChooseProductForm.ProductList.Count > 0)
+                {
+                    Model.PackingInvoiceDetail packingInvoiceDetail = null;
+                    foreach (Model.Product product in ChooseProductForm.ProductList)
+                    {
+                        packingInvoiceDetail = new Book.Model.PackingInvoiceDetail();
+                        packingInvoiceDetail.PackingInvoiceDetailId = Guid.NewGuid().ToString();
+                        packingInvoiceDetail.PackingInvoiceHeader = this.packingInvoiceHeader;
+                        packingInvoiceDetail.ProductId = product.ProductId;
+                        packingInvoiceDetail.Product = product;
+
+                        packingInvoiceDetail.Quantity = 0;
+                        packingInvoiceDetail.UnitPrice = 0;
+                        packingInvoiceDetail.Amount = 0;
+
+                        this.packingInvoiceHeader.Details.Add(packingInvoiceDetail);
+                    }
+                }
+                else if (ChooseProductForm.ProductList == null || ChooseProductForm.ProductList.Count == 0)
+                {
+                    Model.Product product = f.SelectedItem as Model.Product;
+
+                    Model.PackingInvoiceDetail packingInvoiceDetail = new Book.Model.PackingInvoiceDetail();
+                    packingInvoiceDetail.PackingInvoiceDetailId = Guid.NewGuid().ToString();
+                    packingInvoiceDetail.PackingInvoiceHeader = this.packingInvoiceHeader;
+                    packingInvoiceDetail.ProductId = product.ProductId;
+                    packingInvoiceDetail.Product = product;
+
+                    packingInvoiceDetail.Quantity = 0;
+                    packingInvoiceDetail.UnitPrice = 0;
+                    packingInvoiceDetail.Amount = 0;
+
+                    this.packingInvoiceHeader.Details.Add(packingInvoiceDetail);
+                }
+
+                this.bindingSourceDetail.DataSource = this.packingInvoiceHeader.Details;
+                this.gridControl3.RefreshDataSource();
+            }
+        }
     }
 }

@@ -488,5 +488,68 @@ namespace Book.UI.Invoices.IP
                 this.txt_ADDRESS.EditValue = customer.CustomerAddress;
             }
         }
+
+        private void btn_AddProduct_Click(object sender, EventArgs e)
+        {
+            Book.UI.Invoices.ChooseProductForm f = new Book.UI.Invoices.ChooseProductForm();
+
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                if (ChooseProductForm.ProductList != null && ChooseProductForm.ProductList.Count > 0)
+                {
+                    Model.PackingListDetail packingDetail = null;
+                    foreach (Model.Product product in ChooseProductForm.ProductList)
+                    {
+                        packingDetail = new Book.Model.PackingListDetail();
+                        packingDetail.PackingListDetailId = Guid.NewGuid().ToString();
+                        packingDetail.PackingListHeader = this.packingListHeader;
+                        packingDetail.Product = product;
+                        packingDetail.ProductId = product.ProductId;
+
+                        packingDetail.BoxMaxQuantity = Convert.ToDecimal(packingDetail.Product.Digital);
+                        packingDetail.BoxMaxNetWeight = Convert.ToDecimal(packingDetail.Product.NetWeight);
+                        packingDetail.BoxMaxGrossWeight = Convert.ToDecimal(packingDetail.Product.GrossWeight);
+                        packingDetail.BoxMaxCaiji = Convert.ToDecimal(packingDetail.Product.Volume);
+
+                        packingDetail.Quantity = 0;
+                        packingDetail.NetWeight =0;
+                        packingDetail.GrossWeight = 0;
+                        packingDetail.Caiji =0;
+
+
+                        packingListHeader.Details.Add(packingDetail);
+                    }
+                }
+                else if (ChooseProductForm.ProductList == null || ChooseProductForm.ProductList.Count == 0)
+                {
+                    Model.Product product = f.SelectedItem as Model.Product;
+
+                    Model.PackingListDetail packingDetail = new Book.Model.PackingListDetail();
+                    packingDetail.PackingListDetailId = Guid.NewGuid().ToString();
+                    packingDetail.PackingListHeader = this.packingListHeader;
+                    packingDetail.Product = product;
+                    packingDetail.ProductId = product.ProductId;
+
+                    packingDetail.BoxMaxQuantity = Convert.ToDecimal(packingDetail.Product.Digital);
+                    packingDetail.BoxMaxNetWeight = Convert.ToDecimal(packingDetail.Product.NetWeight);
+                    packingDetail.BoxMaxGrossWeight = Convert.ToDecimal(packingDetail.Product.GrossWeight);
+                    packingDetail.BoxMaxCaiji = Convert.ToDecimal(packingDetail.Product.Volume);
+
+                    packingDetail.Quantity = 0;
+                    packingDetail.NetWeight = 0;
+                    packingDetail.GrossWeight = 0;
+                    packingDetail.Caiji = 0;
+
+
+                    packingListHeader.Details.Add(packingDetail);
+                }
+
+                this.bindingSourceDetail.DataSource = packingListHeader.Details;
+                this.gridControl3.RefreshDataSource();
+                this.bindingSourceDetail.MoveLast();
+
+
+            }
+        }
     }
 }

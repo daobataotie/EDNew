@@ -59,7 +59,12 @@ namespace Book.UI.Invoices.IP
 
             if (invoiceList.Details != null && invoiceList.Details.Count > 0)
             {
-                string currency = new BL.InvoiceXOManager().GetCurrencyByInvoiceId(invoiceList.Details[0].InvoiceXODetail.InvoiceId);
+                //string currency = new BL.InvoiceXOManager().GetCurrencyByInvoiceId(invoiceList.Details[0].InvoiceXODetail.InvoiceId);
+
+                string currency = "";
+                if (invoiceList.Details.FirstOrDefault(d => d.InvoiceXODetail != null) != null)
+                    currency = new BL.InvoiceXOManager().GetCurrencyByInvoiceId(invoiceList.Details.First(d => d.InvoiceXODetail != null).InvoiceXODetail.InvoiceId);
+
                 string currencyENName = Model.ExchangeRate.GetCurrencyENName(currency);
                 string currencySign = Model.ExchangeRate.GetCurrencySignByCNName(currency);
                 this.xrTableCell6.Text = "Amount     (" + currencyENName + ")";

@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <statements>
     <select id="SelectByHeader" parameterClass="string" resultMap="PackingInvoiceDetailResult">
-      select * from PackingInvoiceDetail where PackingInvoiceHeaderId=#value# order by Number
+      select * from PackingInvoiceDetail where PackingInvoiceHeaderId=#value# order by case when PONo is null then 2 else 1 end 
     </select>
 
     <delete id="DeleteByHeader" parameterClass="string">
