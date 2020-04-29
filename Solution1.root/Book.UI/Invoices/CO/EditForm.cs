@@ -1362,8 +1362,7 @@ namespace Book.UI.Invoices.CO
             {
                 foreach (var detail in invoice.Details)
                 {
-                    if (!detail.InvoiceCODetailPrice.HasValue || detail.InvoiceCODetailPrice.Value == 0)   //没有值的情况下才会去拉设定值
-                        detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.Product.PriceAndRange, Convert.ToDouble(detail.OrderQuantity));
+                    detail.InvoiceCODetailPrice = BL.SupplierProductManager.CountPrice(detail.Product.PriceAndRange, Convert.ToDouble(detail.OrderQuantity));
 
                     if (!string.IsNullOrEmpty(detail.Product.COCurrency) && comboBoxEditCurrency.Text != detail.Product.COCurrency)
                     {

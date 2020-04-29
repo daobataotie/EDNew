@@ -72,6 +72,7 @@ namespace Book.UI.Settings.BasicData.ExchangeRate
         public override void Refresh()
         {
             this.List = exchangeRateManager.Select();
+
             this.bindingSource1.DataSource = this.List;
             if (this.action == "insert")
             {

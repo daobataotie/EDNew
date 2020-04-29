@@ -95,6 +95,8 @@
             this.TC_TotalAmount = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -496,6 +498,8 @@
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel17,
+            this.xrLabel9,
             this.lbl_CountryOfOrigin,
             this.xrLabel15,
             this.lbl_GoodsReadyDate,
@@ -520,7 +524,7 @@
             this.xrLabel20,
             this.xrLine2});
             this.ReportFooter.Dpi = 254F;
-            this.ReportFooter.HeightF = 993.2459F;
+            this.ReportFooter.HeightF = 1084.875F;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // lbl_CountryOfOrigin
@@ -568,7 +572,7 @@
             // xrLabel12
             // 
             this.xrLabel12.Dpi = 254F;
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(149.2717F, 714.4302F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(145.5225F, 806.0587F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(217.3955F, 55.00003F);
@@ -580,7 +584,7 @@
             // 
             this.xrLabel10.Dpi = 254F;
             this.xrLabel10.Font = new System.Drawing.Font("新細明體", 9.75F);
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(149.2717F, 604.4302F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(145.5225F, 696.0586F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel10.SizeF = new System.Drawing.SizeF(110.02F, 55.00003F);
@@ -592,7 +596,7 @@
             // lbl_BankFax
             // 
             this.lbl_BankFax.Dpi = 254F;
-            this.lbl_BankFax.LocationFloat = new DevExpress.Utils.PointFloat(259.2917F, 604.4302F);
+            this.lbl_BankFax.LocationFloat = new DevExpress.Utils.PointFloat(255.5425F, 696.0586F);
             this.lbl_BankFax.Name = "lbl_BankFax";
             this.lbl_BankFax.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_BankFax.SizeF = new System.Drawing.SizeF(990.2092F, 55.00003F);
@@ -603,7 +607,7 @@
             // 
             this.xrLabel8.Dpi = 254F;
             this.xrLabel8.Font = new System.Drawing.Font("新細明體", 9.75F);
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(149.2717F, 549.4301F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(145.5225F, 641.0586F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel8.SizeF = new System.Drawing.SizeF(110.02F, 55.00003F);
@@ -615,7 +619,7 @@
             // lbl_BankTel
             // 
             this.lbl_BankTel.Dpi = 254F;
-            this.lbl_BankTel.LocationFloat = new DevExpress.Utils.PointFloat(259.2916F, 549.4301F);
+            this.lbl_BankTel.LocationFloat = new DevExpress.Utils.PointFloat(255.5424F, 641.0586F);
             this.lbl_BankTel.Name = "lbl_BankTel";
             this.lbl_BankTel.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_BankTel.SizeF = new System.Drawing.SizeF(990.2092F, 55.00003F);
@@ -636,10 +640,10 @@
             // 
             this.xrLabel14.Dpi = 254F;
             this.xrLabel14.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(8.605095F, 383.6559F);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(4.855889F, 475.2843F);
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel14.SizeF = new System.Drawing.SizeF(354.5417F, 55.77405F);
+            this.xrLabel14.SizeF = new System.Drawing.SizeF(294.1245F, 55.77405F);
             this.xrLabel14.StylePriority.UseFont = false;
             this.xrLabel14.StylePriority.UseTextAlignment = false;
             this.xrLabel14.Text = "Bank Information: ";
@@ -649,14 +653,14 @@
             // 
             this.xrLine1.Dpi = 254F;
             this.xrLine1.LineWidth = 3;
-            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(1227.23F, 921.5969F);
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(1223.481F, 1013.225F);
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(662.9995F, 13.22916F);
             // 
             // lbl_CustomerSign
             // 
             this.lbl_CustomerSign.Dpi = 254F;
-            this.lbl_CustomerSign.LocationFloat = new DevExpress.Utils.PointFloat(25.00001F, 934.8259F);
+            this.lbl_CustomerSign.LocationFloat = new DevExpress.Utils.PointFloat(21.2508F, 1026.454F);
             this.lbl_CustomerSign.Name = "lbl_CustomerSign";
             this.lbl_CustomerSign.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_CustomerSign.SizeF = new System.Drawing.SizeF(662.9993F, 58.42004F);
@@ -666,7 +670,7 @@
             // lbl_SWIFTCode
             // 
             this.lbl_SWIFTCode.Dpi = 254F;
-            this.lbl_SWIFTCode.LocationFloat = new DevExpress.Utils.PointFloat(366.6672F, 659.4302F);
+            this.lbl_SWIFTCode.LocationFloat = new DevExpress.Utils.PointFloat(362.918F, 751.0587F);
             this.lbl_SWIFTCode.Name = "lbl_SWIFTCode";
             this.lbl_SWIFTCode.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_SWIFTCode.SizeF = new System.Drawing.SizeF(882.8336F, 55.00006F);
@@ -676,7 +680,7 @@
             // xrLabel29
             // 
             this.xrLabel29.Dpi = 254F;
-            this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(149.2717F, 659.4302F);
+            this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(145.5225F, 751.0587F);
             this.xrLabel29.Name = "xrLabel29";
             this.xrLabel29.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel29.SizeF = new System.Drawing.SizeF(217.3955F, 55.00003F);
@@ -687,7 +691,7 @@
             // lbl_BankAddress
             // 
             this.lbl_BankAddress.Dpi = 254F;
-            this.lbl_BankAddress.LocationFloat = new DevExpress.Utils.PointFloat(149.2717F, 494.4301F);
+            this.lbl_BankAddress.LocationFloat = new DevExpress.Utils.PointFloat(145.5225F, 586.0585F);
             this.lbl_BankAddress.Multiline = true;
             this.lbl_BankAddress.Name = "lbl_BankAddress";
             this.lbl_BankAddress.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -698,7 +702,7 @@
             // lbl_BankName
             // 
             this.lbl_BankName.Dpi = 254F;
-            this.lbl_BankName.LocationFloat = new DevExpress.Utils.PointFloat(149.2717F, 439.4301F);
+            this.lbl_BankName.LocationFloat = new DevExpress.Utils.PointFloat(145.5225F, 531.0585F);
             this.lbl_BankName.Name = "lbl_BankName";
             this.lbl_BankName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_BankName.SizeF = new System.Drawing.SizeF(1100.229F, 55.00003F);
@@ -708,7 +712,7 @@
             // lbl_AccountNo
             // 
             this.lbl_AccountNo.Dpi = 254F;
-            this.lbl_AccountNo.LocationFloat = new DevExpress.Utils.PointFloat(366.6672F, 714.4302F);
+            this.lbl_AccountNo.LocationFloat = new DevExpress.Utils.PointFloat(362.918F, 806.0587F);
             this.lbl_AccountNo.Name = "lbl_AccountNo";
             this.lbl_AccountNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_AccountNo.SizeF = new System.Drawing.SizeF(882.8336F, 55F);
@@ -821,7 +825,7 @@
             // xrLabel20
             // 
             this.xrLabel20.Dpi = 254F;
-            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(1227.23F, 934.8259F);
+            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(1223.481F, 1026.454F);
             this.xrLabel20.Name = "xrLabel20";
             this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel20.SizeF = new System.Drawing.SizeF(662.9996F, 58.42004F);
@@ -833,9 +837,33 @@
             // 
             this.xrLine2.Dpi = 254F;
             this.xrLine2.LineWidth = 3;
-            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(24.99975F, 921.5969F);
+            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(21.25054F, 1013.225F);
             this.xrLine2.Name = "xrLine2";
             this.xrLine2.SizeF = new System.Drawing.SizeF(662.9995F, 13.22916F);
+            // 
+            // xrLabel9
+            // 
+            this.xrLabel9.Dpi = 254F;
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(4.855849F, 363.0869F);
+            this.xrLabel9.Name = "xrLabel9";
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(294.1248F, 55.00003F);
+            this.xrLabel9.StylePriority.UseTextAlignment = false;
+            this.xrLabel9.Text = "Note:";
+            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel17
+            // 
+            this.xrLabel17.Dpi = 254F;
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(298.9807F, 363.0869F);
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(1662.687F, 97.29816F);
+            this.xrLabel17.StylePriority.UseTextAlignment = false;
+            this.xrLabel17.Text = "The signature on the Proforma Invoice is to be deemed as the agreement between bo" +
+                "th parties. Cancellation of the order is not permitted unless any negotiation an" +
+                "d agreement by both parties.";
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // ROProformaInvoice
             // 
@@ -929,5 +957,7 @@
         private DevExpress.XtraReports.UI.XRLabel lbl_CustomerTel;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
         private DevExpress.XtraReports.UI.XRLabel lbl_CustomerAddress;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel17;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
     }
 }

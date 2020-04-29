@@ -27,7 +27,7 @@ namespace Book.UI.Settings.BasicData
             InitializeComponent();
             this.requireValueExceptions = new Dictionary<string, AA>();
             this.invalidValueExceptions = new Dictionary<string, AA>();
-            
+
         }
 
         protected virtual void Save()
@@ -102,6 +102,13 @@ namespace Book.UI.Settings.BasicData
                     {
                         MessageBox.Show(Properties.Resources.InvoiceExist, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
                     MessageBox.Show(Properties.Resources.SuccessfullySaved, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case "new":

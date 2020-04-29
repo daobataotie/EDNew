@@ -141,6 +141,7 @@ namespace Book.UI.Invoices
             }
         }
 
+        //≤È—Ø
         private void simpleButtonSeach_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(this.textEditSeach.Text)) return;

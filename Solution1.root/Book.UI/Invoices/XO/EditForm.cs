@@ -1651,40 +1651,22 @@ namespace Book.UI.Invoices.XO
 
         private void dateEditInvoiceDate_EditValueChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(this.cob_Currency.Text) && this.dateEditInvoiceDate.EditValue != null)
-            {
-                foreach (var item in invoice.Details)
-                {
-                    item.InvoiceXODetailPrice = BL.SupplierProductManager.CountPrice(item.Product.PriceAndRange, Convert.ToDouble(item.InvoiceXODetailQuantity));
-
-                    if (!string.IsNullOrEmpty(item.Product.XOCurrency) && item.Product.XOCurrency != this.cob_Currency.Text)
-                    {
-                        decimal productCurrencyToTaibiRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, item.Product.XOCurrency);
-                        productCurrencyToTaibiRate = productCurrencyToTaibiRate == 0 ? 1 : productCurrencyToTaibiRate;
-
-                        decimal taibiCurrencyToInvoiceRate = exchangeRateManager.GetRateByDateAndCurrency(this.dateEditInvoiceDate.DateTime, cob_Currency.Text);
-                        taibiCurrencyToInvoiceRate = taibiCurrencyToInvoiceRate == 0 ? 1 : taibiCurrencyToInvoiceRate;
-
-                        item.InvoiceXODetailPrice = item.InvoiceXODetailPrice * productCurrencyToTaibiRate / taibiCurrencyToInvoiceRate;
-                    }
-
-                    item.InvoiceXODetailMoney = Convert.ToDecimal(item.InvoiceXODetailQuantity) * item.InvoiceXODetailPrice;
-                    item.TotalMoney = item.InvoiceXODetailMoney;
-                }
-
-                UpdateMoneyFields();
-                this.gridControl1.RefreshDataSource();
-            }
+            CountProPriceAndMoney();
 
         }
 
         private void cob_Currency_EditValueChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(this.cob_Currency.Text) && this.dateEditInvoiceDate.EditValue != null)
+            CountProPriceAndMoney();
+        }
+
+        private void CountProPriceAndMoney()
+        {
+            if (!string.IsNullOrEmpty(this.cob_Currency.Text) && this.dateEditInvoiceDate.EditValue != null && this.action != "view")
             {
                 foreach (var item in invoice.Details)
                 {
-                    item.InvoiceXODetailPrice = BL.SupplierProductManager.CountPrice(item.Product.PriceAndRange, Convert.ToDouble(item.InvoiceXODetailQuantity));
+                    item.InvoiceXODetailPrice = BL.SupplierProductManager.CountPrice(item.Product.XOPriceAndRange, Convert.ToDouble(item.InvoiceXODetailQuantity));
 
                     if (!string.IsNullOrEmpty(item.Product.XOCurrency) && item.Product.XOCurrency != this.cob_Currency.Text)
                     {
