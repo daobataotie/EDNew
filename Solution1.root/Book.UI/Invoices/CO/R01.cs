@@ -51,6 +51,8 @@ namespace Book.UI.Invoices.CO
                 //this.xrPanel1.LocationF.Y += 100;
                 this.xrPanel1.LocationF = new PointF(this.xrPanel1.LocationF.X, this.xrPanel1.LocationF.Y + 100);
 
+                //左下角签名档同厂商
+                this.xrLabel14.Text = companyName;
                 //转单单据右下角的签名档同供应商
                 this.xrLabel15.Text = supplier.SupplierFullName;
             }

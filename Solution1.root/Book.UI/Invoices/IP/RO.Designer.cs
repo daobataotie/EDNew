@@ -665,8 +665,7 @@
             this.lbl_TotalCaiji.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_TotalCaiji.SizeF = new System.Drawing.SizeF(228.2395F, 58.42004F);
             this.lbl_TotalCaiji.StylePriority.UseTextAlignment = false;
-            xrSummary1.FormatString = "{0:0.##} CUFT";
-            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
+            xrSummary1.FormatString = "{0:0.##}";
             this.lbl_TotalCaiji.Summary = xrSummary1;
             this.lbl_TotalCaiji.Text = "From:";
             this.lbl_TotalCaiji.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;

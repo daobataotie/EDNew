@@ -27,7 +27,7 @@ namespace Book.UI.Invoices.XO
             this.DataSource = this.invoice.Details;
 
             //CompanyInfo            
-            this.xrLabelCompanyInfoName.Text = "ALAN SAFETY CO., LTD(久綺有限公司)";
+            this.xrLabelCompanyInfoName.Text = "ALAN SAFETY CO., LTD";
             this.xrLabelData.Text = "客戶訂單通知";
             this.xrLabelPrintDate.Text += DateTime.Now.ToShortDateString();
 

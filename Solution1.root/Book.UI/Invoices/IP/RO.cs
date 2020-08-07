@@ -60,8 +60,7 @@ namespace Book.UI.Invoices.IP
             }
 
             if (packingList.Details != null && packingList.Details.Count > 0)
-                this.lblTotal.Text = packingList.Details.Max(P => Convert.ToInt32(string.IsNullOrEmpty(P.PLTNo) ? "0" : P.PLTNo)) + " PLT / " +
-                                     totalCartonNo + " CARTON";
+                this.lblTotal.Text = (packingList.Details.Max(P => Convert.ToInt32(string.IsNullOrEmpty(P.PLTNo) ? "0" : P.PLTNo)) == 0 ? 1 : packingList.Details.Max(P => Convert.ToInt32(string.IsNullOrEmpty(P.PLTNo) ? "0" : P.PLTNo))) + " PLT / " + totalCartonNo + " CARTON";
 
             if (!string.IsNullOrEmpty(packingList.Unit))
                 this.lbl_TotalQTY.Text = packingList.Details.Sum(P => P.Quantity).Value.ToString("0.##") + " " + packingList.Unit;
@@ -70,9 +69,10 @@ namespace Book.UI.Invoices.IP
 
             this.lbl_TotalNetWeight.Text = packingList.Details.Sum(P => P.NetWeight).Value.ToString("0.##") + " KGS";
             this.lbl_TotalGrossWeight.Text = packingList.Details.Sum(P => P.GrossWeight).Value.ToString("0.##") + " KGS";
+            this.lbl_TotalCaiji.Text = packingList.Details.Sum(P => P.Caiji).Value.ToString("0.##") + " CUFT";
 
             //另一种加总方法,此方法需要在界面上该控件的Summary属性设置如下 Func-Sum; Running-Report
-            this.lbl_TotalCaiji.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_Caiji, "{0:0.##}");
+            //this.lbl_TotalCaiji.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_Caiji, "{0:0.##} CUFT");
 
             TC_PLTNo.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_PLTNo);
             TC_CartonNo.DataBindings.Add("Text", this.DataSource, Model.PackingListDetail.PRO_CartonNo);

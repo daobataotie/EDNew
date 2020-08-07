@@ -486,6 +486,9 @@ namespace Book.UI.Invoices.IP
                 Model.Customer customer = f.SelectedItem as Model.Customer;
                 this.btne_CustomerName.EditValue = customer.CustomerFullName;
                 this.txt_ADDRESS.EditValue = customer.CustomerAddress;
+
+                //if (customer.Contacts != null && customer.Contacts.Count > 0)
+                this.txt_Attn.EditValue = customer.CustomerContact + " ; " + customer.CustomerPhone;
             }
         }
 
@@ -512,9 +515,9 @@ namespace Book.UI.Invoices.IP
                         packingDetail.BoxMaxCaiji = Convert.ToDecimal(packingDetail.Product.Volume);
 
                         packingDetail.Quantity = 0;
-                        packingDetail.NetWeight =0;
+                        packingDetail.NetWeight = 0;
                         packingDetail.GrossWeight = 0;
-                        packingDetail.Caiji =0;
+                        packingDetail.Caiji = 0;
 
 
                         packingListHeader.Details.Add(packingDetail);
