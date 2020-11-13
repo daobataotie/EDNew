@@ -33,7 +33,6 @@
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.TC_PLTNo = new DevExpress.XtraReports.UI.XRTableCell();
             this.TC_CartonNo = new DevExpress.XtraReports.UI.XRTableCell();
             this.TC_CartonQty = new DevExpress.XtraReports.UI.XRTableCell();
             this.TC_ProductName = new DevExpress.XtraReports.UI.XRTableCell();
@@ -58,7 +57,6 @@
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -128,7 +126,6 @@
             // 
             this.xrTableRow2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.TC_PLTNo,
             this.TC_CartonNo,
             this.TC_CartonQty,
             this.TC_ProductName,
@@ -141,15 +138,6 @@
             this.xrTableRow2.StylePriority.UseBorders = false;
             this.xrTableRow2.Weight = 1.625;
             // 
-            // TC_PLTNo
-            // 
-            this.TC_PLTNo.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.TC_PLTNo.Dpi = 254F;
-            this.TC_PLTNo.Name = "TC_PLTNo";
-            this.TC_PLTNo.StylePriority.UseBorders = false;
-            this.TC_PLTNo.Text = "PLT                     NO";
-            this.TC_PLTNo.Weight = 0.14560539792541383;
-            // 
             // TC_CartonNo
             // 
             this.TC_CartonNo.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
@@ -157,7 +145,7 @@
             this.TC_CartonNo.Name = "TC_CartonNo";
             this.TC_CartonNo.StylePriority.UseBorders = false;
             this.TC_CartonNo.Text = "Carton                                              NO";
-            this.TC_CartonNo.Weight = 0.18977235238523726;
+            this.TC_CartonNo.Weight = 0.33537775031065109;
             // 
             // TC_CartonQty
             // 
@@ -393,7 +381,6 @@
             // xrTableRow1
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell1,
             this.xrTableCell7,
             this.xrTableCell4,
             this.xrTableCell2,
@@ -405,19 +392,12 @@
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Weight = 1.625;
             // 
-            // xrTableCell1
-            // 
-            this.xrTableCell1.Dpi = 254F;
-            this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Text = "PLT                     NO";
-            this.xrTableCell1.Weight = 0.14560539792541383;
-            // 
             // xrTableCell7
             // 
             this.xrTableCell7.Dpi = 254F;
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.Text = "Carton                                              NO";
-            this.xrTableCell7.Weight = 0.18977235238523729;
+            this.xrTableCell7.Weight = 0.33537775031065109;
             // 
             // xrTableCell4
             // 
@@ -807,7 +787,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRTable xrTable1;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
@@ -816,7 +795,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
         private DevExpress.XtraReports.UI.XRTable xrTable2;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
-        private DevExpress.XtraReports.UI.XRTableCell TC_PLTNo;
         private DevExpress.XtraReports.UI.XRTableCell TC_CartonNo;
         private DevExpress.XtraReports.UI.XRTableCell TC_CartonQty;
         private DevExpress.XtraReports.UI.XRTableCell TC_ProductName;

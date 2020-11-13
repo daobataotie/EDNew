@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btn_AddProduct = new DevExpress.XtraEditors.SimpleButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btne_ShipTo = new DevExpress.XtraEditors.ButtonEdit();
             this.txt_ShipToAddress = new DevExpress.XtraEditors.TextEdit();
@@ -85,13 +86,12 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btn_AddProduct = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -133,12 +133,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             this.SuspendLayout();
             // 
             // bar1
@@ -170,6 +170,13 @@
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // btn_AddProduct
+            // 
+            resources.ApplyResources(this.btn_AddProduct, "btn_AddProduct");
+            this.btn_AddProduct.Name = "btn_AddProduct";
+            this.btn_AddProduct.StyleController = this.layoutControl1;
+            this.btn_AddProduct.Click += new System.EventHandler(this.btn_AddProduct_Click);
             // 
             // richTextBox1
             // 
@@ -658,6 +665,17 @@
             this.layoutControlItem3.TextSize = new System.Drawing.Size(80, 14);
             this.layoutControlItem3.TextToControlDistance = 5;
             // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.btn_AddProduct;
+            resources.ApplyResources(this.layoutControlItem16, "layoutControlItem16");
+            this.layoutControlItem16.Location = new System.Drawing.Point(215, 475);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(216, 26);
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem16.TextToControlDistance = 0;
+            this.layoutControlItem16.TextVisible = false;
+            // 
             // layoutControlItem21
             // 
             this.layoutControlItem21.Control = this.simpleButton2;
@@ -710,24 +728,6 @@
             this.layoutControlItem37.TextSize = new System.Drawing.Size(50, 20);
             this.layoutControlItem37.TextToControlDistance = 5;
             // 
-            // btn_AddProduct
-            // 
-            resources.ApplyResources(this.btn_AddProduct, "btn_AddProduct");
-            this.btn_AddProduct.Name = "btn_AddProduct";
-            this.btn_AddProduct.StyleController = this.layoutControl1;
-            this.btn_AddProduct.Click += new System.EventHandler(this.btn_AddProduct_Click);
-            // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.Control = this.btn_AddProduct;
-            resources.ApplyResources(this.layoutControlItem16, "layoutControlItem16");
-            this.layoutControlItem16.Location = new System.Drawing.Point(215, 475);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(216, 26);
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem16.TextToControlDistance = 0;
-            this.layoutControlItem16.TextVisible = false;
-            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -776,12 +776,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             this.ResumeLayout(false);
 
         }

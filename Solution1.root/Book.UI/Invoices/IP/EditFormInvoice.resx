@@ -640,12 +640,6 @@
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>NO</value>
   </data>
-  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
@@ -656,7 +650,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="gridColumn3.Width" type="System.Int32, mscorlib">
     <value>137</value>
@@ -668,7 +662,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="gridColumn5.Width" type="System.Int32, mscorlib">
     <value>355</value>
@@ -680,7 +674,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="gridColumn9.Width" type="System.Int32, mscorlib">
     <value>109</value>
@@ -692,7 +686,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
     <value>109</value>
@@ -704,7 +698,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="gridColumn11.Width" type="System.Int32, mscorlib">
     <value>134</value>
@@ -1408,6 +1402,12 @@
   <data name="&gt;&gt;layoutControlItem17.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem28.Name" xml:space="preserve">
+    <value>layoutControlItem28</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem28.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutControlItem29.Name" xml:space="preserve">
     <value>layoutControlItem29</value>
   </data>
@@ -1442,12 +1442,6 @@
     <value>layoutControlItem12</value>
   </data>
   <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem28.Name" xml:space="preserve">
-    <value>layoutControlItem28</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem28.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

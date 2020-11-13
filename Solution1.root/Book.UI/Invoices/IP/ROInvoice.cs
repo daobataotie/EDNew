@@ -73,7 +73,7 @@ namespace Book.UI.Invoices.IP
                 this.lbl_TotalAmount.Text = currencyENName + " " + invoiceList.Details.Sum(P => P.Amount).Value.ToString("N3");
             }
 
-            TC_No.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_Number);
+            //TC_No.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_Number);
             TC_PONO.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_PONo);
             TC_ProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             TCQTY.DataBindings.Add("Text", this.DataSource, Model.PackingInvoiceDetail.PRO_ShowQty, "{0:0.##}");

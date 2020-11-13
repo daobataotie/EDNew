@@ -32,7 +32,6 @@
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.TC_No = new DevExpress.XtraReports.UI.XRTableCell();
             this.TC_PONO = new DevExpress.XtraReports.UI.XRTableCell();
             this.TC_ProductName = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCQTY = new DevExpress.XtraReports.UI.XRTableCell();
@@ -45,6 +44,8 @@
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.lbl_ShipToAddress = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_ShipTo = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_ShippedBy = new DevExpress.XtraReports.UI.XRLabel();
@@ -57,7 +58,6 @@
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -99,8 +99,6 @@
             this.lbl_TotalQTY = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lbl_ShipToAddress = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -134,7 +132,6 @@
             // 
             this.xrTableRow2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.TC_No,
             this.TC_PONO,
             this.TC_ProductName,
             this.TCQTY,
@@ -147,21 +144,12 @@
             this.xrTableRow2.StylePriority.UseBorders = false;
             this.xrTableRow2.Weight = 1.625;
             // 
-            // TC_No
-            // 
-            this.TC_No.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.TC_No.Dpi = 254F;
-            this.TC_No.Name = "TC_No";
-            this.TC_No.StylePriority.UseBorders = false;
-            this.TC_No.Text = "PLT                     NO";
-            this.TC_No.Weight = 0.14560539792541383;
-            // 
             // TC_PONO
             // 
             this.TC_PONO.Dpi = 254F;
             this.TC_PONO.Name = "TC_PONO";
             this.TC_PONO.Text = "PO                                                          NO";
-            this.TC_PONO.Weight = 0.4854417659660466;
+            this.TC_PONO.Weight = 0.63104716389146043;
             // 
             // TC_ProductName
             // 
@@ -282,6 +270,27 @@
             this.PageHeader.Dpi = 254F;
             this.PageHeader.HeightF = 855.941F;
             this.PageHeader.Name = "PageHeader";
+            // 
+            // lbl_ShipToAddress
+            // 
+            this.lbl_ShipToAddress.Dpi = 254F;
+            this.lbl_ShipToAddress.LocationFloat = new DevExpress.Utils.PointFloat(254F, 562.504F);
+            this.lbl_ShipToAddress.Name = "lbl_ShipToAddress";
+            this.lbl_ShipToAddress.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_ShipToAddress.SizeF = new System.Drawing.SizeF(1722F, 58.42004F);
+            this.lbl_ShipToAddress.StylePriority.UseTextAlignment = false;
+            this.lbl_ShipToAddress.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel17
+            // 
+            this.xrLabel17.Dpi = 254F;
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(0F, 562.5041F);
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(254F, 58.42F);
+            this.xrLabel17.StylePriority.UseTextAlignment = false;
+            this.xrLabel17.Text = "Address:";
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // lbl_ShipTo
             // 
@@ -406,7 +415,6 @@
             // xrTableRow1
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell1,
             this.xrTableCell4,
             this.xrTableCell2,
             this.xrTableCell5,
@@ -416,19 +424,12 @@
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Weight = 2.3697921873077634;
             // 
-            // xrTableCell1
-            // 
-            this.xrTableCell1.Dpi = 254F;
-            this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Text = "NO.";
-            this.xrTableCell1.Weight = 0.14560539792541383;
-            // 
             // xrTableCell4
             // 
             this.xrTableCell4.Dpi = 254F;
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.Text = "PO  NO";
-            this.xrTableCell4.Weight = 0.48544034312191153;
+            this.xrTableCell4.Weight = 0.63104574104732536;
             // 
             // xrTableCell2
             // 
@@ -849,27 +850,6 @@
             this.xrLine1.SizeF = new System.Drawing.SizeF(1985F, 5F);
             this.xrLine1.StylePriority.UseBorders = false;
             // 
-            // xrLabel17
-            // 
-            this.xrLabel17.Dpi = 254F;
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(0F, 562.5041F);
-            this.xrLabel17.Name = "xrLabel17";
-            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel17.SizeF = new System.Drawing.SizeF(254F, 58.42F);
-            this.xrLabel17.StylePriority.UseTextAlignment = false;
-            this.xrLabel17.Text = "Address:";
-            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lbl_ShipToAddress
-            // 
-            this.lbl_ShipToAddress.Dpi = 254F;
-            this.lbl_ShipToAddress.LocationFloat = new DevExpress.Utils.PointFloat(254F, 562.504F);
-            this.lbl_ShipToAddress.Name = "lbl_ShipToAddress";
-            this.lbl_ShipToAddress.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_ShipToAddress.SizeF = new System.Drawing.SizeF(1722F, 58.42004F);
-            this.lbl_ShipToAddress.StylePriority.UseTextAlignment = false;
-            this.lbl_ShipToAddress.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
             // ROInvoice
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -919,7 +899,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRTable xrTable1;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
@@ -927,7 +906,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
         private DevExpress.XtraReports.UI.XRTable xrTable2;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
-        private DevExpress.XtraReports.UI.XRTableCell TC_No;
         private DevExpress.XtraReports.UI.XRTableCell TC_PONO;
         private DevExpress.XtraReports.UI.XRTableCell TC_ProductName;
         private DevExpress.XtraReports.UI.XRTableCell TCQTY;
