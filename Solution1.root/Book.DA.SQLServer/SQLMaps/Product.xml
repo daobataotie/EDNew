@@ -902,7 +902,6 @@ select ProductId,Id,ProductName from Product where ProductId in (select ProductI
       ]]>
     </select>
 
-
     <select id="select_QuickProduct" resultMap="ProductResult7" parameterClass="Product">
       <![CDATA[
       select 
@@ -914,6 +913,12 @@ select ProductId,Id,ProductName from Product where ProductId in (select ProductI
       from product
       WHERE
 				[ProductId] = #ProductId#
+      ]]>
+    </select>
+
+    <select id="GetProductsByCustomerId" resultMap="ProductResult5" parameterClass="string">
+      <![CDATA[
+      select ProductId,Id,ProductName,CustomerProductName,ProductVersion from Product where CustomerId=#value#
       ]]>
     </select>
 

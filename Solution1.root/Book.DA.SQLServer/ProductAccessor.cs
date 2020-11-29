@@ -301,9 +301,14 @@ namespace Book.DA.SQLServer
         public string SelectCustomerProductNameByProductIds(string productIds)
         {
             string sql = "select CustomerProductName+',' from Product where ProductId in (" + productIds + ") for xml path('')";
-            object value = this.QueryObject(sql,60);
+            object value = this.QueryObject(sql, 60);
 
             return (value == null ? "" : value.ToString());
+        }
+
+        public IList<Model.Product> GetProductsByCustomerId(string customerId)
+        {
+            return sqlmapper.QueryForList<Model.Product>("Product.GetProductsByCustomerId", customerId);
         }
     }
 }

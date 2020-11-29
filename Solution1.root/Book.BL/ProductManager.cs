@@ -701,6 +701,11 @@ namespace Book.BL
         {
             return accessor.SelectStocksQuantityByStock(productId);
         }
+
+        public IList<Model.Product> GetProductsByCustomerId(string customerId)
+        {
+            return accessor.GetProductsByCustomerId(customerId);
+        }
     }
 }
 

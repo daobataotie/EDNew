@@ -613,5 +613,11 @@ namespace Book.UI.Settings.BasicData.Customs
             }
         }
 
+        private void bar_GetProducts_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            GetProductsByCustomer f = new GetProductsByCustomer(this._customer);
+            f.ShowDialog();
+        }
+
     }
 }
