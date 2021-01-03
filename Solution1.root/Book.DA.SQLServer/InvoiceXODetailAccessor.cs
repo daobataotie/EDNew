@@ -152,5 +152,26 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForList<string>("InvoiceXODetail.SelectProductIDs", PronoteHeaderId);
         }
+
+        public DataTable SearchInvoiceByData(DateTime startDate, DateTime endDate, string customerId, string productId)
+        {
+            string sql = "select p.Id,p.ProductName,p.CustomerProductName,sum(xd.InvoiceXODetailQuantity) as Qty from InvoiceXODetail xd left join InvoiceXO xo on xo.InvoiceId=xd.InvoiceId left join Product p on p.ProductId=xd.ProductId where xo.InvoiceDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'";
+
+            if (!string.IsNullOrEmpty(customerId))
+            {
+                sql += " and xo.CustomerId='" + customerId + "'";
+            }
+            if (!string.IsNullOrEmpty(productId))
+            {
+                sql += " and p.ProductId='" + productId + "'";
+            }
+            sql += " group by p.Id,p.ProductName,p.CustomerProductName  order by p.Id";
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sql.ToString(), sqlmapper.DataSource.ConnectionString);
+            sda.Fill(dt);
+
+            return dt;
+        }
     }
 }

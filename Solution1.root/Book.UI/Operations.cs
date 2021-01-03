@@ -817,7 +817,9 @@ namespace Book.UI
 
             //銷售統計 
             operations.Add("Query.InvoiceXSStatistics", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.InvoiceXSStatistics", form); });
-        
+
+            //下單型號查詢
+            operations.Add("Invoices.XO.SearchInvoiceByData", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.XO.SearchInvoiceByData", form); });
         }
 
         static Form CreateForm(string formTypeName)
