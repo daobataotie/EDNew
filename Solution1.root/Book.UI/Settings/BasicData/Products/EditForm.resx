@@ -1960,6 +1960,9 @@
   <data name="cob_COCurrency.Properties.Items4" xml:space="preserve">
     <value>日圓</value>
   </data>
+  <data name="cob_COCurrency.Properties.Items5" xml:space="preserve">
+    <value>加幣</value>
+  </data>
   <data name="cob_COCurrency.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 21</value>
   </data>
@@ -2709,6 +2712,9 @@
   </data>
   <data name="cob_XOCurrency.Properties.Items4" xml:space="preserve">
     <value>日圓</value>
+  </data>
+  <data name="cob_XOCurrency.Properties.Items5" xml:space="preserve">
+    <value>加幣</value>
   </data>
   <data name="cob_XOCurrency.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 21</value>
@@ -3554,7 +3560,7 @@
     <value>layoutControl4</value>
   </data>
   <data name="&gt;&gt;xtraTabControl2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>1</value>
   </data>
   <data name="spinEditReferenceSellPrice.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>

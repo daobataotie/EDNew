@@ -29,10 +29,21 @@
         private void InitializeComponent()
         {
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.TCId = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCProductName = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCCustomerProductName = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCQty = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
-            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.lbl_CompanyName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_ReportDate = new DevExpress.XtraReports.UI.XRLabel();
@@ -40,23 +51,10 @@
             this.lbl_DateRange = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_Customer = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lbl_Product = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
-            this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
-            this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.TCId = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCProductName = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCCustomerProductName = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCQty = new DevExpress.XtraReports.UI.XRTableCell();
+            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -68,6 +66,56 @@
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrTable2
+            // 
+            this.xrTable2.Dpi = 254F;
+            this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(10.58333F, 0F);
+            this.xrTable2.Name = "xrTable2";
+            this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow2});
+            this.xrTable2.SizeF = new System.Drawing.SizeF(1836.208F, 63.5F);
+            this.xrTable2.StylePriority.UseTextAlignment = false;
+            this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrTableRow2
+            // 
+            this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.TCId,
+            this.TCProductName,
+            this.TCCustomerProductName,
+            this.TCQty});
+            this.xrTableRow2.Dpi = 254F;
+            this.xrTableRow2.Name = "xrTableRow2";
+            this.xrTableRow2.Weight = 1;
+            // 
+            // TCId
+            // 
+            this.TCId.Dpi = 254F;
+            this.TCId.Name = "TCId";
+            this.TCId.Text = "商品編號";
+            this.TCId.Weight = 1.4166658656803641;
+            // 
+            // TCProductName
+            // 
+            this.TCProductName.Dpi = 254F;
+            this.TCProductName.Name = "TCProductName";
+            this.TCProductName.Text = "商品名稱";
+            this.TCProductName.Weight = 2.9687504805917815;
+            // 
+            // TCCustomerProductName
+            // 
+            this.TCCustomerProductName.Dpi = 254F;
+            this.TCCustomerProductName.Name = "TCCustomerProductName";
+            this.TCCustomerProductName.Text = "客戶型號";
+            this.TCCustomerProductName.Weight = 2.1979168268639273;
+            // 
+            // TCQty
+            // 
+            this.TCQty.Dpi = 254F;
+            this.TCQty.Name = "TCQty";
+            this.TCQty.Text = "下單數量";
+            this.TCQty.Weight = 0.64583221195250973;
             // 
             // TopMargin
             // 
@@ -95,20 +143,60 @@
             this.xrLabel1,
             this.lbl_DateRange,
             this.xrLabel4,
-            this.lbl_Customer,
-            this.xrLabel6,
-            this.lbl_Product});
+            this.lbl_Customer});
             this.ReportHeader.Dpi = 254F;
-            this.ReportHeader.HeightF = 490.9142F;
+            this.ReportHeader.HeightF = 435.3517F;
             this.ReportHeader.Name = "ReportHeader";
             // 
-            // PageFooter
+            // xrTable1
             // 
-            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPageInfo1});
-            this.PageFooter.Dpi = 254F;
-            this.PageFooter.HeightF = 76.7292F;
-            this.PageFooter.Name = "PageFooter";
+            this.xrTable1.Dpi = 254F;
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(10.58333F, 371.8517F);
+            this.xrTable1.Name = "xrTable1";
+            this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow1});
+            this.xrTable1.SizeF = new System.Drawing.SizeF(1836.208F, 63.5F);
+            this.xrTable1.StylePriority.UseTextAlignment = false;
+            this.xrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrTableRow1
+            // 
+            this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell1,
+            this.xrTableCell2,
+            this.xrTableCell4,
+            this.xrTableCell3});
+            this.xrTableRow1.Dpi = 254F;
+            this.xrTableRow1.Name = "xrTableRow1";
+            this.xrTableRow1.Weight = 1;
+            // 
+            // xrTableCell1
+            // 
+            this.xrTableCell1.Dpi = 254F;
+            this.xrTableCell1.Name = "xrTableCell1";
+            this.xrTableCell1.Text = "商品編號";
+            this.xrTableCell1.Weight = 1.4166658656803641;
+            // 
+            // xrTableCell2
+            // 
+            this.xrTableCell2.Dpi = 254F;
+            this.xrTableCell2.Name = "xrTableCell2";
+            this.xrTableCell2.Text = "商品名稱";
+            this.xrTableCell2.Weight = 2.9687504805917815;
+            // 
+            // xrTableCell4
+            // 
+            this.xrTableCell4.Dpi = 254F;
+            this.xrTableCell4.Name = "xrTableCell4";
+            this.xrTableCell4.Text = "客戶型號";
+            this.xrTableCell4.Weight = 2.1979168268639273;
+            // 
+            // xrTableCell3
+            // 
+            this.xrTableCell3.Dpi = 254F;
+            this.xrTableCell3.Name = "xrTableCell3";
+            this.xrTableCell3.Text = "下單數量";
+            this.xrTableCell3.Weight = 0.64583221195250973;
             // 
             // lbl_CompanyName
             // 
@@ -116,7 +204,7 @@
             this.lbl_CompanyName.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_CompanyName.LocationFloat = new DevExpress.Utils.PointFloat(10.58333F, 0F);
             this.lbl_CompanyName.Name = "lbl_CompanyName";
-            this.lbl_CompanyName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.lbl_CompanyName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lbl_CompanyName.SizeF = new System.Drawing.SizeF(1836.208F, 94.27416F);
             this.lbl_CompanyName.StylePriority.UseFont = false;
             this.lbl_CompanyName.StylePriority.UseTextAlignment = false;
@@ -189,133 +277,20 @@
             this.lbl_Customer.StylePriority.UseTextAlignment = false;
             this.lbl_Customer.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // xrLabel6
+            // PageFooter
             // 
-            this.xrLabel6.Dpi = 254F;
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(10.58337F, 337.2441F);
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(198.4375F, 58.42F);
-            this.xrLabel6.StylePriority.UseTextAlignment = false;
-            this.xrLabel6.Text = "商        品：";
-            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lbl_Product
-            // 
-            this.lbl_Product.Dpi = 254F;
-            this.lbl_Product.LocationFloat = new DevExpress.Utils.PointFloat(209.021F, 337.2441F);
-            this.lbl_Product.Name = "lbl_Product";
-            this.lbl_Product.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_Product.SizeF = new System.Drawing.SizeF(1637.771F, 58.42F);
-            this.lbl_Product.StylePriority.UseTextAlignment = false;
-            this.lbl_Product.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrTable1
-            // 
-            this.xrTable1.Dpi = 254F;
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(10.58333F, 427.4142F);
-            this.xrTable1.Name = "xrTable1";
-            this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
-            this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(1836.208F, 63.5F);
-            this.xrTable1.StylePriority.UseTextAlignment = false;
-            this.xrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrTableRow1
-            // 
-            this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell1,
-            this.xrTableCell2,
-            this.xrTableCell4,
-            this.xrTableCell3});
-            this.xrTableRow1.Dpi = 254F;
-            this.xrTableRow1.Name = "xrTableRow1";
-            this.xrTableRow1.Weight = 1;
-            // 
-            // xrTableCell1
-            // 
-            this.xrTableCell1.Dpi = 254F;
-            this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Text = "商品編號";
-            this.xrTableCell1.Weight = 1.4166658656803641;
-            // 
-            // xrTableCell2
-            // 
-            this.xrTableCell2.Dpi = 254F;
-            this.xrTableCell2.Name = "xrTableCell2";
-            this.xrTableCell2.Text = "商品名稱";
-            this.xrTableCell2.Weight = 2.9687504805917815;
-            // 
-            // xrTableCell3
-            // 
-            this.xrTableCell3.Dpi = 254F;
-            this.xrTableCell3.Name = "xrTableCell3";
-            this.xrTableCell3.Text = "下單數量";
-            this.xrTableCell3.Weight = 0.64583221195250973;
-            // 
-            // xrTableCell4
-            // 
-            this.xrTableCell4.Dpi = 254F;
-            this.xrTableCell4.Name = "xrTableCell4";
-            this.xrTableCell4.Text = "客戶型號";
-            this.xrTableCell4.Weight = 2.1979168268639273;
-            // 
-            // xrTable2
-            // 
-            this.xrTable2.Dpi = 254F;
-            this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(10.58333F, 0F);
-            this.xrTable2.Name = "xrTable2";
-            this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
-            this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(1836.208F, 63.5F);
-            this.xrTable2.StylePriority.UseTextAlignment = false;
-            this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrTableRow2
-            // 
-            this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.TCId,
-            this.TCProductName,
-            this.TCCustomerProductName,
-            this.TCQty});
-            this.xrTableRow2.Dpi = 254F;
-            this.xrTableRow2.Name = "xrTableRow2";
-            this.xrTableRow2.Weight = 1;
-            // 
-            // TCId
-            // 
-            this.TCId.Dpi = 254F;
-            this.TCId.Name = "TCId";
-            this.TCId.Text = "商品編號";
-            this.TCId.Weight = 1.4166658656803641;
-            // 
-            // TCProductName
-            // 
-            this.TCProductName.Dpi = 254F;
-            this.TCProductName.Name = "TCProductName";
-            this.TCProductName.Text = "商品名稱";
-            this.TCProductName.Weight = 2.9687504805917815;
-            // 
-            // TCCustomerProductName
-            // 
-            this.TCCustomerProductName.Dpi = 254F;
-            this.TCCustomerProductName.Name = "TCCustomerProductName";
-            this.TCCustomerProductName.Text = "客戶型號";
-            this.TCCustomerProductName.Weight = 2.1979168268639273;
-            // 
-            // TCQty
-            // 
-            this.TCQty.Dpi = 254F;
-            this.TCQty.Name = "TCQty";
-            this.TCQty.Text = "下單數量";
-            this.TCQty.Weight = 0.64583221195250973;
+            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPageInfo1});
+            this.PageFooter.Dpi = 254F;
+            this.PageFooter.HeightF = 76.7292F;
+            this.PageFooter.Name = "PageFooter";
             // 
             // xrPageInfo1
             // 
             this.xrPageInfo1.Dpi = 254F;
             this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(1698.625F, 18.3092F);
             this.xrPageInfo1.Name = "xrPageInfo1";
-            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(148.1666F, 58.42F);
             this.xrPageInfo1.StylePriority.UseTextAlignment = false;
             this.xrPageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
@@ -336,8 +311,8 @@
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.SnapGridSize = 31.75F;
             this.Version = "10.2";
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -352,8 +327,6 @@
         private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.UI.XRLabel lbl_ReportDate;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
-        private DevExpress.XtraReports.UI.XRLabel lbl_Product;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel lbl_Customer;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel lbl_DateRange;

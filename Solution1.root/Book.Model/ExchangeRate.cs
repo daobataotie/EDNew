@@ -34,6 +34,9 @@ namespace Book.Model
                 case "日圓":
                     enName = "JYP";
                     break;
+                case "加幣":
+                    enName = "CAD";
+                    break;
             }
 
             return enName;
@@ -58,6 +61,9 @@ namespace Book.Model
                     break;
                 case "日圓":
                     enName = "JPY¥";
+                    break;
+                case "加幣":
+                    enName = "CAD$";
                     break;
             }
 
@@ -84,6 +90,9 @@ namespace Book.Model
                 case "日圓":
                     enName = "¥";
                     break;
+                case "加幣":
+                    enName = "$";
+                    break;
             }
 
             return enName;
@@ -109,6 +118,9 @@ namespace Book.Model
                     break;
                 case "JYP":
                     str = "¥";
+                    break;
+                case "CAD":
+                    str = "$";
                     break;
                 default:
                     break;

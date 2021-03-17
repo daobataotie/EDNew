@@ -4464,6 +4464,10 @@
     <EmbeddedResource Include="Invoices\XO\SearchInvoiceByData.resx">
       <DependentUpon>SearchInvoiceByData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\XO\R01_Xiamen.resx">
+      <DependentUpon>R01_Xiamen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XS\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -4635,6 +4639,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Port\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\Products\ChooseProductsForm.resx">
+      <DependentUpon>ChooseProductsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\SupplierJiaohuoZhunshilv.resx">
       <DependentUpon>SupplierJiaohuoZhunshilv.cs</DependentUpon>
@@ -12078,6 +12085,12 @@
     <Compile Include="Invoices\XO\SearchInvoiceByData.Designer.cs">
       <DependentUpon>SearchInvoiceByData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoices\XO\R01_Xiamen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoices\XO\R01_Xiamen.Designer.cs">
+      <DependentUpon>R01_Xiamen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invoices\XS\ListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12269,6 +12282,12 @@
     </Compile>
     <Compile Include="Settings\BasicData\Port\EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BasicData\Products\ChooseProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\BasicData\Products\ChooseProductsForm.Designer.cs">
+      <DependentUpon>ChooseProductsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\BasicData\Supplier\SupplierJiaohuoZhunshilv.cs">
       <SubType>Form</SubType>

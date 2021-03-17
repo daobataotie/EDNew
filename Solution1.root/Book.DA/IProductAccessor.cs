@@ -14,8 +14,7 @@ namespace Book.DA
     /// <summary>
     /// Interface of data accessor of dbo.Product
     /// </summary>
-    public partial interface
-        IProductAccessor : IEntityAccessor
+    public partial interface IProductAccessor : IEntityAccessor
     {
         IList<Book.Model.Product> SelectProduct();
 
@@ -69,6 +68,8 @@ namespace Book.DA
         double SelectStocksQuantityByStock(string productId);
 
         IList<Model.Product> GetProductsByCustomerId(string customerId);
+
+        IList<Model.Product> GetAllProducts_Fast();
     }
 }
 

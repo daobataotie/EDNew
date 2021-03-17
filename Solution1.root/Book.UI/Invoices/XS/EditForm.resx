@@ -220,6 +220,9 @@
   <data name="comboBoxEditCurrency.Properties.Items4" xml:space="preserve">
     <value>日圓</value>
   </data>
+  <data name="comboBoxEditCurrency.Properties.Items5" xml:space="preserve">
+    <value>加幣</value>
+  </data>
   <data name="comboBoxEditCurrency.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 21</value>
   </data>

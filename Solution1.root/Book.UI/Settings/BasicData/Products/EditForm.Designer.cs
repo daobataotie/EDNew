@@ -2117,7 +2117,8 @@ namespace Book.UI.Settings.BasicData.Products
             resources.GetString("cob_COCurrency.Properties.Items1"),
             resources.GetString("cob_COCurrency.Properties.Items2"),
             resources.GetString("cob_COCurrency.Properties.Items3"),
-            resources.GetString("cob_COCurrency.Properties.Items4")});
+            resources.GetString("cob_COCurrency.Properties.Items4"),
+            resources.GetString("cob_COCurrency.Properties.Items5")});
             this.cob_COCurrency.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cob_COCurrency.StyleController = this.layoutControl13;
             // 
@@ -2617,7 +2618,8 @@ namespace Book.UI.Settings.BasicData.Products
             resources.GetString("cob_XOCurrency.Properties.Items1"),
             resources.GetString("cob_XOCurrency.Properties.Items2"),
             resources.GetString("cob_XOCurrency.Properties.Items3"),
-            resources.GetString("cob_XOCurrency.Properties.Items4")});
+            resources.GetString("cob_XOCurrency.Properties.Items4"),
+            resources.GetString("cob_XOCurrency.Properties.Items5")});
             this.cob_XOCurrency.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cob_XOCurrency.StyleController = this.layoutControl14;
             // 

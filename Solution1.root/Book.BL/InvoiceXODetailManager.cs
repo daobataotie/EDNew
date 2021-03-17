@@ -116,9 +116,9 @@ namespace Book.BL
             return accessor.SelectProductIDs(PronoteHeaderId);
         }
 
-        public DataTable SearchInvoiceByData(DateTime startDate, DateTime endDate, string customerId, string productId)
+        public DataTable SearchInvoiceByData(DateTime startDate, DateTime endDate, string customerId, string productIds)
         {
-            return accessor.SearchInvoiceByData(startDate, endDate, customerId, productId);
+            return accessor.SearchInvoiceByData(startDate, endDate, customerId, productIds);
         }
     }
 }

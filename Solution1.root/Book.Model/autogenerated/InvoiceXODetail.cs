@@ -207,7 +207,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 货品数量
+        /// 货品訂購数量
         /// </summary>
         public double? InvoiceXODetailQuantity
         {

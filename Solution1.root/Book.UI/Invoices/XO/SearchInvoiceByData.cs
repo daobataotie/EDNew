@@ -6,11 +6,17 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Linq;
 
 namespace Book.UI.Invoices.XO
 {
     public partial class SearchInvoiceByData : DevExpress.XtraEditors.XtraForm
     {
+        public List<Model.Product> Products = new List<Book.Model.Product>();
+
+        public string ProductNames { get; set; }
+        public string ProductIds { get; set; }
+
         public SearchInvoiceByData()
         {
             InitializeComponent();
@@ -32,7 +38,7 @@ namespace Book.UI.Invoices.XO
 
             try
             {
-                ROSearchInvoiceByData ro = new ROSearchInvoiceByData(date_Start.DateTime, date_End.DateTime, ncc_Customer.EditValue as Model.Customer, btn_Product.EditValue as Model.Product);
+                ROSearchInvoiceByData ro = new ROSearchInvoiceByData(date_Start.DateTime, date_End.DateTime, ncc_Customer.EditValue as Model.Customer, ProductIds);
 
                 ro.ShowPreviewDialog();
             }
@@ -51,13 +57,32 @@ namespace Book.UI.Invoices.XO
 
         private void btn_Product_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            Invoices.ChooseProductForm form = new Invoices.ChooseProductForm();
-            if (form.ShowDialog(this) == DialogResult.OK)
+            //Invoices.ChooseProductForm form = new Invoices.ChooseProductForm();
+            //if (form.ShowDialog(this) == DialogResult.OK)
+            //{
+            //    this.btn_Product.EditValue = form.SelectedItem as Model.Product;
+            //}
+            //form.Dispose();
+            //GC.Collect();
+
+            Settings.BasicData.Products.ChooseProductsForm f = new Book.UI.Settings.BasicData.Products.ChooseProductsForm(Products);
+            if (f.ShowDialog(this) == DialogResult.OK)
             {
-                this.btn_Product.EditValue = form.SelectedItem as Model.Product;
+                this.Products = f.Products.Where(P => P.Checked == true).ToList();
+
+                ProductNames = "";
+                ProductIds = "";
+                foreach (var item in Products)
+                {
+                    ProductNames += item.ProductName + ",";
+                    ProductIds += "'" + item.ProductId + "',";
+                }
+
+                ProductNames = ProductNames.TrimEnd(',');
+                ProductIds = ProductIds.TrimEnd(',');
+
+                this.btn_Product.Text = this.ProductNames;
             }
-            form.Dispose();
-            GC.Collect();
         }
     }
 }

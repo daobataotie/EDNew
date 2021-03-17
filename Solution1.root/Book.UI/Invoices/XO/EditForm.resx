@@ -132,6 +132,16 @@
   <data name="barButtonItem10.Caption" xml:space="preserve">
     <value>DOC</value>
   </data>
+  <data name="barButtonItemCO.Caption" xml:space="preserve">
+    <value>形成采购单</value>
+  </data>
+  <data name="bar_PrintXiamen.Caption" xml:space="preserve">
+    <value>訂單通知</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>194, 17</value>
+  </data>
   <data name="barSubItem3.Caption" xml:space="preserve">
     <value>打印</value>
   </data>
@@ -141,16 +151,9 @@
   <data name="barButtonItem5.Caption" xml:space="preserve">
     <value>格式2</value>
   </data>
-  <data name="barButtonItemCO.Caption" xml:space="preserve">
-    <value>形成采购单</value>
-  </data>
-  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>194, 17</value>
-  </metadata>
-  <metadata name="defaultLookAndFeel1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="defaultLookAndFeel1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </data>
   <data name="ncc_Supplier.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 86</value>
   </data>
@@ -201,26 +204,29 @@
     <value>804, 61</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="comboBoxEditCurrency.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+  <data name="cob_Currency.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
-  <data name="comboBoxEditCurrency.Properties.Items" xml:space="preserve">
+  <data name="cob_Currency.Properties.Items" xml:space="preserve">
     <value>人民幣</value>
   </data>
-  <data name="comboBoxEditCurrency.Properties.Items1" xml:space="preserve">
+  <data name="cob_Currency.Properties.Items1" xml:space="preserve">
     <value>新台幣</value>
   </data>
-  <data name="comboBoxEditCurrency.Properties.Items2" xml:space="preserve">
+  <data name="cob_Currency.Properties.Items2" xml:space="preserve">
     <value>美金</value>
   </data>
-  <data name="comboBoxEditCurrency.Properties.Items3" xml:space="preserve">
+  <data name="cob_Currency.Properties.Items3" xml:space="preserve">
     <value>歐元</value>
   </data>
-  <data name="comboBoxEditCurrency.Properties.Items4" xml:space="preserve">
+  <data name="cob_Currency.Properties.Items4" xml:space="preserve">
     <value>日圓</value>
   </data>
+  <data name="cob_Currency.Properties.Items5" xml:space="preserve">
+    <value>加幣</value>
+  </data>
   <data name="cob_Currency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 21</value>
+    <value>284, 21</value>
   </data>
   <data name="cob_Currency.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -332,7 +338,7 @@
     <value>804, 12</value>
   </data>
   <data name="textEditCustomerInvoiceXOID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 21</value>
+    <value>284, 21</value>
   </data>
   <data name="textEditCustomerInvoiceXOID.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -407,7 +413,7 @@
     <value>12, 360</value>
   </data>
   <data name="EmpAudit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>653, 87</value>
+    <value>652, 87</value>
   </data>
   <data name="EmpAudit.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 21</value>
@@ -428,7 +434,7 @@
     <value>4</value>
   </data>
   <data name="textEditAuditState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>890, 87</value>
+    <value>889, 87</value>
   </data>
   <data name="textEditAuditState.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -464,7 +470,7 @@
     <value>0</value>
   </data>
   <data name="calcEditInvoiceTax1xset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>889, 37</value>
+    <value>888, 37</value>
   </data>
   <data name="calcEditInvoiceTax1xset.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 21</value>
@@ -488,7 +494,7 @@
     <value>12, 29</value>
   </data>
   <data name="textEditNote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>573, 80</value>
+    <value>572, 80</value>
   </data>
   <data name="textEditNote.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -509,7 +515,7 @@
     <value>0</value>
   </data>
   <data name="calcEditInvoiceTotalxset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>889, 12</value>
+    <value>888, 12</value>
   </data>
   <data name="calcEditInvoiceTotalxset.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 21</value>
@@ -533,7 +539,7 @@
     <value>0</value>
   </data>
   <data name="calcEditInvoiceTotal0xset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>653, 62</value>
+    <value>652, 62</value>
   </data>
   <data name="calcEditInvoiceTotal0xset.Size" type="System.Drawing.Size, System.Drawing">
     <value>406, 21</value>
@@ -554,7 +560,7 @@
     <value>9</value>
   </data>
   <data name="textEditInvoiceCphm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>653, 12</value>
+    <value>652, 12</value>
   </data>
   <data name="textEditInvoiceCphm.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 21</value>
@@ -578,7 +584,7 @@
     <value>0</value>
   </data>
   <data name="spinEditInvoiceTaxRate1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>653, 37</value>
+    <value>652, 37</value>
   </data>
   <data name="spinEditInvoiceTaxRate1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Glyph</value>
@@ -714,7 +720,7 @@
     <value>layoutControlGroup3</value>
   </data>
   <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1071, 121</value>
+    <value>1070, 121</value>
   </data>
   <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -735,7 +741,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1071, 121</value>
+    <value>1070, 121</value>
   </data>
   <data name="xtraTabPage1.Text" xml:space="preserve">
     <value>交易明细</value>
@@ -753,7 +759,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1077, 149</value>
+    <value>1076, 149</value>
   </data>
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1542,7 +1548,7 @@
     <value>804, 37</value>
   </data>
   <data name="buttonEditEmployee.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 21</value>
+    <value>284, 21</value>
   </data>
   <data name="buttonEditEmployee.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1559,9 +1565,9 @@
   <data name="&gt;&gt;buttonEditEmployee.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>740, 17</value>
-  </metadata>
+  </data>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 110</value>
   </data>
@@ -1659,9 +1665,9 @@
   <data name="repositoryItemLookUpEdit1.Columns18" xml:space="preserve">
     <value>版本</value>
   </data>
-  <metadata name="bindingSourceproduct.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="bindingSourceproduct.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>556, 17</value>
-  </metadata>
+  </data>
   <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
     <value />
   </data>
@@ -1750,7 +1756,7 @@
     <value>3</value>
   </data>
   <data name="colProduct.Width" type="System.Int32, mscorlib">
-    <value>154</value>
+    <value>186</value>
   </data>
   <data name="gridColumnCustomProduct.Caption" xml:space="preserve">
     <value>客户型号</value>
@@ -1840,7 +1846,7 @@
     <value>4</value>
   </data>
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
-    <value>40</value>
+    <value>38</value>
   </data>
   <data name="gridColumnVersion.Caption" xml:space="preserve">
     <value>版本</value>
@@ -1888,7 +1894,7 @@
     <value>8</value>
   </data>
   <data name="colInvoiceXODetailPrice.Width" type="System.Int32, mscorlib">
-    <value>55</value>
+    <value>49</value>
   </data>
   <data name="colInvoiceXODetailQuantity.Caption" xml:space="preserve">
     <value>数量</value>
@@ -1930,7 +1936,7 @@
     <value>5</value>
   </data>
   <data name="colInvoiceXODetailQuantity.Width" type="System.Int32, mscorlib">
-    <value>51</value>
+    <value>59</value>
   </data>
   <data name="gridColumnZR.Caption" xml:space="preserve">
     <value>折让</value>
@@ -1945,7 +1951,7 @@
     <value>10</value>
   </data>
   <data name="gridColumnZR.Width" type="System.Int32, mscorlib">
-    <value>35</value>
+    <value>40</value>
   </data>
   <data name="colInvoiceXODetailMoneyxset.Caption" xml:space="preserve">
     <value>金额</value>
@@ -1957,7 +1963,7 @@
     <value>9</value>
   </data>
   <data name="colInvoiceXODetailMoneyxset.Width" type="System.Int32, mscorlib">
-    <value>66</value>
+    <value>59</value>
   </data>
   <data name="gridColumnZS.Caption" xml:space="preserve">
     <value>赠送</value>
@@ -1972,7 +1978,7 @@
     <value>11</value>
   </data>
   <data name="gridColumnZS.Width" type="System.Int32, mscorlib">
-    <value>33</value>
+    <value>37</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>库存</value>
@@ -1996,7 +2002,7 @@
     <value>12</value>
   </data>
   <data name="gridColumn6.Width" type="System.Int32, mscorlib">
-    <value>333</value>
+    <value>295</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>gridColumn2</value>
@@ -2017,7 +2023,7 @@
     <value>6</value>
   </data>
   <data name="gridColumn9.Width" type="System.Int32, mscorlib">
-    <value>70</value>
+    <value>72</value>
   </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>退货数量</value>
@@ -2029,7 +2035,7 @@
     <value>7</value>
   </data>
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
-    <value>57</value>
+    <value>59</value>
   </data>
   <data name="gridColumn11.Caption" xml:space="preserve">
     <value>需排單</value>
@@ -2074,7 +2080,7 @@
     <value>0</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1077, 220</value>
+    <value>1076, 220</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2212,7 +2218,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1101, 521</value>
+    <value>1100, 521</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2232,12 +2238,12 @@
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="bindingSourceCustomerMarks.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="bindingSourceCustomerMarks.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>325, 17</value>
-  </metadata>
-  <metadata name="bindingSourceCustomer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="bindingSourceCustomer.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>885, 17</value>
-  </metadata>
+  </data>
   <data name="barButtonItem2.Caption" xml:space="preserve">
     <value>销售出货单</value>
   </data>
@@ -2250,9 +2256,9 @@
   <data name="barButtonItem6.Caption" xml:space="preserve">
     <value>barButtonItem6</value>
   </data>
-  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>1080, 17</value>
-  </metadata>
+  </data>
   <data name="layoutControlItem6.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9pt, style=Bold</value>
   </data>
@@ -2283,20 +2289,20 @@
   <data name="barButtonItem7.Caption" xml:space="preserve">
     <value>barButtonItem7</value>
   </data>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>1224, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.TrayHeight" type="System.Int32, mscorlib">
     <value>44</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1101, 568</value>
+    <value>1100, 568</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>单据录入 - 客户订单</value>
@@ -3014,6 +3020,12 @@
   </data>
   <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bar_PrintXiamen.Name" xml:space="preserve">
+    <value>bar_PrintXiamen</value>
+  </data>
+  <data name="&gt;&gt;bar_PrintXiamen.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

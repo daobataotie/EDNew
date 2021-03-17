@@ -921,6 +921,13 @@ select ProductId,Id,ProductName from Product where ProductId in (select ProductI
       select ProductId,Id,ProductName,CustomerProductName,ProductVersion from Product where CustomerId=#value#
       ]]>
     </select>
+    
+   <select id="GetAllProducts_Fast" resultMap="ProductResult5">
+      <![CDATA[
+      select ProductId,Id,ProductName,CustomerProductName,ProductVersion from Product
+      ]]>
+    </select>
+
 
   </statements>
 </sqlMap>

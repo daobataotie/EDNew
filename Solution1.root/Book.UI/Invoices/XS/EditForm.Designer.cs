@@ -333,7 +333,8 @@
             resources.GetString("comboBoxEditCurrency.Properties.Items1"),
             resources.GetString("comboBoxEditCurrency.Properties.Items2"),
             resources.GetString("comboBoxEditCurrency.Properties.Items3"),
-            resources.GetString("comboBoxEditCurrency.Properties.Items4")});
+            resources.GetString("comboBoxEditCurrency.Properties.Items4"),
+            resources.GetString("comboBoxEditCurrency.Properties.Items5")});
             this.comboBoxEditCurrency.Properties.NullValuePrompt = null;
             this.comboBoxEditCurrency.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboBoxEditCurrency.StyleController = this.layoutControl1;

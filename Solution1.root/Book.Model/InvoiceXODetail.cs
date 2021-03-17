@@ -97,6 +97,18 @@ namespace Book.Model
 
         public DateTime? ChuhuoDate { get; set; }
 
+        /// <summary>
+        /// 採購單價，根據訂單幣別，商品採購幣別，採購單價換算
+        /// </summary>
+        public decimal COPrice { get; set; }
+
+        public decimal COMoney { get; set; }
+
+        public string COCurrencySign { get; set; }
+
+        public string COPriceShow { get { return COCurrencySign + COPrice.ToString("#.##"); } }
+        public string COMoneyShow { get { return COCurrencySign + COMoney.ToString("#.##"); } }
+
         public readonly static string PRO_InvoiceDate = "InvoiceDate";
 
         public readonly static string PRO_InvoiceYjrq = "InvoiceYjrq";
@@ -112,5 +124,11 @@ namespace Book.Model
         public readonly static string PRO_CustomerProductName = "CustomerProductName";
 
         public readonly static string PRO_ChuhuoDate = "ChuhuoDate";
+
+        public readonly static string PRO_COPriceShow = "COPriceShow";
+
+        public readonly static string PRO_COMoneyShow = "COMoneyShow";
+
+        public readonly static string PRO_COCurrencySign = "COCurrencySign";
     }
 }

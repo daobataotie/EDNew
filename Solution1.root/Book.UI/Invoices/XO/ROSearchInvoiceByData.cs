@@ -9,14 +9,14 @@ namespace Book.UI.Invoices.XO
 {
     public partial class ROSearchInvoiceByData : DevExpress.XtraReports.UI.XtraReport
     {
-        public ROSearchInvoiceByData(DateTime startDate, DateTime endDate, Model.Customer customer, Model.Product product)
+        public ROSearchInvoiceByData(DateTime startDate, DateTime endDate, Model.Customer customer, string productIds)
         {
             InitializeComponent();
 
             string customerId = customer == null ? null : customer.CustomerId;
-            string productId = product == null ? null : product.ProductId;
+            //string productId = product == null ? null : product.ProductId;
 
-            DataTable dt = new BL.InvoiceXODetailManager().SearchInvoiceByData(startDate, endDate, customerId, productId);
+            DataTable dt = new BL.InvoiceXODetailManager().SearchInvoiceByData(startDate, endDate, customerId, productIds);
             if (dt == null || dt.Rows.Count == 0)
             {
                 throw new Exception("無數據！");
@@ -26,7 +26,7 @@ namespace Book.UI.Invoices.XO
             lbl_ReportDate.Text += DateTime.Now.ToString("yyyy-MM-dd");
             lbl_DateRange.Text = string.Format("{0} ~ {1}", startDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));
             lbl_Customer.Text = customer == null ? null : customer.CustomerFullName;
-            lbl_Product.Text = product == null ? null : product.ProductName;
+            //lbl_Product.Text = product == null ? null : product.ProductName;
             DataSource = dt;
 
             TCId.DataBindings.Add("Text", DataSource, "Id");

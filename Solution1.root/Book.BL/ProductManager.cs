@@ -706,6 +706,11 @@ namespace Book.BL
         {
             return accessor.GetProductsByCustomerId(customerId);
         }
+
+        public IList<Model.Product> GetAllProducts_Fast()
+        {
+            return accessor.GetAllProducts_Fast();
+        }
     }
 }
 

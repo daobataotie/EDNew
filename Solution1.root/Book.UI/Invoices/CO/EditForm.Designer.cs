@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txt_Shipment = new DevExpress.XtraEditors.TextEdit();
             this.cob_SupplierCurrency2 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -397,7 +397,8 @@
             resources.GetString("cob_SupplierCurrency2.Properties.Items1"),
             resources.GetString("cob_SupplierCurrency2.Properties.Items2"),
             resources.GetString("cob_SupplierCurrency2.Properties.Items3"),
-            resources.GetString("cob_SupplierCurrency2.Properties.Items4")});
+            resources.GetString("cob_SupplierCurrency2.Properties.Items4"),
+            resources.GetString("cob_SupplierCurrency2.Properties.Items5")});
             this.cob_SupplierCurrency2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cob_SupplierCurrency2.StyleController = this.layoutControl1;
             // 
@@ -413,7 +414,8 @@
             resources.GetString("cob_SupplierCurrency1.Properties.Items1"),
             resources.GetString("cob_SupplierCurrency1.Properties.Items2"),
             resources.GetString("cob_SupplierCurrency1.Properties.Items3"),
-            resources.GetString("cob_SupplierCurrency1.Properties.Items4")});
+            resources.GetString("cob_SupplierCurrency1.Properties.Items4"),
+            resources.GetString("cob_SupplierCurrency1.Properties.Items5")});
             this.cob_SupplierCurrency1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cob_SupplierCurrency1.StyleController = this.layoutControl1;
             // 
@@ -429,7 +431,8 @@
             resources.GetString("comboBoxEditCurrency.Properties.Items1"),
             resources.GetString("comboBoxEditCurrency.Properties.Items2"),
             resources.GetString("comboBoxEditCurrency.Properties.Items3"),
-            resources.GetString("comboBoxEditCurrency.Properties.Items4")});
+            resources.GetString("comboBoxEditCurrency.Properties.Items4"),
+            resources.GetString("comboBoxEditCurrency.Properties.Items5")});
             this.comboBoxEditCurrency.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboBoxEditCurrency.StyleController = this.layoutControl1;
             this.comboBoxEditCurrency.EditValueChanged += new System.EventHandler(this.comboBoxEditCurrency_EditValueChanged);
@@ -662,8 +665,8 @@
             this.spinEditInvoiceTaxRate.Properties.AutoHeight = ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.AutoHeight")));
             this.spinEditInvoiceTaxRate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons1"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons2"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons3"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons4"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons8")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons9"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons10"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons11"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons12"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons13"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons14"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons15"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons16"), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons17"), null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons18"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons1"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons2"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons3"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons4"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons8")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons9"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons10"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons11"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons12"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons13"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons14"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons15"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons16"), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons17"), null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons18"))))});
             this.spinEditInvoiceTaxRate.Properties.DisplayFormat.FormatString = "0.00";
             this.spinEditInvoiceTaxRate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.spinEditInvoiceTaxRate.Properties.Mask.EditMask = null;
@@ -1243,9 +1246,9 @@
             this.gridControl1.EmbeddedNavigator.ImeMode = ((System.Windows.Forms.ImeMode)(resources.GetObject("gridControl1.EmbeddedNavigator.ImeMode")));
             this.gridControl1.EmbeddedNavigator.TextLocation = ((DevExpress.XtraEditors.NavigatorButtonsTextLocation)(resources.GetObject("gridControl1.EmbeddedNavigator.TextLocation")));
             this.gridControl1.EmbeddedNavigator.ToolTipIconType = ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("gridControl1.EmbeddedNavigator.ToolTipIconType")));
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             resources.ApplyResources(this.gridControl1, "gridControl1");
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";

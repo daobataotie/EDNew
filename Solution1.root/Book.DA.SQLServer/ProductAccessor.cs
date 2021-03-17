@@ -310,5 +310,10 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForList<Model.Product>("Product.GetProductsByCustomerId", customerId);
         }
+
+        public IList<Model.Product> GetAllProducts_Fast()
+        {
+            return sqlmapper.QueryForList<Model.Product>("Product.GetAllProducts_Fast", null);
+        }
     }
 }

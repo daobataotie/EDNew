@@ -1687,5 +1687,12 @@ namespace Book.UI.Invoices.XO
                 this.gridControl1.RefreshDataSource();
             }
         }
+
+        //èBÈT”ÜÜŒÕ®÷™
+        private void bar_PrintXiamen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            R01_Xiamen ro= new R01_Xiamen(this.invoice.InvoiceId);
+            ro.ShowPreviewDialog();
+        }
     }
 }

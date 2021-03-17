@@ -105,7 +105,8 @@
             "新台幣",
             "美金",
             "歐元",
-            "日圓"});
+            "日圓",
+            "加幣"});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             this.repositoryItemComboBox1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 

@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="barButtonItem2.Caption" xml:space="preserve">
+    <value>销售订单</value>
+  </data>
+  <data name="barButtonItem3.Caption" xml:space="preserve">
+    <value>强制结案</value>
+  </data>
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>194, 17</value>
   </metadata>
@@ -168,6 +174,9 @@
   <data name="cob_SupplierCurrency2.Properties.Items4" xml:space="preserve">
     <value>日圓</value>
   </data>
+  <data name="cob_SupplierCurrency2.Properties.Items5" xml:space="preserve">
+    <value>加幣</value>
+  </data>
   <data name="cob_SupplierCurrency2.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 21</value>
   </data>
@@ -207,6 +216,9 @@
   <data name="cob_SupplierCurrency1.Properties.Items4" xml:space="preserve">
     <value>日圓</value>
   </data>
+  <data name="cob_SupplierCurrency1.Properties.Items5" xml:space="preserve">
+    <value>加幣</value>
+  </data>
   <data name="cob_SupplierCurrency1.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 21</value>
   </data>
@@ -245,6 +257,9 @@
   </data>
   <data name="comboBoxEditCurrency.Properties.Items4" xml:space="preserve">
     <value>日圓</value>
+  </data>
+  <data name="comboBoxEditCurrency.Properties.Items5" xml:space="preserve">
+    <value>加幣</value>
   </data>
   <data name="comboBoxEditCurrency.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 21</value>
@@ -631,704 +646,6 @@
   <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 394</value>
   </data>
-  <data name="&gt;&gt;layoutControl2.Name" xml:space="preserve">
-    <value>layoutControl2</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.Parent" xml:space="preserve">
-    <value>xtraTabPage1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>940, 87</value>
-  </data>
-  <data name="xtraTabPage1.Text" xml:space="preserve">
-    <value>交易明细</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.Name" xml:space="preserve">
-    <value>xtraTabPage1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>946, 115</value>
-  </data>
-  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.Name" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.Parent" xml:space="preserve">
-    <value>xtraTabPage2</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>940, 87</value>
-  </data>
-  <data name="xtraTabPage2.Text" xml:space="preserve">
-    <value>发票资料</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.Name" xml:space="preserve">
-    <value>xtraTabPage2</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.Name" xml:space="preserve">
-    <value>layoutControl8</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.Parent" xml:space="preserve">
-    <value>xtraTabPage3</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>940, 87</value>
-  </data>
-  <data name="xtraTabPage3.Text" xml:space="preserve">
-    <value>账款资料</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage3.Name" xml:space="preserve">
-    <value>xtraTabPage3</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage3.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage3.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.Name" xml:space="preserve">
-    <value>layoutControl7</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.Parent" xml:space="preserve">
-    <value>xtraTabPage4</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>940, 87</value>
-  </data>
-  <data name="xtraTabPage4.Text" xml:space="preserve">
-    <value>相关资料</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage4.Name" xml:space="preserve">
-    <value>xtraTabPage4</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage4.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage4.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabControl1.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>325, 17</value>
-  </metadata>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v10.2">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridControl1.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="gridControl1.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="gridControl1.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="gridControl1.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="gridControl1.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v10.2">
-    <value>Application</value>
-  </data>
-  <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 112</value>
-  </data>
-  <data name="gridColumn8.Caption" xml:space="preserve">
-    <value>序号</value>
-  </data>
-  <data name="gridColumn8.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="gridColumn8.Width" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="colProductId.Caption" xml:space="preserve">
-    <value>商品编号</value>
-  </data>
-  <data name="colProductId.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colProductId.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="colProductId.Width" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="colProduct.Caption" xml:space="preserve">
-    <value>商品名称</value>
-  </data>
-  <data name="colProduct.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colProduct.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="colProduct.Width" type="System.Int32, mscorlib">
-    <value>230</value>
-  </data>
-  <data name="gridColumn1.Caption" xml:space="preserve">
-    <value>单位</value>
-  </data>
-  <data name="repositoryItemComboBox1.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemComboBox1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="gridColumn1.Width" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="colInvoiceCODetailQuantity.Caption" xml:space="preserve">
-    <value>数量</value>
-  </data>
-  <data name="colInvoiceCODetailQuantity.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colInvoiceCODetailQuantity.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="colInvoiceCODetailQuantity.Width" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="colInvoiceCODetailPrice.Caption" xml:space="preserve">
-    <value>单价</value>
-  </data>
-  <data name="colInvoiceCODetailPrice.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colInvoiceCODetailPrice.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="colInvoiceCODetailPrice.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="colInvoiceCODetailMoney.Caption" xml:space="preserve">
-    <value>金额</value>
-  </data>
-  <data name="colInvoiceCODetailMoney.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colInvoiceCODetailMoney.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="colInvoiceCODetailMoney.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="gridColumnStocksQuantity.Caption" xml:space="preserve">
-    <value>库存</value>
-  </data>
-  <data name="gridColumnStocksQuantity.Width" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="colInvoiceProductDescription.Caption" xml:space="preserve">
-    <value>商品描述</value>
-  </data>
-  <data name="colInvoiceProductDescription.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colInvoiceProductDescription.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="colInvoiceProductDescription.Width" type="System.Int32, mscorlib">
-    <value>450</value>
-  </data>
-  <data name="gridColumn6.Caption" xml:space="preserve">
-    <value>净重</value>
-  </data>
-  <data name="gridColumn6.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="gridColumn6.Width" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="gridColumn5.Caption" xml:space="preserve">
-    <value>毛重</value>
-  </data>
-  <data name="gridColumn5.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="gridColumn5.Width" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="gridColumn7.Caption" xml:space="preserve">
-    <value>体积</value>
-  </data>
-  <data name="gridColumn7.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="gridColumn7.Width" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="gridColumnNote.Caption" xml:space="preserve">
-    <value>备注</value>
-  </data>
-  <data name="gridColumnNote.Width" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="gridColumn14.Caption" xml:space="preserve">
-    <value>訂單預交日期</value>
-  </data>
-  <data name="gridColumn14.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="gridColumn14.Width" type="System.Int32, mscorlib">
-    <value>82</value>
-  </data>
-  <data name="gridColumn9.Caption" xml:space="preserve">
-    <value>已进货数量</value>
-  </data>
-  <data name="gridColumn9.Width" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="gridColumn10.Caption" xml:space="preserve">
-    <value>下个生产站</value>
-  </data>
-  <metadata name="bindingSourceWorkHouse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>615, 17</value>
-  </metadata>
-  <data name="repositoryItemLookUpEdit3.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemLookUpEdit3.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="repositoryItemLookUpEdit3.Columns" xml:space="preserve">
-    <value>Workhousename</value>
-  </data>
-  <data name="repositoryItemLookUpEdit3.Columns1" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="repositoryItemLookUpEdit3.Columns2" xml:space="preserve">
-    <value>名称</value>
-  </data>
-  <data name="repositoryItemLookUpEdit3.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gridColumn11.Caption" xml:space="preserve">
-    <value>Remark</value>
-  </data>
-  <data name="gridColumn11.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="gridColumn12.Caption" xml:space="preserve">
-    <value>手册号</value>
-  </data>
-  <data name="gridColumn13.Caption" xml:space="preserve">
-    <value>手册项号</value>
-  </data>
-  <metadata name="bindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>470, 17</value>
-  </metadata>
-  <data name="repositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns1" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns2" xml:space="preserve">
-    <value>編號</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns3" xml:space="preserve">
-    <value>ProductName</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns4" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns5" xml:space="preserve">
-    <value>名稱</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns6" xml:space="preserve">
-    <value>ProductId</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns7" xml:space="preserve">
-    <value>編號</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns8" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns9" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
-    <value>None</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns10" xml:space="preserve">
-    <value />
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns11" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.Columns12" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="repositoryItemLookUpEdit2.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns" xml:space="preserve">
-    <value>ProductName</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns1" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns2" xml:space="preserve">
-    <value>名稱</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns3" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns4" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns5" xml:space="preserve">
-    <value>編號</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns6" xml:space="preserve">
-    <value>ProductId</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns7" xml:space="preserve">
-    <value>编号</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns8" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns9" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
-    <value>None</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns10" xml:space="preserve">
-    <value />
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns11" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.Columns12" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="repositoryItemLookUpEdit2.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="repositoryItemSearchLookUpEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <metadata name="bindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>470, 17</value>
-  </metadata>
-  <data name="repositoryItemSearchLookUpEdit1.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>946, 252</value>
-  </data>
-  <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
-    <value>gridControl1</value>
-  </data>
-  <data name="&gt;&gt;gridControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridControl1.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="textEditInvoiceId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>539, 12</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceId.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditInvoiceId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 21</value>
-  </data>
-  <data name="textEditInvoiceId.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;textEditInvoiceId.Name" xml:space="preserve">
-    <value>textEditInvoiceId</value>
-  </data>
-  <data name="&gt;&gt;textEditInvoiceId.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;textEditInvoiceId.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;textEditInvoiceId.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 47</value>
-  </data>
-  <data name="layoutControlGroup1.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlGroup1</value>
-  </data>
-  <data name="layoutControlItem8.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem8</value>
-  </data>
-  <data name="layoutControlItem8.Text" xml:space="preserve">
-    <value>layoutControlItem8</value>
-  </data>
-  <data name="layoutControlItem5.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt, style=Bold</value>
-  </data>
-  <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
-    <value>日期:</value>
-  </data>
-  <data name="layoutControlItem5.Text" xml:space="preserve">
-    <value>日期:</value>
-  </data>
-  <data name="layoutControlItem1.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt, style=Bold</value>
-  </data>
-  <data name="layoutControlItem1.CustomizationFormText" xml:space="preserve">
-    <value>单据编号:</value>
-  </data>
-  <data name="layoutControlItem1.Text" xml:space="preserve">
-    <value>单据编号:</value>
-  </data>
-  <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem2</value>
-  </data>
-  <data name="layoutControlItem2.Text" xml:space="preserve">
-    <value>layoutControlItem2</value>
-  </data>
-  <data name="layoutControlItem7.CustomizationFormText" xml:space="preserve">
-    <value>商品明细:</value>
-  </data>
-  <data name="layoutControlItem7.Text" xml:space="preserve">
-    <value>商品明细:</value>
-  </data>
-  <data name="layoutControlItem9.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem9</value>
-  </data>
-  <data name="layoutControlItem9.Text" xml:space="preserve">
-    <value>layoutControlItem9</value>
-  </data>
-  <data name="layoutControlItem3.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt, style=Bold</value>
-  </data>
-  <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem3</value>
-  </data>
-  <data name="layoutControlItem3.Text" xml:space="preserve">
-    <value>经手人:</value>
-  </data>
-  <data name="emptySpaceItem10.CustomizationFormText" xml:space="preserve">
-    <value>emptySpaceItem10</value>
-  </data>
-  <data name="emptySpaceItem10.Text" xml:space="preserve">
-    <value>emptySpaceItem10</value>
-  </data>
-  <data name="layoutControlItem6.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt, style=Bold</value>
-  </data>
-  <data name="layoutControlItem6.CustomizationFormText" xml:space="preserve">
-    <value>预交日期:</value>
-  </data>
-  <data name="layoutControlItem6.Text" xml:space="preserve">
-    <value>预交日期:</value>
-  </data>
-  <data name="layoutControlItem4.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt, style=Bold</value>
-  </data>
-  <data name="layoutControlItem4.CustomizationFormText" xml:space="preserve">
-    <value>厂商:</value>
-  </data>
-  <data name="layoutControlItem4.Text" xml:space="preserve">
-    <value>厂商:</value>
-  </data>
-  <data name="layoutControlItem47.CustomizationFormText" xml:space="preserve">
-    <value>客户:</value>
-  </data>
-  <data name="layoutControlItem47.Text" xml:space="preserve">
-    <value>客户：</value>
-  </data>
-  <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
-    <value>销售订单:</value>
-  </data>
-  <data name="layoutControlItem10.Text" xml:space="preserve">
-    <value>销售订单编号:</value>
-  </data>
-  <data name="layoutControlItem53.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem53</value>
-  </data>
-  <data name="layoutControlItem53.Text" xml:space="preserve">
-    <value>layoutControlItem53</value>
-  </data>
-  <data name="layoutControlItem55.CustomizationFormText" xml:space="preserve">
-    <value>供應商2：</value>
-  </data>
-  <data name="layoutControlItem55.Text" xml:space="preserve">
-    <value>供應商2：</value>
-  </data>
-  <data name="layoutControlItem57.CustomizationFormText" xml:space="preserve">
-    <value>幣別：</value>
-  </data>
-  <data name="layoutControlItem57.Text" xml:space="preserve">
-    <value>訂單幣別：</value>
-  </data>
-  <data name="layoutControlItem46.CustomizationFormText" xml:space="preserve">
-    <value>客户订单编号:</value>
-  </data>
-  <data name="layoutControlItem46.Text" xml:space="preserve">
-    <value>客户订单编号:</value>
-  </data>
-  <data name="layoutControlItem54.CustomizationFormText" xml:space="preserve">
-    <value>Shipment：</value>
-  </data>
-  <data name="layoutControlItem54.Text" xml:space="preserve">
-    <value>Shipment：</value>
-  </data>
-  <data name="layoutControlItem51.CustomizationFormText" xml:space="preserve">
-    <value>批号：</value>
-  </data>
-  <data name="layoutControlItem51.Text" xml:space="preserve">
-    <value>批号：</value>
-  </data>
-  <data name="layoutControlItem48.CustomizationFormText" xml:space="preserve">
-    <value>供應商1幣別：</value>
-  </data>
-  <data name="layoutControlItem48.Text" xml:space="preserve">
-    <value>供應商1幣別：</value>
-  </data>
-  <data name="layoutControlItem52.CustomizationFormText" xml:space="preserve">
-    <value>供應商2幣別：</value>
-  </data>
-  <data name="layoutControlItem52.Text" xml:space="preserve">
-    <value>供應商2幣別：</value>
-  </data>
-  <data name="layoutControlGroup1.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>970, 521</value>
-  </data>
-  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl1.Text" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="textEditAuditState.Location" type="System.Drawing.Point, System.Drawing">
     <value>778, 58</value>
   </data>
@@ -1599,6 +916,7 @@
   <data name="&gt;&gt;textEditNote.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="layoutControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -1607,30 +925,6 @@
   </data>
   <data name="layoutControlGroup2.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup2</value>
-  </data>
-  <data name="layoutControlGroup2.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>940, 87</value>
-  </data>
-  <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl2.Text" xml:space="preserve">
-    <value>layoutControl2</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.Name" xml:space="preserve">
-    <value>layoutControl2</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.Parent" xml:space="preserve">
-    <value>xtraTabPage1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl2.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="layoutControlItem11.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem11</value>
@@ -1673,6 +967,54 @@
   </data>
   <data name="layoutControlItem45.Text" xml:space="preserve">
     <value>税额:</value>
+  </data>
+  <data name="layoutControlGroup2.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>940, 87</value>
+  </data>
+  <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl2.Text" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Name" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Parent" xml:space="preserve">
+    <value>xtraTabPage1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>940, 87</value>
+  </data>
+  <data name="xtraTabPage1.Text" xml:space="preserve">
+    <value>交易明细</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Name" xml:space="preserve">
+    <value>xtraTabPage1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>946, 115</value>
+  </data>
+  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="textEditInvoiceCphm.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 12</value>
@@ -1977,30 +1319,6 @@
   <data name="layoutControlGroup4.CustomizationFormText" xml:space="preserve">
     <value>Root</value>
   </data>
-  <data name="layoutControlGroup4.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>940, 87</value>
-  </data>
-  <data name="layoutControl4.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="layoutControl4.Text" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.Name" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.Parent" xml:space="preserve">
-    <value>xtraTabPage2</value>
-  </data>
-  <data name="&gt;&gt;layoutControl4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="layoutControlItem36.CustomizationFormText" xml:space="preserve">
     <value>课税类别:</value>
   </data>
@@ -2048,6 +1366,48 @@
   </data>
   <data name="emptySpaceItem1.Text" xml:space="preserve">
     <value>emptySpaceItem1</value>
+  </data>
+  <data name="layoutControlGroup4.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>940, 87</value>
+  </data>
+  <data name="layoutControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="layoutControl4.Text" xml:space="preserve">
+    <value>layoutControl4</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.Name" xml:space="preserve">
+    <value>layoutControl4</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.Parent" xml:space="preserve">
+    <value>xtraTabPage2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>940, 87</value>
+  </data>
+  <data name="xtraTabPage2.Text" xml:space="preserve">
+    <value>发票资料</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Name" xml:space="preserve">
+    <value>xtraTabPage2</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="spinEditInvoiceOwed.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -2175,30 +1535,6 @@
   <data name="layoutControlGroup8.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup8</value>
   </data>
-  <data name="layoutControlGroup8.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>940, 87</value>
-  </data>
-  <data name="layoutControl8.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="layoutControl8.Text" xml:space="preserve">
-    <value>layoutControl8</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.Name" xml:space="preserve">
-    <value>layoutControl8</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.Parent" xml:space="preserve">
-    <value>xtraTabPage3</value>
-  </data>
-  <data name="&gt;&gt;layoutControl8.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="emptySpaceItem15.CustomizationFormText" xml:space="preserve">
     <value>emptySpaceItem15</value>
   </data>
@@ -2246,6 +1582,48 @@
   </data>
   <data name="emptySpaceItem17.Text" xml:space="preserve">
     <value>emptySpaceItem17</value>
+  </data>
+  <data name="layoutControlGroup8.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>940, 87</value>
+  </data>
+  <data name="layoutControl8.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="layoutControl8.Text" xml:space="preserve">
+    <value>layoutControl8</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.Name" xml:space="preserve">
+    <value>layoutControl8</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.Parent" xml:space="preserve">
+    <value>xtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;layoutControl8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>940, 87</value>
+  </data>
+  <data name="xtraTabPage3.Text" xml:space="preserve">
+    <value>账款资料</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage3.Name" xml:space="preserve">
+    <value>xtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage3.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage3.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="buttonEditEmployee2.Location" type="System.Drawing.Point, System.Drawing">
     <value>728, 31</value>
@@ -2298,30 +1676,6 @@
   <data name="layoutControlGroup7.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup7</value>
   </data>
-  <data name="layoutControlGroup7.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>940, 87</value>
-  </data>
-  <data name="layoutControl7.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl7.Text" xml:space="preserve">
-    <value>layoutControl7</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.Name" xml:space="preserve">
-    <value>layoutControl7</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.Parent" xml:space="preserve">
-    <value>xtraTabPage4</value>
-  </data>
-  <data name="&gt;&gt;layoutControl7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="emptySpaceItem8.CustomizationFormText" xml:space="preserve">
     <value>emptySpaceItem8</value>
   </data>
@@ -2352,9 +1706,397 @@
   <data name="layoutControlItem44.Text" xml:space="preserve">
     <value>审核人员:</value>
   </data>
+  <data name="layoutControlGroup7.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>940, 87</value>
+  </data>
+  <data name="layoutControl7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl7.Text" xml:space="preserve">
+    <value>layoutControl7</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.Name" xml:space="preserve">
+    <value>layoutControl7</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;layoutControl7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>940, 87</value>
+  </data>
+  <data name="xtraTabPage4.Text" xml:space="preserve">
+    <value>相关资料</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.Name" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>325, 17</value>
+  </metadata>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v10.2">
+    <value>True</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v10.2">
+    <value>None</value>
+  </data>
+  <data name="gridControl1.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v10.2">
+    <value>Application</value>
+  </data>
+  <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 112</value>
+  </data>
+  <data name="gridColumn8.Caption" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="gridColumn8.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn8.Width" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="colProductId.Caption" xml:space="preserve">
+    <value>商品编号</value>
+  </data>
+  <data name="colProductId.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colProductId.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="colProductId.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="colProduct.Caption" xml:space="preserve">
+    <value>商品名称</value>
+  </data>
+  <data name="colProduct.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colProduct.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="colProduct.Width" type="System.Int32, mscorlib">
+    <value>230</value>
+  </data>
+  <data name="gridColumn1.Caption" xml:space="preserve">
+    <value>单位</value>
+  </data>
+  <data name="repositoryItemComboBox1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemComboBox1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gridColumn1.Width" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="colInvoiceCODetailQuantity.Caption" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="colInvoiceCODetailQuantity.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colInvoiceCODetailQuantity.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="colInvoiceCODetailQuantity.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="colInvoiceCODetailPrice.Caption" xml:space="preserve">
+    <value>单价</value>
+  </data>
+  <data name="colInvoiceCODetailPrice.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colInvoiceCODetailPrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="colInvoiceCODetailPrice.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="colInvoiceCODetailMoney.Caption" xml:space="preserve">
+    <value>金额</value>
+  </data>
+  <data name="colInvoiceCODetailMoney.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colInvoiceCODetailMoney.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="colInvoiceCODetailMoney.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="gridColumnStocksQuantity.Caption" xml:space="preserve">
+    <value>库存</value>
+  </data>
+  <data name="gridColumnStocksQuantity.Width" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="colInvoiceProductDescription.Caption" xml:space="preserve">
+    <value>商品描述</value>
+  </data>
+  <data name="colInvoiceProductDescription.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colInvoiceProductDescription.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="colInvoiceProductDescription.Width" type="System.Int32, mscorlib">
+    <value>450</value>
+  </data>
+  <data name="gridColumn6.Caption" xml:space="preserve">
+    <value>净重</value>
+  </data>
+  <data name="gridColumn6.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="gridColumn6.Width" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="gridColumn5.Caption" xml:space="preserve">
+    <value>毛重</value>
+  </data>
+  <data name="gridColumn5.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="gridColumn5.Width" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="gridColumn7.Caption" xml:space="preserve">
+    <value>体积</value>
+  </data>
+  <data name="gridColumn7.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="gridColumn7.Width" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="gridColumnNote.Caption" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="gridColumnNote.Width" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="gridColumn14.Caption" xml:space="preserve">
+    <value>訂單預交日期</value>
+  </data>
+  <data name="gridColumn14.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="gridColumn14.Width" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="gridColumn9.Caption" xml:space="preserve">
+    <value>已进货数量</value>
+  </data>
+  <data name="gridColumn9.Width" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="gridColumn10.Caption" xml:space="preserve">
+    <value>下个生产站</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.Columns" xml:space="preserve">
+    <value>Workhousename</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.Columns1" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="repositoryItemLookUpEdit3.Columns2" xml:space="preserve">
+    <value>名称</value>
+  </data>
   <metadata name="bindingSourceWorkHouse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>615, 17</value>
   </metadata>
+  <data name="repositoryItemLookUpEdit3.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn11.Caption" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="gridColumn11.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="gridColumn12.Caption" xml:space="preserve">
+    <value>手册号</value>
+  </data>
+  <data name="gridColumn13.Caption" xml:space="preserve">
+    <value>手册项号</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns1" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns2" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns3" xml:space="preserve">
+    <value>ProductName</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns4" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns5" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns6" xml:space="preserve">
+    <value>ProductId</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns7" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns8" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns9" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
+    <value>None</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns11" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns12" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <metadata name="bindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>470, 17</value>
+  </metadata>
+  <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="repositoryItemLookUpEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns" xml:space="preserve">
+    <value>ProductName</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns1" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns2" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns3" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns4" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns5" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns6" xml:space="preserve">
+    <value>ProductId</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns7" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns8" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns9" type="DevExpress.Utils.FormatType, DevExpress.Data.v10.2">
+    <value>None</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns11" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.Columns12" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
+    <value>Default</value>
+  </data>
+  <data name="repositoryItemLookUpEdit2.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="repositoryItemSearchLookUpEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemSearchLookUpEdit1.NullText" xml:space="preserve">
+    <value />
+  </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>编号</value>
   </data>
@@ -2379,8 +2121,224 @@
   <data name="gridColumn4.Width" type="System.Int32, mscorlib">
     <value>150</value>
   </data>
-  <data name="barButtonItem2.Caption" xml:space="preserve">
-    <value>销售订单</value>
+  <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>946, 252</value>
+  </data>
+  <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
+    <value>gridControl1</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="textEditInvoiceId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>539, 12</value>
+  </data>
+  <data name="textEditInvoiceId.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditInvoiceId.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditInvoiceId.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditInvoiceId.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditInvoiceId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 21</value>
+  </data>
+  <data name="textEditInvoiceId.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textEditInvoiceId.Name" xml:space="preserve">
+    <value>textEditInvoiceId</value>
+  </data>
+  <data name="&gt;&gt;textEditInvoiceId.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;textEditInvoiceId.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;textEditInvoiceId.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 47</value>
+  </data>
+  <data name="layoutControlGroup1.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="layoutControlItem8.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="layoutControlItem8.Text" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="layoutControlItem5.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
+    <value>日期:</value>
+  </data>
+  <data name="layoutControlItem5.Text" xml:space="preserve">
+    <value>日期:</value>
+  </data>
+  <data name="layoutControlItem1.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="layoutControlItem1.CustomizationFormText" xml:space="preserve">
+    <value>单据编号:</value>
+  </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>单据编号:</value>
+  </data>
+  <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="layoutControlItem2.Text" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="layoutControlItem7.CustomizationFormText" xml:space="preserve">
+    <value>商品明细:</value>
+  </data>
+  <data name="layoutControlItem7.Text" xml:space="preserve">
+    <value>商品明细:</value>
+  </data>
+  <data name="layoutControlItem9.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="layoutControlItem9.Text" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="layoutControlItem3.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="layoutControlItem3.Text" xml:space="preserve">
+    <value>经手人:</value>
+  </data>
+  <data name="emptySpaceItem10.CustomizationFormText" xml:space="preserve">
+    <value>emptySpaceItem10</value>
+  </data>
+  <data name="emptySpaceItem10.Text" xml:space="preserve">
+    <value>emptySpaceItem10</value>
+  </data>
+  <data name="layoutControlItem6.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="layoutControlItem6.CustomizationFormText" xml:space="preserve">
+    <value>预交日期:</value>
+  </data>
+  <data name="layoutControlItem6.Text" xml:space="preserve">
+    <value>预交日期:</value>
+  </data>
+  <data name="layoutControlItem4.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="layoutControlItem4.CustomizationFormText" xml:space="preserve">
+    <value>厂商:</value>
+  </data>
+  <data name="layoutControlItem4.Text" xml:space="preserve">
+    <value>厂商:</value>
+  </data>
+  <data name="layoutControlItem47.CustomizationFormText" xml:space="preserve">
+    <value>客户:</value>
+  </data>
+  <data name="layoutControlItem47.Text" xml:space="preserve">
+    <value>客户：</value>
+  </data>
+  <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
+    <value>销售订单:</value>
+  </data>
+  <data name="layoutControlItem10.Text" xml:space="preserve">
+    <value>销售订单编号:</value>
+  </data>
+  <data name="layoutControlItem53.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem53</value>
+  </data>
+  <data name="layoutControlItem53.Text" xml:space="preserve">
+    <value>layoutControlItem53</value>
+  </data>
+  <data name="layoutControlItem55.CustomizationFormText" xml:space="preserve">
+    <value>供應商2：</value>
+  </data>
+  <data name="layoutControlItem55.Text" xml:space="preserve">
+    <value>供應商2：</value>
+  </data>
+  <data name="layoutControlItem57.CustomizationFormText" xml:space="preserve">
+    <value>幣別：</value>
+  </data>
+  <data name="layoutControlItem57.Text" xml:space="preserve">
+    <value>訂單幣別：</value>
+  </data>
+  <data name="layoutControlItem46.CustomizationFormText" xml:space="preserve">
+    <value>客户订单编号:</value>
+  </data>
+  <data name="layoutControlItem46.Text" xml:space="preserve">
+    <value>客户订单编号:</value>
+  </data>
+  <data name="layoutControlItem54.CustomizationFormText" xml:space="preserve">
+    <value>Shipment：</value>
+  </data>
+  <data name="layoutControlItem54.Text" xml:space="preserve">
+    <value>Shipment：</value>
+  </data>
+  <data name="layoutControlItem51.CustomizationFormText" xml:space="preserve">
+    <value>批号：</value>
+  </data>
+  <data name="layoutControlItem51.Text" xml:space="preserve">
+    <value>批号：</value>
+  </data>
+  <data name="layoutControlItem48.CustomizationFormText" xml:space="preserve">
+    <value>供應商1幣別：</value>
+  </data>
+  <data name="layoutControlItem48.Text" xml:space="preserve">
+    <value>供應商1幣別：</value>
+  </data>
+  <data name="layoutControlItem52.CustomizationFormText" xml:space="preserve">
+    <value>供應商2幣別：</value>
+  </data>
+  <data name="layoutControlItem52.Text" xml:space="preserve">
+    <value>供應商2幣別：</value>
+  </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>970, 521</value>
+  </data>
+  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl1.Text" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="barButtonItem1.Caption" xml:space="preserve">
     <value>采购进货单</value>
@@ -2546,9 +2504,6 @@
   </data>
   <data name="barButtonItemJieAn.Caption" xml:space="preserve">
     <value>结案</value>
-  </data>
-  <data name="barButtonItem3.Caption" xml:space="preserve">
-    <value>强制结案</value>
   </data>
   <data name="layoutControlItem56.CustomizationFormText" xml:space="preserve">
     <value>货币种类：</value>

@@ -842,7 +842,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.checkEditIsRequiredCheckCycle.EditValue = this.product.IsRequiredCheckCycle;
             this.textEditCheckCycle.Text = this.product.CheckCycle;
             this.textEditVersion.Text = this.product.ProductVersion;
-            
+
 
             this.checkEditQiang.Checked = this.product.IsQiangHua.HasValue ? this.product.IsQiangHua.Value : false;
             this.checkEditFang.Checked = this.product.IsFangWu.HasValue ? this.product.IsFangWu.Value : false;
@@ -3112,7 +3112,7 @@ namespace Book.UI.Settings.BasicData.Products
             //if (hitInfo.InRow && !gridView5.IsGroupRow(hitInfo.RowHandle))
             //{
             //设置商品类别
-            if (this.gridView5.RowCount > 0)
+            if (this.gridView5.RowCount > 0 && this.gridView5.FocusedRowHandle >= 0)
             {
 
                 this.action = "view";

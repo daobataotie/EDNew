@@ -230,9 +230,9 @@
             // 
             this.xrPictureBox1.Dpi = 254F;
             this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(200F, 0F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(278F, 0F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(1600F, 320F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(1450F, 320F);
             // 
             // PageHeader
             // 

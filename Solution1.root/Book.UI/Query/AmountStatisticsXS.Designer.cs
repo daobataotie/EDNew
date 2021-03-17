@@ -110,7 +110,8 @@
             "新台幣",
             "美金",
             "歐元",
-            "日圓"});
+            "日圓",
+            "加幣"});
             this.comboBoxEditCurrency.Properties.NullValuePrompt = null;
             this.comboBoxEditCurrency.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboBoxEditCurrency.Size = new System.Drawing.Size(101, 21);
